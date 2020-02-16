@@ -565,35 +565,35 @@ La procedura da inserire nel General Manual (o da mantenere scritta ed operativa
  | di modificare o revocare permessi ad un utente o    |
  |    fornitore. E' stata richiesta la revoca?         |
  .-----------------------------------------------------.
-       | Sì |							| No |
-	   .----.							.----.
-		 |								  |
-	.--------------------------.	.--------------------.
-	| Cancellare il profilo,   |	| E' stata richiesta |
-	| dare conferma con        |	| la creazione di un |
-	| l'effettiva cancellazione|	| nuovo utente?		 |
-	|  della cancellazione **  |	.--------------------.
-	.--------------------------.		| Sì |	  | No |
-										.----.	  .----.
-										  |			|
-						/-----------------]			|
-						|							|
-			.------------------------------.	.--------------------------.
-			| Assegnare al nuovo utente    |	| L'utente è un fornitore  |
-			| i permessi dell'asset in     |	| o collaboratore esterno ?|
-			| cui è coinvolto (****).      |	.--------------------------.
-			| Dare conferma alla richiesta |	|   | Sì |		| No |
-			| pervenuta.                   |		.----.		.----.
-			.------------------------------.		  |			   |
-													  |			   |
-									------------------]		.-------------------------.
-									|						| Modificare i permessi   |
-						.------------------------------.	| come richiesto. Dare    |
-						| Assegnare o creare i 		   |	| conferma alla richiesta |
-						| permessi richiesti.		   |	| pervenuta.              |
-						| Dare conferma alla richiesta |	.-------------------------.
-						| pervenuta. ***               |
-						.------------------------------.
+       | Sì |                           | No |
+	   .----.                           .----.
+		  |                                |
+	.--------------------------.    .--------------------.
+	| Cancellare il profilo,   |    | E' stata richiesta |
+	| dare conferma con        |    | la creazione di un |
+	| l'effettiva cancellazione|    | nuovo utente?		 |
+	|  della cancellazione **  |    .--------------------.
+	.--------------------------.        | Sì |    | No |
+                                        .----.    .----.
+                                          |         |
+                        /-----------------]         |
+                        |                           |
+    .------------------------------.    .--------------------------.
+    | Assegnare al nuovo utente    |    | L'utente è un fornitore  |
+    | i permessi dell'asset in     |    | o collaboratore esterno ?|
+    | cui è coinvolto (****).      |    .--------------------------.
+    | Dare conferma alla richiesta |        | Sì |      | No |
+    | pervenuta.                   |        .----.      .----.
+    .------------------------------.          |            |
+                                              |            |
+                            /-----------------]     .-------------------------.
+                            |                       | Modificare i permessi   |
+                .------------------------------.    | come richiesto. Dare    |
+                | Assegnare o creare i         |    | conferma alla richiesta |
+                | permessi richiesti.          |    | pervenuta.              |
+                | Dare conferma alla richiesta |    .-------------------------.
+                | pervenuta. ***               |
+                .------------------------------.
 
 (**) Inserisco un'ulteriore descrizione, nel prossimo punto 03q vi sono altri passaggi da attuare quando è richiesta
 la cancelllazione dell'utente (come impostazione auto-risponditore per la casella email da disattivare).
@@ -1033,25 +1033,25 @@ Semplici dispositivi che sono in grado di gestire la rete wifi e la generazione 
 le parole "Unifi Access".
 Gli amministratori di rete dell'organizzazione dovranno quindi creare una rete dedicata per l'accesso ospite (comunemente chiamata VLAN). Un esempio dello schema.
 
- +-----------------------+								   +---------------------------+
+ +-----------------------+                                 +---------------------------+
  |  rete organizzazione  |                                 |  rete ospiti (vlan ID xx) |
- |     192.168.2.0/24    |                                 |	172.25.1.0/24          |
+ |     192.168.2.0/24    |                                 |    172.25.1.0/24          |
  +-----------------------+                                 +---------------------------+
           \___________________/-------------------\           |
-							  |  apparato  SWITCH |___________/
-						      \-------------------/
-										|
-										|
-										\________________
-														 |
-												.--------[-----.
-												|   firewall   |
-												.--------------.
-														|
-								@----------@			|
-								| router   |------------/
-								| internet |
-								@----------@
+                              |  apparato  SWITCH |___________/
+                              \-------------------/
+                                        |
+                                        |
+                                        \_________________
+                                                         |
+                                                .--------[-----.
+                                                |   firewall   |
+                                                .--------------.
+                                                        |
+                                @----------@            |
+                                | router   |------------/
+                                | internet |
+                                @----------@
 
 In questo scarno esempio, la rete dell'organizzazione è divisa a livello fisico dalla rete ospiti, tramite un apparato switch programmabile (porta per porta ethernet).
 La rete ospiti può comunicare con il mondo internet tramite un apparato firewall che amministra l'instradamento da noi impostato.
