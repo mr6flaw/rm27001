@@ -684,34 +684,34 @@ Riassumo il caso in una breve procedura,
  +-----------------------------------------------+
  | Richiesta di cancellazione, avvio distruzione |
  +-----------------------------------------------+
-						|
-						|
+                        |
+                        |
  +----------------------[-------------+
  | Il dato non può essere cancellato, |
  | probabile processo fermo che lo    |
  |        mantiene bloccato?          |
  +------------------------------------+
-     | Sì |					| No |
-	 +----+					+----+
-	   |					  |			+--------------------------+
-	   |					  [-------->| la procedura è terminata |
-	   |								+--------------------------+
-	+-------------------------------+
-	| Segnalazione all'operatore    |
-	| Intervento manuale.           |
-	| La notifica è stata ignorata? |
-	+-------------------------------+
-		| Sì |			| No |
-		+----+			+----+
-		  | 			  | 			+--------------------------+
-		  |				  [------------>| la procedura è terminata |
-		  |								+--------------------------+
-		+-[--------------------------+
-		| Lo script di controllo     |
-		| reinvierà una notifica     |
-		| di presenza dati segnalati |
-		| come inattivi              |
-		+----------------------------+
+     | Sì |                 | No |
+     +----+                 +----+
+       |                      |         +--------------------------+
+       |                      [-------->| la procedura è terminata |
+       |                                +--------------------------+
+    +-------------------------------+
+    | Segnalazione all'operatore    |
+    | Intervento manuale.           |
+    | La notifica è stata ignorata? |
+    +-------------------------------+
+        | Sì |          | No |
+        +----+          +----+
+          |               |             +--------------------------+
+          |               [------------>| la procedura è terminata |
+          |                             +--------------------------+
+        +-[--------------------------+
+        | Lo script di controllo     |
+        | reinvierà una notifica     |
+        | di presenza dati segnalati |
+        | come inattivi              |
+        +----------------------------+
 
 * Cancellazione o revoca accesso utente
 L'utente che ha lasciato l'organizzazione (sia esso come dipendente, o fornitore), il suo profilo e i relativi accessi dovranno essere rimossi il prima possibile.
@@ -843,12 +843,13 @@ La procedura continua poi con queste fasi.
 
 Ipotesi 1, il rischio per le libertà e i diritti delle persone fisiche non è elevato
 Ipotesi 2, il rischio per le libertà e i diritti delle persone fisiche è probabile ma non elevato.
-			richiesta azione di notifica al Garante della Privacy, in almeno 72 ore di tempo.
-			elencare nella richiesta la descrizione della violazione dei dati, probabile conseguenze della violazione dei dati, eventuali misure attuate dal titolare per porre rimedio.
+            richiesta azione di notifica al Garante della Privacy, in almeno 72 ore di tempo.
+            elencare nella richiesta la descrizione della violazione dei dati, probabile conseguenze della violazione dei dati,
+            eventuali misure attuate dal titolare per porre rimedio.
 Ipotesi 3, il rischio per le libertà e i diritti delle persone fisiche è probabile ed elevato
-			richiesta azione di notifica al Garante della Privacy, in almeno 72 ore di tempo.
-			elencare nella richiesta la descrizione della violazione dei dati, probabile conseguenze della violazione dei dati, eventuali misure attuate dal titolare per porre rimedio.
-			richiesta azione di comunicazione a nomi e recapiti e alla figura del DPO (o altro punto rilevante del contatto)
+            richiesta azione di notifica al Garante della Privacy, in almeno 72 ore di tempo.
+            elencare nella richiesta la descrizione della violazione dei dati, probabile conseguenze della violazione dei dati, eventuali misure attuate dal titolare per porre rimedio.
+            richiesta azione di comunicazione a nomi e recapiti e alla figura del DPO (o altro punto rilevante del contatto)
 
 La procedura data-breach dovrà riportare nome e cognome, della persona che avrà contatto con le autorità.
 
@@ -904,7 +905,7 @@ Li trovate nelle note finali, al punto (07*1).
 
 Il personale dell'organizzazione potrebbe non essere felice di seguire i punti richiesta dalla normativa. Immaginiamoci se venisse poi chiesto di seguire un corso di introduzione alla stessa normativa. Per tenere alto il morale, consiglio di presentare l'inroduzione dei termini 27001, asset, nuove regole e procedure tramite fogli di presentazione, diversi per ciascun reparto.
 Ad esempio, nell'introduzione alla norma includeremo con brevi frasi i punti più importanti, con disegni o icone (perchè anche divertenti) che possono aiutare il personale a ricordarsi di un particolare passaggio o termine.
-Il mio consiglio è di includere cenni alla normativa GDPR europea, e la norma inglese (________) per sottolineare l'impegno di paesi vicini all'Italia ma anche extra europei per la mantenere una buona sicurezza nella gestione dei dati. 
+Il mio consiglio è di includere cenni alla normativa GDPR europea, e la norma inglese MCSS (07a*1) per sottolineare l'impegno di paesi vicini all'Italia ma anche extra europei per la mantenere una buona sicurezza nella gestione dei dati. 
 Nell'organizzazione esistono poi reparti che trattano tipi di dati diversi tra loro. Una figura amministrativa può trattare banche dati come una figura commerciale. La stessa amministrativa al contrario, non tratterà il dato codice del reparto programmatori. Per questo motivo i fogli di presenazione devono essere quasi sempre differenziati, includendo termini e disegni diversi per reparto. Il personale ne trarrà vantaggio e si sentirà ascoltato allo stesso tempo, troverà nel Security Manager la figura di riferimento di fronte ad una scelta legata alla tema sicurezza di un asset.
 Altro aspetto da evidenziare durante la formazione, è il concetto di protezione, continuità di erogazione del dato. Il personale deve saper fin da subito che saranno anche loro attori, di questo concetto.
  
@@ -943,7 +944,7 @@ Elenco requisiti base
 --> Backup
 ----> presenza di backup effettuato a cadenza (sì/no)
 ----> tipo di supporto in cui viene registrato il backup (indicare il supporto, se nastro, spazio esterno. Nota bene: se utilizzato il supporto nastro,
-		è richiesto il revault dei nastri una volta all'anno come minimo. I dati già salvati nei nastri, devono essere riscritti in nastri nuovi almeno una volta all'anno).
+       è richiesto il revault dei nastri una volta all'anno come minimo. I dati già salvati nei nastri, devono essere riscritti in nastri nuovi almeno una volta all'anno).
 ----> luogo di conservazione del backup (indicare il luogo) (nota per la nostra organizzazione, è preferibile che sia esterno al luogo dell'organizzazione del fornitore)
 ----> esiste un soggetto responsabile dell'effettuazione del backup e del controllo della loro regolarità (sì/no)
 ----> viene effettuata la procedura di ripristino dei dati per verificare la disponibilità ed efficacia (sì/no)
@@ -953,9 +954,9 @@ Tale nomina reca l'elencazione analitica degli ambiti di operatività consentiti
 --> Viene periodicamente confermata la nomina ad amministratore di sistema in virtu' del possesso di requisiti di professionalita' e competenza (sì/no)
 --> Viene effettuato un audit periodico sulle attivita' svolte dall'amministratore di sistema e sulla registrazione dei log (sì/no)
 --> Sono adottati sistemi idonei alla registrazione degli accessi logici (autenticazione informatica) ai sistemi di elaborazione
-	e agli archivi elettronici da parte degli amministratori di sistema (sì/no)
+      e agli archivi elettronici da parte degli amministratori di sistema (sì/no)
 --> Le registrazioni (access log) hanno caratteristiche di completezza, inalterabilità e possibilità di verifica della loro integrità adeguate al
-	raggiungimento dello scopo di verifica per cui sono richieste (sì/no)
+     raggiungimento dello scopo di verifica per cui sono richieste (sì/no)
 --> Le registrazioni comprendono i riferimenti temporali e la descrizione dell'evento che le ha generate e sono conservate per un congruo periodo, non inferiore a sei mesi (sì/no)
 --> Relativamente all'obbligo di registrazione degli accessi logici degli Amministratori di sistema, sono compresi anche i sistemi client oltre che quelli server (sì/no)
 --> Eventi critici
@@ -966,7 +967,7 @@ Creeremo un profilo con i permessi di accesso alle sole aree predefinite e dedic
 se si occupa dello sviluppo di programmi o di gestione/revisione dati. Ricordiamo che negli ambienti di test è obbligatorio usare dati mascherati, anche se quest'ultimi in produzione,
 sono di dominio pubblico.
 
-MODELLO (IMPAGINARE)
+MODELLO
 
 NOMINA AD INCARICO DEL TRATTAMENTO DEI DATI/DELLE INFORMAZIONI E ASSEGNAZIONE DEI RUOLI
 
@@ -1130,10 +1131,10 @@ delle password degli utenti che vi operano in esso.
 
 Nel file che gestisce l'ingresso degli utenti (/etc/login.defs), questi sono valori richiesti,
 
-PASS_MAX_DAYS	60
-PASS_MIN_DAYS	1
-PASS_MIN_LEN	8
-PASS_WARN_AGE	8
+PASS_MAX_DAYS   60
+PASS_MIN_DAY    1
+PASS_MIN_LEN    8
+PASS_WARN_AGE   8
 
 Ogni file presente nel sistema operativo dovrà poi avere solo permessi di scrittura dedicati all'utente
 e il suo relativo gruppo.
@@ -1182,7 +1183,8 @@ Se uno di questi valori dovesse superare (specialementi negli orari con più ric
 
 Nelle segnalazioni, consiglio anche di includere brevi stralci di procedure, basate su eventi già accaduti. In tal modo il personale potrà iniziare verifiche più mirate.
 
-La normativa si aspetta inoltre che i consumi di determinate risorse (calcolo CPU, memoria RAM, spazio disco libero, uso della memoria tampone SWAP, e ogni altro valore che ci è utile), sia raccolto con cadenza, salvato e pronto per essere consultato nel futuro. Il perchè è molto semplice. Supponiamo che nel primo anno di vita di un servizio, gli ospiti che usufruiscono di esso, generino nelle ore di punta circa quaranta accessi al secondo.
+La normativa si aspetta inoltre che i consumi di determinate risorse (calcolo CPU, memoria RAM, spazio disco libero, uso della memoria tampone SWAP, e ogni altro valore che ci è utile), sia raccolto con cadenza, salvato e pronto per essere consultato nel futuro. Il perchè è molto semplice.
+Supponiamo che nel primo anno di vita di un servizio, gli ospiti che usufruiscono di esso, generino nelle ore di punta circa quaranta accessi al secondo.
 Il prossimo anno il traffico potrebbe scendere oppure aumentare. L'unico modo per tener monitorato questo aspetto è tracciare periodicamente i dati di accesso e procedere ad un confronto.
 La figura del Security Manager dovrà schedulare la raccolta dei dati, e verificare in casi di esaurimento risorse non preventivato. Aggiungere nuove funzioni (alle sonde), che siano in grado di registrare altri consumi, e prevenire situazioni improvvise di esaurimento o collasso.
 Software gratuiti che ci permettono di raccogliere dati dalle macchine e registrarli sono per esempio Grafana, Graylog, Munin.
@@ -1195,68 +1197,71 @@ Software gratuiti che ci permettono di raccogliere dati dalle macchine e registr
 *** FONTI ESTERNE ***
 
 (01*1)
-	https://www.iso.org/
+    https://www.iso.org/
 
 (02*1)
-	https://www.garanteprivacy.it/home/provvedimenti-normativa/normativa/normativa-comunitaria-e-intenazionale/trasferimento-dei-dati-verso-paesi-terzi
+    https://www.garanteprivacy.it/home/provvedimenti-normativa/normativa/normativa-comunitaria-e-intenazionale/trasferimento-dei-dati-verso-paesi-terzi
 
 (03*1)
-	https://support.microsoft.com/it-it/help/4028713/windows-10-turn-on-device-encryption
+    https://support.microsoft.com/it-it/help/4028713/windows-10-turn-on-device-encryption
 (03*2)
-	https://wiki.centos.org/HowTos/EncryptedFilesystem
+    https://wiki.centos.org/HowTos/EncryptedFilesystem
 (03*3)
-	https://support.apple.com/it-it/guide/disk-utility/dskutl35612/mac
+    https://support.apple.com/it-it/guide/disk-utility/dskutl35612/mac
 (03*4)
-	https://www.manageengine.com/
+    https://www.manageengine.com/
 (03*5)
-	https://www.belarc.com/products_belarc_advisor
+    https://www.belarc.com/products_belarc_advisor
 (03*6)
-	https://www.cvedetails.com/product/47/Linux-Linux-Kernel.html?vendor_id=33
-	https://lore.kernel.org/lists.html
+    https://www.cvedetails.com/product/47/Linux-Linux-Kernel.html?vendor_id=33
+    https://lore.kernel.org/lists.html
 
 (04*1)
-	https://www.gfi.com/products-and-solutions/network-security-solutions/gfi-eventsmanager soluzione software da installare
-	https://www.legallogger.com/ software dedicato ed attivabile come macchina virtuale
-	https://www.netwrix.it/auditor.html software dedicato che include anche funzioni di controllo audit (utile per avviare indagini o essere avvisati in tempo reale di possibili perdite dati)
+    https://www.gfi.com/products-and-solutions/network-security-solutions/gfi-eventsmanager soluzione software da installare
+    https://www.legallogger.com/ software dedicato ed attivabile come macchina virtuale
+    https://www.netwrix.it/auditor.html software dedicato che include anche funzioni di controllo audit (utile per avviare indagini o essere avvisati in tempo reale di possibili perdite dati)
 
 (07*1)
-	https://twitter.com/netbiosX 		NetbiosX, ricercatore sicurezza per ambiente Windows
-	https://twitter.com/KyleHanslovan 	Kyle Hanslovan, analista malware
-	https://twitter.com/wdormann 		Will Dormann, analista vulnerabilità
-	https://twitter.com/adriengnt		Adrien Guinet, ricercatore sicurezza
-	https://twitter.com/MarceloRivero 	Marcelo Rivero - ricercatore impegnato nel segnalare programmi fraudolenti
-	https://twitter.com/binitamshah 	Bini Tamshah - ricercatrice impegnate nel divulgare informazioni, manuali per la sicurezza informatica,
-										linguaggi di programmazione, tecniche di penetrazione sistemi 
-	https://twitter.com/Viss 			Viss del gruppo Pobhos
-	https://twitter.com/Antelox 		Antelox - ricercatore impegnato nel segnalare truffe, virus recenti
-	https://twitter.com/hFireF0X 		hFireF0X - ricercatore impegnato nel oltrepassare i controlli UAC del sistema Windows
+    https://twitter.com/netbiosX       NetbiosX, ricercatore sicurezza per ambiente Windows
+    https://twitter.com/KyleHanslovan  Kyle Hanslovan, analista malware
+    https://twitter.com/wdormann       Will Dormann, analista vulnerabilità
+    https://twitter.com/adriengnt      Adrien Guinet, ricercatore sicurezza
+    https://twitter.com/MarceloRivero  Marcelo Rivero - ricercatore impegnato nel segnalare programmi fraudolenti
+    https://twitter.com/binitamshah    Bini Tamshah - ricercatrice impegnate nel divulgare informazioni, manuali per la sicurezza informatica,
+                                        linguaggi di programmazione, tecniche di penetrazione sistemi 
+    https://twitter.com/Viss           Viss del gruppo Pobhos
+    https://twitter.com/Antelox        Antelox - ricercatore impegnato nel segnalare truffe, virus recenti
+    https://twitter.com/hFireF0X       hFireF0X - ricercatore impegnato nel oltrepassare i controlli UAC del sistema Windows
 
-	Aggiornamenti riguardo il protocollo sicuro TLS
-		https://twitter.com/GnuTLS GnuTLS
+    Aggiornamenti riguardo il protocollo sicuro TLS
+    https://twitter.com/GnuTLS GnuTLS
 
-	IT Governance (il portale di riferimento per le pratiche di sicurezza nelle organizzazioni aziendali e non)
-		https://twitter.com/ITGovernance
-	
-	Iscrizione alle newsletter come garante della privacy
-		https://www.m3aawg.org/ M3aawg
+    IT Governance (il portale di riferimento per le pratiche di sicurezza nelle organizzazioni aziendali e non)
+    https://twitter.com/ITGovernance
 
-	Garante Privacy
-		https://www.garanteprivacy.it/
-		
+    Iscrizione alle newsletter come garante della privacy
+    https://www.m3aawg.org/ M3aawg
+
+    Garante Privacy
+    https://www.garanteprivacy.it/
+
+(07a1)
+    https://www.gov.uk/government/publications/the-minimum-cyber-security-standard
+
 (10*1)
-	https://www.kali.org/ una delle distribuzioni Linux con al suo interno gli strumenti più usati per azioni di penetrabilità.
+    https://www.kali.org/ una delle distribuzioni Linux con al suo interno gli strumenti più usati per azioni di penetrabilità.
 
 (16*1)
-	https://en.wikipedia.org/wiki/SSAE_16
+    https://en.wikipedia.org/wiki/SSAE_16
 
 (16*2)
-	https://www.hpe.com/it/it/what-is/data-center-tiers.html
+    https://www.hpe.com/it/it/what-is/data-center-tiers.html
 
 
 
 
-LICENZA DELLA GUIDA rm270001.TXT (____da lasciare come pagina dedicata) SE PUBBLICHERO' IN GITHUB, NON SERVIRA' FORSE..
- questa piccola guida è rilasciata tramite licenza WTFPL
+LICENZA DELLA GUIDA rm270001
+ questa guida è rilasciata tramite licenza WTFPL
 
         DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
                     Version 2, December 2004 
