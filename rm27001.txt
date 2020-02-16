@@ -1,0 +1,1274 @@
+
+               ___ \___  | _ \   _ \_ | 
+  __| __ `__ \    ) |   / |   | |   | | 
+ |    |   |   |  __/   /  |   | |   | | 
+_|   _|  _|  _|_____|_/  \___/ \___/ _| 
+
+01) Introduzione
+02) Definizione degli asset
+02a) --> General Manual e Decalogo
+03) Richieste preliminari
+03a) --> Creazione dell'inventario dispositivi
+03b) --> Criptatura dei dischi
+03c) --> Gestione unificata ed antivirus
+03d) --> Aggiornamenti di sistema
+03e) --> Disegno rete
+03f) --> Telelavoro
+03g) --> Regolamentare accesso alle caselle aziendali
+03h) --> Permessi per la condivisione dei dati interni all'impresa
+03i) --> Individuare amministratore/i di sistema
+03l) --> Creazione e revoca degli accessi utente
+03m) --> Blocco terminali
+03o) --> Gestione password
+03p) --> Separazione ambienti di sviluppo, test e produzione
+03q) --> Cancellazione dati
+---)
+04) Registrazioni ed accesso ai log di sistemi operativi
+05) Procedure di emergenza (WIP solo per data breach)
+06) Backup e ripristini
+07) Formazione security manager
+07a) Formazione per il personale
+07b) Estendere regolamento anche ad esterni fornitori o collaboratori
+08) Utilizzo apparecchiature/dispositivi degli ospiti
+09) Misure di protezione per lo stabile
+10) Test di penetrabilità
+11) Monitoraggio dei sistemi che erogano servizi
+12) Documento dei servizi sottoposti a Service Line Agreement (WIP)
+13) Documento Business Continuity (WIP)
+--)
+
+
+01) Introduzione
+Questa breve guida è stata scritta pensandola come un piccolo contributo, per chi volesse interessarsi alla normativa ISO 27001, senza troppo impegno iniziale.
+Oppure conoscere solo gli aspetti preliminari richiesti, e nel caso svilupparli in un possibile futuro.
+
+Nelle organizzazioni che intendono certificarsi ISO 27001, una figura interna potrebbe essere delegata a seguire il processo di avviamento a questa normativa.
+Un consulente o professionista (addetti alla gestione di conformità) potrebbe aiutare la figura in questi tipi di compiti:
+- cercare il tipo di informazione trattato nei sistemi operativi, il tipo di dato che viaggia e viene scritto in essi
+- scrivere procedure per segnalare anomalie, o come richiedere l'installazione di software da parte del personale
+- inventariare tutti i tipi di software utilizzati nei sistemi operativi (sia lato cliente che server)
+- ogni accesso alle aree fisiche dove i dati sono conservati, dovrà essere registrato
+- creazione degli ASSET, ovvero la mappatura delle banche dati, con i tipi di dati trattati ed il periodo di conservazione
+- mantenere separate le aree di test da quelle di produzione nelle quali sono trattati e rsei disponibili dei dati
+
+Differenza tra ISO 27001 e 27002
+La norma 27001 può aiutare le organizzazioni a soddisfare tutti gli obbiettivi di conformità alle normative concernenti le informazioni.
+Mentre la norma 27002 attinge alle conoscenze di un gruppo di professionisti esperti in sicurezza delle informazioni, per impostare la miglior prassi da seguire,
+nel campo della sicurezza delle informazioni.
+Per rendere rappresentabile la norma 27002, possiamo disegnarla come una lunga checklist, divisa per capitoli e punti.
+
+** Avvertenze **
+
+Assolutamente non interpretate le descrizioni riportate in questo documento come definitive, o totalmente applicabili
+ad una qualsiasi organizzazione.
+Il consulente di una società esterna (nella maggior parte dei casi) sarà il vostro referente, per determinate procedure,
+per le sesioni di audit interne, e quelle con gli ispettori della normativa. Per questo motivo, se leggendo il documento trovate parti
+in cui si richiede l'aiuto del consulente, è al fine di completare il punto attenendosi il più possibile ai principi,
+linee guida (ed obblighi) descritti dalla normativa.
+
+Nella guida che state leggendo, riduco il più possibile i riferimenti degli standard che si trovano nella documentazione ISO ufficiale.
+Il motivo è perchè queste informazioni sono soggette a copyright dell'organizzazione "International Organization for Standardization" (01*1).
+Inoltre ho preferito mantenere un linguaggio pratico, al fine di semplificare i concetti e renderli attuabili anche da chi è solo
+interessato ad incrementare la sicurezza all'interno della propria organizzazione o gestione privata.
+
+Cosa non è stato trattato della normativa ISO 27001.
+Vi sono aspetti più complessi da trattare, e io persolamente, non sono un consulente esperto. Ho negli ultimi tre anni testato e preparato questi
+aspetti più tecnici e pratici, ma alcune parti del procedimento di certificazione, rimangono ancora difficili ed ignote.
+Non per niente esistono corsi specifici per organizzare audit interni, che permettono di presentare i documenti necessari alla raggiungimento
+della certificazione.
+
+Questi documenti (argomenti) sono:
+
+Valutazione dei rischi
+
+Mi auguro in futuro di poter inserire punti guida, anche per essi.
+
+02) Definizione degli asset
+
+L'asset è un dato che conserviamo, modifichiamo (se necessario) e proteggiamo all'interno dell'organizzazione.
+Ogni asset può includere diverse proprietà, le quali ci permetteranno di mantenere un adeuguato livello di sicurezza per i nostri dati.
+
+Per facilitare la ricerca di asset (da catalogare) all'interno dell'organizzazione, riporto una serie di esempi.
+- anagrafiche presenti nei software gestionale dell'impresa
+- anagrafiche caricate presso gestori online, fornitori esterni
+- documenti dell'impresa caricati in portali online, come fatture (per archiviazione)
+- portali per gestire l'invio di newsletter. Molto spesso in questi portali vengono caricate anagrafiche, nomi cognomi, indirizzi email,
+a volte anche altre caratteristiche che potrebbero facilitare un possibile intruso, nell'individuare la natura di una serie di profili.
+Un esempio pratico. Abbiamo caricato la lista di tutti i nostri clienti che acquistano determinati servizi dalla nostra organizzazione?
+Se sì, una persona ignota che potrebbe leggere questo elenco, potrebbe utilizzarlo poi utilizzarlo per manovre di concorrenza sleale
+oppure creare un danno di immagine all'organizzazione?
+Portali che gestiscono questi dati, possono essere Mailup, BlueMail, MailChimp, SendinBlue.
+- singole caselle postali esterne all'organizzazione. Spesso per accedere a servizi di fornitori o clienti esterni è richiesta
+un'autenticazione a livello token.
+Google oppure portali social, quali Facebook la possono gestire gratutitamente per noi. Non è da escludere che determinati tipi di dati
+(spesso notifiche con riferimenti) vengano poi salvati all'interno delle caselle email o altri spazi di storage.
+Il mio consiglio è eliminare periodicamenti questi dati dalle aree di stocaggio, così da evitare che ignoti possano accedervi e trovarli.
+Al contrario, se tali dati sono utilizzati dall'organizzazione e devono essere manteunuti anche come storico proprio in queste aree esterne,
+dovremo obbligatoriamente creare l'asset dedicato.
+
+Le proprietà che consiglio di inserire per ciascun asset sono,
+- ubicazione, nella maggior parte dei casi, dove il dato viene conservato. Il luogo di salvataggio vale anche per le aree cloud sparse nel mondo internet.
+	Inoltre, nel punto 03h, parleremo anche delle aree dati divise in possibili reparti operativi.
+- criticità (se l'asset venisse perso o distrutto, che tipo di impatto avrà nell'organizzazione?)
+- accesso (il reparto o il personale che ha accesso a questo asset)
+- grado di confidenzialità. Limiterei a differenziarlo in due modalità, confidenziale e diffuso internamente. Vi sono dati la cui natura è strettamente confidenziale,
+specialmente se sono dati trattati su richiesta di clienti, o figure autorizzate ma esterne all'organizzazione.
+Vi sono poi dati che sono solo gestiti da utente interni all'organizzazione, e per nessuna ragione dovranno essere
+divulgati con figure esterne ad essa.
+Nulla vi vieta di creare altre proprietà per il grado di confidenzialità. E' solo richiesto avere una spiegazione di essa
+quando gli ispettori della normativa verificheranno gli asset.
+
+Di seguito una tabella che mostra due asset.
+
+Tabella 02#T
++-------------------+-----------------------+------------+------------------------+------------+
+| Categoria dati    | Ubicazione            | Criticità  | Grado confidenzialità  | Accesso    |
+*-------------------+-----------------------+------------+------------------------+------------+
+| codice software X | github                | bassa      | confindenziale         | reparto X  |
++-------------------+-----------------------+------------+------------------------+------------+
+| gestione progetti | www.tracking2info.xx  | bassa      | diffuso internamente   | reparto G  |
++-------------------+-----------------------+------------+------------------------+------------+
+
+
+Un'altro aspetto fondamentale riguarda il trattamento dei dati dell'organizzazione in paesi fuori dal territorio europeo (scrivo europeo,
+in quanto questa guida è stata scritta pensando ad un'organizzazione che opera nel territorio italiano).
+Vi sono dei casi in cui non possiamo mantenere i dati nello stesso edificiio dell'organizzazione. Per varie ragioni, dalla copia dati mantenuta in un luogo diverso dalla sede operativa, scongiurare la perdita per via di un disastro), all'evitare attacchi di disturbo mirati a fermare la continuità di distribuzione di uno o più servizi.
+Risulta più flessibile esportare i dati anche fuori dalla comunità europea, in paesi che offrono aree protette da vari tipi di attacco informatico o disastri naturali (alluvioni, pericolo di incendi, terromoti).
+Controlleremo prima di "trasportare" il dato, se il pease extra comunitario che lo ospiterà, sarà compreso nella lista disponibile in questo sito del Garante della Privacy (02*1)
+
+Per finire, tutti i nostri asset raccolti, andranno poi riportati nel General Manual, di seguito la sezione dedicata ad esso.
+
+02a) General Manual e Decalogo
+
+Anche se state leggendo questo testo solo per curiosità o interesse personale, ho voluto includere una breve descrizione del General Manual.
+Si tratta del documento timone, principale, che raccoglie diverse procedure ed informazioni del modo in cui l'organizzazione interverrà nel trattamento dati,
+ma anche di fronte a situazioni di prevenzione, pericolo, o emergenza.
+Gli argomenti del general manual sono parecchi, il Security Manager sarà una delle poche persone nell'organizzazione che potrà ricordarsi i vari punti, mentre altri collaboratori,
+sapranno dell'esistenza di questo documento, e potranno consultarlo in qualsiasi momento. Sia a scopo di informazione generale oppure prima di avviare un procedura consentita. 
+
+Di seguito elenchero alcuni punti di un possibile General Manual. Scrivo possibili, perchè un consulente
+potrebbe inserirne altri a seconda del tipo di dati, impianti di memorizzazione e trattamento,
+utilizzati dall'organizzazione. 
+
+GLOSSARIO (serie di termini usato nel manuale, potreste già trovarlo precompilato)
+CLASSIFICAZIONE DELLE INFORMAZIONI (in parte precompilato, per il resto dovremo inserire i nostri asset)
+DIRITTI DEGLI INTERESSATI (potete già trovarlo precompilato)
+L'INFORMATIVA E LA RICHIESTA DI CONSENSO AL TRATTAMENTO DEI DATI (potete già trovarlo precompilato)
+L'informativa (potete già trovarlo precompilato)
+Il consenso (potete già trovarlo precompilato)
+Esempio di informativa per clienti ed utenti (potete già trovarlo precompilato)
+REGOLE GENERALI PER IL TRATTAMENTO DEI DATI (potete già trovarlo precompilato)
+TRASFERIMENTO ALL’ESTERO DI DATI (potete già trovarlo precompilato)
+* RESPONSABILITA’
+del Titolare (potete già trovarlo precompilato)
+del Responsabile interno (potete già trovarlo precompilato)
+Trattamenti svolti presso organizzazioni/enti esterni o da collaboratori esterni (potete già trovarlo precompilato)
+Nomina e contrattutaliazione di un responsabile (potete già trovarlo precompilato)
+DPO – DATA PROTECTION OFFICER (potete già trovarlo precompilato, sarà necessario spedificiare l'indirizzo email del nostro DPO interno)
+SECURITY MANAGER (potete già trovarlo precompilato)
+AMMINISTRATORI DI SISTEMA (potete già trovarlo precompilato)
+Incaricati (potete già trovarlo precompilato)
+Individuazione degli incaricati (potete già trovarlo precompilato)
+Esempio di lettera di nomina ad incaricato (potete già trovarlo precompilato)
+Responsabilità dei singoli – SEGNALAZIONE DEI PUNTI DI DEBOLEZZA (potete già trovarlo precompilato, la procedura è da compilare)
+Responsabilità del management (potete già trovarlo precompilato)
+LA FORMAZIONE (potete già trovarlo precompilato)
+DATA BREACH – VIOLAZIONE DI DATI (potete già trovarlo precompilato, serve comunque una procedura abbastanza dettagliata, da mantenere come allegato rispetto al general manual)
+PROCEDURA PER SEGNALARE UN DANNEGGIAMENTO DEI DATI (dovremo compilarla)
+PROCEDURA IN CASO DI DIFFUSIONE INVOLONTARIA DATI WEB (dovremo compilarla) 
+
+PRASSI DA RISPETTARE IN GENERALE NEL TRATTAMENTO DEI DATI (potete già trovarlo precompilato)
+PRASSI DA RISPETTARE NEL TRATTAMENTO CON STRUMENTI ELETTRONICI (potete già trovarlo precompilato)
+Uso/gestione del sito internet (potete già trovarlo precompilato)
+POLITICA DI CONTROLLO DEGLI ACCESSI - Codice identificativo dell’incaricato 
+POLITICA DI CONTROLLO DEGLI ACCESSI - Gestione delle password di accesso (in parte precompilato, il resto dovremo inserire le parti che riguardano la nostra organizzazione)
+POLITICA DI CONTROLLO ACCESSI - PROCEDURA PER CREAZIONE, REVOCA O MODIFICA ACCESSI UTENTE (procedura che dovremo compilare)
+PROCEDURA PER GESTIRE SOFTWARE CHE SONO IN GRADO DI SUPERARE CONTROLLI (procedura che dovremo compilare)
+Gestione dell’hardware (potete già trovarlo precompilato)
+Antivirus (in parte da compilare, seguendo le parti che riguardano la nostra organizzazione)
+Manutenzione (in parte da compilare, seguendo le parti che riguardano la nostra organizzazione)
+Connessioni remote (in parte da compilare, seguendo le parti che riguardano la nostra organizzazione)
+Uso improprio degli asset aziendali (in parte da compilare, seguendo le parti che riguardano la nostra organizzazione)
+Uso dei dispositivi personali (in parte da compilare, seguendo le parti che riguardano la nostra organizzazione)
+RICHIESTA DI ASSEGNAZIONE DEVICE A DIPENDENTE O A COLLABORATORE ESTERNO (in parte da compilare, seguendo le parti che riguardano la nostra organizzazione)
+Utilizzo dei supporti di memorizzazione (in parte da compilare, seguendo le parti che riguardano la nostra organizzazione)
+PROCEDURA IN CASO DI FURTO DI MATERIALE ASSEGNATO (procedura che dovremo compilare)
+Policy interna sull’uso di internet e della posta elettronica (testo precompilato)
+Internet (testo precompilato)
+Utilizzo reti wifi (se sono presenti all'interno dell'organizzazione, testo precompilato)
+Posta elettronica (testo precompilato)
+Diritto d’autore e proprietà intellettuale (testo precompilato)
+Protezione delle informazioni private e confidenziali (testo precompilato)
+Modalità di esecuzione dei controlli (testo precompilato)
+PROCEDIMENTI DISCIPLINARI PREVISTI IN CASO DI MANCATO RISPETTO DELLA REGOLAMENTAZIONE INTERNA O DI VIOLAZIONI DELLA SICUREZZA DELLE INFORMAZIONI (testo precompilato)
+STRUMENTI PER RENDERE LA PRESTAZIONE LAVORATIVA E STRUMENTI DI CONTROLLO (testo precompilato)
+Modalità di esecuzione dei backup e test degli stessi (testo che dovremo compilare a seconda di come eseguiamo questi controlli nell'organizzazione)
+PRASSI DA RISPETTARE NEL TRATTAMENTO DEI DATI CON STRUMENTI FISICI E NON ELETTRONICI (testo precompilato)
+SICUREZZA FISICA DELL’EDIFICIO (testo precompilato in parte, è necessario inserire delle parti se all'interno dell'organizzazione esiste un datacenter o aree di stoccaggio trattamento dati)
+CLASSIFICAZIONE DELLE AREE E PERIMETRO DI SICUREZZA (testo precompilato, potrebbe essere necessario variarlo o inserire della parti)
+PROCEDURA DI EMERGENZA PER SVILUPPO INCENDI (procedura da compilare)
+
+ESECUZIONE DI ATTIVITA’ DI TELEMARKETING (testo precompilato)
+CLAUSOLA DI RISERVATEZZA DA INSERIRE NEI CONTRATTI CON I FORNITORI/COLLABORATORI (testo precompilato)
+RICHIAMO ALLA NORMATIVA PRIVACY DA INSERIRE NEI CONTRATTI (testo precompilato)
+AFFIDAMENTO DI UN SERVIZIO AD UN FORNITORE ESTERNO (testo precompilato)
+PUBBLICAZIONE ANNUNCI DI RICERCA PERSONALE (testo precompilato)
+GESTIONE DEI CURRICULA VITAE (testo precompilato)
+UTILIZZO DEI DEVICE AZIENDALI (testo precompilato)
+AZIONI COMMERCIALI (testo precompilato)
+LISTE DI DISTRIBUZIONE (testo precompilato)
+RICHIESTE DEGLI INTERESSATI (testo precompilato)
+USO DEI SOCIAL NETWORK (testo precompilato)
+PROCEDURE SPECIFICHE PER ATTIVITA’ SU CLIENTI (testo precompilato)
+PROCEDURA PER RECUPERO PASSWORD CLIENTE (testo precompilato)
+PROCEDURA PER INTERVENTO PRESSO MACCHINA CLIENTE (testo precompilato)
+MONITORAGGIO E PRESTAZIONI RISORSE (procedura da scrivere a seconda del tipo di organizzazione)
+SVILUPPO DI SOFTWARE (possibile procedura da scrivere a seconda del tipo di organizzazione)
+PRINCIPI PER L’INGEGNERIZZAZIONE DI SISTEMI SICURI (procedura da scrivere a seconda del tipo di organizzazione)
+PRINCIPI PER LA GESTIONE DEI CAMBIAMENTI (procedura da scrivere a seconda del tipo di organizzazione)
+MODALITA’ DI TRASFERIMENTO DELLE INFORMAZIONI (procedura da scrivere a seconda del tipo di organizzazione)
+
+Considerate che le informazioni del manuale sono parecchie e un collaboratore non potrebbe facilmente ricordarsi i punti principali,
+ci verrà sicuramente in aiuto un piccolo decalogo.
+Dieci semplice regole, le quali potranno aiutare a tenere in considerazione i principi di sicurezza ed uso strumenti all'interno dell'organizzazione.
+
+Riporto un esempio delle regole. Ogni organizzazione potrà poi stabilire le proprie.
+
+- 1) Nel momento in cui al dipendente viene assegnato un device si impegna ad usarlo e custodirlo per tutta la durata dell’assegnazione.
+- 2) Ogni dispositivo aziendale, nonché la posta e la navigazione web sono utilizzabili solo per scopi aziendali.
+- 3) Tutto il materiale elettronico consegnato per uso aziendale, deve essere utilizzato con la configurazione impostata dagli amministratori di sistema
+- 4) L’installazione di nuovi software nel proprio dispositivo aziendale, deve essere richiesta tramite apposito ticket agli amministratori di sistema
+- 5) Gli sviluppatori di codice devono attenersi alle procedure di sviluppo codice sicuro, e alla procedura di flusso ambiente locale --> ambiente test --> ambiente produzione
+- 6) Per lo svolgimento delle sessioni di reperibilità degli applicativi web, richieste da un cliente, deve essere richiesta l’assegnazione di un portatile aziendale,
+che coprirà il turno di reperibilità richiesto.
+- 7) A fine della giornata lavorativa il computer assegnato deve essere spento al fine di consentire l'installazione delle patch di sicurezza.
+- 8) Le informazioni e i dati devono essere scambiati unicamente con le modalità sicure definite da [NOME_ORGANIZZAZIONE] (cartelle condivise all’interno dell'ufficio, servizio Promo FTP)
+- 9) E’ necessario attenersi alle regole di cambio e generazione password per la propria casella postale, seguendo le regole riportate nel sito https://nome.sito/ (*02n1*)
+- 10) La casella elettronica dall’esterno degli uffici [NOME_ORGANIZZAZIONE] può essere consultata in modalità di sola lettura, tramite il pannello webmail (specificare l'indirizzo URL del pannello)
+
+(*02n1*) le regole per la gestione e l'intervallo di cambio password è preferibile riportarle in una pagina sito internet, che possa essere utilizzato anche da fornitori o clienti con
+i quali collaborariamo. Per maggiore informazioni del testo che dovremo includere della pagina, potete consultare il punto 03o di questa guida.
+
+
+03) Richieste preliminari.
+
+Prima di entrare negli aspetti più corposi richiesti dalla norma, ho preferito stendere dei piccoli punti da completare.
+Si tratta per la maggior parte di passaggi tecnici.
+Quest'ultimi, una volta completati, ci permetteranno di stendere procedure cogenti senza difficoltà.
+
+03a) Creazione dell'inventario dispositivi
+
+Ogni computer o altro apparato elettronico dotato della capacità di memorizzazione dati (indipendentemente dal sistema operativo), deve essere inventariato e riconosciuto tramite un'etichetta la quale riporta un codice identificativo. Pensiamo ad un cellulare acquistato ed utilizzato da un dipendente dell'impresa.
+In esso vengono salvate informazioni, come rubrica contatti, calendario attività, note varie, e le ultime email riceveute ed inviate. Piccola parentesi, se il servizio email dell'impresa è utilizzato con un gestore cloud che fornisce un cospicuo spazio di salvataggio, un intruso potrebbe accedere a tutte le email presenti nell'archivio del dipendente.
+Questo ci fa capire come sia importante mantenere l'inventario aggiornato, e cosa più importante, collegare ogni dispositivo registrato ad un asset.
+Cellulare dipendente reparto (X2) --> Asset reparto (X2) --> Ci poniamo la domanda, cosa succede se viene smarrito o trafugato il cellulare?
+Il dispositivo possiede l'area di lettura e scrittura dati criptata, un estraneo non può facilmente leggere i dati presenti in esso.
+Il dispositivo è bloccato da codice sblocco schermo e PIN per attivare la scheda di collegamento alla rete del provider.
+Possiamo quindi assegnare un asset con rischio di perdita dati, medio-basso.
+Non corriamo il rischio di utilizzare la procedura che tecnicamente, porta il nome "data-breach".
+
+
+Per regolamentare definitivamente l'inventario, possiamo creare un registro elettronico ed inserire tutti i dispositivi fisici dell'organizzazione.
+Riporto una tabella di esempio,
+
+Tabella 03a#T
+'-------------+-------------------------------+----------------+---------+
+| Nome utente |   Modello dispositivo         | Asset          | Codice  |
++-------------+-------------------------------+----------------+---------+
+| Ilaria V.   | Portatile Azut 330gt          | reparto N3     | RM00601 |
++-------------+-------------------------------+----------------+---------+
+| Mario T.    | Computer JP 8001 serie B1     | reparto Q4     | RM00703 |
++-------------+-------------------------------+----------------+---------+
+| -           | Router internet               | organizzazione | RM00101 |
++-------------+-------------------------------+----------------+---------+
+| -           | Server Alfa gestione paghe    | organizzazione | RM00203 |
+`-------------+-------------------------------+----------------+---------'
+
+Anche dispositivi generali (router, firewall, server) usati da ogni reparto dell'organizzazione, dovranno
+essere inventariati. Ogni dispositivo fisico, dovrà essere etichettato con il codice scelto.
+Per i dispositivi virtuali (macchine, container), potremo mettere un file con il nome del codice nell'area desktop,
+(oppure sfondo, per ogni utente) oppure nel messaggio del giorno (MOTD).
+
+Al registro elettronico inoltre, possiamo aggiungere un foglio, nel quale tracciare la richiesta delle risorse umane,
+scrivendo data ed il suo numero (se disponibile). In questo modo sarà semplice ricercare la data di assegnazione, se richiesto durante
+un audit.
+
+Come dobbiamo comportarci di fronte alla richiesta di assegnazione asset ad un utente?
+Una volta giunta la richiesta del responsabile risorse umane, avvieremmo l'inserimento di un dispositivo (e relativo asset) per un nuovo utente dell'organizzazione.
+Tutti i dati che riguardano l'assegnazione, dovranno essere tracciati, e preventivamente prepareremo un modo per la richiesta, scritto su carta intestata dell'organizzazione.
+Di seguito il testo modello da applicare (potete come sempre, inserire modifiche ad esso).
+
+MODULO DI RICHIESTA ASSEGNAZIONE DISPOSITIVO
+
+Io sottoscritto [NOME_UTENTE] ricevo il dispositivo inventariato con codice __________. In caso di smarrimento o furto di esso,
+mi impegnerò ad avvisare il reparto di sicurezza dell'organizzazione.
+
+Data, luogo (firma)										Il responsabile di sicurezza [nome cognome]
+
+______________________________							______________________________
+
+
+FINE MODULO
+
+03b) Criptatura dei dischi
+
+Come potrete immaginare, se un dispositivo contenente dei dati dell'organizzazioni venisse trafugato o perso, ignoti potrebbero aprrofittarsi dell'occasione per leggere le informazioni
+salvate. La norma ci richiedere di criptare ogni tipo di dispositivo mobile, come un computer portatile o un cellulare di tipo smartphone.
+Con gli odieri sistemi operativi, il passaggio della criptatura del disco è abbastanza semplice, mentre con quelli del passato, è necessario affidarsi a programmi di terze parti per completare la criptatura del disco.
+Di seguito riporto alcuni nomi di sistemi operativi e la via più semplice per iniziare in essi la criptatura. 
+
+Microsoft Windows 10, è consigliato Bitlocker, seguite la procedura online che trovate alla nota (03*1)
+	Non riporto versioni precedenti di windows, come 7 e 8, in quanto non saranno più supportate. Se dovete gestire partizioni dati criptate, potete usufruire
+	di programmi come TrueKey.
+Linux, il tool preferito è dm-crypt (03*2), cercando potete anche trovarne di alternativi. Vi sono distribuzioni come CentOS e Debian che permettono di criptare
+	il disco di sistema e dati fin dalla prima installazione.
+MAC OS, verificate la procedura alla nota (03*3)
+Android, possiamo utilizzare la funzione integrata del sistema operativo, chiamata "Full Disk Encryption". Chiederà l'impostazione di un PIN numerico.
+Iphone e sistemi operativi iOS, utilizziamo la funzione "Attiva il Passcode", inseriamo una password alfanumerica abbastanza forte, e non dovremo fare altro.
+
+Per i dischi nei computer fissi, comunemente chiamati torrette o desktop.
+Nella maggior parte degli uffici, o aree di lavoro come la produzione, magazzino, officina, eccetera, gli operatori non necessitano di un portatile. Un punto in più, in quanto non esiste un rischio alto, il quale si avvicinerebbe ad una trafugazione o perdita dei dati (esempio, un comune caso di furto della torretta PC).
+Il nostro consulente potrebbe indicarci che un rischio di furto è sempre in agguato, quindi di procedere alla criptatura anche di questi dischi fissi. Consiglierei di criptare i dischi, ma se il modello del computer fisso fosse obsoleto, potete riportare nell'inventario questo dettaglio, e notificare che al prossimo aggiornamento hardware, la fase di criptuara verrà completata.
+Durante un audit di certificazione, un ispettore mi ha confermato che non è necessario criptare i dischi dei computer fissi. Potremo quindi affrontare l'operazione quando inizieremo l'aggiornamento di tutto l'hardware del computer ed installaremo un sistema operativo che prevede facilmente l'attivazione della criptatura dati.
+
+Per i dispositivi server (fisici) già presenti, che non possono essere criptati (finchè non verrà eseguito un aggiornamento dell'intero sistema operativo, il quale supporti la criptatura delle partizioni), e sono allocati in un possibile datacenter di proprietà dell'organizazione, è possibile attendere.
+Scriveremo nelle procedure dedicate o nel general manual, che i dati sono custoditi in un datacenter, cui l'ingresso ad esso è monitorato (accesso dedicato solo a personale autorizzato).
+
+03c) Gestione unificata ed antivirus
+
+La normativa richiede che tutto il software utilizzato nell'impresa sia catalogato.La figura del security manager dovrà catalogare ed approvare ogni software
+(compresi i sistemi operativi) utilizzato nei computer (client, server, e dispositivi mobili).
+Quest'ulitmi dati devono poi essere trascritti ed aggiornati in un apposito registro elettronico (un normale foglio di excel).
+Nella maggioranza dei casi le imprese che si stanno rivolgendo alla certificazione ISO 27001, usano già computer e dispositivi mobili con installato software di vario tipo.
+Ad esempio, Adobe Photoshop, Microsoft Office, programmi gestionali, servizi postali come Exchange, Mdaemon, oppure software di progettazione come Autocad.
+
+Il mio consiglio è quindi seguire una di queste due possibili scelte di catalogo.
+
+* La prima. Se avete licenze windows client a sufficienza, potete installare un programma che tramite il dominio active directory, installerà un agente in ogni computer e dispositivo dell'impresa per raccogliere le prime informazioni e mantenere aggiornato l'elenco dei software.In questo modo potrete essere aggiornati se un utente installa senza il vostro permesso un software. Potete in qualsiasi momento, rigenerare con facilità il registro elettronico. Programmi come "Desktop Central" (gratuiti fino ad un massimo di venticinque computer/dispositivi), possono esportare l'elenco dei software in formato testuale. In alternativa potete valutare "Manage engine" (03*4).
+
+* La seconda. In ogni computer è necessario installare un programma di controllo software, come Belarc Advisor(03*5). Esso generarà un report per ogni software installato nel computer.
+Per i dispositivi mobili, è consigliabile verificare le applicazioni installate dal menù "Impostazioni --> Applicazioni".
+Dovremo quindi raccogliere le informazioni generate da ogni computer e riportarle nel registro elettronico, con l'ulteriore operazione pianificata di scansionare i computer e dispositivi ad intervalli regolari (ogni due mesi circa). Questa scelta richiede del tempo in definitiva.
+
+Il programma di gestione unificata nella maggior parte dei casi riesce a gestire il trattamento dei supporti rimovibili.
+Ogni computer controllato dal programma di gestione non potrà utilizzare liberamente un supporto rimovibile come una chiavetta USB.
+L'amministratore di sistema dovrà quindi abilitare il seriale del dispositivo rimovibile all'interno del programma di gestione, nel catalogo dei dispositivi.
+Terminata questa procedura, l'amministratore dovrà scansionare il supporto tramite antivirus. In assenza di minacce, il supporto potrà essere utilizzato dall'utente che ha richiesto il permesso d'utilizzo (tramite un ticket o altro tipo di richiesta tracciabile durante una sessione di audit).
+
+La parte Antivirus.
+Punto che potrebbe richiedere meno tempo rispetto gli altri contenuti in questo manuale. Quasi ogni impresa utilizza computer con installato un software antivirus.
+Il nsotro compito è di verificare che tutti i computer ne abbiamo uno licenziato. Vivo consiglio, evitate di installare antivirus gratuiti.
+Gli aggiornamenti rilasciati dai gestori sono molto lenti, e secondo aspetto, l'ispettore si aspetta di trovare un antivirus registrato con regolare licenza (chiederà il nome).
+Quello che forse non vi aspettavate, riguarda la parte degli smarthphone. Escludendo prodotti Apple come Iphone ed Ipad (potrebbero non essere disponibili antivirus per essi), ogni altro dispositivo mobile deve essere scansionato in tempo reale da un programma antivirus.
+
+Una piccola nota per i software che possono eseguire codice nascosto nei documenti PDF, oppure in documenti di Microsoft Office.
+Il mio consiglio è di eseguire codice javascript o di altro tipo, solo nei documenti di origine "fidata" (ovvero scritti da un collega o da un fornitore conosciuto).
+Esiste anche la possibilità di disabilitare ogni tipo di esecuzione automatica di codice, ma a volte non permette di visionare il contenuto del documento.
+La normativa ci invita a non aprire il file sospetto ed inatteso. Procederei con quest'ultima scelta di fronte a casi di dubbio.
+
+03d) Aggiornamenti di sistema
+
+Ogni computer e dispositivo dell'impresa dovrà aver azionato il controllo e l'installazione degli aggiornamenti automatici del sistema operativo.
+Prendiamo in considerazione i sistemi comunemente usati nelle imprese italiane.
+* Windows 7 client, Windows 10 (o 8.1) client, Windows 2016 server. Gli aggiornamenti per questi sistemi operativi gestiti da Microsoft sono rilasciati
+anche dopo la scoperta di una vulnerabilità, ormai diventata di pubblico dominio.
+Nel caso di Windows 7, gli aggiornamenti hanno permesso a questa versione di completare le comunicazioni criptate, andando a sfruttare a pieno il metodo di trasporto sicuro TLS 1.2.
+A fine giornata spegnere sempre il client, mentre nei server programmare una finestra di manutenzione, per installare gli aggiornamenti.
+
+* Mac OSX . Gli aggiornamenti per questo sistema operativo sono costantemente resi disponibili da Apple. Se a fine giornata il MAC viene spento
+e gli aggiornamenti sono installati, non si corrono particolari rischi.
+
+* Linux . Il mondo del sistema operativo pinguino offre varie distribuzioni, elenco quelle più aggiornate.
+--> Redhat 7/8 - se pagate la sottoscrizione alla licenza d'uso del sistema non correte rischi. Gli aggiornamenti sono disponibili in poche ore,
+dopo che una vunlnerabilità è stata rilasciata pubblica.
+--> Suse - la distribuzione fornisce tramite sottoscrizione l'aggiornamento dei pacchetti. Anche in questo caso, se frequentemente aggiornata si corrono pochi rischi.
+Vale la descrizione fatta per Redhat 7/8.
+--> Debian 9 - gli aggiornamenti sono gratuiti, e ben gestiti dalla comunità. Se uno di quest'ultimi è critico (pensiamo ad un CVE nel kernel)
+non è rilasciato in pochi giorni dalla comunità, è necessario agire manualmente nel sorgente. Il codice correzione in formato "diff", può essere cercato
+nei siti web come quelli riportati alla fonte esterna (03*6).
+
+
+Grazie all'aiuto del comando patch, possiamo prelevare la parte del sorgente kernel modificato ed applicare la correzione.
+$ cd /usr/src/linux-sorgenti-kernel-x.x
+$ patch -p1 < patch-xx-cve-xx.diff
+
+Quindi compilare il sorgente ed installare i nuovi file binari o l'immagine nuova del kernel.
+In definitiva una distribuzione utilizzabile nella maggior parte degli ambienti dove si trattano dati non sensibili.
+
+--> Fedora - vale la descrizione della distribuzione Debian.
+--> CentOS - vale la descrizione della distribuzione Debian.
+
+* Android - gli aggiornamenti sistema dipendono dal costruttore del dispositivo mobile, difficile stabilire con quale frequenza sono resi disponibili.
+Anche per esso vale il __principio che dopo la scoperta di una vulnerabilità, il gestore del software del telefono potrebbe rilasciare dopo pochi giorni
+un aggiornamento di sistema. Oppure in certi casi, gli aggiormaneti potrebbero essere disponibili ad un intervallo regolare (mensile).
+
+* iOS - se vogliamo considerare o valutare, questo sistema operativo per iPhone e iPad dal punto di vista di rischio incidenti di sicurezza,
+possiamo "stare" abbastanza tranquilli.
+
+Apple come per il sistema operativo di un computer MAC, cerca di rilasciare aggiornamenti in poche ore se la vulnerabilità è risultata abbastanza grave
+(ricordo il carattere indiano che se ricevuto via sms o email provocava un riavvio del sistema).Inoltre il sistema è progettato e aggiornato da un'unica fonte (Apple).
+che si occupa sia dello sviluppo software che di quello hardware.
+Potremmo valutare questo aspetto come un ulteriore garanzia. Il codice sorgente difficilmente sarà in mano a terzi che potrebbero studiarlo per rilevare possibili vulnerabilità.
+Ho scritto difficilmente, perchè prima o poi potrebbe verificarsi anche una leak, o avanzare una forzatura del sistema (jailbreak).
+
+Nota finale, mai da dimenticare: ogni computer al termine della giornata lavorativa, deve essere spento per favorire l'installazione degli aggiornamenti automatici.
+
+03e) Disegno rete
+
+La "piantina" della rete dell'impresa, che comprenderà aree locali, possibili reti DMZ, guest, VLAN dedicate, e i dispositivi router, firewall,
+possibili concentratori VPN, è un aspetto fondamentale. L'ispettore richiederà questo dato probabilmente il primo giorno, in modo da avere una
+visione nitida dei punti di pasaggio, in cui i dati possono essere raggiunti; nel caso è previsto l'accesso esterno verso l'organizzazione,
+oppure i nostri dati devono percorrere o essere posizionati reti esterne.
+Inoltre l'aspetto di rindondanza di alcune parti della struttura è richiesto e deve essere specificato nella piantina.
+Ad esempio, se uno scambio di informazioni avviene ventiquattro ore su veqntiquattro, tra un nostro server ed un servizio esterno
+(pensiamo ad un collegamento di pagamento), sarà necessario dimostrare la rindondanza che permette al collegamento di rimanere attivo.
+Un router con due linee distinte, doppio collegamento fibra oppure un collegamento con cavo fibra e un ponte radio.
+In caso di collegamento attraverso una sessione VPN (virtual private network), dovremo dimostrare di aver installato ed utilizzare due dispositivi
+(in genere firewall) che lavorano in modalità alta affidabilità (HA).
+In caso il primo firewall subisca un guasto, il secondo deve intervenire, mantenendo attivo il collegamento VPN.
+Stessa valutazione per le aree locali dove vi sono cicli di elabrazione o stocaggio di dati per ventiquattro ore.
+Apparati come switch che mantengono attive queste aree, dovranno essere configurati in modalità alta affidabilità (lato economico,
+quest'ultima soluzione richiede delle risorse a volte cospicue).
+
+03f) Telelavoro
+
+Ogni tipo di attività che viene eseguita fuori dall'ufficio, deve essere organizzata attraverso un dispositivo aziendale, da molte organizzazioni/imprese è scelto un portatile.
+Se l'utente necessiterà di effettuare un accesso (intendiamo nel dominio dell'impresa oppure anche in un solo server interno), dovremo fornire un accesso di tipo virtual
+private network (vpn).
+Ogni accesso VPN deve essere registrato, ad esempio nel software di raccolta log che il fornitore dell'apparato firewall ci ha gestito. E' probabile che l'ispettore, durante
+la fase di verifica pre-certificazione chiederà la verifica di questo dato.
+Se risulta complesso attivare il software di collegamento nel firewall perimetrale alla rete locale, è possibile installare software più economici
+(possibilmente configurati senza usare un algoritmo RSA) come OPENVPN in un server linux o windows presente nell'area LAN.
+
+03g) Regolamentare accesso alle caselle aziendali
+Anche l'accesso alle caselle aziendali da una postazione remota sottosterà ad un regolamento predisposto.
+Nel manuale generale saranno inoltre indicate tutte le regole riguardo l'uso della posta elettronica.
+Di seguito elencherò solo i punti più importanti, che richiedono a volte un cambiamento all'interno dell'organizzazione.
+
+- L'utilizzo della posta elettronica deve sempre rispettare i requisiti richiesti per la protezione dei dati personali.
+- La trasmissione via e-mail di dati sensibili può essere effettuata solo previa cifratura dei dati stessi.
+- Qualora sia necessario conservare copie elettroniche e/o cartacee delle e-mail per la documentazione delle operazioni effettuate, devono essere rispettate le regole dell’organizzazione relative alla archiviazione e conservazione dei documenti.
+- Non è consentito l’inoltro di e-mail dell’organizzazione alla propria casella elettronica privata.
+- In caso di assenza improvvisa o programmata del dipendente (es. per ferie o attività di lavoro fuori sede o altro motivo ancora) al fine di garantire la continuità lavorativa può rendersi necessario accedere alla casella di posta elettronica in uso al dipendente stesso per inviare e ricevere messaggi. Per tale finalità il lavoratore dovrà consentire al titolare o ad un altro lavoratore (fiduciario) di accedere alla sua casella di posta dell’organizzazione, verificare il contenuto di messaggi ed inoltrare al titolare (in caso l’accesso sia fatto da
+altro lavoratore) quelli ritenuti rilevanti per lo svolgimento dell'attività lavorativa.
+- L'utilizzo di un portale webmail dovrà essere consultato all'esterno dell'organizzazione, preferibilmente in modalità di sola lettura. Alcuni membri dell'organizzazione non saranno d'accordo su questo punto. E' bene spiegare il rischio che si corre se vengono caricati dati nel portale (i quali potrebbero ad insapunta contenere codice malevolo). Solo brevi risposte da un'email (come la conferma di un appuntamento) sono permessi.
+
+03h) Permessi per la condivisione dei dati interni all'impresa
+
+La maggiornanza delle organizzazioni è divisa per reparti, oppure se preferite, gruppi di lavoro.
+La normativa chiede di elencare i settori, descrivere le singole competenze, l'accesso a un determinato tipo di dati.
+Di seguito un esempio per rendere chiara la richiesta.
+Il reparto amministrativo potrebbe scambiare o leggere informazioni del reparto commerciale, che genera offerte e porta contratti firmati in sede.
+Supponiamo di aver applicato una regola di accesso nell'area di condivisione dati, la quale permette solo agli appartenenti del gruppo commerciale di accedere alla propria area. Di conseguenza il gruppo amministrativo dovrà trovare un altro modo per leggere il dato commerciale, oppure inviargli una tipologia di dato (un foglio elettronico di rendicontazione).
+Una possibilità per arginare questo ostacolo, è creare una cartella condivisa esterna alle due aree, in modo da scambiare i dati e cancellarli una volta spostati in un disco della propria area.
+Potrebbe verificarsi un discreto e fastidioso difetto con questa manovra; gli utenti dei diversi reparti, avendo solo a disposizione questa cartella per condividere le informazioni, potrebbero iniziare a copiare (dalla directory del loro gruppo), intere strutture di directory dati.
+Il ragionamento è abbastanza semplice, "io utente faccio parte del reparto A, e un mio collega del reparto B deve leggere un'istantanea di un progetto. Copierò l'intera directory".
+Il collega B dovrebbe spostare la directory e salvarla sul proprio hard-disk. Spesso questa azione non accade, le directory dei vari progetti o documenti, rimangono nello spazio condiviso. Lo spazio dell'area messa a disposizione inizia a diminuire, conosciamo tutti le conseguenze.
+Come risolvere?
+Se gli utenti (seppur a conoscenza dello spazio a disposizione che diminuisce) non riescono a gestire la directory condivisa, una soluzione è modificare la sezione dedicata alla separazione dei reparti nel general manual.
+Dovremo specificare che non esistono barriere di condivisione tra i gruppi di lavoro, distribuiti nella varie aree.
+La tabella dei gruppi sarà mantenuta, ma tecnicamente faranno parte di un asset molto ampio per quanto riguarda la condivisione dei dati.
+
+03i) Individuare amministratore/i di sistema
+
+Consiglio nel caso l'aiuto del responsabile privacy interno. Se si affronta la certificazione, dovrebbe già essere stata nominata questa figura, al fine che la figura/e,
+possano essere nominate.
+
+Riporto l'esempio del modolo di presa in carico, dove saranno elencate determinate attività assegnate per amministratore (possono essere differenti a seconda
+della tipologia di amministratore).
+
+NOMINA AD AMMINISTRATORE DI SISTEMA
+
+ai sensi del provvedimento del garante 27 novembre 2018 (G.U. N.300 del 24 dicembre 2008)
+
+															spettabile ____________________________
+																		(indirizzo organizzazione)
+
+Posto che con la definizione di "Amministratore di Sistema" si intendono figure professionali finalizzate alla gestione e
+alla manutenzione di un sistema di elaborazione o di sue componenti, il provvedimento del Garante del 27 novembre 2008
+"Misure e accorgimenti prescritti ai Titolari dei trattamenti effettuati cn strumenti elettronici relativamente alle
+attribuzioni delle funzioni di "Amministratore di sistema" (G.U. N.300 del 24 dicembre 2008) considera tali anche le
+figure equiparabili dal punto di vista dei rischi relativi alla protezione dei dati, quali gli amministratori di basi dati,
+gli amministratori di reti e di apparati di sicurezza e gli amministratori di sistemi software complessi.
+
+Gli Amministratori di Sistema, pertanto, nelle loro consuete attività, sono concretamente "responsabili" di specifiche
+fasi lavorative che possono comportare elevate criticità rispetto alla protezione dei dati (come nel caso di bacukp/recovery
+dei dati, organizzazione dei flussi di rete, gestione dei supporti di memorizzazione, manutenzione hardware e software, gestione
+dei profili e delle credenziali di autorizzazione).
+
+Con riferimento all'oggetto, pertanto, La informo che [__NOME__ORGANIZZAZIONE__], ha provveduto alla Sua nomina ad AMMINISTRATORE DI SISTEMA
+per le attività inerenti al trattamento dei dati personali, in considerazione dell'esperienza, della capacità e dell'affidabilità.
+
+Attività assegnate:
+(qui inseriremo le attività che l'amministratore dovrà svolgere)
+
+Lei è pertanto responsabile di tutte le operazioni connesse al trattamento dei dati personali come sopra indicato e relative
+alle attività dell'organizzazione e, accettando la nomina, si impegna a rispettare le istruzioni con essa impartite, secondo le
+disposizioni del Regoalemento UE 2016/679, nonchè si impegna a rispettare ogni altra istruzione che Le venisse successivamente
+data a modifica e/o integrazione di quelle di seguito indicate:
+
+- assicurare che i trattamenti dei dati personali da Lei svolti, nell'interesse e per conto dell'organizzazione, avvengano in modo
+lecito e secondo la correttezza, nel rispetto delle esigenze di legittimità, esattezza, aggiornamento, pertinenza, completezza,
+adeguatezza, conservazione;
+
+- censire, organizzare e aggiornare l'elenco delle banche dati esistenti di tipo elettronico, ubicate nelle strutture utilizzate;
+
+- gestire le operazioni per la creazione e gestione delle credenziali di autorizzazione e dei profili di accesso attribuite agli
+utenti;
+
+Inoltre, pur rimandando al regolamento interno per maggiori informazioni, Le viene richiesto, direttamente o con il supporto di
+altre funzioni dell'organizzazione, di:
+
+- assicurarsi che l'accesso alla rete, al sistema informativo e alle applicazioni esistenti, da parte di ogni utente, sia regolato
+tramite un processo di identificazione e autenticazione, verificando che l'identificazione e l'autenticazione siano effettuate
+prima che sia permesso l'accesso al sistema;
+- assicurarsi che tutti gli elaboratori presenti (workstation, server, ecc...) siano adeguatamente protetti con programmi antivirus
+aggiornati costantemente;
+- adottare e sollecitare ogni altra più ampia misura di sicurezza affinchè i dati personali oggetto di trattamento siano custoditi
+e controllati in relazione alle conoscenze acquisite, al progresso tecnico, alla natura dei dati e alle specifiche caratteristiche
+del trattamento, in modo da ridurre al minimo, mediante l'introduzione di idonee e preventive misure di sicurezza, i rischi di
+distruzione, perdita, anche accidentale, accesso non autorizzato, e trattamento non consentito e trattamento non conforme alle
+finalità di raccolta;
+- verificare, almeno una volta all'anno, l'efficacia delle misure di sicurezza adottate, relazionando di conseguenza il Titolare
+anche in merito ad eventuali necessità di intervento.
+
+[__NOME_ORGANIZZAZIONE__] potrà, anche attraverso persone appositamente incaricate o delegate, effettuare verifiche, ispezioni e controlli
+al fine di constatare la corretta esecuzione del presente incarico e delle istruzioni impartite, nonchè la corretta attuazione delle
+disposizioni di legge.
+
+In relazione a quanto sopra esposto, La preghiamo di voler restituire copia della presente nomina sottoscritta per ricevuta e accettuazione.
+
+Saluti.
+
+data, _________________________________
+
+
+			Per [__NOME_ORGANIZZAZIONE__]						L'Amministratore di Sistema
+																	per presa visione e accettazione
+
+			______________________________						________________________________
+					(titolare)
+
+
+03l) Creazione e revoca degli accesso utente
+
+Non possiamo che iniziare con una premessa per questo punto. All'interno dell'organizzazione dovrebbe essere operativo il gestore delle risorse
+umane. Ruolo che in molti casi è anche mantenuto dal responsabile dell'organizzazione.
+Scrivo questo perchè il Security Manger riceverà richieste di creazione, modifica o revoca permessi utenti da ruoli esterni al suo compito.
+Inoltre queste operazioni sugli utenti, sono spesso completate dall'amministratore di sistema, se il Security Manager non ha tutti i permessi
+per avviarle.
+La procedura da inserire nel General Manual (o da mantenere scritta ed operativa solo come riferimento se il nostro scopo non è ottenere la certificazione),
+è molto semplice. Essa ci permetterà anche di tracciare le operazioni sui tutti gli utenti operativi nell'organizzazione.
+
+ .-----------------------------------------------------.
+ | E' giunta richiesta tramite portale organizzativo   |
+ | di modificare o revocare permessi ad un utente o    |
+ |    fornitore. E' stata richiesta la revoca?         |
+ .-----------------------------------------------------.
+       | Sì |							| No |
+	   .----.							.----.
+		 |								  |
+	.--------------------------.	.--------------------.
+	| Cancellare il profilo,   |	| E' stata richiesta |
+	| dare conferma con        |	| la creazione di un |
+	| l'effettiva cancellazione|	| nuovo utente?		 |
+	|  della cancellazione **  |	.--------------------.
+	.--------------------------.		| Sì |	  | No |
+										.----.	  .----.
+										  |			|
+						/-----------------]			|
+						|							|
+			.------------------------------.	.--------------------------.
+			| Assegnare al nuovo utente    |	| L'utente è un fornitore  |
+			| i permessi dell'asset in     |	| o collaboratore esterno ?|
+			| cui è coinvolto (****).      |	.--------------------------.
+			| Dare conferma alla richiesta |	|   | Sì |		| No |
+			| pervenuta.                   |		.----.		.----.
+			.------------------------------.		  |			   |
+													  |			   |
+									------------------]		.-------------------------.
+									|						| Modificare i permessi   |
+						.------------------------------.	| come richiesto. Dare    |
+						| Assegnare o creare i 		   |	| conferma alla richiesta |
+						| permessi richiesti.		   |	| pervenuta.              |
+						| Dare conferma alla richiesta |	.-------------------------.
+						| pervenuta. ***               |
+						.------------------------------.
+
+(**) Inserisco un'ulteriore descrizione, nel prossimo punto 03q vi sono altri passaggi da attuare quando è richiesta
+la cancelllazione dell'utente (come impostazione auto-risponditore per la casella email da disattivare).
+
+(***) Ulteriore descrizione che completa la procedura. Il fornitore o utente esterno richiedente accessp ai dati,
+dovrà essere prima valutato dal Security Manager. Consultare già il punto 07b della guida in caso vogliate completare con maggiore
+descrizione, questa procedura di creazione e revoca.
+
+(****) nella maggior parte dei casi è richiesto anche l'inserimento di un dispositivo (computer, telefono smartphone). Maggiori
+informazioni sono descritte nel punto 03a.
+
+03m) Blocco terminali
+
+Può sembra un semplice livello di sicurezza, a volte è tralasciato o ignorato nelle organizzazioni.
+Ogni utente dovrebbe quando si allontana dalla propria postazione, bloccare con la combinazione di tasti CTRL+ALT+CANC il proprio computer.
+Spesso ci allontaniamo dalla postazione lasciando il computer sprotetto, e chinque potrebbe utilizzarlo.
+Un aiuto, per ridurre il rischio di intrusione, sarà lo screen saver. Dopo massimo tre minuti (consiglio anche un tempo inferiore) di inattività del computer,
+verrà azionato bloccando la postazione. L'amministratore di rete, può facilmente impostare e distribuire questa politica, su tutti i computer dell'organizzazione.
+Mentre per i telefoni cellulari (smartphone e non), dovrà essere impostato un blocco a livello PIN numerico. La tecnologia di oggi giorno permette anche di
+impostare lo sblocco via impronta digitale.
+Il Securiy Manager dovrà verificare con controlli a campione, che il codice PIN a livello controllo numerico sia presente.
+
+
+03o) Gestione password
+Un punto abbastanza semplice che ci permetterà di essere conforme alla normativa.
+Riporto una serie domande e risposte.
+
+*) Perchè è importante modificare la password del proprio utente di accesso alla rete aziendale o altro tipo di risorse?
+Non esiste la certezza che la password usata e qualche volta anche salvata nei dispositivi di uso risorse, non verrà mai letta da ignoti. Programmi offensivi sono costruiti appositamente per trovare password, digitate o mantenute nei computer o cellulari di nuova generazione.
+
+*) Come porre rimedio a questo problema?
+E' sufficiente modificare con una regolare cadenza la password del proprio utente, oppure attendere la richiesta automatica di cambio password (proposta dal dominio di rete organizzazione).
+Rendere la vita difficile ai programmi è un modo per proteggere la nostra corrispondenza, il cambio password fatto almeno una volta ogni sei mesi è l’inizio per difendere la nostra privacy.
+
+*) Come posso scegliere la composizione alfanumerica della password?
+Per la scelta delle password è necessario seguire questo decalogo:
+
+– la lunghezza deve essere di almeno 8 caratteri alfanumerici; deve essere aggiornata ogni 180 giorni, e sarà diversa da quella scaduta. La nuova password deve essere diversa dalle 4 precedenti
+
+– i suoi primi 3 caratteri devono essere diversi rispetto ai corrispondenti caratteri della password scaduta e così per i secondi e gli ultimi tre caratteri consecutivi
+
+– le password devono essere facili da ricordare ma difficili da ipotizzare
+
+– la password non deve essere uguale al cognome e nome; non è consentita la ripetizione di caratteri nella password, cioè non sono consentite le doppie
+
+– la password non può essere uguale al nome della casella email, né può essere uguale ai primi quattro caratteri della casella
+
+– le password non devono consistere in stringhe di caratteri ripetute (ad esempio, a1111111, 1aaaaaaa)
+
+– le password non devono essere costruite con numeri o caratteri in sequenza (ad esempio, 12345678)
+
+– non si può utilizzare una password con i seguenti caratteri:
+		TITO, ESTE, PERS, CRA, RETE, MARZ, APRI, GIUG, LUGL, AGOS, NOVE, DICE, TEST, OPER, ROMA, MILA, FIRE, PALE, BOLO, 1234, IBM, ICR, FILI, DIV, SERV, ACHI, BANC
+
+– le password non devono contenere chiavi o parole comunemente utilizzate (ad esempio, PASSWORD1, o parole trovate in un dizionario con o senza valori numerici)
+
+– le password non devono essere costruite utilizzando nomi, acronimi comuni, iniziali, date di compleanni, nomi di calendario o mesi, numeri telefonici o qualsiasi altra informazione facilmente associabile al nome della casella email
+
+Queste regole sopra descritte dovranno essere inserite nel sistema che si occupa di gestire le autenticazioni per l'organizzazione. Sistemi operativi come Windows e Linux (tramite
+il gestore PAM) hanno già funzioni interne che è possibile abilitare per rispettare le regole/pratiche sopra descritte.
+
+03p) Separazione ambiente di sviluppo, test e produzione
+
+Ultimo punto preliminatre, che a mio parere richiede non solo un sforzo tecnico ma anche uno educativo, se non è ancora stato preso in considerazione. Se all'interno dell'organizzazione si svilupppano i software che gestiranno i dati descritti negli asset, dovremo rispettare una scaletta simile a questa.
+(*) Il programmatore riceve dal projet manager la commessa per iniziare a scrivere un software. L'avvio dello sviluppo dovrà avvenire in un ambiente di sviluppo appositamento predisposto. Disegno due possibilità, un server dedicato con i programmi di compilazione o interpretazione installati.
+La seconda, il programmatore userà gli strumenti di compilazione, interpretazione direttamente nel suo computer.
+Qual'è il punto in cui dobbiamo fare attenzione per entrambe le scelte? I dati salvati a fine giornata dovranno essere prelevati dai nostri programmi di backup e archiviati. Per farla breve, l'agente di backup deve entrare per il prelievo dati dati, nel computer del programmatore o nel server di sviluppo codice.
+(*) Il software è stato scritto, deve essere testato, probabilmente da altro personale dell'organizzazione oppure anche dal cliente che potrebbe averlo commissionato. Per avviare il test abbiamo predisposto un server dedicato al test. Sì avbete letto bene, non abbiamo altra possibilità. Non possiamo installare l'ambiente di test nel computer del programmatore.
+(*) Il software è stato testato, in accordo con il project manager che ha avvisato il cliente o il dipartimento interno all'organizzazione, possiamo concludere quest'ultima fase con il rilascio del software. Se con questa fase si chiude anche il progetto di sviluppo (escludiamo per ora sistemazione o presa in carico di possibili bug), il codice dall'ambiente locale e di test dovrà essere tassativamente cancellato. La figura del Security Manager deve appurare che la cancellazione dei dati avvenga, tramite controlli a campione nello spazio di test. Nell'ambiente locale, è consigliabile chiedere al programmatore di mostrare il contenuto della directory codice, al fine di rilevare possibile materiale ormai dimenticato.
+
+La procedura completa con le varie opzioni scelte, deve essere descritta in un documento e condivisa con tutto il personale di programmazione. Il possibile consulente che ci aiuterà nel percorso di certificazione, ci consiglierà di includere la procedura nel documento "General Manual".
+
+03q) Cancellazione dati
+La gestione dei dati ormai non più utilizzati oppure legati ad una figura (utente interno, cliente, fornitore, socio) non più collaborante con l'organizzazione, dovranno essere distrutti.
+Scrivo distrutti perchè non basta cancellare questi dati (anche se si trattasse di materiale cartaceo).
+I dati dovranno prima essere sovrascritti con un procedimento apposito, shredring (coprire il contenuto di un file con dati casuali, e poi cancellarlo).
+I programmi che si usano per azionarlo si possono ormai trovate per tutti i sistemi operativi. Molti di questi programmi possono essere facilmente integrati anche con le procedure automatiche già scritte per la cancellazione dei dati.
+Consiglio di descrivere nel general manual una procedura che descriva la cancellazione del tipo di dato. Tenendo in considerazione la tabella del punto 04#T (successivo capitolo),
+è facile suddividere o creare diverse procedure di cancellazione a seconda della categoria del dato.
+
+Mentre se l'organizzazione offre servizi disponibili tramite una rete di accesso (quasi sempre accessibili con un metodo predefinito di autenticazione),
+è consigliabile scrivere procedure di verifica, mirate a segnalare possibili dati considerati dismessi, ma ancora presenti nelle aree dell'organizzazione.
+Se i dati venissero trovati, il responsabile o l'operatore del reparto, dovrà procedere alla cancellazione e tracciare l'evento (in un apposito registro elettronico o cartaceo).
+Fondamentale è capire e prevenire queste situazioni. Probabilmente la prima procedura di cancellazione potrebbe funzionare parzialmente in alcuni casi, e per vari motivi,
+non essere in grado di cancellare il dato.
+
+Riassumo il caso in una breve procedura,
+
+ +-----------------------------------------------+
+ | Richiesta di cancellazione, avvio distruzione |
+ +-----------------------------------------------+
+						|
+						|
+ +----------------------[-------------+
+ | Il dato non può essere cancellato, |
+ | probabile processo fermo che lo    |
+ |        mantiene bloccato?          |
+ +------------------------------------+
+     | Sì |					| No |
+	 +----+					+----+
+	   |					  |			+--------------------------+
+	   |					  [-------->| la procedura è terminata |
+	   |								+--------------------------+
+	+-------------------------------+
+	| Segnalazione all'operatore    |
+	| Intervento manuale.           |
+	| La notifica è stata ignorata? |
+	+-------------------------------+
+		| Sì |			| No |
+		+----+			+----+
+		  | 			  | 			+--------------------------+
+		  |				  [------------>| la procedura è terminata |
+		  |								+--------------------------+
+		+-[--------------------------+
+		| Lo script di controllo     |
+		| reinvierà una notifica     |
+		| di presenza dati segnalati |
+		| come inattivi              |
+		+----------------------------+
+
+* Cancellazione o revoca accesso utente
+L'utente che ha lasciato l'organizzazione (sia esso come dipendente, o fornitore), il suo profilo e i relativi accessi dovranno essere rimossi il prima possibile.
+Anche in questo caso è consigliabile scrivere una procedura che descriva i passaggi eseguiti dall'amministratore di sistema, dopo che il responsabile delle risorse umane
+avrà confermato l'uscita (amministrativa) dell'utente.
+Se l'utente utilizzava una casella di posta, essa dovrà essere chiusa, e un processo simile ad un auto-risponditore, dovrà avviare il possibile mittente, a quale
+casella sostitutiva è necessario scrivere.
+
+---)
+
+
+04) Registrazioni e accesso ai log di sistemi operativi (WIP)
+
+Questo punto potrebbe anche rientrare nelle azioni pratiche descritte nell'intero passaggio 03. E' preferibile che tutti i sistemi operativi nell'organizzazione siano stati inventariati, ed aggiornati. Sapremo quindi il numero esatto di sistemi utilizzati, e in quali dovremo attivare la registrazione dell'accesso ad essi.
+L'accesso ad un sistema dell'organizzazione verrà salvato in uno spazio di memoria predisposto per mantenere il dato inalterato. Troviamo in commercio diversi software o soluzioni dedicate [sistemi pronti per utilizzare intere aree di allocazione dati (come le network area storage)] progettati unicamente per mantenere un dato inalterato, e ricercarlo quando necessario.
+Alla nota 04*1 potete trovare alcune delle soluzioni sopra descritte.
+Per un maggior dettaglio degli eventi che dovremo registrare nello spazio inalterabile, riporto un estratto dal manuale operativo ISO 27001.
+
+-- Estratto manuale ISO --
+La registrazione dei log degli eventi, delle attività degli utenti, delle eccezioni, dei malfunzionamenti e degli eventi relativi alla sicurezza delle informazioni dovrebbe essere effettuata, mantenuta e riesaminata periodicamente.
+Guida attuativa
+i log degli eventi dovrebbero includere, quando pertinente:
+a) le user ID;
+b) le attività di sistema;
+c) la data, l'ora e i dettagli degli eventi principali, per esempio log-on e log-off;
+d) l'identità del dispositivoo la sede, se possibile, e l'identificativo del sistema;
+e) le registrazioni degli accessi riusciti a falliti del sistema;
+f) le registrazioni degli accessi riusciti a falliti ai dati, ed ad altre risorse;
+g) i cambiamenti alla configurazioni di sistema;
+h) l'uso di privilegi;
+i) l'uso di utilità di sistema e delle applicazioni;
+j) i file acceduti e il tipo di accesso;
+k) gli indirizzi di rete e i protocolli;
+l) gli allarmi prodotti dal sistema di controllo degli accessi;
+m) l'attivazione e la disattivazione dei sistemi di protezione, quali gli antivirus e per le individuazioni di intrusioni;
+n) le registrazioni delle transazioni applicative, effettuate dagli utenti;
+-- FINE Estratto manuale ISO --
+
+Per quanto tempo dovremo mantenere i dati raccolti con le informazioni di accesso?
+Dipende dal tipo di dato che l'operatore può visionare o trattare, effettuando l'accesso. Mostrerò questa tabella, rende un'idea dei tempi di stoccaggio.
+
+Tabella 04#T
++------------------------------------------------------------------------------------------------+----------+
+| Dato di dominio pubblico (nessun danno economico/immagine se trafugati)                        | 2   anni |
++------------------------------------------------------------------------------------------------+----------+
+| Dato di dominio pubblico (danni economici o d'immagini se trafugati o persi)                   | 2/3 anni |
++------------------------------------------------------------------------------------------------+----------+
+| Dato sensibile (abbiamo sottoscritto un contratto con un pubblica amministrazione/ente statale)| 4/5 anni |
++------------------------------------------------------------------------------------------------+----------+
+| Dato sensibile legato a persona fisiche                                                        | 5   anni |
++------------------------------------------------------------------------------------------------+----------+
+
+Ricordo che solo il consulente può conferma il numero di anni per determinati dati salvati.
+
+05) Procedure di emergenza
+
+Ho inserito in questo capitolo le procedure base richieste dalla normativa. Consiglio di scriverle mantenendo uno stile di diagramma di flusso, semplificandole, in quanto dovranno essere lette da tutti i dipendenti.
+Gli stessi collaboratori dovranno tenerle presente, ovvero in caso di necessità dovranno sapere dove si trovano, nel nostro manuale generale.
+
+ *-----------------------------------------------------------------*
+ |  E' stata consegnata un'email che chiede un riscatto in denaro. |
+ |                  Conosciamo il mittente?                        |
+ *-----------------------------------------------------------------*
+       | Sì |                | No |
+       +----+                +----+
+          |                    |
+          |__+-----+           |
+             | ecc.|           |
+             +-----+        +--[-----+
+                            | azione |
+                            +--------+
+
+Elencherò alcune di queste possibili procedure, 
+
+- dati danneggiati
+--> durante un'attività di aggiornamento di sistema operativo, o aggiornamento applicazione, abbiamo involontariamente perso dei dati. In questo caso l'utente che ha avviato la procedura
+e ha rilevato la perdita di dati, dovrà aprire una segnalazione all'amministratore di sistema, e se lo riteniamo necessario, anche al security manager.
+L'amministratore dovrà quindi dare il via al ripristino dei dati persi, e descrivere possibili problemi riscontrati durante la fase di recupero dati. 
+
+- incendio
+--> evento raro in ufficio, nella mia esperienza l'ho visto accedere per via di un corto circuito solo una volta in venti anni di lavoro.
+Dopo questo evento, il collaboratore dell'organizzazione quando tornerò al proprio posto di lavoro, dovrà elencare le apparecchiature danneggiate.
+Ad esempio il proprio computer, dischi o chiavette rimovibili. E' intenso, questi dispositivi sono stati preventivamente criptati dagli amministratori di sistema,
+anche se persi durante l'incendio, il rischio che un intruso possa aver accesso ai dati contenuti è molto basso.
+Se queste apparecchiature (o parti di esse, come un disco interno) sono in uno degli stati sopra descritti, la procedura descriverà come aprire all'interno dell'organizzazione la segnalazione.
+
+- furto/perdita accidentale
+--> evento che può verificarsi con maggior probabilità. Ipotizziamo una situazione come l'aver lasciato in automobile, con le porte chiuse, un computer portatile o un altro dispositivo di memorizzazione dell'organizzazione. L'automobile viene rubata, oppure lo stesso computer viene trafugato. La procedura è molto semplice, l'utente dovrà aprire una richiesta dal nostro portale interno (ticket o altro strumento che crei un evento tracciabile).Il security manager verrà avvisato in modo da valutare gli asset presenti nel dispositivo perso, quindi intervenire. Mentre gli amministratori di sistema, anche loro avvisati, potranno procedere al ripristino del dispositivo tramite un muletto o nuovo strumento.
+
+- email richiesta riscatto
+--> Questo evento potrebbe risultare medio raro. Negli ultimi anni organizzazioni criminali hanno costruito cavalli di troia ad orologeria, chiamati comunemente cryptolocker.Ad una certa data vengono attivati e codificano ogni dato presente nelle cartelle documenti dell'utente, ed inoltre possono oltrepassarle, arrivando anche ad intaccare i file presenti nei dischi di rete condivisi.
+Dopo queste operazioni poco convenzionali, i soliti ignoti potrebbero inviare un'email all'utente preso di mira, chiedendo un pagamento di denaro con una valuta digitale. Altrimenti, nel computer dell'utente potrebbe appararire un avviso a pieno schermo.
+Tralasciando questa possibile azione di codifica file, l'utente bersagliato potrebbe ricevere un'email con istruzioni per inviare dei dati presenti nell'organizzazione, su ____forzatura di minaccia.
+Qualuche sia la richiesta o il danno precedentemente arrecato dall'ignoto, dovreste descrivere una procedura di contatto. L'utente dovrà descrivere quello che è successo, tramite uno strumento di tracciatura (ticket per esempio), il quale avvisi direttamente gli amministratori di sistema ed il security manager. L'utente dovrà attendere una risposta.Il computer dell'utente sottoposto a ricatto potrebbe essere inutilizzabile (vedi l'esempio di cryptolocker), è consigliabile scrivere nella procedura di staccare il cavo di rete da questo apparecchio, non utilizzarlo ed utilizzare un altro terminale per l'avvio della procedura.
+
+- diffusione involontaria dei dati
+--> Evento la cui probabilità di manifestarsi è alta. Un errore umano potrebbe agevolare l'utente (senza volerlo) a pubblicare dei dati che risultano privati, e non possono ancora essere divulgati. Ad esempio un catalogo non ancora stampato, che può essere pubblicato in anteprima con la modalità digitale.
+Configurazioni troppo permissive in un servizio web, facilitano i motori di ricerca a leggere il contenuto di una o più directory (mancanza di una direttiva index). Contenuti che avrebbero dovuto rimanere riservati, diventano pubblici. Il cliente potrebbe subire un danno di immagine, il quale si rifletterà sull'organizzazione.
+Un altro esempio potrebbe essere la spedizione di dati riservati come credenziali ad utenti non pertinenti alla sorgente di richiesta.
+La procedura dovrà comunicare all'utente che si è accorto dell'errata divulgazione dati, di aprire una richiesta tracciabile, i modo che il securiy manager dell'organizzazione possa intervenire.
+
+- procedura monitor risorse
+--> Anche in questo caso, non sarà raro che la procedura debba essere utilizzata. Ogni sistema operativo dell'organizzazione dovrà essere controllato attraverso processi monitor.
+Vengono quindi verificati i valori di consumo RAM, calcolo CPU, spazio libero nelle partizioni, ed altri livelli da sorvegliare.
+All'arrivo di una segnalazione (tramite email per esempio), sarà necessario valutare se si è verificata anche un'anomalia nel sistema operativo dettagliato. Risolta l'anomalia è consigliabile verificare se siamo di fronte ad un esaurimento di una risorsa, e nel caso predisporre un ampliamento.
+
+- richiesta installazione nuovo software da parte di un membro dell'organizzazione
+--> Una delle procedure che saranno molto utilizzate. I membri o dipendenti dovranno abituarsi ad utilizzarla. La normativa prevede che nessun utente di un dispositivo possa installare in autonomia un software. Dovrà quindi seguire la procedura, chiedere all'amministratore i permessi per installare il software (se già conosciuto), oppure la valutazione di quest'ultimo se non catalogato nell'inventario software dell'organizzazione.
+L'amministratore dovrà richiedere o cercare delle informazioni, come ad esempio l'autore del programma, se vi sono collegamenti a risorse esterne rispettto l'organizzazione (se sì sarà necessario documentare anche le regole firewall). Ad esempio, programmi di profilazione dati possono prelevare delle fonti dai server messi a disposizione dalla sofotware house costruttrice. E' necessario controllare che i dati di proprietà dell'organizzazione inseriti nel software, per essere elaborati, vengano inviati in qualche modo alle risorse della software house.
+Per questo motivo, l'amministratore di sistema dovrà conoscere in maniera accurata i programmi richiesti, e nel caso prendere contatto con i fornitori del software, al fine di chiarire ogni aspetto riguardo la sicurezza richiesta dalla normativa.
+
+- procedura di rilevazione Data Breach
+Se mantenete dati di terze parti nei vostri archivi digitali, come dati personali, il consulente dovrà aiutarvi nel stendere quest'ultima procedura.
+
+Scopo della procedura è quello di definire le modalità e le responsabilità per il corretto adempimento dell’obbligo di notifica al Garante
+privacy ed eventuale comunicazione agli interessati di violazioni di dati personali.
+Le prescrizioni contenute nella presente procedura discendono da normative cogenti, decreti, linee guida, provvedimenti, considerati applicabili
+all’Organizzazione al fine di assicurare piena conformità del Sistema di gestione privacy alle stesse.
+La presente procedura si applica in presenza di una violazione di dati personali ovvero qualora si verifichi (sia in maniera accidentale che illecita) la
+distruzione, la perdita, la modifica, la divulgazione non autorizzata o l’accesso ai dati personali trasmessi, conservati o comunque trattati.
+
+La procedura continua poi con queste fasi.
+* Scoperta della violazione,
+* Qualificazione,
+* Valutazione (vi sono tre ipotesi, che sintetizziamo dopo l'elenco di queste fasi)
+* Notifica (e relativa comunicazione) oppure Archiviazione
+
+- Schema di sintesi -
+
+Ipotesi 1, il rischio per le libertà e i diritti delle persone fisiche non è elevato
+Ipotesi 2, il rischio per le libertà e i diritti delle persone fisiche è probabile ma non elevato.
+			richiesta azione di notifica al Garante della Privacy, in almeno 72 ore di tempo.
+			elencare nella richiesta la descrizione della violazione dei dati, probabile conseguenze della violazione dei dati, eventuali misure attuate dal titolare per porre rimedio.
+Ipotesi 3, il rischio per le libertà e i diritti delle persone fisiche è probabile ed elevato
+			richiesta azione di notifica al Garante della Privacy, in almeno 72 ore di tempo.
+			elencare nella richiesta la descrizione della violazione dei dati, probabile conseguenze della violazione dei dati, eventuali misure attuate dal titolare per porre rimedio.
+			richiesta azione di comunicazione a nomi e recapiti e alla figura del DPO (o altro punto rilevante del contatto)
+
+La procedura data-breach dovrà riportare nome e cognome, della persona che avrà contatto con le autorità.
+
+06) Backup e ripristini
+
+Il salvataggio dei dati trattati per un certo periodo, oppure banche dati utilizzate per la semplice lettura vengono salvati con software dedicati, oppure procedure interne.
+Pensiamo al salvataggio di una macchina virtuale tramite un procedimento snapshot, un agente di backup, opure semplicemente una procedura con lo strumento xcopy o mysqldump (per i database).
+Ebbene questi procedimenti avviati spesso nelle ore notturne o nell'arco della giornata (dove il rischio di perdita dati e ore lavoro è alto), non basta verificare il loro avvio e termine operativo.
+Dobbiamo a seconda del numero di procedure e tipologia di dati che dovranno essere disponibili in caso di disastri o perdite (quindi l'avvio di un ripristino), programmare un procedimento di verifica dei dati salvati.
+Il mio consiglio è quello di programmare il controllo a livello giornaliero, dal lunedì al venerdì, e se possibile alternare il personale che effettuerà la verifica.
+Anche se la base dati da verificare è minima (ad esempio, un set di backup di un solo server gestionale), il controllo nei giorni lavorativi ci permetterà di ridurre il rischio
+di una possibile perdita di informazioni, anche di un solo giorno di inserimento.
+Diverso è per quelle organizzazioni che si occupano di più salvataggi di set di dati, soprattutto per conto terzi. Spesso in queste realtà organizzative, la natura e la tipologia
+del dato da salvare è molto varia. Il personale di controllo dovrà essere istruito per la verifica di ogni informazioni salvata; ad esempio, come verificare se un database
+è stato estratto nel suo formato di salvataggio in modalità completa.Spesso le estrazioni dedicate al backup sono avviate, ma per una serie di interventi interni al database,
+non riescono ad essere terminate.
+Riporto l'esempio di una procedura VIEW o ROUTINE del database MYSQL con un problema, per giunta creata prima di fine giornata lavorativa, e lasciata in uno stato che interromperà
+quasi certamente l'estrazione dati per il procedimento di backup.
+Il numero di controlli da eseguire, deve essere sufficiente per giorno a completare la verifica di tutti i backup in una settimana.
+Se il set completo di tutti i nostri processi backup è pari a settanta, dovremo eseguire quattordici controlli al giorno.
+Il personale inoltre deve seguire una regola molto imporante. Se in un determintato giorno lavorativo viene a mancare l'addetto al controllo
+(pensiamo ad una malattia o permesso straordinari), deve essere predisposto un concetto di verifica da parte di altro personale per la nostra procedura di verifica backup.
+Il personale deve essere quindi istruito a preparato ad affrontare situazioni di assenza, al fine di fare il possibile per mantenere attiva nel possibile,
+la procedura di controllo giornaliera.
+La procedura deve essere quindi trascritta, e resa disponibile per essere consultata in uno o più aspetti (di rischio o controllo del tipo di dato) come quelli sopra descritti.
+Riporto alcune domande fondamentali che dovranno essere presenti nella procedura:
+- il backup contiene dati trascritti nelle ultime quarantotto ore in una delle cartelle da verificare?
+- il file di backup del database contiene la conferma di fine estrazione del dato?
+- in caso di backup fallito, è stato tracciato il caso, per ripetere il controllo il prossimo giorno lavorativo?
+
+- Prove documentate del ripristino di sistemi operativi
+Descriverò ora la parte del ripristino del dato. 
+Voglio prima fare una premessa. Certi tipi di situazioni lavorative e non, inducono ad utilizzare un sistema operativo e una serie di applicazioni anche per oltre cinque, sei anni.
+Ci si può imbattere in situazioni in cui il dato deve essere ripristinato dopo questo periodo ipotetico, su nuovi sistemi operativi o motori database aggiornati.
+Ricordo il database MYSQL, disponibile in distribuzioni Linux fino a pochi anni fa con pacchetti contenenti la versione di Oracle, e poi sostituiti con quelli dell'organizzazione MariaDB.
+Le procedure programmate permettono di ridurre il rischio di trovarci bloccati, durante la fase di ripristino dati.
+Per questo motivo l'ispettore chiederà nei primi audit, documenti che traccino il test di ripristino dati. Potremmo in questo test trovare delle problematiche nell'importare dati da una versione database ad una più recente. Dovremo quindi correggere le tabelle, o i programmi di importazione. Saremo in caso di necessità, pronti a ripristinare i dati di qualsiasi natura, presenti nelle nostre aree di stoccaggio senza particolari problemi (attenendoci così, ai tempi di ripristino elencati nel documento SLA, punto 14).
+Per ogni procedura di ripristino è consigliabile documentare l'orario di partenza e fine, includendo i log di estriazione dati. Ad esempio, se copieremo dati presenti nelle aree di storage, dovremo salvare tutto l'elenco. Se preleveremo un intero estratto di uno o più database, dovremo stampare tutte le operazioni per poi raccoglierle in un file di testo da conservare.
+Riporto un esempio per Mysql/MariaDB:
+
+$ mysql --password=cccccc -u utente --force nome_database < nome_dump_database.sql
+
+L'ispettore chiederà poi ogni dato log salvato, durante le session di audit certificazione.
+
+07) Formazione security manager (WIP)
+
+La figura del Security Manager è in costante aggiornamenti, in termini di nozioni di sicurezza, e di eventi che si verificano nel mondo dei sistemi operativi, e dei servizi erogati dall'organizzazione. Non accennerò dei possibili corsi offerti da aziende del settore, basta cercare nei motori di ricerca parole come "corsi sicurezza informatica", e potete trovare varie possibilità.
+Elencherò solo profili e aree di sicurezza informatica, costantemente aggiornate. Gli ispettori della normativa chiederanno quali portali e fonti vengono periodicamenti consultati dal Security Manger. 
+I certificatori chiederanno in che modo e da quali fonti esterne, il Secury Manager riceve aggiornamenti,
+Li trovate nelle note finali, al punto (07*1).
+
+07a) Formazione per il personale
+
+Il personale dell'organizzazione potrebbe non essere felice di seguire i punti richiesta dalla normativa. Immaginiamoci se venisse poi chiesto di seguire un corso di introduzione alla stessa normativa. Per tenere alto il morale, consiglio di presentare l'inroduzione dei termini 27001, asset, nuove regole e procedure tramite fogli di presentazione, diversi per ciascun reparto.
+Ad esempio, nell'introduzione alla norma includeremo con brevi frasi i punti più importanti, con disegni o icone (perchè anche divertenti) che possono aiutare il personale a ricordarsi di un particolare passaggio o termine.
+Il mio consiglio è di includere cenni alla normativa GDPR europea, e la norma inglese (________) per sottolineare l'impegno di paesi vicini all'Italia ma anche extra europei per la mantenere una buona sicurezza nella gestione dei dati. 
+Nell'organizzazione esistono poi reparti che trattano tipi di dati diversi tra loro. Una figura amministrativa può trattare banche dati come una figura commerciale. La stessa amministrativa al contrario, non tratterà il dato codice del reparto programmatori. Per questo motivo i fogli di presenazione devono essere quasi sempre differenziati, includendo termini e disegni diversi per reparto. Il personale ne trarrà vantaggio e si sentirà ascoltato allo stesso tempo, troverà nel Security Manager la figura di riferimento di fronte ad una scelta legata alla tema sicurezza di un asset.
+Altro aspetto da evidenziare durante la formazione, è il concetto di protezione, continuità di erogazione del dato. Il personale deve saper fin da subito che saranno anche loro attori, di questo concetto.
+ 
+07b) Estendere regolamento anche ad esterni fornitori o collaboratori (WIP)
+
+Fornitori e collaboratori a tempo determinanto e non, che dovranno operare all'interno della rete interna dell'organizzazione, dovranno compilare
+un questionario precompilato. Ecco qui sotto riportate, un esempio di domande alle quali il collaboratore esterno, dovrà fornirci
+le rispote.
+
+Elenco requisiti base
+--> Esiste un inventario degli assett informativi e delle tecnologie impiegate (sì/no)
+--> Sono utilizzati PC fissi (sì/no)
+--> Numero computer fissi (indicare numero)
+--> Sono utilizzati PC portatili (se sì, il numero)
+--> I computer sono collegati in rete (sì/no)
+--> E' presente un server (sì/no)
+--> Presenza di gruppi continuità (sì/no)
+--> Presenza di firewall (indicare la marca/modello)
+--> Presenza di router (se sì, il modello)
+--> Presenza di antivirus (se sì, nome e versione)
+--> L'antivirus è installato su tutti i PC fissi e portatili (sì/no)
+--> L'antivirus è installato su tutti i dispositivi smartphone e tablet (sì/no)
+--> Frequenza di aggiornamento antivirus (indicare se giornaliera)
+--> Il sistema operativo viene costantemente aggiornato (sì/no)
+--> E' presente un filtro antispam per le email (sì/no)
+--> E' presente una procedura per la segnalazione degli eventi sospetti (sì/no)
+--> Presenza di applicativi installati in un server (sì/no)
+--> Tutti i programmi provenienti dall'esterno o scaricati su internet sono preventivamente controllati (sì/no)
+--> E' presente un documento interno per il divieto di installare applicativi che non vengono controllati prima da un responsabile IT. (sì/no)
+--> E' presente un sistema automatico o manuale per il blocco delle estensioni. (sì/no)
+--> Presenza di una password all'accensione del computer (sì/no)
+--> Presenza di una password nello screensaver (sì/no)
+--> Durata della password (indicare il numero di giorni, 180, 90)
+--> Sono presenti profili di autorizzazione ed accesso differenziati in base al ruolo ricoperto da ciascuno (sì/no)
+--> I profili di autorizzazione vengono aggiornati in caso di cambio mansioni (sì/no)
+--> Backup
+----> presenza di backup effettuato a cadenza (sì/no)
+----> tipo di supporto in cui viene registrato il backup (indicare il supporto, se nastro, spazio esterno. Nota bene: se utilizzato il supporto nastro,
+		è richiesto il revault dei nastri una volta all'anno come minimo. I dati già salvati nei nastri, devono essere riscritti in nastri nuovi almeno una volta all'anno).
+----> luogo di conservazione del backup (indicare il luogo) (nota per la nostra organizzazione, è preferibile che sia esterno al luogo dell'organizzazione del fornitore)
+----> esiste un soggetto responsabile dell'effettuazione del backup e del controllo della loro regolarità (sì/no)
+----> viene effettuata la procedura di ripristino dei dati per verificare la disponibilità ed efficacia (sì/no)
+--> E' stato individuato un amministratore di sistema esterno/interno (sì/no)
+--> E' stata effettuata la nomina ad amministratore di sistema formale e ne è presente copia controfirmata. (sì/no)
+Tale nomina reca l'elencazione analitica degli ambiti di operatività consentiti in base al profilo di autorizzazione assegnato
+--> Viene periodicamente confermata la nomina ad amministratore di sistema in virtu' del possesso di requisiti di professionalita' e competenza (sì/no)
+--> Viene effettuato un audit periodico sulle attivita' svolte dall'amministratore di sistema e sulla registrazione dei log (sì/no)
+--> Sono adottati sistemi idonei alla registrazione degli accessi logici (autenticazione informatica) ai sistemi di elaborazione
+	e agli archivi elettronici da parte degli amministratori di sistema (sì/no)
+--> Le registrazioni (access log) hanno caratteristiche di completezza, inalterabilità e possibilità di verifica della loro integrità adeguate al
+	raggiungimento dello scopo di verifica per cui sono richieste (sì/no)
+--> Le registrazioni comprendono i riferimenti temporali e la descrizione dell'evento che le ha generate e sono conservate per un congruo periodo, non inferiore a sei mesi (sì/no)
+--> Relativamente all'obbligo di registrazione degli accessi logici degli Amministratori di sistema, sono compresi anche i sistemi client oltre che quelli server (sì/no)
+--> Eventi critici
+----> Sono accaduti nel corso dell'anno trascorso alcuni eventi critici dal punto di vista del sistema informatico tra quelli sotto indicati (malfunzionamenti dovuti a sabotaggi, furti, virus, accessi non autorizzati o non voluti, perdite cancellazione o diffusione involontaria, accessi effettuati mediante la falsificazione dell'identità dell'utente) (sì/no)
+
+Una volta completato questo questionario, da parte del fornitore, e valutato, potremo permettere ad esso di accedere alla rete interna dell'organizzazione.
+Creeremo un profilo con i permessi di accesso alle sole aree predefinite e dedicate per esso. Inoltre è consigliabile che il fornitore acceda solo alle aree di test,
+se si occupa dello sviluppo di programmi o di gestione/revisione dati. Ricordiamo che negli ambienti di test è obbligatorio usare dati mascherati, anche se quest'ultimi in produzione,
+sono di dominio pubblico.
+
+MODELLO (IMPAGINARE)
+
+NOMINA AD INCARICO DEL TRATTAMENTO DEI DATI/DELLE INFORMAZIONI E ASSEGNAZIONE DEI RUOLI
+
+Premesso che
+- il regolamento UE 2016/679 pur non prevedendo espressamente la figura dell'incaricato del trattamento (ex art. 30 D.lgs. 196/03), non ne esclude
+la presenza in quanto è presente il riferimento a "persone autorizzate al trattamento dei dati personali sotto l'autorità diretta del titolare o del
+responsabile" (in particolare, art. 4, n. 10, del Regolamento).
+- la norma ISO 27001 – A.6.1 Annex A, prevede che l’organizzazione stabilisca un quadro di riferimento gestionale per intraprendere e controllare
+l’attuazione e l’esercizio della sicurezza delle informazioni
+Con riferimento a quanto sopra riportato, il sottoscritto, in qualità di legale rappresentante di (NOME ORGANIZZAZIONE), Le comunica:
+- la Sua nomina ad INCARICATO DEL TRATTAMENTO dei dati personali (così come definiti nel Reg.UE 2016/679) riportati in allegato
+- il Suo ruolo e la Sua responsabilità per la sicurezza delle informazioni (così come intese dalla norma ISO 27001) relativi ai dati e alle informazioni
+trattati nell’ambito dello svolgimento delle Sue mansioni e al corrispondente profilo di abilitazione stabilito per ogni dipendente e collaboratore.
+Nell'esecuzione delle operazioni relative ai trattamenti di dati ed informazioni di seguito indicati, oltre a quanto espressamente previsto nell’allegato
+“Riservatezza e trattamento dei dati” alla presente lettera, rammento l’obbligo di:
+- rispettare le misure di sicurezza tecniche, procedurali ed organizzative previste dalla normativa vigente, predisposte e comunicate, per
+impedire il verificarsi di un qualsiasi evento dannoso ed in particolare per evitare i rischi di distruzione o perdita anche accidentale dei dati stessi, di
+accesso non autorizzato o di trattamento non consentito o non conforme alle finalità stabilite
+- non comunicare e/o diffondere i dati trattati rispettando gli obblighi di riservatezza relativi ai dati personali anche sensibili sia nel periodo
+nel quale vengono effettuati i trattamenti, sia successivamente alla conclusione dei trattamenti stessi.
+In merito a quanto sopra, il Titolare potrà disporre verifiche periodiche sull'osservanza delle istruzioni comunicate.
+La presente nomina ad incaricato annulla e sostituisce integralmente le precedenti
+La preghiamo di restituire copia della presente nomina ad incaricato firmata per presa visione.
+
+DATA, LUOGO: __________________
+
+Il titolare del trattamento
+(f.to legale rappresentante pro-tempore)
+
+NOME AZIENDA
+
+RESPONSABILE
+
+L’incaricato per presa visione del documento di nomina
+nella sua interezza (trattamenti e clausola di riservatezza
+
+inclusi)
+
+NOME UNITA’
+_____________________
+
+Di seguito si riportano i trattamenti affidati all’incaricato. L’elenco delle banche dati correlate ai trattamenti affidati, è disponibile in un
+Documento di valutazione dei Rischi privacy conservato presso il Titolare e soggetto a revisione periodica e consultabile.
+
+FINALITA’ DEL TRATTAMENTO
+
+Banche dati relative a xxxxxxxx (inserire descrizione)
+Banche dati relative a xxxxxxxx (inserire descrizione)
+Codice software, xxxxxxx (inserire descrizione)
+
+ALLEGATO RISERVATEZZA E TRATTAMENTO DEI DATI
+
+
+08) Utilizzo apparecchiature/dispositivi degli ospiti
+
+La certificazione vieta che ospiti possano all'interno dell'organizzazione collegare dispositivi elettronici ai cavi della rete lan interna,
+oppure al segnale wireless predisposto per gli operatori o dipendenti.
+Spesso gli ospiti chiedono il collegamento alla rete internet per lavorare con il loro portatile, oppure semplicemente per mostrare dati che si trovano
+in un sito web durante una riunione.
+Dovremmo predisporre per essi un hot spot wifi che si in grado di generare codici di ingresso (token) alla rete wifi che sarà separata dalla rete interna
+dell'organizzazione.
+Semplici dispositivi che sono in grado di gestire la rete wifi e la generazione di codici, si possono acquistare anche dal portale Amazon, basta cercare
+le parole "Unifi Access".
+Gli amministratori di rete dell'organizzazione dovranno quindi creare una rete dedicata per l'accesso ospite (comunemente chiamata VLAN). Un esempio dello schema.
+
+ +-----------------------+								   +---------------------------+
+ |  rete organizzazione  |                                 |  rete ospiti (vlan ID xx) |
+ |     192.168.2.0/24    |                                 |	172.25.1.0/24          |
+ +-----------------------+                                 +---------------------------+
+          \___________________/-------------------\           |
+							  |  apparato  SWITCH |___________/
+						      \-------------------/
+										|
+										|
+										\________________
+														 |
+												.--------[-----.
+												|   firewall   |
+												.--------------.
+														|
+								@----------@			|
+								| router   |------------/
+								| internet |
+								@----------@
+
+In questo scarno esempio, la rete dell'organizzazione è divisa a livello fisico dalla rete ospiti, tramite un apparato switch programmabile (porta per porta ethernet).
+La rete ospiti può comunicare con il mondo internet tramite un apparato firewall che amministra l'instradamento da noi impostato.
+
+Come avete già letto nel punto 07b, i fornitori che devono trattare per conto dell'organizzazione una serie di dati, possono avere accesso alla rete wifi della rete interna.
+L'accesso viene consentito con le determinate restrizioni del caso (profili creati appositamente, con limitazioni di accesso alle aree dati).
+
+09) Misure di protezione per lo stabile
+
+I punti della normativa per la protezione dello stabile sono da tenere in considerazione.
+Elencherò le azioni pratiche da compiere, affinchè possiate già essere preparati per un audit interno.
+Se i componenti dell'organizzazione accedono tramite una badge elettronico all'edificio, ogni avvenimento (apertura porta di ingresso, o altre aree) dovrà essere registrato.
+A volte è difficile trovare centraline elettroniche di controllo accesso che dialogano con apparati di rete. Vi scrivo questo, perchè il nostro fine è prelevare i dati di registrazione accessi ed inviarle al gestore log, descritto nel punto 04. Una soluzione è prelevare quotidianamente il file log con gli accessi ed inviarlo al gestore log. In realtà l'evento accesso dovrebbe essere inviato in tempo reale al gestore log. Se l'ispettore della normativa potrebbe ritenere obbligatoria (per il vostro caso) la modalità di registrazione in tempo reale, un aggiornamento software della centralina, potrebbe essere la soluzione.
+Accessi di persone esterne come corrieri ed ospiti devono sempre avvenire con la presenza di un membro o dipendente dell'organizzazione. Mentre, il fornitore o cliente che deve accedere alle aree dove sono costuditi o trattati dei dati, deve essere registrato tramite un apposito registro.
+Consiglierei il formato elettronico (per una veloce e chiara azione di ricerca se richiesto).  
+Tramite badge è poi possibile restringere l'accesso a determinate aree (come quelle di stoccaggio dati) da parte del solo personale autorizzato. 
+
+Solo a scopo informativo, ricordo che ogni cavo ethernet (e/o fibra ottica) presente nell'organizzazione dovrà essere schermato (cosa che avviene già in quasi tutti gli stabili).
+Ogni rete WIFI dovrà poi essere protetta da password o altro metodo di autenticazione (token generato su richiesta).
+Ogni armadio di deposito dispositivi hardware, dove sono presenti aree di stoccaggio o trattamento dati dovrà essere chiuso a chiave.
+Tutte queste misure sono da adattorare per evitare possibili fughe dei dati protetti.
+
+Per mantenere la continuità dei servizi offerti dall'organizzazione, lo stabile dovrà essere sottoposto ad una perizia di rischio di fulminazione (diretta o indiretta).
+Prima di affrontare la valutazione (quasi sempre effettuata da un perito professionista) è vivamente raccomandato chiedere in consenso di effettuarla, al possibile consulente.
+Queste perizie non sono economiche, ed è necessario valutare se via siano servizi erogati dall'organizzazione, che possono costituire un problema, se fermati per guasti elettrici.
+
+Riporto un piccolo esempio di valutazione.
+E' stata valutato il rischio di perdita di vite umane (denominato R1), il rischio di perdita di servizio pubblico (denominato R2) ed il rischio di perdita economica (denominato R4).
+Il rischio di perdita di patrimonio culturale insostituibile (denominato R3) non è presente.
+La valutazione del rischio è stata eseguita sulla base dei criteri di progetto e di costruzione utilizzati tenendo conto (ove possibile),
+di tutti gli elementi metallici che fungono da componenti naturali dell’LPS.
+L’analisi è stata effettuata sulla base dei documenti e/o delle informazioni fornite dal Committente.
+
+Al fine di individuare la struttura da considerare per la protezione contro il fulmine, lo studio tiene conto delle seguenti condizioni:
+- separazione fisica (spazi d’aria) tra eventuali altre strutture;
+- separazioni antincendio REI 120 eventualmente esistenti;
+- presenza/assenza di sovratensioni pericolose trasmesse lungo le linee da una struttura all’altra.
+
+Per quanto riguarda l'impianto LPS (Lightning Protection System, impianto di protezione: completo usato per ridurre il danno materiale dovuto alla fulminazione diretta della
+struttura), esso può (o non) essere presente. Tale caratteristica verrà definita nella valutazione.
+
+10) Test di penetrabiltà
+
+Si tratta di un processo abbastanza importante, è possibile eseguirlo in autonomia, consiglio ad ogni modo l'aiuto di un consulente esterno.
+Chiunque eseguirà il test di penetrabilità (una persona fisica o società), il suo nominativo potrebbe essere tracciato nelle possibili verifiche degli ispettori. 
+Un test base di penetrabilità potrebbe essere avviato in questo modo. L'incaricato potrebbe chiederci una macchina virtuale interna alla nostra rete, per installare un sistema operativo con tutti gli strumenti necessari (vedi nota 10*1).
+La prima fase del test potrebbe richiedere tutta la giornata lavorativa, in quanto il maggior numero di macchine dovrà essere rilevato. Molto spesso le macchine client vengono avviate in orari diversi della giornata; ripetendo diverse scansioni nell'arco della giornata, si avrà la possibilità di trovare sempre un maggior numero di macchine attive, quindi scansionarle.
+Terminata la prima scansione, l'incaricato di consegnerà una documentazione di tutti i servizi disponibili e attivi nelle macchine client e server. Dovremo chiudere i servizi non necessari, che quasi sempre sono in ascolto su determinate porte (tcp o udp per esempio). Questa prima documentazione dovremo conservarla.
+Dopo aver spento servizi non necessari, l'incaricato avvierà una seconda scansione.
+Da questa seconda fase, ci aspetteremo di trovare servizi di rete conosciuti, ma facilmente utilizzabili da un estraneo. Ad esempio, servizi database ai quali è possibile accedere con credenziali semplici (root/mysql), cartelle condivise in rete senza richesta di autenticazione. 
+Dovremo quindi correggere queste possibili problematiche, quindi richiedere una terza scansione, la quale confermerà l'assenza di altri servizi di rete troppo esposti.
+
+L'incaricato potrebbe far uso di strumenti come Meta Exploit, per rilevare altri tipi di vulnerabilità presenti nei servizi.
+Se lo farà, potrebbe indicarci quali servizi è necessario aggiornare, per ridurre problemi di sicurezza.
+
+I test di penetrabilità nei servizi disponibile nella rete, non sono gli unici che si possono effettuare.
+Esistono test anche a livello di social enginering. Ad esempio una persona ignota potrebbe fingere 
+di essere un cliente o fornitore dell'organizzazione, per guadagnare in modalità illecita, credenziali
+di accesso ad un determinato servizio o portale.
+Oppure sempre ignoti, potrebbero lasciare fuori dal perimetro dell'organizzazione, device abbandonati
+(come chiavette usb con precaricati programmi di intrusione), inviare documenti digitali contraffatti con
+all'interno codice malevolo.
+E' quindi possibile all'incaricato chiedere di eseguire anche questo tipo di test.
+Esistono infine società già accreditate per rilasciare operazioni di penetrabilità avviate
+e collaudate. Riporto solo alcuni nomi,
+
+Ecovadis, Cyence, BitSight, SecurityScorecard, Cybernance, RiskRecon.
+
+Nelle organizzazioni certificate ISO 27001 da più di due o tre anni, potrebbero essere schedulati test sui servizi,
+e completati prima che un sistema operativo entri in funzione nell'organizzazione.
+
+Riporto l'esempio di un test chiamato "Nessus", operante nel sistema operativo Linux.
+In prima parte ci si limita a controllare i pacchetti software installati e rilasciati dal gestore del sistema operativo,
+affinchè siano aggiornati, conseguentemente esposti il meno possibile a problemi relativi alla sicurezza digitale.
+La seconda scansione verifica il filesystem del sistema operativo, i permessi ed altri aspetti come la scadenza
+delle password degli utenti che vi operano in esso.
+
+Nel file che gestisce l'ingresso degli utenti (/etc/login.defs), questi sono valori richiesti,
+
+PASS_MAX_DAYS	60
+PASS_MIN_DAYS	1
+PASS_MIN_LEN	8
+PASS_WARN_AGE	8
+
+Ogni file presente nel sistema operativo dovrà poi avere solo permessi di scrittura dedicati all'utente
+e il suo relativo gruppo.
+Lato rete, è necessario spegnere alcuni parametri direttamente nelle impostazioni del kernel.
+
+/sbin/sysctl -w net.ipv4.icmp_echo_ignore_broadcast=1
+/sbin/sysctl -w net.ipv4.icmp_ignore_bogus_error_responses=1
+/sbin/sysctl -w net.ipv4.tcp_syncookies=1
+/sbin/sysctl -w net.ipv4.conf.default.accept_redirects=0
+/sbin/sysctl -w net.ipv4.conf.default.accept_source_route=0
+/sbin/sysctl -w net.ipv4.conf.default.log_martians=1
+/sbin/sysctl -w net.ipv4.conf.default.rp_filter=1
+/sbin/sysctl -w net.ipv4.conf.default.secure_redirects=0
+/sbin/sysctl -w net.ipv4.conf.default.send_redirects=0
+/sbin/sysctl -w net.ipv4.conf.all.accept_redirects=0
+/sbin/sysctl -w net.ipv4.conf.all.accept_source_route=0
+/sbin/sysctl -w net.ipv4.conf.all.rp_filter=1
+/sbin/sysctl -w net.ipv4.conf.all.secure_redirects=0
+/sbin/sysctl -w net.ipv4.conf.all.send_redirects=0
+
+Il test "Nessus" procederà quindi con la scansione di tutti i pacchetti installati nel sistema Linux, e confronterà i numeri
+di versione con un database aggiornato e mantenuto con le maggior problematiche di sicurezza (comprese le vulnerabilità
+di tipo 0day, quelle rilasciate in poche ore dalla scoperta).
+Un report dettagliato sarà generato e verrà quindi analizzato dal nostro amministratore di sistema.
+Esistono finestre di orari manutenzione nei server in produzione (solitamente in fascia notturna), nelle quali vengono
+installati pacchetti aggiornati, e risolti particolari casi di problemi sicurezza.
+
+11) Monitoraggio dei sistemi che erogano servizi
+
+Uno dei punti fondamentali della norma è proprio il monitoraggio dei servizi e delle loro risorse a disposizione (disponibilità di calcolo CPU, memoria RAM, spazio disco libero). La normativa si aspetta che il personale addetto al controllo dei servizi, sia avvisato in caso di problemi.
+Esistono diversi software che sono in grado di tenere monitorato i servizi e le risorse, potremmo pensare a Nagios (o Icinga), Zabbix, oppure Dynatrace. I primi due sono rilasciati con licenza open source, mentre il terzo è quasi del tutto a pagamento, ed inoltre prevede l'utilizzo dell'intelligenza artificiale per rilevare e notificare velocemente, anomalie.
+L'idea che voglio illustrarvi, è basata nel dedicare tempo per sviluppare e mantenere delle sonde, capaci di avvisarvi in caso di problemi.
+Nagios nella versione gratuita può essere utilizzato per controllare le porte dei servizi, ad esempio l'erogazione di un servizio web prevede la costante presenza delle porte 80 e 443 (entrambe protocollo TCP) attive.
+Purtroppo non basta Nagios per sapere se una determinata pagina (ad esempio l'accesso ad un portale) è erogata nella rete internet o aziendale. Le porte del servizio web potrebbero essere attive, eppure la pagina non rispondere per via di un problema nei servizi backend (database o interpretazione codice).
+Scrivere delle sonde per monitorare una determinata pagina è una soluzione. Uno script potrebbe avviarsi ogni N minuti e lanciare più richieste ad essa (meglio se distanziate da intervalli regolari di N seocndi).
+Se la pagina non dovesse rispondere per tutte le nostre richieste, procederemo ad inviare la segnalazione via email o tramite un pannello web che monitora lo stato di tutti i nostri servizi.
+Questo concetto di sonda può anche essere utilizzata per inviare richieste con protocollo ICMP a dispositivi di rete. L'assenza di un determinato dispositivo può allarme il personale e prepararlo alla ricezione di altre segnalazioni più specifiche. Per esempio, l'assenza di oltre cinque minuti di un router che instrada il traffico dei servizi web, ci allerta che potrebbero giungere altri allarmi di servizi più specifici (i portali web).
+Passiamo al monitoraggio interno delle risorse. Software come Nagios/Icinga sono in grado tramite agenti interni installati nel sistema, di raccogliere dati delle risorse in uso. Se l'agente rileva un picco d'uso di una determinata risorsa, possiamo essere notificati preventivamente. E' possibile installare gli agenti in ogni macchina (workstation, server) da controllare, tramite il pagamento di una licenza per ciascuno di essi, per il software Nagios o Icinga.
+Mentre per Dynatrace il costo è legato al numero di sessioni monitorate, memoria RAM usata, di tutti i nodi sotto controllo. Maggior informazioni le potete trovare nel sito web del software.
+
+Ammettiamo di non poter disporre di risorse economiche per acquistare le licenze agenti interni dei software sopra descritti. Esiste una via alternativa per essere avvisati preventivamente dell'uso alto delle risorse?
+
+Sì, forse in maniera non troppo tempestiva come ci offre un algoritmo costruito da specialisti ed attivato dell'agente. L'idea base è utilizzare script ciclici che possano rilevare determinati valori, eventi.
+Ad esempio nei sistemi operativi è ormai semplice rilevare uso troppo alto della risorsa di calcolo più importanti (CPU, livelli della memoria RAM, disco libero).
+Se uno di questi valori dovesse superare (specialementi negli orari con più richieste) una certa soglia, il nostro script, dovrà avvisarci.
+
+Nelle segnalazioni, consiglio anche di includere brevi stralci di procedure, basate su eventi già accaduti. In tal modo il personale potrà iniziare verifiche più mirate.
+
+La normativa si aspetta inoltre che i consumi di determinate risorse (calcolo CPU, memoria RAM, spazio disco libero, uso della memoria tampone SWAP, e ogni altro valore che ci è utile), sia raccolto con cadenza, salvato e pronto per essere consultato nel futuro. Il perchè è molto semplice. Supponiamo che nel primo anno di vita di un servizio, gli ospiti che usufruiscono di esso, generino nelle ore di punta circa quaranta accessi al secondo.
+Il prossimo anno il traffico potrebbe scendere oppure aumentare. L'unico modo per tener monitorato questo aspetto è tracciare periodicamente i dati di accesso e procedere ad un confronto.
+La figura del Security Manager dovrà schedulare la raccolta dei dati, e verificare in casi di esaurimento risorse non preventivato. Aggiungere nuove funzioni (alle sonde), che siano in grado di registrare altri consumi, e prevenire situazioni improvvise di esaurimento o collasso.
+Software gratuiti che ci permettono di raccogliere dati dalle macchine e registrarli sono per esempio Grafana, Graylog, Munin.
+
+13) Service Line Agreement (WIP)
+
+14) Documento Business Continuity *BCP* (WIP)
+
+
+*** FONTI ESTERNE ***
+
+(01*1)
+	https://www.iso.org/
+
+(02*1)
+	https://www.garanteprivacy.it/home/provvedimenti-normativa/normativa/normativa-comunitaria-e-intenazionale/trasferimento-dei-dati-verso-paesi-terzi
+
+(03*1)
+	https://support.microsoft.com/it-it/help/4028713/windows-10-turn-on-device-encryption
+(03*2)
+	https://wiki.centos.org/HowTos/EncryptedFilesystem
+(03*3)
+	https://support.apple.com/it-it/guide/disk-utility/dskutl35612/mac
+(03*4)
+	https://www.manageengine.com/
+(03*5)
+	https://www.belarc.com/products_belarc_advisor
+(03*6)
+	https://www.cvedetails.com/product/47/Linux-Linux-Kernel.html?vendor_id=33
+	https://lore.kernel.org/lists.html
+
+(04*1)
+	https://www.gfi.com/products-and-solutions/network-security-solutions/gfi-eventsmanager soluzione software da installare
+	https://www.legallogger.com/ software dedicato ed attivabile come macchina virtuale
+	https://www.netwrix.it/auditor.html software dedicato che include anche funzioni di controllo audit (utile per avviare indagini o essere avvisati in tempo reale di possibili perdite dati)
+
+(07*1)
+	https://twitter.com/netbiosX 		NetbiosX, ricercatore sicurezza per ambiente Windows
+	https://twitter.com/KyleHanslovan 	Kyle Hanslovan, analista malware
+	https://twitter.com/wdormann 		Will Dormann, analista vulnerabilità
+	https://twitter.com/adriengnt		Adrien Guinet, ricercatore sicurezza
+	https://twitter.com/MarceloRivero 	Marcelo Rivero - ricercatore impegnato nel segnalare programmi fraudolenti
+	https://twitter.com/binitamshah 	Bini Tamshah - ricercatrice impegnate nel divulgare informazioni, manuali per la sicurezza informatica,
+										linguaggi di programmazione, tecniche di penetrazione sistemi 
+	https://twitter.com/Viss 			Viss del gruppo Pobhos
+	https://twitter.com/Antelox 		Antelox - ricercatore impegnato nel segnalare truffe, virus recenti
+	https://twitter.com/hFireF0X 		hFireF0X - ricercatore impegnato nel oltrepassare i controlli UAC del sistema Windows
+
+	Aggiornamenti riguardo il protocollo sicuro TLS
+		https://twitter.com/GnuTLS GnuTLS
+
+	IT Governance (il portale di riferimento per le pratiche di sicurezza nelle organizzazioni aziendali e non)
+		https://twitter.com/ITGovernance
+	
+	Iscrizione alle newsletter come garante della privacy
+		https://www.m3aawg.org/ M3aawg
+
+	Garante Privacy
+		https://www.garanteprivacy.it/
+		
+(10*1)
+	https://www.kali.org/ una delle distribuzioni Linux con al suo interno gli strumenti più usati per azioni di penetrabilità.
+
+(16*1)
+	https://en.wikipedia.org/wiki/SSAE_16
+
+(16*2)
+	https://www.hpe.com/it/it/what-is/data-center-tiers.html
+
+
+
+
+LICENZA DELLA GUIDA rm270001.TXT (____da lasciare come pagina dedicata) SE PUBBLICHERO' IN GITHUB, NON SERVIRA' FORSE..
+ questa piccola guida è rilasciata tramite licenza WTFPL
+
+        DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+                    Version 2, December 2004 
+
+ Copyright (C) 2004 Sam Hocevar <sam@hocevar.net> 
+
+ Everyone is permitted to copy and distribute verbatim or modified 
+ copies of this license document, and changing it is allowed as long 
+ as the name is changed. 
+
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
+
+  0. You just DO WHAT THE FUCK YOU WANT TO.
