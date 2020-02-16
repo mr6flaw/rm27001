@@ -481,8 +481,8 @@ NOMINA AD AMMINISTRATORE DI SISTEMA
 
 ai sensi del provvedimento del garante 27 novembre 2018 (G.U. N.300 del 24 dicembre 2008)
 
-															spettabile ____________________________
-																		(indirizzo organizzazione)
+                                                                         spettabile ____________________________
+                                                                         (indirizzo organizzazione)
 
 Posto che con la definizione di "Amministratore di Sistema" si intendono figure professionali finalizzate alla gestione e
 alla manutenzione di un sistema di elaborazione o di sue componenti, il provvedimento del Garante del 27 novembre 2008
@@ -543,11 +543,10 @@ Saluti.
 data, _________________________________
 
 
-			Per [__NOME_ORGANIZZAZIONE__]						L'Amministratore di Sistema
-																	per presa visione e accettazione
+            Per [__NOME_ORGANIZZAZIONE__]                       L'Amministratore di Sistema
+                  (nome cognome titolae)                        per presa visione e accettazione
 
-			______________________________						________________________________
-					(titolare)
+            ______________________________                      ________________________________
 
 
 03l) Creazione e revoca degli accesso utente
@@ -566,14 +565,14 @@ La procedura da inserire nel General Manual (o da mantenere scritta ed operativa
  |    fornitore. E' stata richiesta la revoca?         |
  .-----------------------------------------------------.
        | Sì |                           | No |
-	   .----.                           .----.
-		  |                                |
-	.--------------------------.    .--------------------.
-	| Cancellare il profilo,   |    | E' stata richiesta |
-	| dare conferma con        |    | la creazione di un |
-	| l'effettiva cancellazione|    | nuovo utente?		 |
-	|  della cancellazione **  |    .--------------------.
-	.--------------------------.        | Sì |    | No |
+       .----.                           .----.
+         |                                |
+    .--------------------------.    .--------------------.
+    | Cancellare il profilo,   |    | E' stata richiesta |
+    | dare conferma con        |    | la creazione di un |
+    | l'effettiva cancellazione|    | nuovo utente?		 |
+    |  della cancellazione **  |    .--------------------.
+    .--------------------------.        | Sì |    | No |
                                         .----.    .----.
                                           |         |
                         /-----------------]         |
