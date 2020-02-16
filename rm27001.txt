@@ -67,7 +67,8 @@ in cui si richiede l'aiuto del consulente, è al fine di completare il punto att
 linee guida (ed obblighi) descritti dalla normativa.
 
 Nella guida che state leggendo, riduco il più possibile i riferimenti degli standard che si trovano nella documentazione ISO ufficiale.
-Il motivo è perchè queste informazioni sono soggette a copyright dell'organizzazione "International Organization for Standardization" (01*1).
+Il motivo è perchè queste informazioni sono soggette a copyright dell'organizzazione
+"International Organization for Standardization" (01*1).
 Inoltre ho preferito mantenere un linguaggio pratico, al fine di semplificare i concetti e renderli attuabili anche da chi è solo
 interessato ad incrementare la sicurezza all'interno della propria organizzazione o gestione privata.
 
@@ -406,8 +407,8 @@ un aggiornamento di sistema. Oppure in certi casi, gli aggiormaneti potrebbero e
 possiamo "stare" abbastanza tranquilli.
 
 Apple come per il sistema operativo di un computer MAC, cerca di rilasciare aggiornamenti in poche ore se la vulnerabilità è risultata abbastanza grave
-(ricordo il carattere indiano che se ricevuto via sms o email provocava un riavvio del sistema).Inoltre il sistema è progettato e aggiornato da un'unica fonte (Apple).
-che si occupa sia dello sviluppo software che di quello hardware.
+(ricordo il carattere indiano che se ricevuto via sms o email provocava un riavvio del sistema).
+Inoltre il sistema è progettato e aggiornato da un'unica fonte (Apple) che si occupa sia dello sviluppo software che di quello hardware.
 Potremmo valutare questo aspetto come un ulteriore garanzia. Il codice sorgente difficilmente sarà in mano a terzi che potrebbero studiarlo per rilevare possibili vulnerabilità.
 Ho scritto difficilmente, perchè prima o poi potrebbe verificarsi anche una leak, o avanzare una forzatura del sistema (jailbreak).
 
@@ -570,7 +571,7 @@ La procedura da inserire nel General Manual (o da mantenere scritta ed operativa
     .--------------------------.    .--------------------.
     | Cancellare il profilo,   |    | E' stata richiesta |
     | dare conferma con        |    | la creazione di un |
-    | l'effettiva cancellazione|    | nuovo utente?		 |
+    | l'effettiva cancellazione|    | nuovo utente?      |
     |  della cancellazione **  |    .--------------------.
     .--------------------------.        | Sì |    | No |
                                         .----.    .----.
