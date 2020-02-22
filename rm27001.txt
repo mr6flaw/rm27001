@@ -319,18 +319,27 @@ Con gli odieri sistemi operativi, il passaggio della criptatura del disco è abb
 Di seguito riporto alcuni nomi di sistemi operativi e la via più semplice per iniziare in essi la criptatura. 
 
 Microsoft Windows 10, è consigliato Bitlocker, seguite la procedura online che trovate alla nota (03*1)
-	Non riporto versioni precedenti di windows, come 7 e 8, in quanto non saranno più supportate. Se dovete gestire partizioni dati criptate, potete usufruire
-	di programmi come TrueKey.
+Non riporto versioni precedenti di windows, come 7 e 8, in quanto non saranno più supportate. Se dovete gestire partizioni dati criptate, potete usufruire
+di programmi come TrueKey.
+
 Linux, il tool preferito è dm-crypt (03*2), cercando potete anche trovarne di alternativi. Vi sono distribuzioni come CentOS e Debian che permettono di criptare
-	il disco di sistema e dati fin dalla prima installazione.
-MAC OS, verificate la procedura alla nota (03*3)
+il disco di sistema e dati fin dalla prima installazione.
+
+MAC OS, verificate la procedura esterna a questa guida, il cui URL è riportato alla nota (03*3).
+
 Android, possiamo utilizzare la funzione integrata del sistema operativo, chiamata "Full Disk Encryption". Chiederà l'impostazione di un PIN numerico.
+
 Iphone e sistemi operativi iOS, utilizziamo la funzione "Attiva il Passcode", inseriamo una password alfanumerica abbastanza forte, e non dovremo fare altro.
 
 Per i dischi nei computer fissi, comunemente chiamati torrette o desktop.
-Nella maggior parte degli uffici, o aree di lavoro come la produzione, magazzino, officina, eccetera, gli operatori non necessitano di un portatile. Un punto in più, in quanto non esiste un rischio alto, il quale si avvicinerebbe ad una trafugazione o perdita dei dati (esempio, un comune caso di furto della torretta PC).
-Il nostro consulente potrebbe indicarci che un rischio di furto è sempre in agguato, quindi di procedere alla criptatura anche di questi dischi fissi. Consiglierei di criptare i dischi, ma se il modello del computer fisso fosse obsoleto, potete riportare nell'inventario questo dettaglio, e notificare che al prossimo aggiornamento hardware, la fase di criptuara verrà completata.
-Durante un audit di certificazione, un ispettore mi ha confermato che non è necessario criptare i dischi dei computer fissi. Potremo quindi affrontare l'operazione quando inizieremo l'aggiornamento di tutto l'hardware del computer ed installaremo un sistema operativo che prevede facilmente l'attivazione della criptatura dati.
+Nella maggior parte degli uffici, o aree di lavoro come la produzione, magazzino, officina, eccetera, gli operatori non necessitano di un portatile.
+Un punto in più, in quanto non esiste un rischio alto, il quale si avvicinerebbe ad una trafugazione o perdita dei dati (esempio, un comune caso di furto della torretta PC).
+Il nostro consulente potrebbe indicarci che un rischio di furto è sempre in agguato, quindi di procedere alla criptatura anche di questi dischi fissi.
+Consiglierei di criptare i dischi, ma se il modello del computer fisso fosse obsoleto, potete riportare nell'inventario questo dettaglio, e notificare che al prossimo
+aggiornamento hardware, la fase di criptuara verrà completata.
+
+Durante un audit di certificazione, l'ispettore assegnato mi ha confermato che non è necessario criptare i dischi dei computer fissi (perchè custoditi all'interno dello stabile dell'organizzazione).
+Potremo quindi affrontare l'operazione quando inizieremo l'aggiornamento di tutto l'hardware del computer ed installaremo un sistema operativo che prevede facilmente l'attivazione della criptatura dati.
 
 Per i dispositivi server (fisici) già presenti, che non possono essere criptati (finchè non verrà eseguito un aggiornamento dell'intero sistema operativo, il quale supporti la criptatura delle partizioni), e sono allocati in un possibile datacenter di proprietà dell'organizazione, è possibile attendere.
 Scriveremo nelle procedure dedicate o nel general manual, che i dati sono custoditi in un datacenter, cui l'ingresso ad esso è monitorato (accesso dedicato solo a personale autorizzato).
@@ -646,7 +655,8 @@ Per la scelta delle password è necessario seguire questo decalogo:
 – le password non devono essere costruite con numeri o caratteri in sequenza (ad esempio, 12345678)
 
 – non si può utilizzare una password con i seguenti caratteri:
-		TITO, ESTE, PERS, CRA, RETE, MARZ, APRI, GIUG, LUGL, AGOS, NOVE, DICE, TEST, OPER, ROMA, MILA, FIRE, PALE, BOLO, 1234, IBM, ICR, FILI, DIV, SERV, ACHI, BANC
+       TITO, ESTE, PERS, CRA, RETE, MARZ, APRI, GIUG, LUGL, AGOS, NOVE, DICE, TEST,
+       OPER, ROMA, MILA, FIRE, PALE, BOLO, 1234, IBM, ICR, FILI, DIV, SERV, ACHI, BANC
 
 – le password non devono contenere chiavi o parole comunemente utilizzate (ad esempio, PASSWORD1, o parole trovate in un dizionario con o senza valori numerici)
 
@@ -968,9 +978,9 @@ Creeremo un profilo con i permessi di accesso alle sole aree predefinite e dedic
 se si occupa dello sviluppo di programmi o di gestione/revisione dati. Ricordiamo che negli ambienti di test è obbligatorio usare dati mascherati, anche se quest'ultimi in produzione,
 sono di dominio pubblico.
 
-MODELLO
+  MODELLO
 
-NOMINA AD INCARICO DEL TRATTAMENTO DEI DATI/DELLE INFORMAZIONI E ASSEGNAZIONE DEI RUOLI
+  NOMINA AD INCARICO DEL TRATTAMENTO DEI DATI/DELLE INFORMAZIONI E ASSEGNAZIONE DEI RUOLI
 
 Premesso che
 - il regolamento UE 2016/679 pur non prevedendo espressamente la figura dell'incaricato del trattamento (ex art. 30 D.lgs. 196/03), non ne esclude
@@ -1064,11 +1074,24 @@ L'accesso viene consentito con le determinate restrizioni del caso (profili crea
 
 I punti della normativa per la protezione dello stabile sono da tenere in considerazione.
 Elencherò le azioni pratiche da compiere, affinchè possiate già essere preparati per un audit interno.
+Create un registro elettronico e stampate dei cartellini di carta con scritto VISITATORE. Se riuscite inserite i cartellini in una busitna di plastica munita di molletta (09*1).
+Educate tutto il personale all'uso dei cartellini. Quando un membo dell'organizzazione aspetta ospiti, dovrà prelevare dall'ufficio che conserva i cartellini, gli stessi,
+e notificare sul registro elettronico, questi dati:
+
+| Data | Nome Cognome - possibile organizzazione | Conferisce con (nome cognome membre interno) | orario ingresso | orario uscita |
+
+Sembra una banalità, ma osservare questa procedura, ci mette al riparo da possibili problemi durante ricerche, se vi fosse un fortuito caso di data-breach.
+Inoltre il Security Manger, potrà sapere chi sarà entrato nello stabile dell'organizzazione.
+Se l'organizzazione è dotata di personale che controlla l'ingresso allo stabile, sarà più semplice rispettare, ed attuare la procedura di registrazione.
+
 Se i componenti dell'organizzazione accedono tramite una badge elettronico all'edificio, ogni avvenimento (apertura porta di ingresso, o altre aree) dovrà essere registrato.
-A volte è difficile trovare centraline elettroniche di controllo accesso che dialogano con apparati di rete. Vi scrivo questo, perchè il nostro fine è prelevare i dati di registrazione accessi ed inviarle al gestore log, descritto nel punto 04. Una soluzione è prelevare quotidianamente il file log con gli accessi ed inviarlo al gestore log. In realtà l'evento accesso dovrebbe essere inviato in tempo reale al gestore log. Se l'ispettore della normativa potrebbe ritenere obbligatoria (per il vostro caso) la modalità di registrazione in tempo reale, un aggiornamento software della centralina, potrebbe essere la soluzione.
-Accessi di persone esterne come corrieri ed ospiti devono sempre avvenire con la presenza di un membro o dipendente dell'organizzazione. Mentre, il fornitore o cliente che deve accedere alle aree dove sono costuditi o trattati dei dati, deve essere registrato tramite un apposito registro.
-Consiglierei il formato elettronico (per una veloce e chiara azione di ricerca se richiesto).  
-Tramite badge è poi possibile restringere l'accesso a determinate aree (come quelle di stoccaggio dati) da parte del solo personale autorizzato. 
+A volte è difficile trovare centraline elettroniche di controllo accesso che dialogano con apparati di rete.
+Vi scrivo questo, perchè il nostro fine è prelevare i dati di registrazione accessi ed inviarle al gestore log, descritto nel punto 04. Una soluzione è prelevare quotidianamente il file log con gli accessi ed inviarlo al gestore log.
+In realtà l'evento accesso dovrebbe essere inviato in tempo reale al gestore log. Se l'ispettore della normativa potrebbe ritenere obbligatoria (per il vostro caso) la modalità di registrazione in tempo reale, un aggiornamento software della centralina, potrebbe essere la soluzione.
+Accessi di persone esterne come corrieri ed ospiti devono sempre avvenire con la presenza di un membro o dipendente dell'organizzazione.
+Mentre, il fornitore o cliente che deve accedere alle aree dove sono costuditi o trattati dei dati, deve essere registrato tramite un apposito registro.
+Consiglierei il formato elettronico (per una veloce e chiara azione di ricerca se richiesto).
+Tramite badge è poi possibile restringere l'accesso a determinate aree (come quelle di stoccaggio dati) da parte del solo personale autorizzato.
 
 Solo a scopo informativo, ricordo che ogni cavo ethernet (e/o fibra ottica) presente nell'organizzazione dovrà essere schermato (cosa che avviene già in quasi tutti gli stabili).
 Ogni rete WIFI dovrà poi essere protetta da password o altro metodo di autenticazione (token generato su richiesta).
@@ -1199,7 +1222,7 @@ In breve, il documento è obbligatorio se forniamo un certo tipo di consultazion
 Esistono infrastrutture progettate ad ergoarli con un valore di uptime molto vicino a 99,999 per cento durante tutto l'anno civile.
 Altre invece, durante le normali otto ore lavorative.
 I disservizi (mancanza energia elettrica, indisponibilità della rete o altre risorse di calcolo), potrebbero togliere punteggi decimali all'intero totale (cento per cento).
-
+ 
 Ad esempio, un disservizio di circa otto ore in un anno, è calcolato come segue,
 
 100:X=31536000:28800 		X =~ 0,091
@@ -1316,6 +1339,9 @@ FINE (Service Level Agreement)
 
 (07a1)
     https://www.gov.uk/government/publications/the-minimum-cyber-security-standard
+
+(09*1)
+    https://www.amazon.it/Targhette-identificative-professionali-plastica-premium/dp/B01GVEPD14/ref=sr_1_1_sspa?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=cartellino+identificativo&qid=1582401737&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzSVNDUUhZTTU2TTE5JmVuY3J5cHRlZElkPUEwMzYwMTgwQkdST0JBSUIxVlAzJmVuY3J5cHRlZEFkSWQ9QTA0MjA0MTAyMlZNSE1LSVFGVzlTJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==
 
 (10*1)
     https://www.kali.org/ una delle distribuzioni Linux con al suo interno gli strumenti più usati per azioni di penetrabilità.
