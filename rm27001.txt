@@ -1190,10 +1190,78 @@ Il prossimo anno il traffico potrebbe scendere oppure aumentare. L'unico modo pe
 La figura del Security Manager dovrà schedulare la raccolta dei dati, e verificare in casi di esaurimento risorse non preventivato. Aggiungere nuove funzioni (alle sonde), che siano in grado di registrare altri consumi, e prevenire situazioni improvvise di esaurimento o collasso.
 Software gratuiti che ci permettono di raccogliere dati dalle macchine e registrarli sono per esempio Grafana, Graylog, Munin.
 
-13) Service Line Agreement (WIP)
+13) Service Line Agreement
+
+Potremmo definirlo il documento che dichiara le garanzie di continuità, dei servizi erogati.
+Vi sono organizzazioni che non erogano servizi tramite la rete internet o collegamenti dedicati come tratte MPLS (13*1) o virtual private network, ne permettono a terzi di consultare
+i dati raccolti e/o trattati al proprio interno, ma offrono servizi di consulenza o assistenza, che devono essere erogati (gestiti in alcuni casi) in tempi quasi assicurati.
+In breve, il documento è obbligatorio se forniamo un certo tipo di consultazione, trattamento, erogazione, del dato.
+Esistono infrastrutture progettate ad ergoarli con un valore di uptime molto vicino a 99,999 per cento durante tutto l'anno civile.
+Altre invece, durante le normali otto ore lavorative.
+I disservizi (mancanza energia elettrica, indisponibilità della rete o altre risorse di calcolo), potrebbero togliere punteggi decimali all'intero totale (cento per cento).
+
+Ad esempio, un disservizio di circa otto ore in un anno, è calcolato come segue,
+
+100:X=31536000:28800 		X =~ 0,091
+
+31536000 = i secondi in un anno civile
+28800 = i secondi in otto ore
+
+Il nostro valore totale di erogazione servizi, scenderebbe a 99,909
+
+Il mio consiglio è quindi simulare (sulla base dell'esperienza dell'organizzazione) quanto un servizio potrebbbe rimanere fermo durante l'anno.
+Rilevare un certo livello di uptime, e quindi dichiararlo nel documento di Service Line Agreement.
+
+Il contratto stipulato con un i termini di servizio SLA, prevede in caso di diminuzione del valore uptime dichiarato, la possiblità di richiedere crediti sulla prossima fattura
+di pagamento.
+Il cliente che desidererà richiedere i crediti, dovrà compilare una richiesta da un portale gestito dall'organizzazione, entro un numero di giorni (massimo 60 di norma),
+ed esporre il disservizio.
+Una volta redatto, il documento è preferibile pubblicarlo sul sito internet dell'organizzazione.
+
+Un esempio del contenuto (Service Line Agreement).
+
+L'organizzazione determina dei parametri di qualità nell'erogazione dei servizi offerti ai propri clienti e sulla chiarezza delle informazioni.
+Tali parametri sono da intendersi come obbiettivi di qualità che l'organizzazione si prefigge di garantire, sia di carattere generale, rivolti al complesso
+delle prestazione erogate, che specifici, mirati al singolo servizio personalizzato.
+Il particolare l'organizzazione si obbliga a rendere disponibile la piattaforma con un tasso di disponibilità up-time del 99%, per 24 ore giornaliere e per 360 giorni all'anno.
+
+[NOME_ORGANIZZAZIONE] determina dei parametri di qualità nell'erogazione dei servizi offerti ai propri Clienti e sulla chiarezza delle
+informazioni. Tali parametri sono da intendersi come obiettivi di qualità che [NOME_ORGANIZZAZIONE] si prefigge di garantire, sia di
+carattere generale, rivolti al complesso delle prestazioni erogate, che specifici, mirati al singolo Servizio Personalizzato.
+Per garantire il miglior livello possibile nei servizi forniti, [NOME_ORGANIZZAZIONE] persegue specifici obiettivi di qualità che il Cliente può
+direttamente verificare, così come enunciati di volta in volta nell'ambito di ogni specifica prestazione erogata.
+Ci si impegna, a rilevare l'opinione dei propri Clienti sulla qualità dei servizi offerti attraverso un monitoraggio periodico.
+[NOME_ORGANIZZAZIONE] invita inoltre i propri Clienti a sottoporle per iscritto, tramite posta elettronica o anche telefonicamente tutti i
+suggerimenti e le idee atti a migliorare il servizio e si impegna a garantire sia gli standard generali che quelli specifici in
+condizioni normali ed in assenza di ostacoli che li rendano irrealizzabili.
+
+Supporto Tecnico:
+Area supporto tecnico: http://supporto.[NOME_ORGANIZZAZIONE] o direttamente dalla piattaforma o dove segnalato in fase successiva.
+
+Il cliente puo’ sottoscrivere due livelli di supporto
+
+SUPPORTO VIA EMAIL / TICKET
+Il servizio è disponibile in orario di ufficio:
+dal lunedì al venerdì dalle 9:00 alle 13:00 e dalle 14:00 alle 18:00
+
+E’ a disposizione, un servizio di supporto telefonico riguardante il funzionamento del prodotto/i [ELENCARE NOMI PRODOTTI].
+
+Entro sei ore lavorative viene preso in carico il supporto e gestito entro 18 ore dalla presa in carico.
+Il supporto tecnico [NOME_ORGANIZZAZIONE] è attivo dalle ore 08:30 alle ore 18:30 dal lunedì al venerdì, tramite il sistema di trouble ticket.
+
+SUPPORTO TELEFONICO
+E’ a disposizione, un servizio di supporto telefonico riguardante il funzionamento del prodotto/i [ELENCARE NOMI PRODOTTI].
+La chiamata viene evasa in pochi minuti e riguarda il funzionamento della piattaforma mentre non riguarda tematiche come la
+deliverability, la compatibilità con il codice html, la composizione dei messaggi e l’efficacia della comunicazione.
+
+Il servizio è disponibile in orario di ufficio, dal lunedì al venerdì dalle 9:00 alle 13:00 e dalle 14:00 alle 18:00
+Entro sei ore lavorative viene preso in carico il supporto e gestito entro 18 ore dalla presa in carico.
+Il supporto tecnico [NOME_ORGANIZZAZIONE] è attivo dalle ore 8:30 alle ore 18:30 dal Lunedì al Venerdì, tramite il sistema di trouble ticket.
+
+FINE (Service Level Agreement)
 
 14) Documento Business Continuity *BCP* (WIP)
-
+(WORK IN PROGESS)
 
 *** FONTI ESTERNE ***
 
@@ -1251,6 +1319,9 @@ Software gratuiti che ci permettono di raccogliere dati dalle macchine e registr
 
 (10*1)
     https://www.kali.org/ una delle distribuzioni Linux con al suo interno gli strumenti più usati per azioni di penetrabilità.
+
+(13*1)
+    https://it.wikipedia.org/wiki/Multiprotocol_Label_Switching
 
 (16*1)
     https://en.wikipedia.org/wiki/SSAE_16
