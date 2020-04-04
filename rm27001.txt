@@ -881,8 +881,8 @@ Riporto l'esempio di una procedura VIEW o ROUTINE del database MYSQL con un prob
 quasi certamente l'estrazione dati per il procedimento di backup.
 Il numero di controlli da eseguire, deve essere sufficiente per giorno a completare la verifica di tutti i backup in una settimana.
 Se il set completo di tutti i nostri processi backup è pari a settanta, dovremo eseguire quattordici controlli al giorno.
-Il personale inoltre deve seguire una regola molto imporante. Se in un determintato giorno lavorativo viene a mancare l'addetto al controllo
-(pensiamo ad una malattia o permesso straordinari), deve essere predisposto un concetto di verifica da parte di altro personale per la nostra procedura di verifica backup.
+Il personale inoltre deve seguire una regola molto importante. Se in un determintato giorno lavorativo è assente l'addetto al controllo
+(pensiamo ad una malattia o permesso), deve essere predisposta la verifica da parte di altro personale per la procedura di verifica.
 Il personale deve essere quindi istruito a preparato ad affrontare situazioni di assenza, al fine di fare il possibile per mantenere attiva nel possibile,
 la procedura di controllo giornaliera.
 La procedura deve essere quindi trascritta, e resa disponibile per essere consultata in uno o più aspetti (di rischio o controllo del tipo di dato) come quelli sopra descritti.
@@ -898,12 +898,13 @@ Ci si può imbattere in situazioni in cui il dato deve essere ripristinato dopo 
 Ricordo il database MYSQL, disponibile in distribuzioni Linux fino a pochi anni fa con pacchetti contenenti la versione di Oracle, e poi sostituiti con quelli dell'organizzazione MariaDB.
 Le procedure programmate permettono di ridurre il rischio di trovarci bloccati, durante la fase di ripristino dati.
 Per questo motivo l'ispettore chiederà nei primi audit, documenti che traccino il test di ripristino dati. Potremmo in questo test trovare delle problematiche nell'importare dati da una versione database ad una più recente. Dovremo quindi correggere le tabelle, o i programmi di importazione. Saremo in caso di necessità, pronti a ripristinare i dati di qualsiasi natura, presenti nelle nostre aree di stoccaggio senza particolari problemi (attenendoci così, ai tempi di ripristino elencati nel documento SLA, punto 14).
-Per ogni procedura di ripristino è consigliabile documentare l'orario di partenza e fine, includendo i log di estriazione dati. Ad esempio, se copieremo dati presenti nelle aree di storage, dovremo salvare tutto l'elenco. Se preleveremo un intero estratto di uno o più database, dovremo stampare tutte le operazioni per poi raccoglierle in un file di testo da conservare.
-Riporto un esempio per Mysql/MariaDB:
+Per ogni procedura di ripristino è consigliabile documentare l'orario di partenza e fine, includendo i log di estriazione dati. Ad esempio, se copieremo dati presenti nelle aree di storage, dovremo salvare tutto l'elenco.
+Se preleveremo un intero estratto di uno o più database, dovremo stampare tutte le operazioni per poi raccoglierle in un file di testo da conservare.
+Riporto un esempio per Mysql/MariaDB da inserire, in una procedura autotizzata:
 
-$ mysql --password=cccccc -u utente --force nome_database < nome_dump_database.sql
+$ date; mysql --password=cccccc -u utente --force nome_database < nome_dump_database.sql >> log.txt
 
-L'ispettore chiederà poi ogni dato log salvato, durante le session di audit certificazione.
+L'ispettore chiederà durante le sessioni audit, le tracciature log che testimonino il passaggio dei dati ripristinati.
 
 07) Formazione security manager (WIP)
 
