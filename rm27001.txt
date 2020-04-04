@@ -1214,7 +1214,7 @@ Il prossimo anno il traffico potrebbe scendere oppure aumentare. L'unico modo pe
 La figura del Security Manager dovrà schedulare la raccolta dei dati, e verificare in casi di esaurimento risorse non preventivato. Aggiungere nuove funzioni (alle sonde), che siano in grado di registrare altri consumi, e prevenire situazioni improvvise di esaurimento o collasso.
 Software gratuiti che ci permettono di raccogliere dati dalle macchine e registrarli sono per esempio Grafana, Graylog, Munin.
 
-13) Service Line Agreement
+12) Service Line Agreement
 
 Potremmo definirlo il documento che dichiara le garanzie di continuità, dei servizi erogati.
 Vi sono organizzazioni che non erogano servizi tramite la rete internet o collegamenti dedicati come tratte MPLS (13*1) o virtual private network, ne permettono a terzi di consultare
@@ -1284,7 +1284,7 @@ Il supporto tecnico [NOME_ORGANIZZAZIONE] è attivo dalle ore 8:30 alle ore 18:3
 
 FINE (Service Level Agreement)
 
-14) Documento Business Continuity *BCP* (WIP)
+13) Documento Business Continuity *BCP* (WIP)
 (WORK IN PROGESS)
 
 *** FONTI ESTERNE ***
