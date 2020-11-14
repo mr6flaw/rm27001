@@ -786,19 +786,22 @@ Un punto abbastanza semplice che ci permetterà di essere conforme alla normativ
 Riporto una serie domande e risposte.
 
 *) Perchè è importante modificare la password del proprio utente di accesso alla rete aziendale o altro tipo di risorse?
-Non esiste la certezza che la password usata e qualche volta anche salvata nei dispositivi di uso risorse, non verrà mai letta da ignoti.
-Programmi offensivi sono costruiti appositamente per trovare password, digitate o mantenute nei computer o cellulari di nuova generazione.
+Non esiste la certezza che la password usata e qualche volta anche salvata nei dispositivi di uso risorse,
+non verrà mai letta da ignoti.
+Programmi offensivi sono costruiti appositamente per trovare password, digitate o mantenute nei computer o cellulari
+di nuova generazione.
 
 *) Come porre rimedio a questo problema?
-E' sufficiente modificare con una regolare cadenza la password del proprio utente, oppure attendere la richiesta automatica di cambio password
-(proposta dal dominio di rete organizzazione).
-Rendere la vita difficile ai programmi è un modo per proteggere la nostra corrispondenza, il cambio password fatto almeno una volta ogni
-sei mesi è l’inizio per difendere la nostra privacy.
+E' sufficiente modificare con una regolare cadenza la password del proprio utente, oppure attendere la richiesta automatica
+di cambio password (proposta dal dominio di rete organizzazione).
+Rendere la vita difficile ai programmi è un modo per proteggere la nostra corrispondenza, il cambio password fatto almeno
+una volta ogni sei mesi è l’inizio per difendere la nostra privacy.
 
 *) Come posso scegliere la composizione alfanumerica della password?
 Per la scelta delle password è necessario seguire questo decalogo:
 
-– la lunghezza deve essere di almeno 8 caratteri alfanumerici; deve essere aggiornata ogni 180 giorni, e sarà diversa da quella scaduta.
+– la lunghezza deve essere di almeno 8 caratteri alfanumerici; deve essere aggiornata ogni 180 giorni, e sarà diversa
+	da quella scaduta.
 	La nuova password deve essere diversa dalle 4 precedenti
 
 – i suoi primi 3 caratteri devono essere diversi rispetto ai corrispondenti caratteri della password scaduta e così per i secondi
@@ -847,8 +850,8 @@ o nel server di sviluppo codice.
 oppure anche dal cliente che potrebbe averlo commissionato.
 Per avviare il test abbiamo predisposto un server dedicato al test. Sì avbete letto bene, non abbiamo altra possibilità.
 Non possiamo installare l'ambiente di test nel computer del programmatore.
-(*) Il software è stato testato, in accordo con il project manager che ha avvisato il cliente o il dipartimento interno all'organizzazione,
-possiamo concludere quest'ultima fase con il rilascio del software.
+(*) Il software è stato testato, in accordo con il project manager che ha avvisato il cliente o il dipartimento interno
+all'organizzazione, possiamo concludere quest'ultima fase con il rilascio del software.
 Se con questa fase si chiude anche il progetto di sviluppo (escludiamo per ora sistemazione o presa in carico di possibili bug),
 il codice dall'ambiente locale e di test dovrà essere tassativamente cancellato.
 La figura del Security Manager deve appurare che la cancellazione dei dati avvenga, tramite controlli a campione nello spazio di test.
@@ -861,19 +864,21 @@ Il possibile consulente che ci aiuterà nel percorso di certificazione, ci consi
 la procedura nel documento "General Manual".
 
 03q) Cancellazione dati
-La gestione dei dati ormai non più utilizzati oppure legati ad una figura (utente interno, cliente, fornitore, socio) non più collaborante con l'organizzazione,
-dovranno essere distrutti.
+La gestione dei dati ormai non più utilizzati oppure legati ad una figura (utente interno, cliente, fornitore, socio) non più
+collaborante con l'organizzazione, dovranno essere distrutti.
 Scrivo distrutti perchè non basta cancellare questi dati (anche se si trattasse di materiale cartaceo).
 I dati dovranno prima essere sovrascritti con un procedimento apposito, shredring
 (coprire il contenuto di un file con dati casuali, e poi cancellarlo).
 I programmi che si usano per azionarlo si possono ormai trovate per tutti i sistemi operativi.
-Molti di questi programmi possono essere facilmente integrati anche con le procedure automatiche già scritte per la cancellazione dei dati.
+Molti di questi programmi possono essere facilmente integrati anche con le procedure automatiche già scritte per
+la cancellazione dei dati.
 Consiglio di descrivere nel general manual una procedura che descriva la cancellazione del tipo di dato.
 Tenendo in considerazione la tabella del punto 04#T (successivo capitolo), è facile suddividere o creare diverse procedure
 di cancellazione a seconda della categoria del dato.
 
-Mentre se l'organizzazione offre servizi disponibili tramite una rete di accesso (quasi sempre accessibili con un metodo predefinito di autenticazione),
-è consigliabile scrivere procedure di verifica, mirate a segnalare possibili dati considerati dismessi, ma ancora presenti nelle aree dell'organizzazione.
+Mentre se l'organizzazione offre servizi disponibili tramite una rete di accesso (quasi sempre accessibili con un metodo
+predefinito di autenticazione), è consigliabile scrivere procedure di verifica, mirate a segnalare possibili dati considerati dismessi,
+ma ancora presenti nelle aree dell'organizzazione.
 Se i dati venissero trovati, il responsabile o l'operatore del reparto, dovrà procedere alla cancellazione e tracciare l'evento
 (in un apposito registro elettronico o cartaceo).
 Fondamentale è capire e prevenire queste situazioni. Probabilmente la prima procedura di cancellazione potrebbe funzionare parzialmente
@@ -916,15 +921,15 @@ Riassumo il caso in una breve procedura,
 * Cancellazione o revoca accesso utente
 L'utente che ha lasciato l'organizzazione (sia esso come dipendente, o fornitore), il suo profilo e i relativi accessi dovranno
 essere rimossi il prima possibile.
-Anche in questo caso è consigliabile scrivere una procedura che descriva i passaggi eseguiti dall'amministratore di sistema, dopo che
-il responsabile delle risorse umane avrà confermato l'uscita (amministrativa) dell'utente.
+Anche in questo caso è consigliabile scrivere una procedura che descriva i passaggi eseguiti dall'amministratore di sistema,
+dopo che il responsabile delle risorse umane avrà confermato l'uscita (amministrativa) dell'utente.
 Se l'utente utilizzava una casella di posta, essa dovrà essere chiusa, e un processo simile ad un auto-risponditore,
 dovrà avviare il possibile mittente, a quale casella sostitutiva è necessario scrivere.
 
 ---)
 
 
-04) Registrazioni e accesso ai log di sistemi operativi (WIP)
+04) Registrazioni e accesso ai log di sistemi operativi
 
 Questo punto potrebbe anche rientrare nelle azioni pratiche descritte nell'intero passaggio 03.
 E' preferibile che tutti i sistemi operativi nell'organizzazione siano stati inventariati, ed aggiornati.
@@ -1025,20 +1030,18 @@ quindi intervenire. Mentre gli amministratori di sistema, anche loro avvisati, p
 del dispositivo tramite un muletto o nuovo strumento.
 
 - email richiesta riscatto
---> Negli ultimi anni organizzazioni criminali hanno costruito cavalli di troia ad orologeria,
-chiamati comunemente cryptolocker. Ad una certa data vengono attivati e codificano ogni dato presente nelle cartelle documenti
-dell'utente, ed inoltre possono oltrepassarle, arrivando anche ad intaccare i file presenti nei dischi di rete condivisi.
-Dopo queste operazioni poco convenzionali, i soliti ignoti potrebbero inviare un'email all'utente preso di mira,
-chiedendo un pagamento di denaro con una valuta digitale.
-Altrimenti, nel computer dell'utente potrebbe appararire un avviso a pieno schermo.
-Tralasciando questa possibile azione di codifica file, l'utente bersagliato potrebbe ricevere un'email con istruzioni per inviare
-dei dati presenti nell'organizzazione, su ____forzatura di minaccia.
-Qualuche sia la richiesta o il danno precedentemente arrecato dall'ignoto, dovreste descrivere una procedura di contatto.
-L'utente dovrà descrivere quello che è successo, tramite uno strumento di tracciatura (ticket per esempio),
-il quale avvisi direttamente gli amministratori di sistema ed il security manager. L'utente dovrà attendere una risposta.
-Il computer dell'utente sottoposto a ricatto potrebbe essere inutilizzabile (vedi l'esempio di cryptolocker), è consigliabile
-scrivere nella procedura di staccare il cavo di rete da questo apparecchio, non utilizzarlo ed utilizzare un altro
-terminale per l'avvio della procedura.
+--> Negli ultimi anni organizzazioni criminali hanno costruito dei software illegali distribuiti senza permesso nei computer
+di ignari utenti.
+Ad una certa data i software vengono attivati da chi li controlla, allo scopo di codificare gni dato presente nelle cartelle documenti
+dell'utente, ed inoltre questa operazione può intaccare anche i file presenti nei dischi di rete condivisi.
+Dopo queste operazioni, all'utente preso di mira potrebbe giungere un'email con avviso di pagamento, in cambio della chiave
+per ottenere i file codificati, di nuovo leggibili.
+
+Qualuche sia la richiesta o il danno precedentemente arrecato dall'ignoto, è consigliabile trascrivere una procedura.
+L'utente coinvolto in questa spiacevole azione, dovrà descrivere quello che è successo, tramite uno strumento
+di tracciatura (ticket per esempio), il quale avvisi direttamente gli amministratori di sistema ed il security manager.
+Il computer dell'utente sottoposto a ricatto potrebbe essere inutilizzabile, è consigliabile scrivere nella procedura di staccare
+il cavo di rete da questo apparecchio, non utilizzarlo ed utilizzare un altro terminale per l'avvio della procedura.
 
 - diffusione involontaria dei dati
 --> Evento la cui probabilità di manifestarsi è alta. Un errore umano potrebbe agevolare l'utente (senza volerlo)
@@ -1048,7 +1051,8 @@ Configurazioni troppo permissive in un servizio web, facilitano i motori di rice
 una o più directory (mancanza di una direttiva index).
 Contenuti che avrebbero dovuto rimanere riservati, diventano pubblici.
 Il cliente potrebbe subire un danno di immagine, il quale si rifletterà sull'organizzazione.
-Un altro esempio potrebbe essere la spedizione di dati riservati come credenziali ad utenti non pertinenti alla sorgente di richiesta.
+Un altro esempio potrebbe essere la spedizione di dati riservati come credenziali ad utenti non pertinenti alla
+sorgente di richiesta.
 La procedura dovrà comunicare all'utente che si è accorto dell'errata divulgazione dati, di aprire una richiesta tracciabile,
 i modo che il securiy manager dell'organizzazione possa intervenire.
 
@@ -1056,7 +1060,8 @@ i modo che il securiy manager dell'organizzazione possa intervenire.
 --> Anche in questo caso, non sarà raro che la procedura debba essere utilizzata. Ogni sistema operativo dell'organizzazione
 dovrà essere controllato attraverso processi monitor.
 Vengono quindi verificati i valori di consumo RAM, calcolo CPU, spazio libero nelle partizioni, ed altri livelli da sorvegliare.
-All'arrivo di una segnalazione (tramite email per esempio), sarà necessario valutare se si è verificata anche un'anomalia nel sistema operativo dettagliato.
+All'arrivo di una segnalazione (tramite email per esempio), sarà necessario valutare se si è verificata anche un'anomalia
+nel sistema operativo dettagliato.
 Risolta l'anomalia è consigliabile verificare se siamo di fronte ad un esaurimento di una risorsa, e nel caso predisporre un ampliamento.
 
 - richiesta installazione nuovo software da parte di un membro dell'organizzazione
@@ -1079,8 +1084,8 @@ nel stendere quest'ultima procedura.
 
 Scopo della procedura è quello di definire le modalità e le responsabilità per il corretto adempimento dell’obbligo
 di notifica al "Garante privacy" ed eventuale comunicazione agli interessati di violazioni di dati personali.
-Le prescrizioni contenute nella presente procedura discendono da normative cogenti, decreti, linee guida, provvedimenti, considerati applicabili
-all’Organizzazione al fine di assicurare piena conformità del Sistema di gestione privacy alle stesse.
+Le prescrizioni contenute nella presente procedura discendono da normative cogenti, decreti, linee guida, provvedimenti,
+considerati applicabili all’organizzazione al fine di assicurare piena conformità del Sistema di gestione privacy alle stesse.
 La presente procedura si applica in presenza di una violazione di dati personali ovvero qualora si verifichi
 (sia in maniera accidentale che illecita) la distruzione, la perdita, la modifica, la divulgazione non autorizzata
 o l’accesso ai dati personali trasmessi, conservati o comunque trattati.
@@ -1108,26 +1113,33 @@ La procedura data-breach dovrà riportare nome e cognome, della persona che avr�
 
 06) Backup e ripristini
 
-Il salvataggio dei dati trattati per un certo periodo, oppure banche dati utilizzate per la semplice lettura vengono salvati con software dedicati, oppure procedure interne.
-Pensiamo al salvataggio di una macchina virtuale tramite un procedimento snapshot, un agente di backup, opure semplicemente una procedura con lo strumento xcopy o mysqldump (per i database).
-Ebbene questi procedimenti avviati spesso nelle ore notturne o nell'arco della giornata (dove il rischio di perdita dati e ore lavoro è alto), non basta verificare il loro avvio e termine operativo.
-Dobbiamo a seconda del numero di procedure e tipologia di dati che dovranno essere disponibili in caso di disastri o perdite (quindi l'avvio di un ripristino), programmare un procedimento di verifica dei dati salvati.
-Il mio consiglio è quello di programmare il controllo a livello giornaliero, dal lunedì al venerdì, e se possibile alternare il personale che effettuerà la verifica.
-Anche se la base dati da verificare è minima (ad esempio, un set di backup di un solo server gestionale), il controllo nei giorni lavorativi ci permetterà di ridurre il rischio
-di una possibile perdita di informazioni, anche di un solo giorno di inserimento.
-Diverso è per quelle organizzazioni che si occupano di più salvataggi di set di dati, soprattutto per conto terzi. Spesso in queste realtà organizzative, la natura e la tipologia
-del dato da salvare è molto varia. Il personale di controllo dovrà essere istruito per la verifica di ogni informazioni salvata; ad esempio, come verificare se un database
-è stato estratto nel suo formato di salvataggio in modalità completa.Spesso le estrazioni dedicate al backup sono avviate, ma per una serie di interventi interni al database,
-non riescono ad essere terminate.
-Riporto l'esempio di una procedura VIEW o ROUTINE del database MYSQL con un problema, per giunta creata prima di fine giornata lavorativa, e lasciata in uno stato che interromperà
-quasi certamente l'estrazione dati per il procedimento di backup.
+Il salvataggio dei dati trattati per un certo periodo, oppure banche dati utilizzate per la semplice lettura vengono salvati
+con software dedicati, oppure procedure interne.
+Pensiamo al salvataggio di una macchina virtuale tramite un procedimento snapshot, un agente di backup, opure semplicemente una procedura
+con lo strumento xcopy o mysqldump (per i database).
+Ebbene questi procedimenti avviati spesso nelle ore notturne o nell'arco della giornata (dove il rischio di perdita dati e ore lavoro è alto),
+non basta verificare il loro avvio e termine operativo.
+Dobbiamo a seconda del numero di procedure e tipologia di dati che dovranno essere disponibili in caso di disastri o perdite (quindi l'avvio di un ripristino),
+programmare un procedimento di verifica dei dati salvati.
+Il mio consiglio è di programmare il controllo a livello giornaliero, dal lunedì al venerdì, e se possibile alternare il personale
+che effettuerà la verifica.
+Anche se la base dati da verificare è minima (ad esempio, un set di backup di un solo server gestionale), il controllo nei giorni lavorativi
+ci permetterà di ridurre il rischio di una possibile perdita di informazioni, anche di un solo giorno di inserimento.
+Diverso è per quelle organizzazioni che si occupano di più salvataggi di set di dati, soprattutto per conto terzi.
+Spesso in queste realtà organizzative, la natura e la tipologia del dato da salvare è molto varia.
+Il personale di controllo dovrà essere istruito per la verifica di ogni informazioni salvata; ad esempio, come verificare
+se un database è stato estratto nel suo formato di salvataggio in modalità completa.
+Spesso le estrazioni dedicate al backup sono avviate, ma per una serie di interventi interni al database, non riescono ad essere terminate.
+Riporto l'esempio di una procedura VIEW o ROUTINE del database MYSQL con un problema, per giunta creata prima di fine giornata
+lavorativa, e lasciata in uno stato che interromperà quasi certamente l'estrazione dati per il procedimento di backup.
 Il numero di controlli da eseguire, deve essere sufficiente per giorno a completare la verifica di tutti i backup in una settimana.
 Se il set completo di tutti i nostri processi backup è pari a settanta, dovremo eseguire quattordici controlli al giorno.
 Il personale inoltre deve seguire una regola molto importante. Se in un determintato giorno lavorativo è assente l'addetto al controllo
 (pensiamo ad una malattia o permesso), deve essere predisposta la verifica da parte di altro personale per la procedura di verifica.
-Il personale deve essere quindi istruito a preparato ad affrontare situazioni di assenza, al fine di fare il possibile per mantenere attiva nel possibile,
-la procedura di controllo giornaliera.
-La procedura deve essere quindi trascritta, e resa disponibile per essere consultata in uno o più aspetti (di rischio o controllo del tipo di dato) come quelli sopra descritti.
+Il personale deve essere quindi istruito a preparato ad affrontare situazioni di assenza, al fine di fare il possibile per mantenere
+attiva nel possibile, la procedura di controllo giornaliera.
+La procedura deve essere quindi trascritta, e resa disponibile per essere consultata in uno o più aspetti (di rischio o controllo
+del tipo di dato) come quelli sopra descritti.
 Riporto alcune domande fondamentali che dovranno essere presenti nella procedura:
 - il backup contiene dati trascritti nelle ultime quarantotto ore in una delle cartelle da verificare?
 - il file di backup del database contiene la conferma di fine estrazione del dato?
@@ -1135,12 +1147,19 @@ Riporto alcune domande fondamentali che dovranno essere presenti nella procedura
 
 - Prove documentate del ripristino di sistemi operativi
 Descriverò ora la parte del ripristino del dato. 
-Voglio prima fare una premessa. Certi tipi di situazioni lavorative e non, inducono ad utilizzare un sistema operativo e una serie di applicazioni anche per oltre cinque, sei anni.
-Ci si può imbattere in situazioni in cui il dato deve essere ripristinato dopo questo periodo ipotetico, su nuovi sistemi operativi o motori database aggiornati.
-Ricordo il database MYSQL, disponibile in distribuzioni Linux fino a pochi anni fa con pacchetti contenenti la versione di Oracle, e poi sostituiti con quelli dell'organizzazione MariaDB.
+Voglio prima fare una premessa. Certi tipi di situazioni lavorative e non, inducono ad utilizzare un sistema operativo e una serie
+di applicazioni anche per oltre cinque, sei anni.
+Ci si può imbattere in situazioni in cui il dato deve essere ripristinato dopo questo periodo ipotetico, su nuovi sistemi operativi
+o motori database aggiornati.
+Ricordo il database MYSQL, disponibile in distribuzioni Linux fino a pochi anni fa con pacchetti contenenti la versione di Oracle,
+e poi sostituiti con quelli dell'organizzazione MariaDB.
 Le procedure programmate permettono di ridurre il rischio di trovarci bloccati, durante la fase di ripristino dati.
-Per questo motivo l'ispettore chiederà nei primi audit, documenti che traccino il test di ripristino dati. Potremmo in questo test trovare delle problematiche nell'importare dati da una versione database ad una più recente. Dovremo quindi correggere le tabelle, o i programmi di importazione. Saremo in caso di necessità, pronti a ripristinare i dati di qualsiasi natura, presenti nelle nostre aree di stoccaggio senza particolari problemi (attenendoci così, ai tempi di ripristino elencati nel documento SLA, punto 14).
-Per ogni procedura di ripristino è consigliabile documentare l'orario di partenza e fine, includendo i log di estriazione dati. Ad esempio, se copieremo dati presenti nelle aree di storage, dovremo salvare tutto l'elenco.
+Per questo motivo l'ispettore chiederà nei primi audit, documenti che traccino il test di ripristino dati.
+Potremmo in questo test trovare delle problematiche nell'importare dati da una versione database ad una più recente.
+Dovremo quindi correggere le tabelle, o i programmi di importazione. Saremo in caso di necessità, pronti a ripristinare i dati di qualsiasi
+natura, presenti nelle nostre aree di stoccaggio senza particolari problemi (attenendoci così, ai tempi di ripristino elencati nel documento SLA, punto 14).
+Per ogni procedura di ripristino è consigliabile documentare l'orario di partenza e fine, includendo i log di estriazione dati.
+Ad esempio, se copieremo dati presenti nelle aree di storage, dovremo salvare tutto l'elenco.
 Se preleveremo un intero estratto di uno o più database, dovremo stampare tutte le operazioni per poi raccoglierle in un file di testo da conservare.
 Riporto un esempio per Mysql/MariaDB da inserire, in una procedura autotizzata:
 
@@ -1148,26 +1167,39 @@ $ date; mysql --password=cccccc -u utente --force nome_database < nome_dump_data
 
 L'ispettore chiederà durante le sessioni audit, le tracciature log che testimonino il passaggio dei dati ripristinati.
 
-07) Formazione security manager (WIP)
+07) Formazione security manager
 
-La figura del Security Manager è in costante aggiornamenti, in termini di nozioni di sicurezza, e di eventi che si verificano nel mondo dei sistemi operativi, e dei servizi erogati dall'organizzazione. Non accennerò dei possibili corsi offerti da aziende del settore, basta cercare nei motori di ricerca parole come "corsi sicurezza informatica", e potete trovare varie possibilità.
-Elencherò solo profili e aree di sicurezza informatica, costantemente aggiornate. Gli ispettori della normativa chiederanno quali portali e fonti vengono periodicamenti consultati dal Security Manger. 
+La figura del Security Manager è in costante aggiornamenti, in termini di nozioni di sicurezza, e di eventi che si verificano
+nel mondo dei sistemi operativi, e dei servizi erogati dall'organizzazione.
+Non accennerò dei possibili corsi offerti da aziende del settore, basta cercare nei motori di ricerca parole come "corsi sicurezza informatica",
+e potete trovare varie possibilità.
+Elencherò solo profili e aree di sicurezza informatica, costantemente aggiornate.
+Gli ispettori della normativa chiederanno quali portali e fonti vengono periodicamenti consultati dal Security Manger. 
 I certificatori chiederanno in che modo e da quali fonti esterne, il Secury Manager riceve aggiornamenti,
 Li trovate nelle note finali, al punto (07*1).
 
 07a) Formazione per il personale
 
-Il personale dell'organizzazione potrebbe non essere felice di seguire i punti richiesta dalla normativa. Immaginiamoci se venisse poi chiesto di seguire un corso di introduzione alla stessa normativa. Per tenere alto il morale, consiglio di presentare l'inroduzione dei termini 27001, asset, nuove regole e procedure tramite fogli di presentazione, diversi per ciascun reparto.
-Ad esempio, nell'introduzione alla norma includeremo con brevi frasi i punti più importanti, con disegni o icone (perchè anche divertenti) che possono aiutare il personale a ricordarsi di un particolare passaggio o termine.
-Il mio consiglio è di includere cenni alla normativa GDPR europea, e la norma inglese MCSS (07a*1) per sottolineare l'impegno di paesi vicini all'Italia ma anche extra europei per la mantenere una buona sicurezza nella gestione dei dati. 
-Nell'organizzazione esistono poi reparti che trattano tipi di dati diversi tra loro. Una figura amministrativa può trattare banche dati come una figura commerciale. La stessa amministrativa al contrario, non tratterà il dato codice del reparto programmatori. Per questo motivo i fogli di presenazione devono essere quasi sempre differenziati, includendo termini e disegni diversi per reparto. Il personale ne trarrà vantaggio e si sentirà ascoltato allo stesso tempo, troverà nel Security Manager la figura di riferimento di fronte ad una scelta legata alla tema sicurezza di un asset.
-Altro aspetto da evidenziare durante la formazione, è il concetto di protezione, continuità di erogazione del dato. Il personale deve saper fin da subito che saranno anche loro attori, di questo concetto.
+Il personale dell'organizzazione potrebbe non essere felice di seguire i punti richiesta dalla normativa.
+Immaginiamoci se venisse poi chiesto di seguire un corso di introduzione alla stessa normativa. Per tenere alto il morale,
+consiglio di presentare l'introduzione dei termini 27001, asset, nuove regole e procedure tramite fogli di presentazione, diversi per ciascun reparto.
+Ad esempio, nell'introduzione alla norma includeremo con brevi frasi i punti più importanti, con disegni o icone (perchè anche divertenti) che
+possono aiutare il personale a ricordarsi di un particolare passaggio o termine.
+Il mio consiglio è di includere cenni alla normativa GDPR europea, e la norma inglese MCSS (07a*1) per sottolineare l'impegno di paesi vicini
+all'Italia ma anche extra europei per la mantenere una buona sicurezza nella gestione dei dati. 
+Nell'organizzazione esistono poi reparti che trattano tipi di dati diversi tra loro. Una figura amministrativa può trattare banche dati come
+una figura commerciale. La stessa amministrativa al contrario, non tratterà il dato codice del reparto programmatori.
+Per questo motivo i fogli di presenazione devono essere quasi sempre differenziati, includendo termini e disegni diversi per reparto.
+Il personale ne trarrà vantaggio e si sentirà ascoltato allo stesso tempo, troverà nel Security Manager la figura di riferimento
+di fronte ad una scelta legata alla tema sicurezza di un asset.
+Altro aspetto da evidenziare durante la formazione, è il concetto di protezione, continuità di erogazione del dato.
+Il personale deve saper fin da subito che saranno anche loro attori, di questo concetto.
  
-07b) Estendere regolamento anche ad esterni fornitori o collaboratori (WIP)
+07b) Estendere regolamento anche ad esterni fornitori o collaboratori
 
-Fornitori e collaboratori a tempo determinanto e non, che dovranno operare all'interno della rete interna dell'organizzazione, dovranno compilare
-un questionario precompilato. Ecco qui sotto riportate, un esempio di domande alle quali il collaboratore esterno, dovrà fornirci
-le rispote.
+Fornitori e collaboratori a tempo determinanto e non, che dovranno operare all'interno della rete interna dell'organizzazione,
+dovranno compilare un questionario precompilato.
+Ecco qui sotto riportate, un esempio di domande alle quali il collaboratore esterno, dovrà fornirci le rispote.
 
 Elenco requisiti base
 --> Esiste un inventario degli assett informativi e delle tecnologie impiegate (sì/no)
@@ -1197,9 +1229,11 @@ Elenco requisiti base
 --> I profili di autorizzazione vengono aggiornati in caso di cambio mansioni (sì/no)
 --> Backup
 ----> presenza di backup effettuato a cadenza (sì/no)
-----> tipo di supporto in cui viene registrato il backup (indicare il supporto, se nastro, spazio esterno. Nota bene: se utilizzato il supporto nastro,
-       è richiesto il revault dei nastri una volta all'anno come minimo. I dati già salvati nei nastri, devono essere riscritti in nastri nuovi almeno una volta all'anno).
-----> luogo di conservazione del backup (indicare il luogo) (nota per la nostra organizzazione, è preferibile che sia esterno al luogo dell'organizzazione del fornitore)
+----> tipo di supporto in cui viene registrato il backup (indicare il supporto, se nastro, spazio esterno.
+		Nota bene: se utilizzato il supporto nastro, è richiesto il revault dei nastri una volta all'anno come minimo.
+		I dati già salvati nei nastri, devono essere riscritti in nastri nuovi almeno una volta all'anno).
+----> luogo di conservazione del backup (indicare il luogo) (nota per la nostra organizzazione,
+		è preferibile che sia esterno al luogo dell'organizzazione del fornitore)
 ----> esiste un soggetto responsabile dell'effettuazione del backup e del controllo della loro regolarità (sì/no)
 ----> viene effettuata la procedura di ripristino dei dati per verificare la disponibilità ed efficacia (sì/no)
 --> E' stato individuato un amministratore di sistema esterno/interno (sì/no)
@@ -1211,15 +1245,20 @@ Tale nomina reca l'elencazione analitica degli ambiti di operatività consentiti
       e agli archivi elettronici da parte degli amministratori di sistema (sì/no)
 --> Le registrazioni (access log) hanno caratteristiche di completezza, inalterabilità e possibilità di verifica della loro integrità adeguate al
      raggiungimento dello scopo di verifica per cui sono richieste (sì/no)
---> Le registrazioni comprendono i riferimenti temporali e la descrizione dell'evento che le ha generate e sono conservate per un congruo periodo, non inferiore a sei mesi (sì/no)
---> Relativamente all'obbligo di registrazione degli accessi logici degli Amministratori di sistema, sono compresi anche i sistemi client oltre che quelli server (sì/no)
+--> Le registrazioni comprendono i riferimenti temporali e la descrizione dell'evento che le ha generate e sono conservate
+	per un congruo periodo, non inferiore a sei mesi (sì/no)
+--> Relativamente all'obbligo di registrazione degli accessi logici degli Amministratori di sistema,
+	sono compresi anche i sistemi client oltre che quelli server (sì/no)
 --> Eventi critici
-----> Sono accaduti nel corso dell'anno trascorso alcuni eventi critici dal punto di vista del sistema informatico tra quelli sotto indicati (malfunzionamenti dovuti a sabotaggi, furti, virus, accessi non autorizzati o non voluti, perdite cancellazione o diffusione involontaria, accessi effettuati mediante la falsificazione dell'identità dell'utente) (sì/no)
+----> Sono accaduti nel corso dell'anno trascorso alcuni eventi critici dal punto di vista del sistema informatico tra quelli sotto indicati.
+	Malfunzionamenti dovuti a sabotaggi, furti, virus, accessi non autorizzati o non voluti, perdite cancellazione o diffusione involontaria,
+	accessi effettuati mediante la falsificazione dell'identità dell'utente. (sì/no)
 
 Una volta completato questo questionario, da parte del fornitore, e valutato, potremo permettere ad esso di accedere alla rete interna dell'organizzazione.
-Creeremo un profilo con i permessi di accesso alle sole aree predefinite e dedicate per esso. Inoltre è consigliabile che il fornitore acceda solo alle aree di test,
-se si occupa dello sviluppo di programmi o di gestione/revisione dati. Ricordiamo che negli ambienti di test è obbligatorio usare dati mascherati, anche se quest'ultimi in produzione,
-sono di dominio pubblico.
+Creeremo un profilo con i permessi di accesso alle sole aree predefinite e dedicate per esso.
+Inoltre è consigliabile che il fornitore acceda solo alle aree di test,
+se si occupa dello sviluppo di programmi o di gestione/revisione dati.
+Ricordiamo che negli ambienti di test è obbligatorio usare dati mascherati, anche se quest'ultimi in produzione, sono di dominio pubblico.
 
   MODELLO
 
@@ -1308,46 +1347,59 @@ Un esempio dello schema.
                                 | internet |
                                 @----------@
 
-In questo scarno esempio, la rete dell'organizzazione è divisa a livello fisico dalla rete ospiti, tramite un apparato switch programmabile (porta per porta ethernet).
-La rete ospiti può comunicare con il mondo internet tramite un apparato firewall che amministra l'instradamento da noi impostato.
+In questo scarno esempio, la rete dell'organizzazione è divisa a livello fisico dalla rete ospiti,
+tramite un apparato switch programmabile (porta per porta ethernet).
+La rete ospiti può comunicare con il mondo internet tramite un apparato firewall che amministra
+l'instradamento da noi impostato.
 
-Come avete già letto nel punto 07b, i fornitori che devono trattare per conto dell'organizzazione una serie di dati, possono avere accesso alla rete wifi della rete interna.
+Come avete già letto nel punto 07b, i fornitori che devono trattare per conto dell'organizzazione una serie di dati,
+possono avere accesso alla rete wifi della rete interna.
 L'accesso viene consentito con le determinate restrizioni del caso (profili creati appositamente, con limitazioni di accesso alle aree dati).
 
 09) Misure di protezione per lo stabile
 
 I punti della normativa per la protezione dello stabile sono da tenere in considerazione.
 Elencherò le azioni pratiche da compiere, affinchè possiate già essere preparati per un audit interno.
-Create un registro elettronico e stampate dei cartellini di carta con scritto VISITATORE. Se riuscite inserite i cartellini in una busitna di plastica munita di molletta (09*1).
-Educate tutto il personale all'uso dei cartellini. Quando un membo dell'organizzazione aspetta ospiti, dovrà prelevare dall'ufficio che conserva i cartellini, gli stessi,
-e notificare sul registro elettronico, questi dati:
+Create un registro elettronico e stampate dei cartellini di carta con scritto VISITATORE.
+Se riuscite inserite i cartellini in una busitna di plastica munita di molletta (09*1).
+Educate tutto il personale all'uso dei cartellini. Quando un membo dell'organizzazione aspetta ospiti,
+dovrà prelevare dall'ufficio che conserva i cartellini, gli stessi, e notificare sul registro elettronico, questi dati:
 
 | Data | Nome Cognome - possibile organizzazione | Conferisce con (nome cognome membre interno) | orario ingresso | orario uscita |
 
-Sembra una banalità, ma osservare questa procedura, ci mette al riparo da possibili problemi durante ricerche, se vi fosse un fortuito caso di data-breach.
-Inoltre il Security Manger, potrà sapere chi sarà entrato nello stabile dell'organizzazione.
-Se l'organizzazione è dotata di personale che controlla l'ingresso allo stabile, sarà più semplice rispettare, ed attuare la procedura di registrazione.
+Sembra una banalità, ma osservare questa procedura, ci aiuterà durante le ricerche (ad esempio, dopo il manifestarsi di un data-breach).
+Inoltre il Security Manager, potrà sapere chi sarà entrato nello stabile dell'organizzazione.
+Se l'organizzazione è dotata di personale che controlla l'ingresso allo stabile, sarà più semplice rispettare ed attuare, la procedura di registrazione.
 
-Se i componenti dell'organizzazione accedono tramite una badge elettronico all'edificio, ogni avvenimento (apertura porta di ingresso, o altre aree) dovrà essere registrato.
+Se i componenti dell'organizzazione accedono tramite una badge elettronico all'edificio, ogni avvenimento
+(apertura porta di ingresso, o altre aree) dovrà essere registrato.
 A volte è difficile trovare centraline elettroniche di controllo accesso che dialogano con apparati di rete.
-Vi scrivo questo, perchè il nostro fine è prelevare i dati di registrazione accessi ed inviarle al gestore log, descritto nel punto 04. Una soluzione è prelevare quotidianamente il file log con gli accessi ed inviarlo al gestore log.
-In realtà l'evento accesso dovrebbe essere inviato in tempo reale al gestore log. Se l'ispettore della normativa potrebbe ritenere obbligatoria (per il vostro caso) la modalità di registrazione in tempo reale, un aggiornamento software della centralina, potrebbe essere la soluzione.
+Vi scrivo questo, perchè il nostro fine è prelevare i dati di registrazione accessi ed inviarle al gestore log,
+descritto nel punto 04. Una soluzione è prelevare quotidianamente il file log con gli accessi ed inviarlo al gestore log.
+In realtà l'evento accesso dovrebbe essere inviato in tempo reale al gestore log. Se l'ispettore della normativa potrebbe ritenere
+obbligatoria (per il vostro caso) la modalità di registrazione in tempo reale, un aggiornamento software della centralina, potrebbe essere la soluzione.
 Accessi di persone esterne come corrieri ed ospiti devono sempre avvenire con la presenza di un membro o dipendente dell'organizzazione.
 Mentre, il fornitore o cliente che deve accedere alle aree dove sono costuditi o trattati dei dati, deve essere registrato tramite un apposito registro.
 Consiglierei il formato elettronico (per una veloce e chiara azione di ricerca se richiesto).
 Tramite badge è poi possibile restringere l'accesso a determinate aree (come quelle di stoccaggio dati) da parte del solo personale autorizzato.
 
-Solo a scopo informativo, ricordo che ogni cavo ethernet (e/o fibra ottica) presente nell'organizzazione dovrà essere schermato (cosa che avviene già in quasi tutti gli stabili).
+Solo a scopo informativo, ricordo che ogni cavo ethernet (e/o fibra ottica) presente nell'organizzazione dovrà essere schermato
+(cosa che avviene già in quasi tutti gli stabili).
 Ogni rete WIFI dovrà poi essere protetta da password o altro metodo di autenticazione (token generato su richiesta).
 Ogni armadio di deposito dispositivi hardware, dove sono presenti aree di stoccaggio o trattamento dati dovrà essere chiuso a chiave.
 Tutte queste misure sono da adattorare per evitare possibili fughe dei dati protetti.
 
-Per mantenere la continuità dei servizi offerti dall'organizzazione, lo stabile dovrà essere sottoposto ad una perizia di rischio di fulminazione (diretta o indiretta).
-Prima di affrontare la valutazione (quasi sempre effettuata da un perito professionista) è vivamente raccomandato chiedere in consenso di effettuarla, al possibile consulente.
-Queste perizie non sono economiche, ed è necessario valutare se via siano servizi erogati dall'organizzazione, che possono costituire un problema, se fermati per guasti elettrici.
+Per mantenere la continuità dei servizi offerti dall'organizzazione, lo stabile dovrà essere sottoposto ad una perizia
+di rischio di fulminazione (diretta o indiretta).
+Prima di affrontare la valutazione (quasi sempre effettuata da un perito professionista) è vivamente raccomandato chiedere
+il consenso di effettuarla, al possibile consulente.
+Queste perizie non sono economiche, ed è necessario valutare se via siano servizi erogati dall'organizzazione, che possono costituire un problema,
+se fermati per guasti elettrici.
 
 Riporto un piccolo esempio di valutazione.
-E' stata valutato il rischio di perdita di vite umane (denominato R1), il rischio di perdita di servizio pubblico (denominato R2) ed il rischio di perdita economica (denominato R4).
+
+E' stata valutato il rischio di perdita di vite umane (denominato R1), il rischio di perdita di servizio pubblico (denominato R2)
+ed il rischio di perdita economica (denominato R4).
 Il rischio di perdita di patrimonio culturale insostituibile (denominato R3) non è presente.
 La valutazione del rischio è stata eseguita sulla base dei criteri di progetto e di costruzione utilizzati tenendo conto (ove possibile),
 di tutti gli elementi metallici che fungono da componenti naturali dell’LPS.
@@ -1358,19 +1410,27 @@ Al fine di individuare la struttura da considerare per la protezione contro il f
 - separazioni antincendio REI 120 eventualmente esistenti;
 - presenza/assenza di sovratensioni pericolose trasmesse lungo le linee da una struttura all’altra.
 
-Per quanto riguarda l'impianto LPS (Lightning Protection System, impianto di protezione: completo usato per ridurre il danno materiale dovuto alla fulminazione diretta della
-struttura), esso può (o non) essere presente. Tale caratteristica verrà definita nella valutazione.
+Per quanto riguarda l'impianto LPS (Lightning Protection System), completo usato per ridurre il danno materiale dovuto alla fulminazione
+diretta della struttura, esso può (o non) essere presente. Tale caratteristica verrà definita nella valutazione.
 
 10) Test di penetrabiltà
 
 Si tratta di un processo abbastanza importante, è possibile eseguirlo in autonomia, consiglio ad ogni modo l'aiuto di un consulente esterno.
 Chiunque eseguirà il test di penetrabilità (una persona fisica o società), il suo nominativo potrebbe essere tracciato nelle possibili verifiche degli ispettori. 
-Un test base di penetrabilità potrebbe essere avviato in questo modo. L'incaricato potrebbe chiederci una macchina virtuale interna alla nostra rete, per installare un sistema operativo con tutti gli strumenti necessari (vedi nota 10*1).
-La prima fase del test potrebbe richiedere tutta la giornata lavorativa, in quanto il maggior numero di macchine dovrà essere rilevato. Molto spesso le macchine client vengono avviate in orari diversi della giornata; ripetendo diverse scansioni nell'arco della giornata, si avrà la possibilità di trovare sempre un maggior numero di macchine attive, quindi scansionarle.
-Terminata la prima scansione, l'incaricato di consegnerà una documentazione di tutti i servizi disponibili e attivi nelle macchine client e server. Dovremo chiudere i servizi non necessari, che quasi sempre sono in ascolto su determinate porte (tcp o udp per esempio). Questa prima documentazione dovremo conservarla.
+Un test base di penetrabilità potrebbe essere avviato in questo modo. L'incaricato potrebbe chiederci una macchina virtuale interna alla nostra rete,
+per installare un sistema operativo con tutti gli strumenti necessari (vedi nota 10*1).
+La prima fase del test potrebbe richiedere tutta la giornata lavorativa, in quanto il maggior numero di macchine dovrà essere rilevato.
+Molto spesso le macchine client vengono avviate in orari diversi della giornata; ripetendo diverse scansioni nell'arco della giornata,
+si avrà la possibilità di trovare sempre un maggior numero di macchine attive, quindi scansionarle.
+Terminata la prima scansione, l'incaricato di consegnerà una documentazione di tutti i servizi disponibili e attivi nelle macchine
+client e server. Dovremo chiudere i servizi non necessari, che quasi sempre sono in ascolto su determinate porte (tcp o udp per esempio).
+Questa prima documentazione dovremo conservarla.
 Dopo aver spento servizi non necessari, l'incaricato avvierà una seconda scansione.
-Da questa seconda fase, ci aspetteremo di trovare servizi di rete conosciuti, ma facilmente utilizzabili da un estraneo. Ad esempio, servizi database ai quali è possibile accedere con credenziali semplici (root/mysql), cartelle condivise in rete senza richesta di autenticazione. 
-Dovremo quindi correggere queste possibili problematiche, quindi richiedere una terza scansione, la quale confermerà l'assenza di altri servizi di rete troppo esposti.
+Da questa seconda fase, ci aspetteremo di trovare servizi di rete conosciuti, ma facilmente utilizzabili da un estraneo.
+Ad esempio, servizi database ai quali è possibile accedere con credenziali semplici (root/mysql),
+cartelle condivise in rete senza richesta di autenticazione. 
+Dovremo quindi correggere queste possibili problematiche, quindi richiedere una terza scansione, la quale confermerà l'assenza
+di altri servizi di rete troppo esposti.
 
 L'incaricato potrebbe far uso di strumenti come Meta Exploit, per rilevare altri tipi di vulnerabilità presenti nei servizi.
 Se lo farà, potrebbe indicarci quali servizi è necessario aggiornare, per ridurre problemi di sicurezza.
@@ -1432,40 +1492,64 @@ installati pacchetti aggiornati, e risolti particolari casi di problemi sicurezz
 
 11) Monitoraggio dei sistemi che erogano servizi
 
-Uno dei punti fondamentali della norma è proprio il monitoraggio dei servizi e delle loro risorse a disposizione (disponibilità di calcolo CPU, memoria RAM, spazio disco libero). La normativa si aspetta che il personale addetto al controllo dei servizi, sia avvisato in caso di problemi.
-Esistono diversi software che sono in grado di tenere monitorato i servizi e le risorse, potremmo pensare a Nagios (o Icinga), Zabbix, oppure Dynatrace. I primi due sono rilasciati con licenza open source, mentre il terzo è quasi del tutto a pagamento, ed inoltre prevede l'utilizzo dell'intelligenza artificiale per rilevare e notificare velocemente, anomalie.
+Uno dei punti fondamentali della norma è proprio il monitoraggio dei servizi e delle loro risorse a disposizione
+(disponibilità di calcolo CPU, memoria RAM, spazio disco libero). La normativa si aspetta che il personale addetto al controllo dei servizi,
+sia avvisato in caso di problemi.
+Esistono diversi software che sono in grado di tenere monitorato i servizi e le risorse, potremmo pensare a Nagios (o Icinga), Zabbix, oppure Dynatrace.
+I primi due sono rilasciati con licenza open source, mentre il terzo è quasi del tutto a pagamento, ed inoltre prevede l'utilizzo dell'intelligenza artificiale
+per rilevare e notificare velocemente, anomalie.
 L'idea che voglio illustrarvi, è basata nel dedicare tempo per sviluppare e mantenere delle sonde, capaci di avvisarvi in caso di problemi.
-Nagios nella versione gratuita può essere utilizzato per controllare le porte dei servizi, ad esempio l'erogazione di un servizio web prevede la costante presenza delle porte 80 e 443 (entrambe protocollo TCP) attive.
-Purtroppo non basta Nagios per sapere se una determinata pagina (ad esempio l'accesso ad un portale) è erogata nella rete internet o aziendale. Le porte del servizio web potrebbero essere attive, eppure la pagina non rispondere per via di un problema nei servizi backend (database o interpretazione codice).
-Scrivere delle sonde per monitorare una determinata pagina è una soluzione. Uno script potrebbe avviarsi ogni N minuti e lanciare più richieste ad essa (meglio se distanziate da intervalli regolari di N seocndi).
-Se la pagina non dovesse rispondere per tutte le nostre richieste, procederemo ad inviare la segnalazione via email o tramite un pannello web che monitora lo stato di tutti i nostri servizi.
-Questo concetto di sonda può anche essere utilizzata per inviare richieste con protocollo ICMP a dispositivi di rete. L'assenza di un determinato dispositivo può allarme il personale e prepararlo alla ricezione di altre segnalazioni più specifiche. Per esempio, l'assenza di oltre cinque minuti di un router che instrada il traffico dei servizi web, ci allerta che potrebbero giungere altri allarmi di servizi più specifici (i portali web).
-Passiamo al monitoraggio interno delle risorse. Software come Nagios/Icinga sono in grado tramite agenti interni installati nel sistema, di raccogliere dati delle risorse in uso. Se l'agente rileva un picco d'uso di una determinata risorsa, possiamo essere notificati preventivamente. E' possibile installare gli agenti in ogni macchina (workstation, server) da controllare, tramite il pagamento di una licenza per ciascuno di essi, per il software Nagios o Icinga.
-Mentre per Dynatrace il costo è legato al numero di sessioni monitorate, memoria RAM usata, di tutti i nodi sotto controllo. Maggior informazioni le potete trovare nel sito web del software.
+Nagios nella versione gratuita può essere utilizzato per controllare le porte dei servizi, ad esempio l'erogazione di un servizio web prevede la costante
+presenza delle porte 80 e 443 (entrambe protocollo TCP) attive.
+Purtroppo non basta Nagios per sapere se una determinata pagina (ad esempio l'accesso ad un portale) è erogata nella rete internet o aziendale.
+Le porte del servizio web potrebbero essere attive, eppure la pagina non rispondere per via di un problema nei servizi backend
+(database o interpretazione codice).
+Scrivere delle sonde per monitorare una determinata pagina è una soluzione.
+Uno script potrebbe avviarsi ogni N minuti e lanciare più richieste ad essa (meglio se distanziate da intervalli regolari di N seocndi).
+Se la pagina non dovesse rispondere per tutte le nostre richieste, procederemo ad inviare la segnalazione via email o tramite un pannello web
+che monitora lo stato di tutti i nostri servizi.
+Questo concetto di sonda può anche essere utilizzata per inviare richieste con protocollo ICMP a dispositivi di rete.
+L'assenza di un determinato dispositivo può allarme il personale e prepararlo alla ricezione di altre segnalazioni più specifiche.
+Per esempio, l'assenza di oltre cinque minuti di un router che instrada il traffico dei servizi web, ci allerta che potrebbero giungere
+altri allarmi di servizi più specifici (i portali web).
+Passiamo al monitoraggio interno delle risorse. Software come Nagios/Icinga sono in grado tramite agenti interni installati nel sistema,
+di raccogliere dati delle risorse in uso. Se l'agente rileva un picco d'uso di una determinata risorsa, possiamo essere notificati preventivamente.
+E' possibile installare gli agenti in ogni macchina (workstation, server) da controllare, tramite il pagamento di una licenza per ciascuno di essi,
+per il software Nagios o Icinga.
+Mentre per Dynatrace il costo è legato al numero di sessioni monitorate, memoria RAM usata, di tutti i nodi sotto controllo.
+Maggior informazioni le potete trovare nel sito web del software.
 
-Ammettiamo di non poter disporre di risorse economiche per acquistare le licenze agenti interni dei software sopra descritti. Esiste una via alternativa per essere avvisati preventivamente dell'uso alto delle risorse?
+Ammettiamo di non poter disporre di risorse economiche per acquistare le licenze agenti interni dei software sopra descritti.
+Esiste una via alternativa per essere avvisati preventivamente dell'uso alto delle risorse?
 
-Sì, forse in maniera non troppo tempestiva come ci offre un algoritmo costruito da specialisti ed attivato dell'agente. L'idea base è utilizzare script ciclici che possano rilevare determinati valori, eventi.
+Sì, forse in maniera non troppo tempestiva come ci offre un algoritmo costruito da specialisti ed attivato dell'agente.
+L'idea base è utilizzare script ciclici che possano rilevare determinati valori, eventi.
 Ad esempio nei sistemi operativi è ormai semplice rilevare uso troppo alto della risorsa di calcolo più importanti (CPU, livelli della memoria RAM, disco libero).
 Se uno di questi valori dovesse superare (specialementi negli orari con più richieste) una certa soglia, il nostro script, dovrà avvisarci.
 
-Nelle segnalazioni, consiglio anche di includere brevi stralci di procedure, basate su eventi già accaduti. In tal modo il personale potrà iniziare verifiche più mirate.
+Nelle segnalazioni, consiglio anche di includere brevi stralci di procedure, basate su eventi già accaduti.
+In tal modo il personale potrà iniziare verifiche più mirate.
 
-La normativa si aspetta inoltre che i consumi di determinate risorse (calcolo CPU, memoria RAM, spazio disco libero, uso della memoria tampone SWAP, e ogni altro valore che ci è utile), sia raccolto con cadenza, salvato e pronto per essere consultato nel futuro. Il perchè è molto semplice.
+La normativa si aspetta inoltre che i consumi di determinate risorse (calcolo CPU, memoria RAM, spazio disco libero, uso della memoria tampone SWAP,
+e ogni altro valore che ci è utile), sia raccolto con cadenza, salvato e pronto per essere consultato nel futuro. Il perchè è molto semplice.
 Supponiamo che nel primo anno di vita di un servizio, gli ospiti che usufruiscono di esso, generino nelle ore di punta circa quaranta accessi al secondo.
-Il prossimo anno il traffico potrebbe scendere oppure aumentare. L'unico modo per tener monitorato questo aspetto è tracciare periodicamente i dati di accesso e procedere ad un confronto.
-La figura del Security Manager dovrà schedulare la raccolta dei dati, e verificare in casi di esaurimento risorse non preventivato. Aggiungere nuove funzioni (alle sonde), che siano in grado di registrare altri consumi, e prevenire situazioni improvvise di esaurimento o collasso.
+Il prossimo anno il traffico potrebbe scendere oppure aumentare. L'unico modo per tener monitorato questo aspetto è tracciare periodicamente i dati
+di accesso e procedere ad un confronto.
+La figura del Security Manager dovrà schedulare la raccolta dei dati, e verificare in casi di esaurimento risorse non preventivato.
+Aggiungere nuove funzioni (alle sonde), che siano in grado di registrare altri consumi, e prevenire situazioni improvvise di esaurimento o collasso.
 Software gratuiti che ci permettono di raccogliere dati dalle macchine e registrarli sono per esempio Grafana, Graylog, Munin.
 
 12) Service Line Agreement
 
 Potremmo definirlo il documento che dichiara le garanzie di continuità, dei servizi erogati.
-Vi sono organizzazioni che non erogano servizi tramite la rete internet o collegamenti dedicati come tratte MPLS (13*1) o virtual private network, ne permettono a terzi di consultare
-i dati raccolti e/o trattati al proprio interno, ma offrono servizi di consulenza o assistenza, che devono essere erogati (gestiti in alcuni casi) in tempi quasi assicurati.
+Vi sono organizzazioni che non erogano servizi tramite la rete internet o collegamenti dedicati come tratte MPLS (13*1) o virtual private network,
+ne permettono a terzi di consultare i dati raccolti e/o trattati al proprio interno, ma offrono servizi di consulenza o assistenza,
+che devono essere erogati (gestiti in alcuni casi) in tempi quasi assicurati.
 In breve, il documento è obbligatorio se forniamo un certo tipo di consultazione, trattamento, erogazione, del dato.
 Esistono infrastrutture progettate ad ergoarli con un valore di uptime molto vicino a 99,999 per cento durante tutto l'anno civile.
 Altre invece, durante le normali otto ore lavorative.
-I disservizi (mancanza energia elettrica, indisponibilità della rete o altre risorse di calcolo), potrebbero togliere punteggi decimali all'intero totale (cento per cento).
+I disservizi (mancanza energia elettrica, indisponibilità della rete o altre risorse di calcolo), potrebbero togliere punteggi decimali
+all'intero totale (cento per cento).
  
 Ad esempio, un disservizio di circa otto ore in un anno, è calcolato come segue,
 
@@ -1476,21 +1560,26 @@ Ad esempio, un disservizio di circa otto ore in un anno, è calcolato come segue
 
 Il nostro valore totale di erogazione servizi, scenderebbe a 99,909
 
-Il mio consiglio è quindi simulare (sulla base dell'esperienza dell'organizzazione) quanto un servizio potrebbbe rimanere fermo durante l'anno.
+Il mio consiglio è quindi simulare (sulla base dell'esperienza dell'organizzazione) quanto un servizio potrebbbe rimanere
+fermo durante l'anno.
 Rilevare un certo livello di uptime, e quindi dichiararlo nel documento di Service Line Agreement.
 
-Il contratto stipulato con un i termini di servizio SLA, prevede in caso di diminuzione del valore uptime dichiarato, la possiblità di richiedere crediti sulla prossima fattura
+Il contratto stipulato con un i termini di servizio SLA, prevede in caso di diminuzione del valore uptime dichiarato, la possiblità
+di richiedere crediti sulla prossima fattura
 di pagamento.
-Il cliente che desidererà richiedere i crediti, dovrà compilare una richiesta da un portale gestito dall'organizzazione, entro un numero di giorni (massimo 60 di norma),
-ed esporre il disservizio.
+Il cliente che desidererà richiedere i crediti, dovrà compilare una richiesta da un portale gestito dall'organizzazione,
+entro un numero di giorni (massimo 60 di norma), ed esporre il disservizio.
 Una volta redatto, il documento è preferibile pubblicarlo sul sito internet dell'organizzazione.
 
 Un esempio del contenuto (Service Line Agreement).
 
-L'organizzazione determina dei parametri di qualità nell'erogazione dei servizi offerti ai propri clienti e sulla chiarezza delle informazioni.
-Tali parametri sono da intendersi come obbiettivi di qualità che l'organizzazione si prefigge di garantire, sia di carattere generale, rivolti al complesso
+L'organizzazione determina dei parametri di qualità nell'erogazione dei servizi offerti ai propri clienti e sulla chiarezza
+delle informazioni.
+Tali parametri sono da intendersi come obbiettivi di qualità che l'organizzazione si prefigge di garantire, sia di carattere generale,
+rivolti al complesso
 delle prestazione erogate, che specifici, mirati al singolo servizio personalizzato.
-Il particolare l'organizzazione si obbliga a rendere disponibile la piattaforma con un tasso di disponibilità up-time del 99%, per 24 ore giornaliere e per 360 giorni all'anno.
+Il particolare l'organizzazione si obbliga a rendere disponibile la piattaforma con un tasso di disponibilità up-time del 99%,
+per 24 ore giornaliere e per 360 giorni all'anno.
 
 [NOME_ORGANIZZAZIONE] determina dei parametri di qualità nell'erogazione dei servizi offerti ai propri Clienti e sulla chiarezza delle
 informazioni. Tali parametri sono da intendersi come obiettivi di qualità che [NOME_ORGANIZZAZIONE] si prefigge di garantire, sia di
@@ -1555,7 +1644,8 @@ Parte da completare.
 (04*1)
     https://www.gfi.com/products-and-solutions/network-security-solutions/gfi-eventsmanager soluzione software da installare
     https://www.legallogger.com/ software dedicato ed attivabile come macchina virtuale
-    https://www.netwrix.it/auditor.html software dedicato che include anche funzioni di controllo audit (utile per avviare indagini o essere avvisati in tempo reale di possibili perdite dati)
+    https://www.netwrix.it/auditor.html software dedicato che include anche funzioni di controllo audit
+			(utile per avviare indagini o essere avvisati in tempo reale di possibili perdite dati)
 
 (07*1)
     https://twitter.com/netbiosX       NetbiosX, ricercatore sicurezza per ambiente Windows
