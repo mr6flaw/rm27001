@@ -4,6 +4,9 @@
  |    |   |   |  __/   /  |   | |   | | 
 _|   _|  _|  _|_____|_/  \___/ \___/ _| 
 
+ultimo aggiornamento 27 nov 2020
+
+
 01) Introduzione
 02) Definizione degli asset
 02a) --> General Manual e Decalogo
@@ -33,7 +36,7 @@ _|   _|  _|  _|_____|_/  \___/ \___/ _|
 09) Misure di protezione per lo stabile
 10) Test di penetrabilità
 11) Monitoraggio dei sistemi che erogano servizi
-12) Documento dei servizi sottoposti a Service Line Agreement (WIP)
+12) Documento dei servizi sottoposti a Service Line Agreement
 13) Documento Business Continuity (WIP)
 --)
 
@@ -504,8 +507,8 @@ per installare gli aggiornamenti.
 Se a fine giornata il MAC viene spento e gli aggiornamenti sono installati, non si corrono particolari rischi.
 
 * Linux . Il mondo del sistema operativo pinguino offre varie distribuzioni, elenco quelle più aggiornate.
---> Redhat 7/8 - se pagate la sottoscrizione alla licenza d'uso del sistema non correte rischi.
-Gli aggiornamenti sono disponibili in poche ore, dopo che una vunlnerabilità è stata rilasciata pubblica.
+--> Redhat 7/8 (Enterprise Linux) - se pagate la sottoscrizione alla licenza d'uso del sistema non correte rischi.
+Gli aggiornamenti sono disponibili in poche ore, dopo che una vunlnerabilità è stata riscontrata.
 
 --> Suse - la distribuzione fornisce tramite sottoscrizione l'aggiornamento dei pacchetti. Anche in questo caso,
 se frequentemente aggiornata si corrono pochi rischi.
@@ -525,8 +528,12 @@ $ patch -p1 < patch-xx-cve-xx.diff
 Quindi compilare il sorgente ed installare i nuovi file binari o l'immagine nuova del kernel.
 In definitiva una distribuzione utilizzabile nella maggior parte degli ambienti dove si trattano dati non sensibili.
 
+--> Ubuntu - vale la descrizione della distribuzione Debian.
 --> Fedora - vale la descrizione della distribuzione Debian.
---> CentOS - vale la descrizione della distribuzione Debian.
+--> CentOS - il supporto per la versione 7 sarà attivo sino l'anno duemilaventiquattro. Purtroppo per la versione
+             8, sino alla fine dell'anno duemilaventuno. Da giugno duemilaventuno probabilmente il gestore di questa
+             distribuzione ormai ferma, rilascerà una prima versione di Rocky Linux (community enterprise, (03*7)),
+             in cui gli aggiornamenti saranno di nuovo disponibili con la stessa frequenza e metodo di CentOS.
 
 * Android - gli aggiornamenti sistema dipendono dal costruttore del dispositivo mobile, difficile stabilire con quale
 frequenza sono resi disponibili.
@@ -1446,7 +1453,7 @@ E' quindi possibile all'incaricato chiedere di eseguire anche questo tipo di tes
 Esistono infine società già accreditate per rilasciare operazioni di penetrabilità avviate
 e collaudate. Riporto solo alcuni nomi,
 
-Ecovadis, Cyence, BitSight, SecurityScorecard, Cybernance, RiskRecon.
+Ecovadis, Cyence, BitSight, SecurityScorecard, Cybernance, RiskRecon, Cryptonet Labs.
 
 Nelle organizzazioni certificate ISO 27001 da più di due o tre anni, potrebbero essere schedulati test sui servizi,
 e completati prima che un sistema operativo entri in funzione nell'organizzazione.
@@ -1524,8 +1531,10 @@ Esiste una via alternativa per essere avvisati preventivamente dell'uso alto del
 
 Sì, forse in maniera non troppo tempestiva come ci offre un algoritmo costruito da specialisti ed attivato dell'agente.
 L'idea base è utilizzare script ciclici che possano rilevare determinati valori, eventi.
-Ad esempio nei sistemi operativi è ormai semplice rilevare uso troppo alto della risorsa di calcolo più importanti (CPU, livelli della memoria RAM, disco libero).
-Se uno di questi valori dovesse superare (specialementi negli orari con più richieste) una certa soglia, il nostro script, dovrà avvisarci.
+Ad esempio nei sistemi operativi è ormai semplice rilevare uso troppo alto della risorsa di calcolo più importanti
+(CPU, livelli della memoria RAM, disco libero).
+Se uno di questi valori dovesse superare (specialementi negli orari con più richieste) una certa soglia, il nostro script,
+dovrà avvisarci.
 
 Nelle segnalazioni, consiglio anche di includere brevi stralci di procedure, basate su eventi già accaduti.
 In tal modo il personale potrà iniziare verifiche più mirate.
@@ -1536,7 +1545,8 @@ Supponiamo che nel primo anno di vita di un servizio, gli ospiti che usufruiscon
 Il prossimo anno il traffico potrebbe scendere oppure aumentare. L'unico modo per tener monitorato questo aspetto è tracciare periodicamente i dati
 di accesso e procedere ad un confronto.
 La figura del Security Manager dovrà schedulare la raccolta dei dati, e verificare in casi di esaurimento risorse non preventivato.
-Aggiungere nuove funzioni (alle sonde), che siano in grado di registrare altri consumi, e prevenire situazioni improvvise di esaurimento o collasso.
+Aggiungere nuove funzioni (alle sonde), che siano in grado di registrare altri consumi,
+e prevenire situazioni improvvise di esaurimento o collasso.
 Software gratuiti che ci permettono di raccogliere dati dalle macchine e registrarli sono per esempio Grafana, Graylog, Munin.
 
 12) Service Line Agreement
@@ -1553,7 +1563,7 @@ all'intero totale (cento per cento).
  
 Ad esempio, un disservizio di circa otto ore in un anno, è calcolato come segue,
 
-100:X=31536000:28800 		X =~ 0,091
+100:X=31536000:28800         X =~ 0,091
 
 31536000 = i secondi in un anno civile
 28800 = i secondi in otto ore
@@ -1612,12 +1622,13 @@ deliverability, la compatibilità con il codice html, la composizione dei messag
 
 Il servizio è disponibile in orario di ufficio, dal lunedì al venerdì dalle 9:00 alle 13:00 e dalle 14:00 alle 18:00
 Entro sei ore lavorative viene preso in carico il supporto e gestito entro 18 ore dalla presa in carico.
-Il supporto tecnico [NOME_ORGANIZZAZIONE] è attivo dalle ore 8:30 alle ore 18:30 dal Lunedì al Venerdì, tramite il sistema di trouble ticket.
+Il supporto tecnico [NOME_ORGANIZZAZIONE] è attivo dalle ore 8:30 alle ore 18:30 dal Lunedì al Venerdì,
+tramite il sistema di trouble ticket.
 
 FINE (Service Level Agreement)
 
 13) Documento Business Continuity *BCP* (WIP)
-Parte da completare.
+
 
 *** FONTI ESTERNE ***
 
@@ -1640,6 +1651,8 @@ Parte da completare.
 (03*6)
     https://www.cvedetails.com/product/47/Linux-Linux-Kernel.html?vendor_id=33
     https://lore.kernel.org/lists.html
+(03*7)
+    https://github.com/rocky-linux/
 
 (04*1)
     https://www.gfi.com/products-and-solutions/network-security-solutions/gfi-eventsmanager soluzione software da installare
@@ -1655,9 +1668,9 @@ Parte da completare.
     https://twitter.com/MarceloRivero  Marcelo Rivero - ricercatore impegnato nel segnalare programmi fraudolenti
     https://twitter.com/binitamshah    Bini Tamshah - ricercatrice impegnate nel divulgare informazioni, manuali per la sicurezza informatica,
                                         linguaggi di programmazione, tecniche di penetrazione sistemi 
-    https://twitter.com/Viss           Viss del gruppo Pobhos
     https://twitter.com/Antelox        Antelox - ricercatore impegnato nel segnalare truffe, virus recenti
     https://twitter.com/hFireF0X       hFireF0X - ricercatore impegnato nel oltrepassare i controlli UAC del sistema Windows
+    https://twitter.com/USCERT_gov     riporta maggiori incidenti di sicurezza, analizza minacce, e condivide informazioni del mondo cyber security.
 
     Aggiornamenti riguardo il protocollo sicuro TLS
     https://twitter.com/GnuTLS GnuTLS
