@@ -284,25 +284,25 @@ ed uso strumenti all'interno dell'organizzazione.
 Riporto un esempio delle regole. Ogni organizzazione potrà poi stabilire le proprie.
 
 - 1) Nel momento in cui al dipendente viene assegnato un device si impegna ad usarlo e custodirlo
-		per tutta la durata dell’assegnazione.
+        per tutta la durata dell’assegnazione.
 - 2) Ogni dispositivo aziendale, nonché la posta e la navigazione web sono utilizzabili
-		solo per scopi aziendali.
+        solo per scopi aziendali.
 - 3) Tutto il materiale elettronico consegnato per uso aziendale, deve essere utilizzato con
-		la configurazione impostata dagli amministratori di sistema
+        la configurazione impostata dagli amministratori di sistema
 - 4) L’installazione di nuovi software nel proprio dispositivo aziendale, deve essere richiesta tramite
-		dedicato ticket agli amministratori di sistema
+        dedicato ticket agli amministratori di sistema
 - 5) Gli sviluppatori di codice devono attenersi alle procedure di sviluppo codice sicuro, e alla procedura
-		di flusso ambiente locale --> ambiente test --> ambiente produzione
+        di flusso ambiente locale --> ambiente test --> ambiente produzione
 - 6) Per lo svolgimento delle sessioni di reperibilità degli applicativi web, richieste da un cliente, deve essere
-		richiesta l’assegnazione di un portatile aziendale, che coprirà il turno di reperibilità richiesto.
+        richiesta l’assegnazione di un portatile aziendale, che coprirà il turno di reperibilità richiesto.
 - 7) A fine della giornata lavorativa il computer assegnato deve essere spento al fine di consentire
-		l'installazione delle patch di sicurezza.
+        l'installazione delle patch di sicurezza.
 - 8) Le informazioni e i dati devono essere scambiati unicamente con le modalità sicure definite da
-		[NOME_ORGANIZZAZIONE] (cartelle condivise all’interno dell'ufficio, servizio Promo FTP)
+        [NOME_ORGANIZZAZIONE] (cartelle condivise all’interno dell'ufficio, servizio Promo FTP)
 - 9) E’ necessario attenersi alle regole di cambio e generazione password per la propria casella postale,
-		seguendo le regole riportate nel sito https://nome.sito/ (*02n1*)
+        seguendo le regole riportate nel sito https://nome.sito/ (*02n1*)
 - 10) La casella elettronica dall’esterno degli uffici [NOME_ORGANIZZAZIONE] può essere consultata
-		in modalità di sola lettura, tramite il pannello webmail (specificare l'indirizzo URL del pannello)
+        in modalità di sola lettura, tramite il pannello webmail (specificare l'indirizzo URL del pannello)
 
 (*02n1*) le regole per la gestione e l'intervallo di cambio password è preferibile riportarle in una pagina dedicata
 del sito internet dell'organizzazione, che possa essere utilizzato anche da parti interessate.
@@ -377,9 +377,9 @@ Io sottoscritto [NOME_UTENTE] ricevo il dispositivo inventariato con codice ____
 In caso di smarrimento o furto di esso, mi impegnerò ad avvisare il reparto
 di sicurezza dell'organizzazione.
 
-Data, luogo (firma)								Il responsabile di sicurezza [nome cognome]
+Data, luogo (firma)                             Il responsabile di sicurezza [nome cognome]
 
-______________________________					______________________________
+______________________________                  ______________________________
 
 
 FINE MODULO
@@ -515,8 +515,8 @@ se frequentemente aggiornata si corrono pochi rischi.
 Vale la descrizione fatta per Redhat 7/8.
 
 --> Debian 9 - gli aggiornamenti sono gratuiti, e ben gestiti dalla comunità. Se uno di quest'ultimi
-è critico (pensiamo ad un CVE nel kernel)
-non è rilasciato in pochi giorni dalla comunità, è necessario agire manualmente nel sorgente.
+è critico (pensiamo ad una vulnerabilità CVE nel kernel) non è rilasciato in pochi giorni dalla comunità,
+è necessario agire manualmente nel sorgente.
 Il codice correzione in formato "diff", può essere cercato nei siti web come quelli riportati
 alla fonte esterna (03*6).
 
@@ -808,16 +808,16 @@ una volta ogni sei mesi è l’inizio per difendere la nostra privacy.
 Per la scelta delle password è necessario seguire questo decalogo:
 
 – la lunghezza deve essere di almeno 8 caratteri alfanumerici; deve essere aggiornata ogni 180 giorni, e sarà diversa
-	da quella scaduta.
-	La nuova password deve essere diversa dalle 4 precedenti
+    da quella scaduta.
+    La nuova password deve essere diversa dalle 4 precedenti
 
 – i suoi primi 3 caratteri devono essere diversi rispetto ai corrispondenti caratteri della password scaduta e così per i secondi
-	e gli ultimi tre caratteri consecutivi
+    e gli ultimi tre caratteri consecutivi
 
 – le password devono essere facili da ricordare ma difficili da ipotizzare
 
 – la password non deve essere uguale al cognome e nome; non è consentita la ripetizione di caratteri nella password,
-	cioè non sono consentite le doppie
+    cioè non sono consentite le doppie
 
 – la password non può essere uguale al nome della casella email, né può essere uguale ai primi quattro caratteri della casella
 
@@ -1490,6 +1490,9 @@ Lato rete, è necessario spegnere alcuni parametri direttamente nelle impostazio
 /sbin/sysctl -w net.ipv4.conf.all.secure_redirects=0
 /sbin/sysctl -w net.ipv4.conf.all.send_redirects=0
 
+Altre interessanti opzioni di sicurezza da applicare nel sistema operativo Linux, le potete trovare
+nella pagina "Linux Hardening Guide" (10*2).
+
 Il test "Nessus" procederà quindi con la scansione di tutti i pacchetti installati nel sistema Linux, e confronterà i numeri
 di versione con un database aggiornato e mantenuto con le maggior problematiche di sicurezza (comprese le vulnerabilità
 di tipo 0day, quelle rilasciate in poche ore dalla scoperta).
@@ -1628,7 +1631,7 @@ tramite il sistema di trouble ticket.
 FINE (Service Level Agreement)
 
 13) Documento Business Continuity *BCP* (WIP)
-
+--
 
 *** FONTI ESTERNE ***
 
@@ -1658,7 +1661,7 @@ FINE (Service Level Agreement)
     https://www.gfi.com/products-and-solutions/network-security-solutions/gfi-eventsmanager soluzione software da installare
     https://www.legallogger.com/ software dedicato ed attivabile come macchina virtuale
     https://www.netwrix.it/auditor.html software dedicato che include anche funzioni di controllo audit
-			(utile per avviare indagini o essere avvisati in tempo reale di possibili perdite dati)
+            (utile per avviare indagini o essere avvisati in tempo reale di possibili perdite dati)
 
 (07*1)
     https://twitter.com/netbiosX       NetbiosX, ricercatore sicurezza per ambiente Windows
@@ -1692,6 +1695,8 @@ FINE (Service Level Agreement)
 
 (10*1)
     https://www.kali.org/ una delle distribuzioni Linux con al suo interno gli strumenti più usati per azioni di penetrabilità.
+(10*2)
+    https://madaidans-insecurities.github.io/guides/linux-hardening.html
 
 (13*1)
     https://it.wikipedia.org/wiki/Multiprotocol_Label_Switching
@@ -1705,7 +1710,7 @@ FINE (Service Level Agreement)
 
 
 
-LICENZA DELLA GUIDA rm27001
+LICENZA DELLA GUIDA RM27001
 
  questa guida è rilasciata tramite licenza WTFPL
 
