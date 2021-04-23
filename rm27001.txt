@@ -930,12 +930,14 @@ Riassumo il caso in una breve procedura,
         +----------------------------+
 
 * Cancellazione o revoca accesso utente
-L'utente che ha lasciato l'organizzazione (sia esso come dipendente, o fornitore), il suo profilo e i relativi accessi dovranno
-essere rimossi il prima possibile.
-Anche in questo caso è consigliabile scrivere una procedura che descriva i passaggi eseguiti dall'amministratore di sistema,
-dopo che il responsabile delle risorse umane avrà confermato l'uscita (amministrativa) dell'utente.
-Se l'utente utilizzava una casella di posta, essa dovrà essere chiusa, e un processo simile ad un auto-risponditore,
-dovrà avviare il possibile mittente, a quale casella sostitutiva è necessario scrivere.
+L'utente che ha lasciato l'organizzazione (sia esso come dipendente, o fornitore), il suo profilo e
+relativi accessi dovranno essere rimossi il prima possibile.
+Anche in questo caso è consigliabile scrivere una procedura che descriva i passaggi eseguiti
+dall'amministratore di sistema, dopo che il responsabile delle risorse umane avrà confermato
+l'uscita (amministrativa) dell'utente.
+Se l'utente utilizzava una casella di posta, essa dovrà essere chiusa, e un processo simile
+ad un auto-risponditore, dovrà avviare il possibile mittente, a quale casella sostitutiva
+è necessario scrivere.
 
 ---)
 
@@ -1394,20 +1396,29 @@ Mentre, il fornitore o cliente che deve accedere alle aree dove sono costuditi o
 Consiglierei il formato elettronico (per una veloce e chiara azione di ricerca se richiesto).
 Tramite badge è poi possibile restringere l'accesso a determinate aree (come quelle di stoccaggio dati) da parte del solo personale autorizzato.
 
-Solo a scopo informativo, ricordo che ogni cavo ethernet (e/o fibra ottica) presente nell'organizzazione dovrà essere schermato
+Ricordo che ogni cavo ethernet (e/o fibra ottica) presente nell'organizzazione dovrà essere schermato
 (cosa che avviene già in quasi tutti gli stabili).
 Ogni rete WIFI dovrà poi essere protetta da password o altro metodo di autenticazione (token generato su richiesta).
 Ogni armadio di deposito dispositivi hardware, dove sono presenti aree di stoccaggio o trattamento dati dovrà essere chiuso a chiave.
 Tutte queste misure sono da adattorare per evitare possibili fughe dei dati protetti.
 
-Per mantenere la continuità dei servizi offerti dall'organizzazione, lo stabile dovrà essere sottoposto ad una perizia
-di rischio di fulminazione (diretta o indiretta).
+Nel registro delle manutenzioni non può mancare poi la verifica periodica dell'impianto elettrico.
+Un elettricista per conto dell'azienda sanitaria locale deve controllare l'impianto.
+Possiamo chiedere al nostro responsabile del servizio prevenzione e protezione se può consigliarci un elettricista
+abilitato alla verifica dell'impianto per conto dell'ASL. Questo per evitare di trovarci con una persona che tenterà
+di venderci lampade di emergenza oltre a quelle che sono già presenti negli stabili dell'organizzazione.
+Altrimenti possiamo chiedere a chi ha creato il progetto dell'impianto elettrico. Il progettista potrebbe conoscere
+un'elettricista di fiducia che ha steso l'impianto e se vi sono del problemi (come file elettrici fuori posto), anzichè
+riportarli come problema, potrebbe "gestirli".
+
+Per mantenere la continuità dei servizi offerti dall'organizzazione , la quale mantiene un datacenter, lo stabile dovrà essere
+sottoposto ad una perizia di rischio fulminazione (diretta o indiretta).
 Prima di affrontare la valutazione (quasi sempre effettuata da un perito professionista) è vivamente raccomandato chiedere
 il consenso di effettuarla, al possibile consulente.
 Queste perizie non sono economiche, ed è necessario valutare se via siano servizi erogati dall'organizzazione, che possono costituire un problema,
 se fermati per guasti elettrici.
 
-Riporto un piccolo esempio di valutazione.
+Riporto una parte di una valutazione.
 
 E' stata valutato il rischio di perdita di vite umane (denominato R1), il rischio di perdita di servizio pubblico (denominato R2)
 ed il rischio di perdita economica (denominato R4).
@@ -1426,16 +1437,21 @@ diretta della struttura, esso può (o non) essere presente. Tale caratteristica 
 
 10) Test di penetrabiltà
 
-Si tratta di un processo abbastanza importante, è possibile eseguirlo in autonomia, consiglio ad ogni modo l'aiuto di un consulente esterno.
-Chiunque eseguirà il test di penetrabilità (una persona fisica o società), il suo nominativo potrebbe essere tracciato nelle possibili verifiche degli ispettori. 
-Un test base di penetrabilità potrebbe essere avviato in questo modo. L'incaricato potrebbe chiederci una macchina virtuale interna alla nostra rete,
+Si tratta di un processo abbastanza importante, è possibile eseguirlo in autonomia,
+consiglio ad ogni modo l'aiuto di un consulente esterno.
+Chiunque eseguirà il test di penetrabilità (una persona fisica o società), il suo nominativo potrebbe
+essere tracciato nelle possibili verifiche degli ispettori.
+Un test base di penetrabilità potrebbe essere avviato in questo modo.
+L'incaricato potrebbe chiederci una macchina virtuale interna alla nostra rete,
 per installare un sistema operativo con tutti gli strumenti necessari (vedi nota 10*1).
-La prima fase del test potrebbe richiedere tutta la giornata lavorativa, in quanto il maggior numero di macchine dovrà essere rilevato.
-Molto spesso le macchine client vengono avviate in orari diversi della giornata; ripetendo diverse scansioni nell'arco della giornata,
-si avrà la possibilità di trovare sempre un maggior numero di macchine attive, quindi scansionarle.
-Terminata la prima scansione, l'incaricato di consegnerà una documentazione di tutti i servizi disponibili e attivi nelle macchine
-client e server. Dovremo chiudere i servizi non necessari, che quasi sempre sono in ascolto su determinate porte (tcp o udp per esempio).
-Questa prima documentazione dovremo conservarla.
+La prima fase del test potrebbe richiedere tutta la giornata lavorativa, in quanto il maggior numero
+di macchine dovrà essere rilevato.
+Molto spesso le macchine client vengono avviate in orari diversi della giornata; ripetendo diverse scansioni
+nell'arco della giornata, si avrà la possibilità di trovare sempre un maggior numero di macchine attive,
+quindi scansionarle.
+Terminata la prima scansione, l'incaricato di consegnerà una documentazione di tutti i servizi disponibili
+e attivi nelle macchine client e server. Dovremo chiudere i servizi non necessari, che quasi sempre sono in ascolto
+su determinate porte (tcp o udp per esempio). Questa prima documentazione dovremo conservarla.
 Dopo aver spento servizi non necessari, l'incaricato avvierà una seconda scansione.
 Da questa seconda fase, ci aspetteremo di trovare servizi di rete conosciuti, ma facilmente utilizzabili da un estraneo.
 Ad esempio, servizi database ai quali è possibile accedere con credenziali semplici (root/mysql),
@@ -1519,7 +1535,7 @@ Purtroppo non basta Nagios per sapere se una determinata pagina (ad esempio l'ac
 Le porte del servizio web potrebbero essere attive, eppure la pagina non rispondere per via di un problema nei servizi backend
 (database o interpretazione codice).
 Scrivere delle sonde per monitorare una determinata pagina è una soluzione.
-Uno script potrebbe avviarsi ogni N minuti e lanciare più richieste ad essa (meglio se distanziate da intervalli regolari di N seocndi).
+Uno script potrebbe avviarsi ogni N minuti e lanciare più richieste ad essa (meglio se distanziate da intervalli regolari di N secondi).
 Se la pagina non dovesse rispondere per tutte le nostre richieste, procederemo ad inviare la segnalazione via email o tramite un pannello web
 che monitora lo stato di tutti i nostri servizi.
 Questo concetto di sonda può anche essere utilizzata per inviare richieste con protocollo ICMP a dispositivi di rete.
@@ -1690,7 +1706,7 @@ FINE (Service Level Agreement)
     https://twitter.com/ITGovernance
 
     Iscrizione alle newsletter come garante della privacy
-    https://www.m3aawg.org/ M3aawg
+    https://www.m3aawg.org/ M3AAWG
 
     Garante Privacy
     https://www.garanteprivacy.it/
