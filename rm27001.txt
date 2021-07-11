@@ -990,7 +990,8 @@ Tabella 04#T
 | Dato sensibile legato a persona fisiche                                                        | 5   anni |
 +------------------------------------------------------------------------------------------------+----------+
 
-Ricordo che solo il consulente può conferma il numero di anni per determinati dati salvati.
+Aggiornamento disciplina nazionale. Trovate al riferimento (04*2) un interessante articolo, che descrive la conservazione
+dei dati telematici, osservando gli obblighi a livello nazionale ed europeo.
 
 05) Procedure di emergenza
 
@@ -1686,6 +1687,7 @@ FINE (Service Level Agreement)
     https://www.legallogger.com/ software dedicato ed attivabile come macchina virtuale
     https://www.netwrix.it/auditor.html software dedicato che include anche funzioni di controllo audit
             (utile per avviare indagini o essere avvisati in tempo reale di possibili perdite dati)
+(04*2) https://www.iusinitinere.it/data-retention-tra-esigenze-di-sicurezza-e-tutela-della-privacy-30015
 
 (07*1)
     https://twitter.com/netbiosX       NetbiosX, ricercatore sicurezza per ambiente Windows
@@ -1710,6 +1712,9 @@ FINE (Service Level Agreement)
 
     Garante Privacy
     https://www.garanteprivacy.it/
+
+    Sicurezza e Penetraion test
+    https://diablohorn.com/
 
 (07a1)
     https://www.gov.uk/government/publications/the-minimum-cyber-security-standard
