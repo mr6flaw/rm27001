@@ -4,8 +4,7 @@
  |    |   |   |  __/   /  |   | |   | | 
 _|   _|  _|  _|_____|_/  \___/ \___/ _| 
 
-ultimo aggiornamento 27 nov 2020
-
+Ultimo aggiornamento: 07 agosto 2021
 
 01) Introduzione
 02) Definizione degli asset
@@ -91,13 +90,15 @@ interessato ad incrementare la sicurezza all'interno della propria organizzazion
 Cosa non è stato trattato della normativa ISO 27001.
 Vi sono aspetti più complessi da trattare, e io persolamente, non sono un consulente esperto.
 Ho negli ultimi tre anni testato e preparato questi aspetti più tecnici e pratici, ma alcune parti 
-del procedimento di certificazione, rimangono ancora difficili ed ignote.
-Non per niente esistono corsi specifici per organizzare audit interni, che permettono di presentare
-i documenti necessari alla raggiungimentodella certificazione.
+del procedimento di certificazione rimangono ancora difficili da descrivere.
+Esistono corsi specifici per organizzare audit interni, che permettono di presentare
+i documenti necessari alla raggiungimento della certificazione.
 
 Questi documenti (argomenti) sono:
 
 Valutazione dei rischi
+Dichiarazione di applicabilità
+Manuale generico
 
 Mi auguro in futuro di poter inserire punti guida, anche per essi.
 
@@ -1651,7 +1652,190 @@ tramite il sistema di trouble ticket.
 
 FINE (Service Level Agreement)
 
-13) Documento Business Continuity *BCP* (WIP)
+13) Documento Business Continuity *BCP*
+Il percorso di preparazione alla normativa ci porterà inoltre alla stesura di questo documento,
+tutto focalizzato nel nostro modo di mantenere i servizi attivi il più possibile.
+Ovviamente il documento è dedicato alle organizzazione che erogano servizi ai quali i dati, sono connessi.
+Pensiamo alla stesura di preventivi, offerte commerciali, assistenza post vendita per un prodotto gestionale,
+fino a giungere alla gestione di un database dedicato alla profilazione o solo al comune stoccaggio dati.
+
+L'aiuto del consulente è fondamentale in certi casi, ho però deciso di mantenere passaggi semplici e chiari,
+al fine di stendere almeno uno scheletro abbastanza sotenuto del documento BCP per chi volesse solo provare a
+scriverlo; e magari nel futuro analizzarlo con altre parti, e renderlo completo.
+
+La prima fase iniziale consisterà nell'elencare tutti i servizi che l'organizzazione offre o eroga.
+Processi come stesure preventivi, offerte commerciali, assistenza inerente alla fase post vendita, dovranno essere inclusi.
+Per ogni servizio indichiremo anche il massimo periodo di perdita dei dati torrebabile (RPO).
+
+Piccola nota, per servizio erogato possiamo intendere il tipo descritto nel punto guida 13.
+
+Tabella 014#T1
++------------------------------+-------------+
+|  nome servizio erogato       |  RPO (ore)  |
++------------------------------+-------------+
+| Portale cedole risorse umane |     16      |
++------------------------------+-------------+
+
+Ottenuto l'elenco, cercheremo di raggruppare in processi i disservizi servizi. Uno dei modi più semplice
+è raggruppare i diversi reparti dell'organizzazione (che trattano dati), ed elencare per ciascuno
+le rispettive mansioni.
+
+Dovremo assegnare ad essi il valore MAO (Maximum Acceptable Outage), ovvero il tempo massimo in cui
+un processo potrebbe non essere disponibile o erogfato. Di seguito la tabella di esempio.
+
+Tabella 014#T2
++----------------------+-------------+---------------+--------------+-----+
+|  Processo            | Da 1 a 2    | Da 2 a 4      | Da 4 a 8     | MAO |
+|                      |  ore        |  ore          |  ore         |     |
++----------------------+-------------+---------------+--------------+-----+
+| Erogazione offerte   | Accettabile | Impatto medio | Impatto alto | ??  |
+|  commerciali         |             |               |              |     |
++----------------------+-------------+---------------+--------------+-----+
+| Elaborazione         | Impatto     | Impatto alto  | Impatto      | ??  |
+|  buste paga          |  basso      |               |  critico     |     |
++----------------------+-------------+---------------+--------------+-----+
+| Fornitura servizi di | Impatto     | Impatto basso | Impatto      | ??  |
+|  assistenza          |  basso      |               |  medio       |     |
++----------------------+-------------+---------------+--------------+-----+
+
+Ad ogni processo collegheremo uno scenario di disastro, che se scaturito potrebbe essere un problema
+per l'erogazione del processo.
+
+Tabella 014#T3
+                    +-----------------------------------+
+                    |         SCENARI COINVOLTI         |
++-------------------+--+--+--+--+--+--+--+--+--+--+--+--+
+|  Processo         | 1| 2| 3| 4| 5| 6| 7| 8| 9|10|11|12|
++-------------------+--+--+--+--+--+--+--+--+--+--+--+--+
+| Offerte           | X| X| X|  | X|  | X|  |  |  |  |  |
+|  commerciali      |  |  |  |  |  |  |  |  |  |  |  |  |
++-------------------+--+--+--+--+--+--+--+--+--+--+--+--+
+| Elaborazione      | X| X|  |  |  |  |  | X|  |  |  |  |
+|  buste paga       |  |  |  |  |  |  |  |  |  |  |  |  |
++-------------------+--+--+--+--+--+--+--+--+--+--+--+--+
+| Fornitura servizi |  |  |  | X|  |  |  |  |  |  |  |  |
+|  assistenza       |  |  |  |  |  |  |  |  |  |  |  |  |
+`-------------------+--+--+--+--+--+--+--+--+--+--+--+--'
+
+
+Di seguito le descrizione scenari coinvolti.
+
+Scenario numero 1
+Malfunzionamento nodo fisico. Dichiarare in quanto tempo potremo ripristinare il nodo fisico danneggiato, in modo che i servizi
+programmati in esso possano essere di nuovo erogati.
+
+Scenario numero 2
+Possibile distruzione dei dispositivi negli uffici. Dichiarare in quanto tempo l'ufficio e i dispositivi interessati possono essere
+ripristinati e resi di nuovo operativi dal personale. Al fine di riprendere l'erogazione del servizio o servizi.
+
+Scenario numero 3
+Furto dei dispositivi negli uffici. Dichiarare in quanto tempo il personale può raggiungere una sede dove siano a disposizione
+altri dispositivi per riprendere ad erogare il servizio o servizi.
+
+Scenario numero 4
+Incendio ufficio. Dichiarare in quanto tempo il personale, può raggiungere una sede dove siano a disposizione
+altri dispositivi per riprendere ad erogare il servizio o servizi.
+
+--> Ogni scenario ha una sua procedura da attuare nel momento in cui si verifica.
+--> L'ispettore potrebbe porre delle domande per i tempi di ripristino, e come li giustifichiamo.
+
+Tabella gestione scenario
+
+Tabella 014#T4
+.--------+--------------------+-------------------+---------------------------+------------------+------+-----------------.
+| Evento | Scenario specifico | Azione preventiva | Misure di emergenza       | Azioni per le    | RTO* | Analisi rischio |
+|   ID   |                    |                   |   provvisorie             |    risorse       |      |                 |
++--------+--------------------+-------------------+---------------------------+------------------+------+-----------------+
+|   1    |  Malfunzionamento  |  Verifica tramite | Giunto Alert da sistema   |   Sostituzione   |      |  Probabilità    |
+|        |    nodo fisico     |    sonde monitor  | di monitoraggio. Seguire  |   nodo fisico    |  8   |  danno (basso,  |
+|        |                    |                   |  procedura numero 0001    |   danneggiato    |  ore |   medio, alto)  |
++--------+--------------------+-------------------+---------------------------+------------------+------+-----------------+
+|   2    |  Possibile distru- |  Manutenzione     | Giunto allarme da impian- |   Ripristino     |  8   |  Probabilità    |
+|        |   zione dispositivi|   impianto anti-  |  to. Seguire procedura    |   terminali      |  ore |   danno basso   |
+|        |    negli uffici    |     incendio      |   numero 0002             |                  |      |                 |
++--------+--------------------+-------------------+---------------------------+------------------+------+-----------------+
+|   3    |  Furto nei locali  |  Manutenzione     | Giunto allarme da sistema |  Ripristino      |  8   |  Probabilità    |
+|        |   ufficio          |   impianto anti-  | di monitoraggio. Seguire  |  dispositivi     |  ore |   danno medio / |
+|        |                    |    intrusione     |  procedura numero 0003    |                  |      |    alto         |
++--------+--------------------+-------------------+---------------------------+------------------+------+-----------------+
+|   4    |  Incendi o ufficio | Manutenzione      | Giunto allarme da sistema |  Ripristino      |  2   |  Probabilità    |
+|        |                    |  impianto anti-   | di monitoraggio. Seguire  |   locali ufficio |  ore |    danno media  |
+|        |                    |   incendio        | procedura numero 0004     |                  |      |                 |
++--------+--------------------+-------------------+---------------------------+------------------+------+-----------------+
+|   5    |  Mancanza energia  | Manutenzione      | Giunto allarme da sistema |  Ripristino      |  2   |  Probabilità    |
+|        |    elettrica sala  |  impianto UPS     | di monitoraggio UPS.      |   locali ufficio |  ore |    danno media  |
+|        |      server        |                   | Seguire proc. numero 0005 |                  |      |                 |
++--------+--------------------+-------------------+---------------------------+------------------+------+-----------------+
+
+RTO* tempo ripresa operazioni
+
+PROCEDURE numero 000X
+Nella tabella 014#T4 sono riportati gli scenari che possono accadare, e le misure di emergenza provvisorie, più descrittive.
+Nel documento deve essere riportata ogni procedura richiamata nella tabella, la quale sarà seguita in caso di
+avvenimento dello scenario descritto.
+
+ESEMPIO procedura 0002
+Il reparto tecnico individuerà un nodo fisico (nel quale è installato il software di gestione
+macchine virtuali) adatto ad ospitare le risorse macchina virtuale attive nel nodo con
+problemi o risorse esaurite. Procederà a contattare i clienti delle macchine virtuali, coinvolti in
+questa migrazione, informandoli di possibili disconnessioni durante la migrazione da nodo a nodo.
+A termine migrazione, il gruppo tecnico contatterà ogni cliente coinvolto, per confermare
+l’avvenuta ripresa del servizio macchina virtuale.
+
+0001
+Il reparto predisposto alla manutenzione nodi, individuerà il guasto nel nodo fisico. Se non sarà possibile
+riparare il componente danneggiato, sarà prelevato da magazzino una nuova unità nodo fisico per iniziare
+la procedura di ripristino nodo e sistema operativo.
+
+0002
+Il reparto predisposto alla manutenzione dei dispositivi, preleverà da magazzino nuove unità dispositivi danneggiati.
+
+0003
+Spostamento del personale in altre aree dell'organizzazione (se necessario), avvio dei dispositivi muletto prelevati
+dal magazzino, per continuare erogazione dei servizi.
+
+0004
+Spostamento del personale in altre aree esterne o interne (non intaccate dall'incendio) dell'organizzazione.
+Avvio dei dispositivi muletto prelevati dal magazzino, per continuare erogazione dei servizi.
+
+0005
+Verificare il tempo di durata erogazione energia dal pannello LCD delle batterie UPS. Prima che il tempo termini,
+valutare l'inizio dello spegnimento server presenti nella sala di calcolo.
+
+ELENCO TEST PROCEDURA SCENARI EMERGENZA
+Per ogni evento ID specificato nella tabella 014#T4, dovremo descrivere la simulazione dell'evento, che eseguiremo.
+
+Scenario ID 1 - Verrà avviata la simulazione del ripristino nodo fisico, il quale mantiene attivo uno dei seguenti processi (offerte commerciali,
+elaborazione buste paga, fornitura servizi di assistenza).
+
+Scenario ID 2 - Verrà avviata la simulazione della distruzione dispositivi negl uffici del raparto (sceglierlo). Saranno predisposti
+dispositivi muletto, e sarà chiesto agli operatori di utilizzarli al fine di operare con i servizi erogati dal reparto.
+
+Scenario ID 3 - Verrà simulato il furto del nodo fisico che eroga il servizio di fornitura assistenza, per circa sessanta
+minuti. Gli operatori al call center, registreranno le chiamate in arrivo in modo da registrarle nel portale di assistenza
+appena sarà tornato disponibile.
+
+Scenario ID 4 – Verrà chiesto ad un utente di reparto commerciale di erogare un servizio come "Elaborazione buste paga",
+tramite un apparato muletto di emergenza, presso una sede esterna dell'organizzazione.
+
+Scenario ID 5 - Verrà tolta erogazione di energia elettrica alla sala server, al fine di richiamare l'intervento
+delle batterie UPS, e raccogliere il tempo di autonomia di quest'ultimo dispositivo, nel fornire energia elettrica,
+ai server attivi.
+
+
+SISTEMA DI GESTIONE E PIANO DI MIGLIORAMENTO
+Le simulazioni di quest'ultimi scenari possono essere mantenuti solo con un sistema di gestione.
+Dopo il rilascio della prima versione del documento, ogni scenario dovrà essere collaudato, la procedura descritta dovrà
+quindi essere avviata, e le evidenze salvate in una cartella dedicata. Per evidenze indendo qualsiasi elemento che può
+testimoniare l'avvenuta simulazione. Ad esempio, tracciati log, schermate di creazione macchine virtuali o fisiche,
+fotografie di contatori, termostati, stati di oggetti elettronici collegati ad operazioni di alta affidabilità.
+Dopo all'approvazione del documento e delle simulazioni, è consigliabile ripetere almeno un terzo degli scenari, almeno
+una volta all'anno, salvando ogni evidenza.
+Se durante la simulazione si riscontrano miglioramenti nel processo di test e/o verifica, è consigliabile documentarli
+nelle evidenze, al fine di provare che il piano di miglioramento è gestito.
+
+
+FINE Documento Business Continuity *BCP*
 
 
 *** FONTI ESTERNE ***
