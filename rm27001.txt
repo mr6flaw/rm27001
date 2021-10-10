@@ -4,7 +4,7 @@
  |    |   |   |  __/   /  |   | |   | | 
 _|   _|  _|  _|_____|_/  \___/ \___/ _| 
 
-Ultimo aggiornamento: 07 agosto 2021
+Ultimo aggiornamento: 10 ottobre 2021
 
 01) Introduzione
 02) Definizione degli asset
@@ -36,24 +36,24 @@ Ultimo aggiornamento: 07 agosto 2021
 10) Test di penetrabilità
 11) Monitoraggio dei sistemi che erogano servizi
 12) Documento dei servizi sottoposti a Service Line Agreement
-13) Documento Business Continuity (WIP)
+13) Documento Business Continuity
 --)
 
 
 01) Introduzione
-Questa breve guida è stata scritta pensandola come un piccolo contributo, per chi volesse interessarsi
-alla normativa ISO 27001, senza troppo impegno iniziale.
-Oppure conoscere solo gli aspetti preliminari richiesti, e nel caso svilupparli in un possibile futuro.
+Questa breve guida è stata scritta come un piccolo contributo, per chi volesse interessarsi
+alla normativa ISO 27001, senza troppo impegno iniziale, oppure conoscere solo gli aspetti
+preliminari richiesti, e nel caso svilupparli.
 
 Nelle organizzazioni che intendono certificarsi ISO 27001, una figura interna potrebbe essere delegata
 a seguire il processo di avviamento a questa normativa.
-Un consulente o professionista (addetti alla gestione di conformità) potrebbe aiutare la figura in
-questi tipi di compiti:
+Un consulente o professionista (in grado di condurre sessioni di audit interne) potrebbe aiutare la figura
+in questi compiti:
 - cercare il tipo di informazione trattato nei sistemi operativi, il tipo di dato che viaggia e
 viene scritto in essi
-- scrivere procedure per segnalare anomalie, o come richiedere l'installazione di software 
+- scrivere procedure per segnalare anomalie/incidenti, o come richiedere l'installazione di software 
 da parte del personale
-- inventariare tutti i tipi di software utilizzati nei sistemi operativi (sia lato cliente che server)
+- inventariare tutti i tipi di software utilizzati nei sistemi operativi (sia lato client che server)
 - ogni accesso alle aree fisiche dove i dati sono conservati, dovrà essere registrato
 - creazione degli ASSET, ovvero la mappatura delle banche dati, con i tipi di dati trattati ed
 il periodo di conservazione
@@ -64,8 +64,7 @@ Differenza tra ISO 27001 e 27002
 La norma 27001 può aiutare le organizzazioni a soddisfare tutti gli obbiettivi di conformità alle
 normative concernenti le informazioni.
 Mentre la norma 27002 attinge alle conoscenze di un gruppo di professionisti esperti in sicurezza delle
-informazioni, per impostare la miglior prassi da seguire,
-nel campo della sicurezza delle informazioni.
+informazioni, per impostare la miglior prassi da seguire, nel campo della sicurezza delle informazioni.
 Per rendere rappresentabile la norma 27002, possiamo disegnarla come una lunga checklist, divisa
 per capitoli e punti.
 
@@ -74,10 +73,10 @@ per capitoli e punti.
 Assolutamente non interpretate le descrizioni riportate in questo documento come definitive, o
 totalmente applicabili ad una qualsiasi organizzazione.
 Il consulente di una società esterna (nella maggior parte dei casi) sarà il vostro referente, per
-determinate procedure, per le sesioni di audit interne, e quelle con gli ispettori della normativa.
-Per questo motivo, se leggendo il documento trovate parti in cui si richiede l'aiuto del consulente, è
-al fine di completare il punto attenendosi il più possibile ai principi, linee guida (ed obblighi)
-descritti dalla normativa.
+determinate procedure, per le sessioni audit interne, e con gli ispettori della norma.
+Per questo motivo, se leggendo il documento trovate parti in cui si richiede l'aiuto del consulente,
+è al fine di completare il punto attenendosi il più possibile ai principi, linee guida (ed obblighi)
+descritti dalla norma.
 
 Nella guida che state leggendo, riduco il più possibile i riferimenti degli standard che si trovano
 nella documentazione ISO ufficiale.
@@ -87,10 +86,9 @@ Inoltre ho preferito mantenere un linguaggio pratico, al fine di semplificare i 
 attuabili anche da chi è solo
 interessato ad incrementare la sicurezza all'interno della propria organizzazione o gestione privata.
 
-Cosa non è stato trattato della normativa ISO 27001.
-Vi sono aspetti più complessi da trattare, e io persolamente, non sono un consulente esperto.
+Cosa non è stato trattato in questo testo, riguardo la normativa ISO 27001.
 Ho negli ultimi tre anni testato e preparato questi aspetti più tecnici e pratici, ma alcune parti 
-del procedimento di certificazione rimangono ancora difficili da descrivere.
+del procedimento di certificazione rimangono per me, ancora difficili da descrivere.
 Esistono corsi specifici per organizzare audit interni, che permettono di presentare
 i documenti necessari alla raggiungimento della certificazione.
 
@@ -102,9 +100,15 @@ Manuale generico
 
 Mi auguro in futuro di poter inserire punti guida, anche per essi.
 
+Una nota importante per possibili raccomandazioni che potreste ricevere a fine di una
+sessione audit.
+Esse se non avete modo di gestirle nel tempo accordato, NON possono diventare non conformità
+al fase di controllo nel prossimo audit.
+
+
 02) Definizione degli asset
 
-L'asset è un dato che conserviamo, modifichiamo (se necessario) e proteggiamo all'interno
+L'asset è un dato, risorsa che conserviamo, modifichiamo (se necessario) e proteggiamo all'interno
 dell'organizzazione.
 Ogni asset può includere diverse proprietà, le quali ci permetteranno di mantenere un adeuguato
 livello di sicurezza per i nostri dati.
@@ -378,7 +382,7 @@ Io sottoscritto [NOME_UTENTE] ricevo il dispositivo inventariato con codice ____
 In caso di smarrimento o furto di esso, mi impegnerò ad avvisare il reparto
 di sicurezza dell'organizzazione.
 
-Data, luogo (firma)                             Il responsabile di sicurezza [nome cognome]
+Data, luogo (firma utente)                      Il responsabile di sicurezza [nome cognome]
 
 ______________________________                  ______________________________
 
@@ -737,7 +741,7 @@ Essa ci permetterà anche di tracciare le operazioni sui tutti gli utenti operat
  | E' giunta richiesta tramite portale organizzativo   |
  | di modificare o revocare permessi ad un utente o    |
  |    fornitore. E' stata richiesta la revoca?         |
- .-----------------------------------------------------.
+ `-----------------------------------------------------'
        | Sì |                           | No |
        .----.                           .----.
          |                                |
@@ -745,28 +749,28 @@ Essa ci permetterà anche di tracciare le operazioni sui tutti gli utenti operat
     | Cancellare il profilo,   |    | E' stata richiesta |
     | dare conferma con        |    | la creazione di un |
     | l'effettiva cancellazione|    | nuovo utente?      |
-    |  della cancellazione **  |    .--------------------.
-    .--------------------------.        | Sì |    | No |
-                                        .----.    .----.
+    |  della cancellazione **  |    `--------------------'
+    `--------------------------'        | Sì |    | No |
+                                        `----'    `----'
                                           |         |
                         /-----------------]         |
                         |                           |
     .------------------------------.    .--------------------------.
     | Assegnare al nuovo utente    |    | L'utente è un fornitore  |
     | i permessi dell'asset in     |    | o collaboratore esterno ?|
-    | cui è coinvolto (****).      |    .--------------------------.
+    | cui è coinvolto (****).      |    `--------------------------'
     | Dare conferma alla richiesta |        | Sì |      | No |
     | pervenuta.                   |        .----.      .----.
-    .------------------------------.          |            |
+    `------------------------------'          |            |
                                               |            |
                             /-----------------]     .-------------------------.
                             |                       | Modificare i permessi   |
                 .------------------------------.    | come richiesto. Dare    |
                 | Assegnare o creare i         |    | conferma alla richiesta |
                 | permessi richiesti.          |    | pervenuta.              |
-                | Dare conferma alla richiesta |    .-------------------------.
+                | Dare conferma alla richiesta |    `-------------------------'
                 | pervenuta. ***               |
-                .------------------------------.
+                `------------------------------'
 
 (**) Inserisco un'ulteriore descrizione, nel prossimo punto 03q vi sono altri passaggi da attuare quando è richiesta
 la cancelllazione dell'utente (come impostazione auto-risponditore per la casella email da disattivare).
@@ -900,35 +904,35 @@ Riassumo il caso in una breve procedura,
 
  +-----------------------------------------------+
  | Richiesta di cancellazione, avvio distruzione |
- +-----------------------------------------------+
+ `-----------------------------------------------'
                         |
                         |
  +----------------------[-------------+
  | Il dato non può essere cancellato, |
  | probabile processo fermo che lo    |
  |        mantiene bloccato?          |
- +------------------------------------+
+ `------------------------------------'
      | Sì |                 | No |
      +----+                 +----+
        |                      |         +--------------------------+
        |                      [-------->| la procedura è terminata |
-       |                                +--------------------------+
+       |                                +--------------------------'
     +-------------------------------+
     | Segnalazione all'operatore    |
     | Intervento manuale.           |
     | La notifica è stata ignorata? |
-    +-------------------------------+
+    `-------------------------------'
         | Sì |          | No |
         +----+          +----+
           |               |             +--------------------------+
           |               [------------>| la procedura è terminata |
-          |                             +--------------------------+
+          |                             `--------------------------'
         +-[--------------------------+
         | Lo script di controllo     |
         | reinvierà una notifica     |
         | di presenza dati segnalati |
         | come inattivi              |
-        +----------------------------+
+        `----------------------------'
 
 * Cancellazione o revoca accesso utente
 L'utente che ha lasciato l'organizzazione (sia esso come dipendente, o fornitore), il suo profilo e
@@ -994,32 +998,35 @@ Tabella 04#T
 Aggiornamento disciplina nazionale. Trovate al riferimento (04*2) un interessante articolo, che descrive la conservazione
 dei dati telematici, osservando gli obblighi a livello nazionale ed europeo.
 
+
 05) Procedure di emergenza
 
-Ho inserito in questo capitolo le procedure base richieste dalla normativa. Consiglio di scriverle mantenendo uno stile di diagramma di flusso,
-semplificandole, in quanto dovranno essere lette da tutti i dipendenti.
-Gli stessi collaboratori dovranno tenerle presente, ovvero in caso di necessità dovranno sapere dove si trovano, nel nostro manuale generale.
+Ho inserito in questo capitolo le procedure base richieste dalla normativa.
+Consiglio di scriverle mantenendo uno stile di diagramma di flusso, semplificandole, in quanto dovranno essere
+lette da tutti i dipendenti.
+Gli stessi collaboratori dovranno tenerle presente, ovvero in caso di necessità dovranno sapere dove si trovano,
+nel nostro manuale generale.
 
  *-----------------------------------------------------------------*
  |  E' stata consegnata un'email che chiede un riscatto in denaro. |
  |                  Conosciamo il mittente?                        |
  *-----------------------------------------------------------------*
        | Sì |                | No |
-       +----+                +----+
+       `----'                `----'
           |                    |
           |__+-----+           |
              | ecc.|           |
-             +-----+        +--[-----+
+             `-----'        +--[-----+
                             | azione |
-                            +--------+
+                            `--------'
 
 Elencherò alcune di queste possibili procedure, 
 
 - dati danneggiati
 --> durante un'attività di aggiornamento di sistema operativo, o aggiornamento applicazione, abbiamo
 involontariamente perso dei dati.
-In questo caso l'utente che ha avviato la procedura e ha rilevato la perdita di dati, dovrà aprire una segnalazione
-all'amministratore di sistema, e se lo riteniamo necessario, anche al security manager.
+In questo caso l'utente che ha avviato la procedura e ha rilevato la perdita di dati, dovrà aprire
+una segnalazione all'amministratore di sistema, e se lo riteniamo necessario, anche al security manager.
 L'amministratore dovrà quindi dare il via al ripristino dei dati persi,
 e descrivere possibili problemi riscontrati durante la fase di recupero dati. 
 
@@ -1095,7 +1102,7 @@ contatto con i fornitori del software, al fine di chiarire ogni aspetto riguardo
 
 - procedura di rilevazione Data Breach
 Se mantenete dati di terze parti nei vostri archivi digitali, come dati personali, il consulente dovrà aiutarvi
-nel stendere quest'ultima procedura.
+nello stendere quest'ultima.
 
 Scopo della procedura è quello di definire le modalità e le responsabilità per il corretto adempimento dell’obbligo
 di notifica al "Garante privacy" ed eventuale comunicazione agli interessati di violazioni di dati personali.
@@ -1125,6 +1132,7 @@ Ipotesi 3, il rischio per le libertà e i diritti delle persone fisiche è proba
             richiesta azione di comunicazione a nomi e recapiti e alla figura del DPO (o altro punto rilevante del contatto)
 
 La procedura data-breach dovrà riportare nome e cognome, della persona che avrà contatto con le autorità.
+
 
 06) Backup e ripristini
 
@@ -1166,7 +1174,7 @@ Voglio prima fare una premessa. Certi tipi di situazioni lavorative e non, induc
 di applicazioni anche per oltre cinque, sei anni.
 Ci si può imbattere in situazioni in cui il dato deve essere ripristinato dopo questo periodo ipotetico, su nuovi sistemi operativi
 o motori database aggiornati.
-Ricordo il database MYSQL, disponibile in distribuzioni Linux fino a pochi anni fa con pacchetti contenenti la versione di Oracle,
+Ricordo il database MYSQL, disponibile in distribuzioni Linux, fino a pochi anni fa con pacchetti contenenti la versione di Oracle,
 e poi sostituiti con quelli dell'organizzazione MariaDB.
 Le procedure programmate permettono di ridurre il rischio di trovarci bloccati, durante la fase di ripristino dati.
 Per questo motivo l'ispettore chiederà nei primi audit, documenti che traccino il test di ripristino dati.
@@ -1180,7 +1188,8 @@ Riporto un esempio per Mysql/MariaDB da inserire, in una procedura autotizzata:
 
 $ date; mysql --password=cccccc -u utente --force nome_database < nome_dump_database.sql >> log.txt
 
-L'ispettore chiederà durante le sessioni audit, le tracciature log che testimonino il passaggio dei dati ripristinati.
+L'ispettore potrebbe chiedere durante le sessioni audit, le tracciature log che testimonino il passaggio dei dati ripristinati.
+
 
 07) Formazione security manager
 
@@ -1345,7 +1354,7 @@ Un esempio dello schema.
  +-----------------------+                                 +---------------------------+
  |  rete organizzazione  |                                 |  rete ospiti (vlan ID xx) |
  |     192.168.2.0/24    |                                 |    172.25.1.0/24          |
- +-----------------------+                                 +---------------------------+
+ `-----------------------'                                 `---------------------------'
           \___________________/-------------------\           |
                               |  apparato  SWITCH |___________/
                               \-------------------/
@@ -1355,7 +1364,7 @@ Un esempio dello schema.
                                                          |
                                                 .--------[-----.
                                                 |   firewall   |
-                                                .--------------.
+                                                `--------------'
                                                         |
                                 @----------@            |
                                 | router   |------------/
@@ -1370,6 +1379,7 @@ l'instradamento da noi impostato.
 Come avete già letto nel punto 07b, i fornitori che devono trattare per conto dell'organizzazione una serie di dati,
 possono avere accesso alla rete wifi della rete interna.
 L'accesso viene consentito con le determinate restrizioni del caso (profili creati appositamente, con limitazioni di accesso alle aree dati).
+
 
 09) Misure di protezione per lo stabile
 
@@ -1437,31 +1447,35 @@ Al fine di individuare la struttura da considerare per la protezione contro il f
 Per quanto riguarda l'impianto LPS (Lightning Protection System), completo usato per ridurre il danno materiale dovuto alla fulminazione
 diretta della struttura, esso può (o non) essere presente. Tale caratteristica verrà definita nella valutazione.
 
+
 10) Test di penetrabiltà
 
-Si tratta di un processo abbastanza importante, è possibile eseguirlo in autonomia,
-consiglio ad ogni modo l'aiuto di un consulente esterno.
-Chiunque eseguirà il test di penetrabilità (una persona fisica o società), il suo nominativo potrebbe
+Si tratta di un processo abbastanza importante, il quale è possibile eseguirlo in autonomia,
+oppure delegandolo ad un consulente esterno.
+Chiunque eseguirà il test di penetrabilità (persona fisica o società), il suo nominativo potrebbe
 essere tracciato nelle possibili verifiche degli ispettori.
 Un test base di penetrabilità potrebbe essere avviato in questo modo.
 L'incaricato potrebbe chiederci una macchina virtuale interna alla nostra rete,
 per installare un sistema operativo con tutti gli strumenti necessari (vedi nota 10*1).
 La prima fase del test potrebbe richiedere tutta la giornata lavorativa, in quanto il maggior numero
 di macchine dovrà essere rilevato.
-Molto spesso le macchine client vengono avviate in orari diversi della giornata; ripetendo diverse scansioni
-nell'arco della giornata, si avrà la possibilità di trovare sempre un maggior numero di macchine attive,
+Molto spesso le macchine client vengono avviate in orari diversi della giornata; ripetendo diverse
+scansioni si avrà la possibilità di trovare sempre un maggior numero di macchine attive,
 quindi scansionarle.
 Terminata la prima scansione, l'incaricato di consegnerà una documentazione di tutti i servizi disponibili
-e attivi nelle macchine client e server. Dovremo chiudere i servizi non necessari, che quasi sempre sono in ascolto
-su determinate porte (tcp o udp per esempio). Questa prima documentazione dovremo conservarla.
-Dopo aver spento servizi non necessari, l'incaricato avvierà una seconda scansione.
-Da questa seconda fase, ci aspetteremo di trovare servizi di rete conosciuti, ma facilmente utilizzabili da un estraneo.
-Ad esempio, servizi database ai quali è possibile accedere con credenziali semplici (root/mysql),
-cartelle condivise in rete senza richesta di autenticazione. 
-Dovremo quindi correggere queste possibili problematiche, quindi richiedere una terza scansione, la quale confermerà l'assenza
-di altri servizi di rete troppo esposti.
+e attivi nelle macchine client e server. Dovremo chiudere i servizi non necessari, che quasi sempre sono
+in ascolto su determinate porte (tcp o udp per esempio).
+Questa prima documentazione dovremo conservarla, come evidenza.
+Dopo aver spento servizi non necessari, inserite password forti ad utenti predefiniti di sistema
+(elenco degli esempi dei nomi comuni usati, printer, backup, admin, spool, mysql) l'incaricato
+avvierà una seconda scansione.
+Da questa seconda fase, ci aspetteremo di trovare servizi di rete conosciuti, ma difficilmente usufruibli
+da un estraneo.
+Dovremo quindi correggere queste possibili problematiche, richiedere una terza scansione, la quale
+confermerà l'assenza di altri servizi di rete troppo esposti.
 
-L'incaricato potrebbe far uso di strumenti come Meta Exploit, per rilevare altri tipi di vulnerabilità presenti nei servizi.
+L'incaricato potrebbe far uso di strumenti come Meta Exploit, per rilevare altri tipi di vulnerabilità
+presenti nei servizi.
 Se lo farà, potrebbe indicarci quali servizi è necessario aggiornare, per ridurre problemi di sicurezza.
 
 I test di penetrabilità nei servizi disponibile nella rete, non sono gli unici che si possono effettuare.
@@ -1515,39 +1529,46 @@ Lato rete, è necessario spegnere alcuni parametri direttamente nelle impostazio
 Altre interessanti opzioni di sicurezza da applicare nel sistema operativo Linux, le potete trovare
 nella pagina "Linux Hardening Guide" (10*2).
 
-Il test "Nessus" procederà quindi con la scansione di tutti i pacchetti installati nel sistema Linux, e confronterà i numeri
-di versione con un database aggiornato e mantenuto con le maggior problematiche di sicurezza (comprese le vulnerabilità
-di tipo 0day, quelle rilasciate in poche ore dalla scoperta).
+Il test "Nessus" procederà quindi con la scansione di tutti i pacchetti installati nel sistema Linux, e
+confronterà i numeri di versione con un database aggiornato e mantenuto con le maggior problematiche di
+sicurezza (comprese le vulnerabilità di tipo 0day, quelle rilasciate in poche ore dalla scoperta).
 Un report dettagliato sarà generato e verrà quindi analizzato dal nostro amministratore di sistema.
-Esistono finestre di orari manutenzione nei server in produzione (solitamente in fascia notturna), nelle quali vengono
-installati pacchetti aggiornati, e risolti particolari casi di problemi sicurezza.
+Esistono finestre di orari manutenzione nei server in produzione (solitamente in fascia notturna),
+nelle quali vengono installati pacchetti aggiornati, e risolti particolari casi di problemi sicurezza.
+
 
 11) Monitoraggio dei sistemi che erogano servizi
 
 Uno dei punti fondamentali della norma è proprio il monitoraggio dei servizi e delle loro risorse a disposizione
-(disponibilità di calcolo CPU, memoria RAM, spazio disco libero). La normativa si aspetta che il personale addetto al controllo dei servizi,
-sia avvisato in caso di problemi.
-Esistono diversi software che sono in grado di tenere monitorato i servizi e le risorse, potremmo pensare a Nagios (o Icinga), Zabbix, oppure Dynatrace.
-I primi due sono rilasciati con licenza open source, mentre il terzo è quasi del tutto a pagamento, ed inoltre prevede l'utilizzo dell'intelligenza artificiale
-per rilevare e notificare velocemente, anomalie.
-L'idea che voglio illustrarvi, è basata nel dedicare tempo per sviluppare e mantenere delle sonde, capaci di avvisarvi in caso di problemi.
-Nagios nella versione gratuita può essere utilizzato per controllare le porte dei servizi, ad esempio l'erogazione di un servizio web prevede la costante
-presenza delle porte 80 e 443 (entrambe protocollo TCP) attive.
-Purtroppo non basta Nagios per sapere se una determinata pagina (ad esempio l'accesso ad un portale) è erogata nella rete internet o aziendale.
+(disponibilità di calcolo CPU, memoria RAM, spazio disco libero). La normativa si aspetta che il personale addetto
+al controllo dei servizi, sia avvisato in caso di problemi.
+Esistono diversi software che sono in grado di tenere monitorato i servizi e le risorse, potremmo pensare a Nagios/Icinga,
+Zabbix, oppure Dynatrace.
+I primi due sono rilasciati con licenza open source, mentre il terzo è quasi del tutto a pagamento, ed inoltre prevede
+l'utilizzo dell'intelligenza artificiale per rilevare e notificare velocemente, anomalie.
+L'idea che voglio illustrarvi, è basata nel dedicare tempo per sviluppare e mantenere delle sonde, capaci di avvisarvi
+in caso di problemi.
+Nagios nella versione gratuita può essere utilizzato per controllare le porte dei servizi, ad esempio l'erogazione di un
+servizio web prevede la costante presenza delle porte 80 e 443 (entrambe protocollo TCP) attive.
+Purtroppo non basta Nagios per sapere se una determinata pagina (ad esempio l'accesso ad un portale) è erogata
+nella rete internet o aziendale.
 Le porte del servizio web potrebbero essere attive, eppure la pagina non rispondere per via di un problema nei servizi backend
 (database o interpretazione codice).
 Scrivere delle sonde per monitorare una determinata pagina è una soluzione.
-Uno script potrebbe avviarsi ogni N minuti e lanciare più richieste ad essa (meglio se distanziate da intervalli regolari di N secondi).
-Se la pagina non dovesse rispondere per tutte le nostre richieste, procederemo ad inviare la segnalazione via email o tramite un pannello web
-che monitora lo stato di tutti i nostri servizi.
+Uno script potrebbe avviarsi ogni N minuti e lanciare più richieste ad essa (meglio se distanziate da intervalli
+regolari di N secondi).
+Se la pagina non dovesse rispondere per tutte le nostre richieste, procederemo ad inviare la segnalazione via email o
+tramite un pannello web che monitora lo stato di tutti i nostri servizi.
 Questo concetto di sonda può anche essere utilizzata per inviare richieste con protocollo ICMP a dispositivi di rete.
-L'assenza di un determinato dispositivo può allarme il personale e prepararlo alla ricezione di altre segnalazioni più specifiche.
-Per esempio, l'assenza di oltre cinque minuti di un router che instrada il traffico dei servizi web, ci allerta che potrebbero giungere
-altri allarmi di servizi più specifici (i portali web).
-Passiamo al monitoraggio interno delle risorse. Software come Nagios/Icinga sono in grado tramite agenti interni installati nel sistema,
-di raccogliere dati delle risorse in uso. Se l'agente rileva un picco d'uso di una determinata risorsa, possiamo essere notificati preventivamente.
-E' possibile installare gli agenti in ogni macchina (workstation, server) da controllare, tramite il pagamento di una licenza per ciascuno di essi,
-per il software Nagios o Icinga.
+L'assenza di un determinato dispositivo può allarme il personale e prepararlo alla ricezione di altre segnalazioni
+più specifiche.
+Per esempio, l'assenza di oltre cinque minuti di un router che instrada il traffico dei servizi web, ci allerta
+che potrebbero giungere altri allarmi di servizi più specifici (i portali web).
+Passiamo al monitoraggio interno delle risorse. Software come Nagios/Icinga sono in grado tramite agenti interni
+installati nel sistema, di raccogliere dati delle risorse in uso. Se l'agente rileva un picco d'uso di una determinata
+risorsa, possiamo essere notificati preventivamente.
+E' possibile installare gli agenti in ogni macchina (workstation, server) da controllare, tramite il pagamento
+di una licenza per ciascuno di essi, per il software Nagios o Icinga.
 Mentre per Dynatrace il costo è legato al numero di sessioni monitorate, memoria RAM usata, di tutti i nodi sotto controllo.
 Maggior informazioni le potete trovare nel sito web del software.
 
@@ -1564,22 +1585,28 @@ dovrà avvisarci.
 Nelle segnalazioni, consiglio anche di includere brevi stralci di procedure, basate su eventi già accaduti.
 In tal modo il personale potrà iniziare verifiche più mirate.
 
-La normativa si aspetta inoltre che i consumi di determinate risorse (calcolo CPU, memoria RAM, spazio disco libero, uso della memoria tampone SWAP,
-e ogni altro valore che ci è utile), sia raccolto con cadenza, salvato e pronto per essere consultato nel futuro. Il perchè è molto semplice.
-Supponiamo che nel primo anno di vita di un servizio, gli ospiti che usufruiscono di esso, generino nelle ore di punta circa quaranta accessi al secondo.
-Il prossimo anno il traffico potrebbe scendere oppure aumentare. L'unico modo per tener monitorato questo aspetto è tracciare periodicamente i dati
-di accesso e procedere ad un confronto.
-La figura del Security Manager dovrà schedulare la raccolta dei dati, e verificare in casi di esaurimento risorse non preventivato.
-Aggiungere nuove funzioni (alle sonde), che siano in grado di registrare altri consumi,
-e prevenire situazioni improvvise di esaurimento o collasso.
-Software gratuiti che ci permettono di raccogliere dati dalle macchine e registrarli sono per esempio Grafana, Graylog, Munin.
+La normativa si aspetta inoltre che i consumi di determinate risorse (calcolo CPU, memoria RAM, spazio disco libero,
+uso della memoria tampone SWAP, e ogni altro valore che ci è utile), sia raccolto con cadenza, salvato e pronto per
+essere consultato nel futuro.
+Il perchè è molto semplice.
+Supponiamo che nel primo anno di vita di un servizio, gli ospiti che usufruiscono di esso, generino nelle ore di punta
+circa quaranta accessi al secondo.
+Il prossimo anno il traffico potrebbe scendere oppure aumentare. L'unico modo per tener monitorato questo aspetto
+è tracciare periodicamente i dati di accesso e procedere ad un confronto.
+La figura del Security Manager dovrà schedulare la raccolta dei dati, e verificare in casi di esaurimento
+risorse non preventivato.
+Aggiungere nuove funzioni (alle sonde), che siano in grado di registrare altri consumi, e prevenire situazioni
+improvvise di esaurimento o collasso.
+Software gratuiti che ci permettono di raccogliere dati dalle macchine e registrarli sono per esempio
+Grafana, Graylog, Munin.
+
 
 12) Service Line Agreement
 
 Potremmo definirlo il documento che dichiara le garanzie di continuità, dei servizi erogati.
-Vi sono organizzazioni che non erogano servizi tramite la rete internet o collegamenti dedicati come tratte MPLS (13*1) o virtual private network,
-ne permettono a terzi di consultare i dati raccolti e/o trattati al proprio interno, ma offrono servizi di consulenza o assistenza,
-che devono essere erogati (gestiti in alcuni casi) in tempi quasi assicurati.
+Vi sono organizzazioni che non erogano servizi tramite la rete internet o collegamenti dedicati come tratte MPLS (13*1)
+o virtual private network, ne permettono a terzi di consultare i dati raccolti e/o trattati al proprio interno,
+ma offrono servizi di consulenza o assistenza, che devono essere erogati (gestiti in alcuni casi) in tempi quasi assicurati.
 In breve, il documento è obbligatorio se forniamo un certo tipo di consultazione, trattamento, erogazione, del dato.
 Esistono infrastrutture progettate ad ergoarli con un valore di uptime molto vicino a 99,999 per cento durante tutto l'anno civile.
 Altre invece, durante le normali otto ore lavorative.
@@ -1651,6 +1678,7 @@ Il supporto tecnico [NOME_ORGANIZZAZIONE] è attivo dalle ore 8:30 alle ore 18:3
 tramite il sistema di trouble ticket.
 
 FINE (Service Level Agreement)
+
 
 13) Documento Business Continuity *BCP*
 Il percorso di preparazione alla normativa ci porterà inoltre alla stesura di questo documento,
