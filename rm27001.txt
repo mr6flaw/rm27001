@@ -4,8 +4,6 @@
  |    |   |   |  __/   /  |   | |   | | 
 _|   _|  _|  _|_____|_/  \___/ \___/ _| 
 
-Ultimo aggiornamento: 23 luglio 2022
-
 01) Introduzione
 02) Definizione degli asset
 02a) --> General Manual e Decalogo
@@ -110,13 +108,13 @@ al fase di controllo nel prossimo audit.
 
 02) Definizione degli asset
 
-L'asset è un dato, risorsa che conserviamo, modifichiamo (se necessario) e proteggiamo all'interno
-dell'organizzazione.
+L'asset è un dato, risorsa che conserviamo, modifichiamo (se necessario) e proteggiamo
+all'interno dell'organizzazione.
 Ogni asset può includere diverse proprietà, le quali ci permetteranno di mantenere un adeuguato
 livello di sicurezza per i nostri dati.
 
-Per facilitare la ricerca di asset (da catalogare) all'interno dell'organizzazione, riporto una serie
-di esempi.
+Per facilitare la ricerca di asset (da catalogare) all'interno dell'organizzazione, riporto una
+serie di esempi.
 - anagrafiche presenti nei software gestionale dell'impresa
 - anagrafiche caricate presso gestori online, fornitori esterni
 - documenti dell'impresa caricati in portali online, come fatture (per archiviazione)
@@ -148,8 +146,8 @@ vale anche per le aree cloud sparse nel mondo internet.
 e diffuso internamente.
 Vi sono dati la cui natura è strettamente confidenziale, specialmente se sono dati trattati
 su richiesta di clienti, o figure autorizzate ma esterne all'organizzazione.
-Vi sono poi dati che sono solo gestiti da utente interni all'organizzazione, e per nessuna ragione
-dovranno essere divulgati con figure esterne ad essa.
+Vi sono poi dati che sono solo gestiti da utente interni all'organizzazione, e per nessuna
+ragione dovranno essere divulgati con figure esterne ad essa.
 Nulla vi vieta di creare altre proprietà per il grado di confidenzialità. E' solo richiesto
 avere una spiegazione di essa quando gli ispettori della normativa verificheranno gli asset.
 
@@ -165,8 +163,8 @@ Tabella 02#T
 +-------------------+-----------------------+------------+------------------------+------------+
 
 
-Un'altro aspetto fondamentale riguarda il trattamento dei dati dell'organizzazione in paesi fuori dal
-territorio europeo (scrivo europeo, in quanto questa guida è stata scritta pensando
+Un'altro aspetto fondamentale riguarda il trattamento dei dati dell'organizzazione in paesi fuori
+dal territorio europeo (scrivo europeo, in quanto questa guida è stata scritta pensando
 ad un'organizzazione che opera nel territorio italiano).
 Vi sono dei casi in cui non possiamo mantenere i dati nello stesso edificiio dell'organizzazione.
 Per varie ragioni, dalla copia dati mantenuta in un luogo diverso dalla sede operativa, scongiurare
@@ -566,12 +564,14 @@ Il codice correzione in formato "diff", può essere cercato nei siti web come qu
 alla fonte esterna (03*6).
 
 
-Grazie all'aiuto del comando patch, possiamo prelevare la parte del sorgente kernel modificato ed applicare la correzione.
+Grazie all'aiuto del comando patch, possiamo prelevare la parte del sorgente kernel modificato ed
+applicare la correzione.
 $ cd /usr/src/linux-sorgenti-kernel-x.x
 $ patch -p1 < patch-xx-cve-xx.diff
 
 Quindi compilare il sorgente ed installare i nuovi file binari o l'immagine nuova del kernel.
-In definitiva una distribuzione utilizzabile nella maggior parte degli ambienti dove si trattano dati non sensibili.
+In definitiva una distribuzione utilizzabile nella maggior parte degli ambienti dove si trattano
+dati non sensibili.
 
 --> Ubuntu - vale la descrizione della distribuzione Debian.
 --> Fedora - vale la descrizione della distribuzione Debian.
@@ -581,26 +581,28 @@ In definitiva una distribuzione utilizzabile nella maggior parte degli ambienti 
 nelle versioni CentOS 8, in modo da utilizzare gli aggiornamento di Rocky Linux e convertire la base
 del sistema CentOS alla versione Rocky Linux.
 
-* Android - gli aggiornamenti sistema dipendono dal costruttore del dispositivo mobile, difficile stabilire con quale
-frequenza sono resi disponibili.
-Anche per esso vale il principio che dopo la scoperta di una vulnerabilità, il gestore del software del telefono
-potrebbe rilasciare dopo pochi giorni un aggiornamento di sistema.
-In certi casi, gli aggiormaneti del fornitore del telefono, potrebbero essere disponibili ad un intervallo regolare.
+* Android - gli aggiornamenti sistema dipendono dal costruttore del dispositivo mobile, difficile stabilire
+con quale frequenza sono resi disponibili.
+Anche per esso vale il principio che dopo la scoperta di una vulnerabilità, il gestore del software del
+telefono potrebbe rilasciare dopo pochi giorni un aggiornamento di sistema.
+In certi casi, gli aggiormaneti del fornitore del telefono, potrebbero essere disponibili ad un intervallo
+regolare.
 
 * iOS - se vogliamo considerare o valutare, questo sistema operativo per iPhone e iPad dal punto di vista
 di rischio incidenti di sicurezza, possiamo "stare" abbastanza tranquilli.
 
-Apple come per il sistema operativo di un computer MAC, cerca di rilasciare aggiornamenti in poche ore se la vulnerabilità
-è risultata abbastanza grave. Un esempio: il caso del carattere indiano che se ricevuto via sms o email,
-provocava un riavvio del sistema.
-Inoltre il sistema è progettato e aggiornato da un'unica fonte (Apple) che si occupa sia dello sviluppo software
-che di quello hardware. Potremmo valutare questo aspetto, come un ulteriore garanzia.
-Il codice sorgente difficilmente sarà in mano a terzi che potrebbero studiarlo per rilevare possibili vulnerabilità.
+Apple come per il sistema operativo di un computer MAC, cerca di rilasciare aggiornamenti in poche ore se
+la vulnerabilità è risultata abbastanza grave. Un esempio: il caso del carattere indiano che se ricevuto via
+sms o email, provocava un riavvio del sistema.
+Inoltre il sistema è progettato e aggiornato da un'unica fonte (Apple) che si occupa sia dello sviluppo
+software che di quello hardware. Potremmo valutare questo aspetto, come un ulteriore garanzia.
+Il codice sorgente difficilmente sarà in mano a terzi che potrebbero studiarlo per rilevare possibili
+vulnerabilità.
 Ho scritto difficilmente, perchè prima o poi potrebbe verificarsi anche una perdita di informazioni (leak),
 o avanzare una forzatura del sistema (jailbreak).
 
-Nota finale, mai da dimenticare: ogni computer al termine della giornata lavorativa, deve essere spento per favorire
-l'installazione degli aggiornamenti automatici.
+Nota finale, mai da dimenticare: ogni computer al termine della giornata lavorativa, deve essere spento per
+favorire l'installazione degli aggiornamenti automatici.
 
 03e) Disegno rete
 
@@ -1090,9 +1092,10 @@ Dopo questo evento, il collaboratore dell'organizzazione quando tornerò al prop
 dovrà elencare le apparecchiature danneggiate.
 Ad esempio il proprio computer, dischi o chiavette rimovibili.
 E' inteso, questi dispositivi sono stati preventivamente criptati dagli amministratori di sistema,
-anche se persi durante l'incendio, il rischio che un intruso possa aver accesso ai dati contenuti è molto basso.
-Se queste apparecchiature (o parti di esse, come un disco interno) sono in uno degli stati sopra descritti,
-la procedura descriverà come aprire all'interno dell'organizzazione la segnalazione.
+anche se persi durante l'incendio, il rischio che un intruso possa aver accesso ai dati contenuti è
+molto basso.
+Se queste apparecchiature (o parti di esse, come un disco interno) sono in uno degli stati sopra
+descritti, la procedura descriverà come aprire all'interno dell'organizzazione la segnalazione.
 
 - furto/perdita accidentale
 --> evento che può verificarsi con maggior probabilità. Ipotizziamo una situazione come l'aver lasciato
@@ -1108,21 +1111,25 @@ al ripristino del dispositivo tramite un muletto o nuovo strumento.
 - email richiesta riscatto
 --> Negli ultimi anni organizzazioni criminali hanno costruito dei software illegali distribuiti senza
 permesso nei computer di ignari utenti.
-Ad una certa data i software vengono attivati da chi li controlla, allo scopo di codificare gni dato presente
-nelle cartelle documenti dell'utente, ed inoltre questa operazione può intaccare anche i file presenti
-nei dischi di rete condivisi.
+Ad una certa data i software vengono attivati da chi li controlla, allo scopo di codificare ogni dato
+presente nelle cartelle documenti dell'utente, ed inoltre questa operazione può intaccare anche i file
+presenti nei dischi di rete condivisi.
 Dopo queste operazioni, all'utente preso di mira potrebbe giungere un'email con avviso di pagamento,
 in cambio della chiave per ottenere i file codificati, di nuovo leggibili.
 
-Qualuche sia la richiesta o il danno precedentemente arrecato dall'ignoto, è consigliabile trascrivere una procedura.
+Qualuche sia la richiesta o il danno precedentemente arrecato dall'ignoto, è consigliabile trascrivere
+una procedura.
 L'utente coinvolto in questa spiacevole azione, dovrà descrivere quello che è successo, tramite uno strumento
-di tracciatura (ticket per esempio), il quale avvisi direttamente gli amministratori di sistema ed il security manager.
-Il computer dell'utente sottoposto a ricatto potrebbe essere inutilizzabile, è consigliabile scrivere nella procedura di staccare
-il cavo di rete da questo apparecchio, non utilizzarlo ed utilizzare un altro terminale per l'avvio della procedura.
+di tracciatura (ticket per esempio), il quale avvisi direttamente gli amministratori di sistema ed
+il security manager.
+Il computer dell'utente sottoposto a ricatto potrebbe essere inutilizzabile, è consigliabile scrivere
+nella procedura di staccare
+il cavo di rete da questo apparecchio, non utilizzarlo ed utilizzare un altro terminale per l'avvio
+della procedura.
 
 - diffusione involontaria dei dati
---> Evento la cui probabilità di manifestarsi è alta. Un errore umano potrebbe agevolare l'utente (senza volerlo)
-a pubblicare dei dati che risultano privati, e non possono ancora essere divulgati.
+--> Evento la cui probabilità di manifestarsi è alta. Un errore umano potrebbe agevolare l'utente
+(senza volerlo) a pubblicare dei dati che risultano privati, e non possono ancora essere divulgati.
 Ad esempio un catalogo non ancora stampato, che può essere pubblicato in anteprima con la modalità digitale.
 Configurazioni troppo permissive in un servizio web, facilitano i motori di ricerca a leggere il contenuto di
 una o più directory (mancanza di una direttiva index).
@@ -1134,38 +1141,47 @@ La procedura dovrà comunicare all'utente che si è accorto dell'errata divulgaz
 i modo che il securiy manager dell'organizzazione possa intervenire.
 
 - procedura monitor risorse
---> Anche in questo caso, non sarà raro che la procedura debba essere utilizzata. Ogni sistema operativo dell'organizzazione
-dovrà essere controllato attraverso processi monitor.
-Vengono quindi verificati i valori di consumo RAM, calcolo CPU, spazio libero nelle partizioni, ed altri livelli da sorvegliare.
-All'arrivo di una segnalazione (tramite email per esempio), sarà necessario valutare se si è verificata anche un'anomalia
-nel sistema operativo dettagliato.
-Risolta l'anomalia è consigliabile verificare se siamo di fronte ad un esaurimento di una risorsa, e nel caso predisporre un ampliamento.
+--> Anche in questo caso, non sarà raro che la procedura debba essere utilizzata. Ogni sistema operativo
+dell'organizzazione dovrà essere controllato attraverso processi monitor.
+Vengono quindi verificati i valori di consumo RAM, calcolo CPU, spazio libero nelle partizioni, ed altri
+livelli da sorvegliare.
+All'arrivo di una segnalazione (tramite email per esempio), sarà necessario valutare se si è verificata
+anche un'anomalia nel sistema operativo dettagliato.
+Risolta l'anomalia è consigliabile verificare se siamo di fronte ad un esaurimento di una risorsa,
+e nel caso predisporre un ampliamento.
 
 - richiesta installazione nuovo software da parte di un membro dell'organizzazione
---> Una delle procedure che saranno molto utilizzate. I membri o dipendenti dovranno abituarsi ad utilizzarla.
+--> Una delle procedure che saranno molto utilizzate. I membri o dipendenti dovranno abituarsi ad
+utilizzarla.
 La normativa prevede che nessun utente di un dispositivo possa installare in autonomia un software.
-Dovrà quindi seguire la procedura, chiedere all'amministratore i permessi per installare il software (se già conosciuto),
-oppure la valutazione di quest'ultimo se non catalogato nell'inventario software dell'organizzazione.
+Dovrà quindi seguire la procedura, chiedere all'amministratore i permessi per installare il software
+(se già conosciuto), oppure la valutazione di quest'ultimo se non catalogato nell'inventario software
+dell'organizzazione.
 
 L'amministratore dovrà richiedere o cercare delle informazioni, come ad esempio l'autore del programma,
-se vi sono collegamenti a risorse esterne rispettto l'organizzazione (se sì sarà necessario documentare anche le regole firewall).
+se vi sono collegamenti a risorse esterne rispettto l'organizzazione (se sì sarà necessario documentare
+anche le regole firewall).
 Ad esempio, programmi di profilazione dati possono prelevare delle fonti dai server messi a disposizione
-dalla sofotware house costruttrice. E' necessario controllare che i dati di proprietà dell'organizzazione inseriti nel software,
-per essere elaborati, vengano inviati in qualche modo alle risorse della software house.
-Per questo motivo, l'amministratore di sistema dovrà conoscere in maniera accurata i programmi richiesti, e nel caso prendere
-contatto con i fornitori del software, al fine di chiarire ogni aspetto riguardo la sicurezza richiesta dalla normativa.
+dalla sofotware house costruttrice. E' necessario controllare che i dati di proprietà dell'organizzazione
+inseriti nel software, per essere elaborati, vengano inviati in qualche modo alle risorse della software
+house.
+Per questo motivo, l'amministratore di sistema dovrà conoscere in maniera accurata i programmi richiesti,
+e nel caso prendere contatto con i fornitori del software, al fine di chiarire ogni aspetto riguardo
+la sicurezza richiesta dalla normativa.
 
 - procedura di rilevazione Data Breach
 Se mantenete dati di terze parti nei vostri archivi digitali, come dati personali, il consulente dovrà aiutarvi
 nello stendere quest'ultima.
 
-Scopo della procedura è quello di definire le modalità e le responsabilità per il corretto adempimento dell’obbligo
-di notifica al "Garante privacy" ed eventuale comunicazione agli interessati di violazioni di dati personali.
-Le prescrizioni contenute nella presente procedura discendono da normative cogenti, decreti, linee guida, provvedimenti,
-considerati applicabili all’organizzazione al fine di assicurare piena conformità del Sistema di gestione privacy alle stesse.
-La presente procedura si applica in presenza di una violazione di dati personali ovvero qualora si verifichi
-(sia in maniera accidentale che illecita) la distruzione, la perdita, la modifica, la divulgazione non autorizzata
-o l’accesso ai dati personali trasmessi, conservati o comunque trattati.
+Scopo della procedura è quello di definire le modalità e le responsabilità per il corretto adempimento
+dell’obbligo di notifica al "Garante privacy" ed eventuale comunicazione agli interessati di violazioni
+di dati personali.
+Le prescrizioni contenute nella presente procedura discendono da normative cogenti, decreti, linee guida,
+provvedimenti, considerati applicabili all’organizzazione al fine di assicurare piena conformità del 
+Sistema di gestione privacy, alle stesse.
+La presente procedura si applica in presenza di una violazione di dati personali ovvero qualora
+si verifichi (sia in maniera accidentale che illecita) la distruzione, la perdita, la modifica,
+la divulgazione non autorizzata o l’accesso ai dati personali trasmessi, conservati o comunque trattati.
 
 La procedura continua poi con queste fasi.
 * Scoperta della violazione,
@@ -1335,7 +1351,8 @@ Elenco requisiti base
 --> E' presente una procedura per la segnalazione degli eventi sospetti (sì/no)
 --> Presenza di applicativi installati in un server (sì/no)
 --> Tutti i programmi provenienti dall'esterno o scaricati su internet sono preventivamente controllati (sì/no)
---> E' presente un documento interno per il divieto di installare applicativi che non vengono controllati prima da un responsabile IT. (sì/no)
+--> E' presente un documento interno per il divieto di installare applicativi che non vengono controllati
+       prima da un responsabile IT. (sì/no)
 --> E' presente un sistema automatico o manuale per il blocco delle estensioni. (sì/no)
 --> Presenza di una password all'accensione del computer (sì/no)
 --> Presenza di una password nello screensaver (sì/no)
@@ -1490,7 +1507,8 @@ con limitazioni di accesso alle aree dati).
 09) Misure di protezione per lo stabile
 
 I punti della normativa per la protezione dello stabile sono da tenere in considerazione.
-Elencherò le azioni pratiche da compiere, affinchè possiate già essere preparati per un audit interno.
+Elencherò le azioni pratiche da compiere, affinchè possiate già essere preparati per un audit
+interno.
 Create un registro elettronico e stampate dei cartellini di carta con scritto VISITATORE.
 Se riuscite inserite i cartellini in una busitna di plastica munita di molletta (09*1).
 Educate tutto il personale all'uso dei cartellini. Quando un membo dell'organizzazione
@@ -1509,9 +1527,10 @@ Inoltre il Security Manager, potrà sapere chi sarà entrato nello stabile dell'
 Se l'organizzazione è dotata di personale che controlla l'ingresso allo stabile, sarà più
 semplice rispettare ed attuare, la procedura di registrazione.
 
-Se i componenti dell'organizzazione accedono tramite una badge elettronico all'edificio, ogni avvenimento
-(apertura porta di ingresso, o altre aree) dovrà essere registrato.
-A volte è difficile trovare centraline elettroniche di controllo accesso che dialogano con apparati di rete.
+Se i componenti dell'organizzazione accedono tramite una badge elettronico all'edificio,
+ogni avvenimento (apertura porta di ingresso, o altre aree) dovrà essere registrato.
+A volte è difficile trovare centraline elettroniche di controllo accesso che dialogano con
+apparati di rete.
 Vi scrivo questo, perchè il nostro fine è prelevare i dati di registrazione accessi
 ed inviarle al gestore log, descritto nel punto 04. Una soluzione è prelevare quotidianamente
 il file log con gli accessi ed inviarlo al gestore log.
@@ -1527,8 +1546,8 @@ Consiglierei il formato elettronico (per una veloce e chiara azione di ricerca s
 Tramite badge è poi possibile restringere l'accesso a determinate aree
 (come quelle di stoccaggio dati) da parte del solo personale autorizzato.
 
-Ricordo che ogni cavo ethernet (e/o fibra ottica) presente nell'organizzazione dovrà essere schermato
-(cosa che avviene già in quasi tutti gli stabili).
+Ricordo che ogni cavo ethernet (e/o fibra ottica) presente nell'organizzazione dovrà essere
+schermato (cosa che avviene già in quasi tutti gli stabili).
 Ogni rete WIFI dovrà poi essere protetta da password o altro metodo di autenticazione
 (token generato su richiesta).
 Ogni armadio di deposito dispositivi hardware, dove sono presenti aree di stoccaggio o
@@ -1589,8 +1608,8 @@ per installare un sistema operativo con tutti gli strumenti necessari (vedi nota
 oppure un accesso VPN alla rete interna (scelta più probabile).
 Nella prima fase di test, ripetendo diverse scansioni si avrà la possibilità di trovare
 sempre un maggior numero di macchine attive, quindi scansionarle.
-Terminata la prima scansione, l'incaricato di consegnerà una documentazione di tutti i servizi disponibili
-e attivi nelle macchine client e server, e i vulnerabilità (base, medie alte) rilevate.
+Terminata la prima scansione, l'incaricato di consegnerà una documentazione di tutti i servizi
+disponibili e attivi nelle macchine client e server, e i vulnerabilità (base, medie alte) rilevate.
 Dovremo chiudere i servizi non necessari, che quasi sempre sono in ascolto su
 determinate porte (tcp o udp per esempio).
 Questa prima documentazione dovremo conservarla, come evidenza.
@@ -1602,8 +1621,8 @@ Da questa seconda fase (chiamata anche follow-up), ci aspetteremo di trovare i s
 conosciuti, ma senza la presenza di vulnerabilità esposte.
 
 
-L'incaricato potrebbe far uso di strumenti come Meta Exploit, Rapid 7, per rilevare altri tipi di vulnerabilità
-presenti nei servizi.
+L'incaricato potrebbe far uso di strumenti come Meta Exploit, Rapid 7, per rilevare altri tipi di
+vulnerabilità presenti nei servizi.
 Se lo farà, potrebbe indicarci quali servizi è necessario aggiornare, per ridurre problemi di sicurezza.
 
 Nota importante per le vulnerabilità rilevate ed impossibili da sanare. Capita sopratutto nei sistemi
@@ -1897,35 +1916,36 @@ altri dispositivi per riprendere ad erogare il servizio o servizi.
 Tabella gestione scenario
 
 Tabella 014#T4
-.--------+--------------------+-------------------+---------------------------+------------------+------+-----------------.
-| Evento | Scenario specifico | Azione preventiva | Misure di emergenza       | Azioni per le    | RTO* | Analisi rischio |
-|   ID   |                    |                   |   provvisorie             |    risorse       |      |                 |
-+--------+--------------------+-------------------+---------------------------+------------------+------+-----------------+
-|   1    |  Malfunzionamento  |  Verifica tramite | Giunto Alert da sistema   |   Sostituzione   |      |  Probabilità    |
-|        |    nodo fisico     |    sonde monitor  | di monitoraggio. Seguire  |   nodo fisico    |  8   |  danno (basso,  |
-|        |                    |                   |  procedura numero 0001    |   danneggiato    |  ore |   medio, alto)  |
-+--------+--------------------+-------------------+---------------------------+------------------+------+-----------------+
-|   2    |  Possibile distru- |  Manutenzione     | Giunto allarme da impian- |   Ripristino     |  8   |  Probabilità    |
-|        |   zione dispositivi|   impianto anti-  |  to. Seguire procedura    |   terminali      |  ore |   danno basso   |
-|        |    negli uffici    |     incendio      |   numero 0002             |                  |      |                 |
-+--------+--------------------+-------------------+---------------------------+------------------+------+-----------------+
-|   3    |  Furto nei locali  |  Manutenzione     | Giunto allarme da sistema |  Ripristino      |  8   |  Probabilità    |
-|        |   ufficio          |   impianto anti-  | di monitoraggio. Seguire  |  dispositivi     |  ore |   danno medio / |
-|        |                    |    intrusione     |  procedura numero 0003    |                  |      |    alto         |
-+--------+--------------------+-------------------+---------------------------+------------------+------+-----------------+
-|   4    |  Incendi o ufficio | Manutenzione      | Giunto allarme da sistema |  Ripristino      |  2   |  Probabilità    |
-|        |                    |  impianto anti-   | di monitoraggio. Seguire  |   locali ufficio |  ore |    danno media  |
-|        |                    |   incendio        | procedura numero 0004     |                  |      |                 |
-+--------+--------------------+-------------------+---------------------------+------------------+------+-----------------+
-|   5    |  Mancanza energia  | Manutenzione      | Giunto allarme da sistema |  Ripristino      |  2   |  Probabilità    |
-|        |    elettrica sala  |  impianto UPS     | di monitoraggio UPS.      |   locali ufficio |  ore |    danno media  |
-|        |      server        |                   | Seguire proc. numero 0005 |                  |      |                 |
-+--------+--------------------+-------------------+---------------------------+------------------+------+-----------------+
+.--------+--------------------+-------------------+--------------------------+------------------+------+-----------------.
+| Evento | Scenario specifico | Azione preventiva | Misure di emergenza      | Azioni per le    | RTO* | Analisi rischio |
+|   ID   |                    |                   |   provvisorie            |    risorse       |      |                 |
++--------+--------------------+-------------------+--------------------------+------------------+------+-----------------+
+|   1    |  Malfunzionamento  |  Verifica tramite | Giunto Alert da sistema  |   Sostituzione   |      |  Probabilità    |
+|        |    nodo fisico     |    sonde monitor  | di monitoraggio. Seguire |   nodo fisico    |  8   |  danno (basso,  |
+|        |                    |                   |  procedura numero 0001   |   danneggiato    |  ore |   medio, alto)  |
++--------+--------------------+-------------------+--------------------------+------------------+------+-----------------+
+|   2    |  Possibile distru- |  Manutenzione     | Giunto allarme da impian-|   Ripristino     |  8   |  Probabilità    |
+|        |   zione dispositivi|   impianto anti-  |  to. Seguire procedura   |   terminali      |  ore |   danno basso   |
+|        |    negli uffici    |     incendio      |   numero 0002            |                  |      |                 |
++--------+--------------------+-------------------+--------------------------+------------------+------+-----------------+
+|   3    |  Furto nei locali  |  Manutenzione     | Giunto allarme da sistema|  Ripristino      |  8   |  Probabilità    |
+|        |   ufficio          |   impianto anti-  | di monitoraggio. Seguire |  dispositivi     |  ore |   danno medio / |
+|        |                    |    intrusione     |  procedura numero 0003   |                  |      |    alto         |
++--------+--------------------+-------------------+--------------------------+------------------+------+-----------------+
+|   4    |  Incendi o ufficio | Manutenzione      | Giunto allarme da sistema|  Ripristino      |  2   |  Probabilità    |
+|        |                    |  impianto anti-   | di monitoraggio. Seguire |   locali ufficio |  ore |    danno media  |
+|        |                    |   incendio        | procedura numero 0004    |                  |      |                 |
++--------+--------------------+-------------------+--------------------------+------------------+------+-----------------+
+|   5    |  Mancanza energia  | Manutenzione      | Giunto allarme da sistema|  Ripristino      |  2   |  Probabilità    |
+|        |    elettrica sala  |  impianto UPS     | di monitoraggio UPS.     |   locali ufficio |  ore |    danno media  |
+|        |      server        |                   | Seguire proc. numero 0005|                  |      |                 |
++--------+--------------------+-------------------+--------------------------+------------------+------+-----------------+
 
 RTO* tempo ripresa operazioni
 
 PROCEDURE numero 000X
-Nella tabella 014#T4 sono riportati gli scenari che possono accadare, e le misure di emergenza provvisorie, più descrittive.
+Nella tabella 014#T4 sono riportati gli scenari che possono accadare, e le misure di emergenza provvisorie,
+più descrittive.
 Nel documento deve essere riportata ogni procedura richiamata nella tabella, la quale sarà seguita in caso di
 avvenimento dello scenario descritto.
 
@@ -1960,18 +1980,19 @@ valutare l'inizio dello spegnimento server presenti nella sala di calcolo.
 ELENCO TEST PROCEDURA SCENARI EMERGENZA
 Per ogni evento ID specificato nella tabella 014#T4, dovremo descrivere la simulazione dell'evento, che eseguiremo.
 
-Scenario ID 1 - Verrà avviata la simulazione del ripristino nodo fisico, il quale mantiene attivo uno dei seguenti processi (offerte commerciali,
-elaborazione buste paga, fornitura servizi di assistenza).
+Scenario ID 1 - Verrà avviata la simulazione del ripristino nodo fisico, il quale mantiene attivo uno dei seguenti processi
+(offerte commerciali, elaborazione buste paga, fornitura servizi di assistenza).
 
-Scenario ID 2 - Verrà avviata la simulazione della distruzione dispositivi negl uffici del raparto (sceglierlo). Saranno predisposti
-dispositivi muletto, e sarà chiesto agli operatori di utilizzarli al fine di operare con i servizi erogati dal reparto.
+Scenario ID 2 - Verrà avviata la simulazione della distruzione dispositivi negl uffici del raparto (sceglierlo).
+Saranno predisposti dispositivi muletto, e sarà chiesto agli operatori di utilizzarli al fine di operare con i
+servizi erogati dal reparto.
 
-Scenario ID 3 - Verrà simulato il furto del nodo fisico che eroga il servizio di fornitura assistenza, per circa sessanta
-minuti. Gli operatori al call center, registreranno le chiamate in arrivo in modo da registrarle nel portale di assistenza
-appena sarà tornato disponibile.
+Scenario ID 3 - Verrà simulato il furto del nodo fisico che eroga il servizio di fornitura assistenza, per circa
+sessanta minuti. Gli operatori al call center, registreranno le chiamate in arrivo in modo da registrarle
+nel portale di assistenza appena sarà tornato disponibile.
 
-Scenario ID 4 – Verrà chiesto ad un utente di reparto commerciale di erogare un servizio come "Elaborazione buste paga",
-tramite un apparato muletto di emergenza, presso una sede esterna dell'organizzazione.
+Scenario ID 4 – Verrà chiesto ad un utente di reparto commerciale di erogare un servizio come
+"Elaborazione buste paga", tramite un apparato muletto di emergenza, presso una sede esterna dell'organizzazione.
 
 Scenario ID 5 - Verrà tolta erogazione di energia elettrica alla sala server, al fine di richiamare l'intervento
 delle batterie UPS, e raccogliere il tempo di autonomia di quest'ultimo dispositivo, nel fornire energia elettrica,
@@ -1999,10 +2020,10 @@ FINE Documento Business Continuity *BCP*
     https://www.iso.org/
 
 (02*1)
-    https://www.garanteprivacy.it/home/provvedimenti-normativa/normativa/normativa-comunitaria-e-intenazionale/trasferimento-dei-dati-verso-paesi-terzi
+    https://bit.ly/3cXfkfO
 
 (03b*1)
-    https://support.microsoft.com/it-it/help/4028713/windows-10-turn-on-device-encryption
+    https://bit.ly/3znvJly
 (03b*2)
     https://secret.club/2021/01/15/bitlocker-bypass.html
 (03b*3)
@@ -2016,14 +2037,13 @@ FINE Documento Business Continuity *BCP*
 (03*5)
     https://www.belarc.com/products_belarc_advisor
 (03*6)
-    https://www.cvedetails.com/product/47/Linux-Linux-Kernel.html?vendor_id=33
+    https://bit.ly/3bmEggz
     https://lore.kernel.org/lists.html
 (03*7)
     https://github.com/rocky-linux/
 
 (04*1)
-    https://www.gfi.com/products-and-solutions/network-security-solutions/gfi-eventsmanager soluzione software da installare
-    https://www.legallogger.com/ software dedicato ed attivabile come macchina virtuale
+    https://www.gigasys.it/site/log-management/ software dedicato ed attivabile come macchina virtuale
     https://www.netwrix.it/auditor.html software dedicato che include anche funzioni di controllo audit
             (utile per avviare indagini o essere avvisati in tempo reale di possibili perdite dati)
 (04*2) https://www.iusinitinere.it/data-retention-tra-esigenze-di-sicurezza-e-tutela-della-privacy-30015
@@ -2056,13 +2076,14 @@ FINE Documento Business Continuity *BCP*
     https://diablohorn.com/
 
 (07a1)
-    https://www.gov.uk/government/publications/the-minimum-cyber-security-standard
+    https://bit.ly/3BrKcQ5
 
 (09*1)
-    https://www.amazon.it/Targhette-identificative-professionali-plastica-premium/dp/B01GVEPD14/ref=sr_1_1_sspa?__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=cartellino+identificativo&qid=1582401737&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzSVNDUUhZTTU2TTE5JmVuY3J5cHRlZElkPUEwMzYwMTgwQkdST0JBSUIxVlAzJmVuY3J5cHRlZEFkSWQ9QTA0MjA0MTAyMlZNSE1LSVFGVzlTJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==
+    https://amzn.to/3QaTC6H
 
 (10*1)
-    https://www.kali.org/ una delle distribuzioni Linux con al suo interno gli strumenti più usati per azioni di penetrabilità.
+    https://www.kali.org/
+    una delle distribuzioni Linux con al suo interno gli strumenti più usati per azioni di penetrabilità.
 (10*2)
     https://madaidans-insecurities.github.io/guides/linux-hardening.html
 
