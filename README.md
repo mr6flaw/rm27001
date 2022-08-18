@@ -2,4 +2,4 @@
 prepazione alla certificazione ISO/IEC 27001
 
 Questa breve guida per chi volesse interessarsi alla normativa, senza troppo impegno iniziale.
-Oppure conoscere solo gli aspetti preliminari richiesti, e nel caso svilupparli in un possibile futuro.
+Oppure conoscere solo gli aspetti preliminari richiesti.
