@@ -41,7 +41,7 @@ Indice
 11) Monitoraggio dei sistemi che erogano servizi                     44
 12) Documento dei servizi sottoposti a Service Line Agreement        45
 13) Documento Business Continuity                                    47
-
+14) Analisi dei rischi                                               52
 
 
 
@@ -63,13 +63,12 @@ Questa breve guida è stata scritta come un piccolo contributo, per chi
 volesse interessarsi alla normativa ISO/IEC 27001 (in particolare
 l'appendice tecnico 27002), senza troppo impegno iniziale, oppure
 conoscere solo gli aspetti preliminari richiesti, per svilupparli in
-un'organizzazione (anche "domestica").
+un'organizzazione (anche domestica).
 
 Le organizzazioni che intendono certificarsi ISO/IEC 27001, scelgono
 una figura interna delegata a seguire il processo di avviamento alla
 normativa.
-Un consulente esterno (in grado di condurre sessioni di audit interni)
-potrebbe aiutare la figura in questi compiti:
+Un consulente esterno potrebbe aiutare la figura in questi compiti:
 - cercare il tipo di informazione trattato nei sistemi operativi,
 il tipo di dato trattato e viene salvato in essi
 
@@ -97,9 +96,9 @@ come una lunga checklist, divisa per capitoli e punti.
 Assolutamente non interpretate le descrizioni riportate in questo docu_
 mento come definitive, o totalmente applicabili ad una qualsiasi
 organizzazione.
-Il consulente di una società esterna (nella maggior parte dei casi) sa_
-rà il referente, per determinate procedure, per le sessioni audit
-interne, e con gli ispettori della norma.
+Il consulente esterno dovrebbe essere il referente, per le
+sessioni audit interne, e con la verifica finale degli
+ispettori; il quale organismo rilascerà il certificato di conformità.
 Per questo motivo, se leggendo il documento trovate parti in cui si
 richiede l'aiuto del consulente, è al fine di completare il punto atte_
 nendosi il più possibile ai principi, linee guida (ed obblighi) de_
@@ -108,9 +107,9 @@ scritti dalla norma.
 Nella guida viene ridotto il più possibile i riferimenti degli stan_
 dard che si trovano nella documentazione ISO ufficiale.
 
-Il motivo è perchè queste informazioni sono soggette a copyright del_
-l'organizzazione "International Organization for Standardization"
-(01*1).
+Queste informazioni sono soggette a copyright del l'organizzazione
+"International Organization for Standardization" (01*1).
+
 
 [rm27001-mr6flaws]                                            [Pagina 2]
 
@@ -143,6 +142,7 @@ Una nota importante per possibili raccomandazioni che potreste ricevere
 a fine di unasessione audit.
 Esse se non avete modo di gestirle nel tempo accordato, NON possono di_
 ventare non conformità in fase di controllo del prossimo audit.
+
 
 
 
@@ -670,7 +670,7 @@ che prevede facilmente l'attivazione della criptatura dati.
 Per i dispositivi server (fisici) già presenti, che non possono essere
 criptati (perchè l'attuale sistema operativo, non supporta la cripta_
 tura), e sono allocati in un datacenter di proprietà dell'organizazione,
-è possibile accettare il rischio, come sopra descritto.
+è possibile vlutare se accettare il rischio, come sopra descritto.
 [rm27001-mr6flaws]                                           [Pagina 12]
 
 Scriveremo nelle procedure dedicate o nel general manual, che i dati so_
@@ -1287,8 +1287,6 @@ Per la scelta delle password è necessario seguire questo decalogo:
 
 – le password devono essere facili da ricordare ma difficili da ipotiz_
   zare
-
-
 [rm27001-mr6flaws]                                           [Pagina 23]
 
 – la password non deve essere uguale al cognome e nome; non è consen_
@@ -1343,6 +1341,8 @@ La seconda, il programmatore userà gli strumenti di compilazione,
 interpretazione direttamente nel suo computer.
 Qual'è il punto in cui fare attenzione per entrambe le scelte?
 
+
+
 [rm27001-mr6flaws]                                           [Pagina 24]
 
 I dati salvati a fine giornata dovranno essere prelevati dai nostri pro_
@@ -1379,14 +1379,14 @@ l'organizzazione, dovranno essere distrutti.
 Scrivo distrutti perchè non basta cancellare questi dati (anche se si
 trattasse di materiale cartaceo).
 I dati dovranno prima essere sovrascritti con un procedimento apposito,
-shredring (coprire il contenuto di un file con dati casuali, e poi can_
-cellarlo).
-I programmi che si usano per azionarlo si possono ormai trovate per tu_
-tti i sistemi operativi.
-Molti di questi programmi possono essere facilmente integrati anche con
-le procedure automatiche già scritte per la cancellazione dei dati.
-Consiglio di descrivere nel general manual una procedura che descriva la
-cancellazione del tipo di dato.
+shredring, coprire il contenuto di un file con dati casuali, e poi can_
+cellarlo (al riferimento 03q*1 è riportata una'alternativa a shered).
+I programmi shredding si possono ormai trovate per tutti i sistemi
+operativi.
+La maggior parte possono essere facilmente integrati con le procedure
+automatiche già scritte per la cancellazione dei dati.
+Consiglio di descrivere nel manuale SGSI una procedura che descriva la
+cancellazione del tipo di dato (il numero di sovrascritture, 7).
 Tenendo in considerazione la tabella del punto 04#T (successivo capito_
 lo), è facile suddividere o creare diverse procedure di cancellazione
 a seconda della categoria del dato.
@@ -2458,7 +2458,7 @@ Mentre per Dynatrace il costo è legato al numero di sessioni monitorate,
 memoria RAM usata, di tutti i nodi sotto controllo.
 Maggior informazioni le potete trovare nel sito web del software.
 
-Ammettiamo di non poter disporre di risorse economiche per acquistare le
+Ammesso di non poter disporre di risorse economiche per acquistare le
 licenze agenti interni dei software sopra descritti.
 Esiste una via alternativa per essere avvisati preventivamente dell'uso
 alto delle risorse?
@@ -2582,7 +2582,7 @@ Supporto Tecnico:
 Area supporto tecnico: http://supporto.[NOME_ORGANIZZAZIONE] o diretta_
 mente dalla piattaforma o dove segnalato in fase successiva.
 
-Il cliente puo’ sottoscrivere due livelli di supporto
+Il cliente puo’ sottoscrivere due livelli di supporto:
 
 SUPPORTO VIA EMAIL / TICKET
 Il servizio è disponibile in orario di ufficio:
@@ -2643,7 +2643,7 @@ dati torrebabile (RPO).
 Piccola nota, per servizio erogato possiamo intendere il tipo descritto
 nel punto guida 13.
 
-Tabella 014#T1
+Tabella 013#T1
 +------------------------------+-------------+
 |  nome servizio erogato       |  RPO (ore)  |
 +------------------------------+-------------+
@@ -2659,7 +2659,7 @@ Dovremo assegnare ad essi il valore MAO (Maximum Acceptable Outage), ov_
 vero il tempo massimo in cui un processo potrebbe non essere disponibile
 o erogato. Di seguito la tabella di esempio.
 
-Tabella 014#T2
+Tabella 013#T2
 +-------------------+-------------+---------------+--------------+-----+
 |  Processo         | Da 1 a 2    | Da 2 a 4      | Da 4 a 8     | MAO |
 |                   |  ore        |  ore          |  ore         |     |
@@ -2689,7 +2689,7 @@ potrebbe essere un problema per l'erogazione del processo.
 
 [rm27001-mr6flaws]                                           [Pagina 48]
 
-Tabella 014#T3
+Tabella 013#T3
                     +-----------------------------------+
                     |         SCENARI COINVOLTI         |
 +-------------------+--+--+--+--+--+--+--+--+--+--+--+--+
@@ -2747,7 +2747,7 @@ re ad erogare il servizio o servizi.
 
 Tabella gestione scenario
 
-Tabella 014#T4
+Tabella 013#T4
 .----+----------+-----------+-----------+---------+-----+-------------.
 | ID | Scenario | Azione    | Misure di | Azioni  | RTO | Analisi     |
 |    |          | preven_   | emergenza | per le  |  *  |  rischio    |
@@ -2910,11 +2910,67 @@ di provare che il piano di miglioramento è gestito.
 
 
 
+
 [rm27001-mr6flaws]                                           [Pagina 52]
 
+14) Analisi dei rischi
+
+In fase di scrittura.
 
 
-FONTI ESTERNE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                           [Pagina 53]
+
+
+  FONTI ESTERNE
 
 (01*1)
     https://www.iso.org/
@@ -2942,6 +2998,14 @@ FONTI ESTERNE
              zioni del SGSI, le attività coperte, copia del_
              la documentazione richiesta dalla norma ISO/IEC
              27001.
+(03q*1)
+    Se nel sistema operativo Linux non fosse installato shred,
+    è possibile utilizzare DD con una serie di comandi:
+    FN=cthulhu.txt; dd bs=1k count="`du -sk \"${FN}\" | \
+    cut -f1`" if=/dev/urandom >"${FN}"; rm -f "${FN}"
+
+    preso da https://twitter.com/Alh4zr3d
+
 (03*2)
     https://wiki.centos.org/HowTos/EncryptedFilesystem
 (03*3)
@@ -2956,6 +3020,11 @@ FONTI ESTERNE
 (03*7)
     https://github.com/rocky-linux/
 
+
+
+
+[rm27001-mr6flaws]                                           [Pagina 54]
+
 (04*1)
     https://www.gigasys.it/site/log-management/ software dedicato ed at_
     tivabile come macchina virtuale
@@ -2964,10 +3033,6 @@ FONTI ESTERNE
     sere avvisati in tempo reale di possibili perdite dati)
 
 (04*2) https://bit.ly/3SRboOl
-
-
-[rm27001-mr6flaws]                                           [Pagina 53]
-
 (07*1)
     https://twitter.com/netbiosX       NetbiosX, ricercatore sicurezza
                                        per ambiente Windows
@@ -2986,8 +3051,6 @@ FONTI ESTERNE
                                        ne, tecniche di penetrazione si_
                                        stemi.
 
-
-
     https://twitter.com/Antelox        Antelox - ricercatore impegnato
                                        nel segnalare truffe, virus
                                        recenti
@@ -2998,12 +3061,14 @@ FONTI ESTERNE
                                        curezza, analizza minacce, e con_
                                        divide informazioni del mondo
                                        cyber security.
-    https://twitter.com/GnuTLS GnuTLS  Aggiornamenti riguardo il proto_
+    https://twitter.com/GnuTLS         Aggiornamenti riguardo il proto_
                                        collo sicuro TLS
     https://twitter.com/ITGovernance   IT Governance (il portale di rife_
                                        rimento per le pratiche di sicu_
                                        rezza nelle organizzazioni azien_
                                        dali e non)
+    https://twitter.com/Dinosn         Nicolas Krassas - ricercatore am_
+                                       bito cyber-sicurezza.
 
     Iscrizione alle newsletter come garante della privacy
     https://www.m3aawg.org/ M3AAWG
@@ -3014,16 +3079,13 @@ FONTI ESTERNE
     Sicurezza e Penetraion test
     https://diablohorn.com/
 
+[rm27001-mr6flaws]                                           [Pagina 55]
+
 (07a1)
     https://bit.ly/3BrKcQ5
 
 (09*1)
     https://amzn.to/3QaTC6H
-
-
-
-[rm27001-mr6flaws]                                           [Pagina 54]
-
 
 (10*1)
     https://www.kali.org/
@@ -3036,11 +3098,8 @@ FONTI ESTERNE
 (13*1)
     https://it.wikipedia.org/wiki/Multiprotocol_Label_Switching
 
-(16*1)
-    https://en.wikipedia.org/wiki/SSAE_16
-
-(16*2)
-    https://www.hpe.com/it/it/what-is/data-center-tiers.html
+(14*1)
+    https://www.cesaregallotti.it/
 
 
 
@@ -3076,9 +3135,7 @@ FONTI ESTERNE
 
 
 
-
-
-[rm27001-mr6flaws]                                           [Pagina 55]
+[rm27001-mr6flaws]                                           [Pagina 56]
 
 
 
@@ -3133,5 +3190,5 @@ LICENZA DELLA GUIDA rm27001
 
 
 
-[rm27001-mr6flaws]                                           [Pagina 56]
-
+
+[rm27001-mr6flaws]                                           [Pagina 57]
