@@ -1,6 +1,6 @@
 ![rm27001_logo](https://user-images.githubusercontent.com/60988564/197357337-b0eee310-9420-4a04-88ac-7f2b1b9f9ea4.png)
 
-# rm27001.txt
+# rm27001
 prepazione alla certificazione ISO/IEC 27001
 
 Questa breve guida per chi volesse interessarsi alla normativa, senza troppo impegno iniziale.
