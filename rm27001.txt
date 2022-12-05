@@ -41,7 +41,7 @@ Indice
 11) Monitoraggio dei sistemi che erogano servizi                     44
 12) Documento dei servizi sottoposti a Service Line Agreement        45
 13) Documento Business Continuity                                    47
-14) Analisi dei rischi                                               52
+14) Valutazione dei rischi                                           52
 
 
 
@@ -124,13 +124,9 @@ Cosa non è stato trattato in questo testo, riguardo la normativa ISO/IEC
 Ho negli ultimi tre anni testato e preparato questi aspetti più tecnici
 e pratici, ma alcune parti del procedimento di certificazione rimangono
 per me, ancora difficili da descrivere.
-Esistono corsi specifici per organizzare audit interni, che permettono
-di presentare i documenti necessari alla raggiungimento della certifi_
-cazione.
 
 Questi documenti (argomenti) sono:
 
-Valutazione dei rischi
 Dichiarazione di applicabilità (SoA: State of Applicability)
 Politiche sicurezza informazioni
 Manuale generico di gestione sistema sicurezza dati
@@ -139,13 +135,17 @@ Riesame finale della sicurezza dati, dell'anno intercorso.
 Mi auguro in futuro di poter inserire punti guida, anche per essi.
 
 Una nota importante per possibili raccomandazioni che potreste ricevere
-a fine di unasessione audit.
+a fine di una sessione audit.
 Esse se non avete modo di gestirle nel tempo accordato, NON possono di_
 ventare non conformità in fase di controllo del prossimo audit.
 
-
-
-
+Inoltre, esistono corsi specifici per avviarsi alla professione di
+"team leader", ottenere la prima qualifica e poi iniziare un periodo di
+praticantato se si volesse proseguire con questa professione, in modo
+da poter "auditare" organizzazioni.
+Mentre un team leader, non può auditare la società per la quale lavora
+(per esempio come Security Manager), in quanto sarebbe una figura non
+imparziale (vi potrebbbero essere degli interessi).
 
 
 
@@ -449,14 +449,14 @@ seconda del tipo di organizzazione)
 
 [rm27001-mr6flaws]                                            [Pagina 8]
 
-Considerate che le informazioni del manuale sono parecchie e un collabo_
-ratore non potrebbe facilmente ricordarsi i punti principali, ci verrà
-sicuramente in aiuto un piccolo decalogo.
+Considerando che le informazioni del manuale sono parecchie e un colla_
+boratore non potrebbe facilmente ricordarsi i punti principali, ci verrà
+sicuramente in aiuto un breve documento, il decalogo.
 Dieci semplice regole, le quali potranno aiutare a tenere in considera_
 zione i principi di sicurezza ed uso strumenti all'interno del_
 l'organizzazione.
 
-Di seguito un esempio regole.
+Di seguito l'esempio regole del decalogo.
 
 - 1) Nel momento in cui al dipendente viene assegnato un device si impe_
      gna ad usarlo e custodirlo per tutta la durata dell’assegnazione.
@@ -602,8 +602,8 @@ FINE MODULO
 03b) Criptatura dei dischi
 
 Come potrete immaginare, se un dispositivo contenente dei dati dell'or_
-ganizzazione venisse trafugato o perso, ignoti potrebbero aprrofittarsi
-dell'occasione per leggere le informazioni salvate.
+ganizzazione venisse trafugato o perso, ignoti potrebbero aprrofittare
+dell'occasione, per leggere le informazioni salvate.
 La norma ci richiedere di criptare ogni tipo di dispositivo mobile, co_
 me un computer portatile o un cellulare di tipo smartphone.
 Con gli odieri sistemi operativi, il passaggio della criptatura del di_
@@ -735,22 +735,19 @@ a gestire il trattamento dei supporti rimovibili.
 Ogni computer controllato dal programma di gestione non potrà utilizzare
 liberamente un supporto rimovibile come una chiavetta USB.
 L'amministratore di sistema dovrà quindi abilitare il seriale del dispo_
-sitivo rimovibile all'interno del programmadi gestione, nel catalogo
-dei dispositivi.
+sitivo rimovibile all'interno del software di gestione, precisameten nel
+catalogo dei dispositivi.
 
 Terminata questa procedura, l'amministratore dovrà scansionare il sup_
-porto tramite antivirus.
+porto tramite il software antivirus.
 In assenza di minacce, il supporto potrà essere utilizzato dall'utente
 che ha richiesto il permesso d'utilizzo (tramite un ticket o altro ti_
-po di richiesta tracciabile durante una sessione di audit).
+po di richiesta purché tracciabile).
 
 
 La parte Antivirus.
-Punto che potrebbe richiedere meno tempo rispetto gli altri contenuti
-in questo manuale.
 Quasi ogni impresa utilizza computer con installato un software antivirus.
-Il nsotro compito è di verificare che tutti i computer ne abbiamo uno
-licenziato.
+E' bene verificare che tutti i computer ne abbiamo uno licenziato.
 Vivo consiglio, evitate di installare antivirus gratuiti.
 Gli aggiornamenti rilasciati dai gestori sono molto lenti, e secondo as_
 petto, nell'audit viene richiesto un antivirus abbastanza efficace.
@@ -781,6 +778,9 @@ italiane.
 questi sistemi operativi gestiti da Microsoft sono rilasciati anche
 dopo la scoperta di una vulnerabilità, ormai diventata di pubblico
 dominio.
+
+
+
 
 
 [rm27001-mr6flaws]                                           [Pagina 14]
@@ -1882,25 +1882,25 @@ riceve aggiornamenti. Al punto (07*1) sono riportati delle fonti utili.
 
 Il personale dell'organizzazione potrebbe riscontrare difficoltà nel se_
 guire i punti richiesta dalla normativa.
-Immaginiamoci se venisse poi chiesto di seguire un corso di introduzione
-alla stessa normativa.
-Il consiglio è di presentare l'introduzione dei termini 27001, asset,
-nuove regole e procedure tramite fogli di presentazione, diversi per
-ciascun reparto.
-Ad esempio, nell'introduzione alla norma è consigliabile includere con
-brevi frasi i punti più importanti, con disegni o icone che
-possono aiutare il personale a ricordarsi di un particolare passaggio
-o termine.
-Il mio consiglio è di includere cenni alla normativa GDPR europea, e
-la norma inglese MCSS (07a*1) per sottolineare l'impegno di paesi vicini
-all'Italia ma anche extra europei per la mantenere una buona sicurezza
-nella gestione dei dati.
+Se venisse poi chiesto di seguire un corso di introduzione alla stessa
+normativa, potrebbe verificarsi dei possibili problemi di comprensione.
+Il consiglio è di presentare l'introduzione dei termini ISO/IEC 27001,
+asset, nuove regole e procedure tramite fogli di presentazione, diversi
+per ciascun reparto.
+Nell'introduzione alla norma è consigliabile includere con brevi frasi
+i punti più importanti, con disegni o icone che possono aiutare il
+personale a ricordarsi di un particolare passaggio o termine.
+Includere cenni alla normativa GDPR europea, e la norma inglese MCSS
+(07a*1) per sottolineare l'impegno di paesi vicini all'Italia ma anche
+extra europei per mantenere una buona sicurezza nella gestione dei dati.
 Nell'organizzazione esistono poi reparti che trattano tipi di dati di_
 versi tra loro. Una figura amministrativa può trattare banche dati come
-una figura commerciale. La stessa amministrativa al contrario, non trat_
-terà il dato codice del reparto programmatori.
-Per questo motivo i fogli di presenazione devono essere quasi sempre dif_
-ferenziati, includendo termini e disegni diversi per reparto.
+lo stesso eseguirebbe una figura commerciale. La stessa amministrativa
+al contrario, potrebbe non trattare il dato codice del reparto
+programmatori.
+Per questo motivo i fogli di presentazione potrebbero essere quasi sem_
+pre differenziati, includendo termini e disegni diversi per reparto.
+
 
 
 [rm27001-mr6flaws]                                           [Pagina 34]
@@ -1909,15 +1909,16 @@ Il personale ne trarrà vantaggio e si sentirà ascoltato allo stesso
 tempo, troverà nel Security Manager la figura di riferimento di fronte
 ad una scelta legata alla tema sicurezza di un asset.
 Altro aspetto da evidenziare durante la formazione, è il concetto di
-protezione, continuità di erogazione del dato.
-Il personale deve saper fin da subito che saranno anche loro attori,
-di questo concetto.
- 
+riservatezza, continuità di erogazione, e disponibilità del dato.
+Questi tre principi sono i cardini della norma, e ogni membro nell'or_
+ganizzazione deve sempre cercare di rispettarli ed attuarli, nella ge_
+stione del sistema di protezione dati.
+
 07b) Estendere regolamento anche ad esterni fornitori o collaboratori
 
-Fornitori e collaboratori a tempo determinanto e non, che dovranno ope_
-rare all'interno della rete interna dell'organizzazione, dovranno compi_
-lare un questionario precompilato.
+Fornitori e collaboratori esterni all'organizzazione, dovranno ope_
+rare all'interno della rete interna, dovranno compilare un questiona_
+rio precompilato.
 Ecco qui sotto riportate, un esempio di domande alle quali il collabo_
 ratore esterno, dovrà fornirci le rispote.
 
@@ -1956,7 +1957,6 @@ Elenco requisiti base
     base al ruolo ricoperto da ciascuno (sì/no)
 --> I profili di autorizzazione vengono aggiornati in caso di cambio
     mansioni (sì/no)
-
 
 
 [rm27001-mr6flaws]                                           [Pagina 35]
@@ -2132,7 +2132,7 @@ VLAN).
 Un esempio dello schema.
 
  +--------------------+                    +--------------------------+
- | rete ORGAN         |                    |  rete ospiti (vlan ID xx)|
+ | rete ORGANIZZAZIONE|                    |  rete ospiti (vlan ID xx)|
  |  192.168.2.0/24    |                    |    172.25.1.0/24         |
  `--------------------'                    `--------------------------'
           \_____________/----------------\      |
@@ -2149,7 +2149,7 @@ Un esempio dello schema.
                             @----------@            |
                             | router   |------------/
                             | internet |
-                            @----------@
+                            `----------'
 
 In questo scarno esempio, la rete dell'organizzazione è divisa a livello
 fisico dalla rete ospiti, tramite un apparato switch programmabile
@@ -2172,10 +2172,10 @@ in considerazione.
 Elencherò le azioni pratiche da compiere, affinchè possiate già essere
 preparati per un audit interno.
 Create un registro elettronico e stampate dei cartellini di carta con
-scritto VISITATORE.
-Se riuscite inserite i cartellini in una busitna di plastica munita
+scritto "VISITATORE".
+Se riuscite inserite i cartellini in una bustina di plastica munita
 di molletta (09*1).
-Educate tutto il personale all'uso dei cartellini. Quando un membo
+Educate tutto il personale all'uso dei cartellini. Quando un membro
 dell'organizzazione attende ospiti, dovrà prelevare dall'ufficio che
 conserva i cartellini, gli stessi, e notificare sul registro elettroni_
 co, questi dati:
@@ -2616,8 +2616,8 @@ FINE (Service Level Agreement)
 
 13) Documento Business Continuity *BCP*
 Il percorso di preparazione alla normativa ci porterà inoltre alla
-stesura di questo documento, tutto focalizzato nel nostro modo di mante_
-nere i servizi attivi il più possibile.
+stesura di questo documento, focalizzato nel nostro modo di mantenere
+i servizi attivi il più possibile.
 Ovviamente il documento è dedicato alle organizzazione che erogano ser_
 vizi ai quali i dati, sono connessi.
 Pensiamo alla stesura di preventivi, offerte commerciali, assistenza
@@ -2672,7 +2672,7 @@ Tabella 013#T2
 +-------------------+-------------+---------------+--------------+-----+
 | Fornitura servizi | Impatto     | Impatto basso | Impatto      | ??  |
 | di assistenza     |  basso      |               |  medio       |     |
-+-------------------+-------------+---------------+--------------+-----+
+`-------------------+-------------+---------------+--------------+-----'
 
 Ad ogni processo collegheremo uno scenario di disastro, che se scaturito
 potrebbe essere un problema per l'erogazione del processo.
@@ -2913,64 +2913,120 @@ di provare che il piano di miglioramento è gestito.
 
 [rm27001-mr6flaws]                                           [Pagina 52]
 
-14) Analisi dei rischi
+14) Valutazione dei rischi
 
-In fase di scrittura.
+La valutazione (e analisi) dei rischi, è una delle parte fondamenti per
+mantenere un ottimo livello di cyber-sicurezza, e nel caso sia neces_
+sario, ottenere la certificazione. Nulla vieta di scrivere e mantenere
+aggiornata una valutazione per il nostro contesto privato o organizz_
+ativo. Prima di iniziare con i dettagli e spiegazioni, invito a prendere
+in considerazione l'importanza nello stabilire i valori che andremo
+ad utilizzare per le valutazioni.
+Suggerisco di mantenere per i valori di probabilità, impatto, danni al_
+la riservatezza, integrità e disponibilità un intervallo tra uno e cin_
+que, dove uno è il valore minimo di danno rivolto alla nostra organiz_
+zaione rispetto il principio.
+Eviterei di mantenere il masssimo del livello a dieci, per gestire al
+meglio il risultato finale (priorità) di gestione del singolo scenario
+di rischio.
 
+Riporto per documentazione le linee guida ISO/IEC 27001 inserite al pun_
+to 6.1.3.
+a) selezionare, sulla base dei risultati della valutazione del rischio,
+le adeguate opzioni;
+b) determinare tutti i controlli necessari per implementare la sicurezza
+c) verificare che non siano stati omessi controlli necessari indicati
+nell’Allegato A;
+d) redigere una Dichiarazione di applicabilità che riporti i controlli
+necessari e le giustificazioni per l’inclusione o l’esclusione e se
+è implementato oppure no;
+e) formulare un piano di trattamento del rischio;
+f) ottenere l’approvazione del piano di trattamento del rischio e l’ac_
+cettazione dei rischi da parte dei responsabili dei rischi;
 
+Per ragioni di formattazione di questo documento non è stato possibile
+rappresentare un esempio della tabella dati, descritta in queste pagine.
+Nell'ultima pagina delle fonti esterne troverete i due riferimenti es_
+terni delle due tabelle 014*T1, 014*T2, al punto (14*1).
+Una volta aperta la tabella (014*T1), troverete i seguenti riferimenti.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Negli esempi sono valutati due rischi, e sono stati valutati con que_
+sti valori massimi.
+Il valore probabilità che conferma con quale livello il rischio potreb_
+be accadere, viene stabilito come prima analisi dello stesso rischio.
+Il valore impatto è basato a cosa accadrebbe all'organizzazione se nes_
+sun controllo fosse attivato dalla stessa. Lo stesso valore scelto viene
+giustificato con una descrizione.
+I valori rischio di riservatezza, disponibilità, e integrità sono calco_
+lati moltiplicando impatto per ciasun valore di danno analizzato.
+Viene poi preso il valore massimo tra i tre, e moltiplicato per la pro_
+babilità che il rischio accada.
+Per ottenere il valore dei controlli applicati, è necessario analizzare
+nella tabella separata (014*T2), quanti controlli dell'Annex A potremmo
+applicare per il singolo rischio. Nel foglio due, sono riportati la mag_
+gior parte dei controlli che l'organizzazione potrebbe scegliere e ap_
+plicare.
 
 [rm27001-mr6flaws]                                           [Pagina 53]
 
+Una volta scelti i controlli, preleveremo il numero totale di essi e lo
+riporteremo nella casella dedicata.
+L'ultima formula, è la differenza tra il valore di priorità e il numero
+dei controlli attuati. Con questo valore avremo la nostra priorità di
+trattamento del singolo rischio. Il risultato potrebbe essere zero o
+addirittura negativo (nel caso in cui vengono applicati oltre dieci con_
+trolli). Il consiglio è di applicare alla formula, un controllo "se"
+(SE con il programma Excel di Microsoft). Qui un esempio:
 
-  FONTI ESTERNE
+SE(CELLA_RISCHIO-CELLA_CONTROLLI<=0;1;CELLA_RISCHIO-CELLA_CONTROLLI)
+
+Questo controllo ci permetterà di mantenere il risultato a minimo uno.
+Non esiste un trattamento/scenario di rischio individuato pari a zero
+(o negativo).
+Consiglio di tenere sempre in considerazione che il rischio potrebbe
+manifestarsi anche in minima parte, è una buona considerazione per
+tutta l'analisi del rischio.
+
+La descrizione a fianco dell'ultimo valore di priorità, commenterà come
+il rischio viene trattato (operazioni, trattamenti specifici).
+Nello specifico il pre ed il post trattamento. Per pre si intendono tut_
+te le operazioni possibili mantenute per tentare di prevenire il ri_
+schio o una possibile minaccia. Per post si intendono le azioni che ver_
+ranno eseguite come contenimento dopo che la minaccia si è manifestata
+e ha confermato lo scenario di rischio.
+
+In seguito può essere anche inserito lo stato di trattamento del singolo
+rischio, ad esempio se tutti i controlli scelti sono stati attivati op_
+pure alcuni di essi sono ancora in lavorazione; in questo ultimo caso
+il controllo non risulterà applicato.
+Come ultimo dettaglio, viene riportato anche la data dell'ultima analisi
+del rischio specifico.
+
+La spiegazione qui riportata è semplificata, vi sono metodi più com_
+pleti per condurre un'analsi di rischio. Lo strumento VERA scritto da
+Cesare Gallotti è uno di questi (14*2).
+
+Due ultime note riguardo gli scenari di esempio proposti negli esempi.
+Lo scenario ID 1.1 fa riferimento al remoto ma possibile rischio che un
+dipendente dell'organizzazione (o chiunque si sia impossessato del dis_
+positivo) riesca a disinstallare o fermare anche temporaneamente l'agen_
+te di sicurezza (EndPoint o AntiVirus) attivo.
+
+Lo scenario con ID 1.2 riguarda un'attrezzatura presente nell'organiz_
+zazione, ovvero l'unità batteria UPS, che permette in caso di mancanza
+di energia elettrica dal fornitore, di chiudere con calma tutte le ap_
+plicazioni aperte, salvare i lavori, ed attendere il ritorno della for_
+nitura. Anche in questo caso è prevista un'azione preventiva che potrà
+informare poi l'organizzazione dell'efficacia della batteria, in quanto
+l'unità potrebbe essere del tutto esausta e non erogare per nemmeno due
+secondi di tempo. L'azione di post intervento potrebbe essere già piani_
+ficata e conosciuta, ovvero dove recuperare in poco tempo un'altra unità
+utile a far ripartire un minimo di terminali per garantire i servizi
+essenziali.
+[rm27001-mr6flaws]                                           [Pagina 54]
+
+
+* FONTI ESTERNE *
 
 (01*1)
     https://www.iso.org/
@@ -3004,7 +3060,7 @@ In fase di scrittura.
     FN=cthulhu.txt; dd bs=1k count="`du -sk \"${FN}\" | \
     cut -f1`" if=/dev/urandom >"${FN}"; rm -f "${FN}"
 
-    preso da https://twitter.com/Alh4zr3d
+    script scritto da @Alh4zr3d https://twitter.com/Alh4zr3d
 
 (03*2)
     https://wiki.centos.org/HowTos/EncryptedFilesystem
@@ -3023,7 +3079,7 @@ In fase di scrittura.
 
 
 
-[rm27001-mr6flaws]                                           [Pagina 54]
+[rm27001-mr6flaws]                                           [Pagina 55]
 
 (04*1)
     https://www.gigasys.it/site/log-management/ software dedicato ed at_
@@ -3032,7 +3088,9 @@ In fase di scrittura.
     anche funzioni di controllo audit (utile per avviare indagini o es_
     sere avvisati in tempo reale di possibili perdite dati)
 
-(04*2) https://bit.ly/3SRboOl
+(04*2) 
+    https://bit.ly/3SRboOl
+
 (07*1)
     https://twitter.com/netbiosX       NetbiosX, ricercatore sicurezza
                                        per ambiente Windows
@@ -3076,11 +3134,12 @@ In fase di scrittura.
     Garante Privacy
     https://www.garanteprivacy.it/
 
+
+[rm27001-mr6flaws]                                           [Pagina 56]
+
     Sicurezza e Penetraion test
     https://diablohorn.com/
 
-[rm27001-mr6flaws]                                           [Pagina 55]
-
 (07a1)
     https://bit.ly/3BrKcQ5
 
@@ -3099,72 +3158,13 @@ In fase di scrittura.
     https://it.wikipedia.org/wiki/Multiprotocol_Label_Switching
 
 (14*1)
+    https://github.com/mr6flaw/rm27001/blob/master/rm27001_14T1.txt
+
+    https://github.com/mr6flaw/rm27001/blob/master/rm27001_14T2.txt
+
+(14*2)
     https://www.cesaregallotti.it/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[rm27001-mr6flaws]                                           [Pagina 56]
-
-
-
-
-LICENZA DELLA GUIDA rm27001
-
- questa guida è rilasciata tramite licenza WTFPL
-
-        DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
-                    Version 2, December 2004 
-
- Copyright (C) 2004 Sam Hocevar <sam@hocevar.net> 
-
- Everyone is permitted to copy and distribute verbatim or modified 
- copies of this license document, and changing it is allowed as long 
- as the name is changed. 
-
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
-   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
-
-  0. You just DO WHAT THE FUCK YOU WANT TO.
-
-
-
-
-
-
-
-
+    La risorsa più indicata per iniziare una valutazione del rischio
 
 
 
@@ -3192,3 +3192,59 @@ LICENZA DELLA GUIDA rm27001
 
 
 [rm27001-mr6flaws]                                           [Pagina 57]
+
+
+
+
+LICENZA DELLA GUIDA rm27001
+
+ questa guida è rilasciata tramite licenza WTFPL
+
+        DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+                    Version 2, December 2004 
+
+ Copyright (C) 2004 Sam Hocevar <sam@hocevar.net> 
+
+ Everyone is permitted to copy and distribute verbatim or modified 
+ copies of this license document, and changing it is allowed as long 
+ as the name is changed. 
+
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
+
+  0. You just DO WHAT THE FUCK YOU WANT TO.
+
+
+RINGRAZIAMENTI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                           [Pagina 58]
