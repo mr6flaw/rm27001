@@ -1,0 +1,52 @@
+Tabella 014*T2 (per vedere la tabella è consigliato disabilitare nel proprio
+              programma testuale, la funzione "WORD WRAP" o ritorno a capo automatico)
+                                                                                                '-----------------------`
+                                                                                                | Contesto organizzativo|
+'-----------------------------------------------------------------------------------------------+-----+-----+-----+-----+
+|     Controllo                                                                                 | 1.1 | 1.2 | 1.3 | 1.4 |
++-----------------------------------------------------------------------------------------------+-----+-----+-----+-----+
+| 27001-A.05.01.01 Politiche per la sicurezza delle informazioni                                |  1  |  1  |  0  |  0  |
+| 27001-A.06.01.01 Ruoli e responsabilità per la sicurezza delle informazioni                   |  0  |  0  |  0  |  0  |
+| 27001-A.06.01.05 Sicurezza delle informazioni nella gestione dei progetti                     |  0  |  0  |  0  |  0  |
+| 27001-A.07.01.02 Termini e condizioni di impiego                                              |  0  |  0  |  0  |  0  |
+| 27001-A.07.02.02 Sensibilizzazione e formazione                                               |  1  |  0  |  0  |  0  |
+| 27001-A.07.02.03 Processo disciplinare                                                        |  0  |  0  |  0  |  0  |
+| 27001-A.07.03.01 Cessazione o variazione delle responsabilità durante il rapporto di lavoro   |  0  |  0  |  0  |  0  |
+| 27001-A.08.01.01 Inventario degli asset                                                       |  1  |  0  |  0  |  0  |
+| 27001-A.08.01.03 Utilizzo accettabile degli asset                                             |  0  |  0  |  0  |  0  |
+| 27001-A.09.02.01 Registrazione e de-registrazione degli utenti                                |  0  |  0  |  0  |  0  |
+| 27001-A.09.02.02 Provisioning degli accessi degli utenti                                      |  1  |  0  |  0  |  0  |
+| 27001-A.09.02.03 Gestione dei diritti di accesso privilegiato                                 |  0  |  0  |  0  |  0  |
+| 27001-A.09.02.04 Gestione delle informazioni segrete di autenticazione degli utenti           |  0  |  0  |  0  |  0  |
+| 27001-A.09.02.05 Riesame dei diritti di accesso degli utenti                                  |  1  |  0  |  0  |  0  |
+| 27001-A.09.02.06 Rimozione o adattamento dei diritti di accesso                               |  0  |  0  |  0  |  0  |
+| 27001-A.10.01.01 Politica sull’uso dei controlli crittografici                                |  0  |  0  |  0  |  0  |
+| 27001-A.11.01.02 Controlli di accesso fisico                                                  |  0  |  0  |  0  |  0  |
+| 27001-A.11.01.03 Rendere sicuri uffici, locali e strutture                                    |  0  |  1  |  0  |  0  |
+| 27001-A.11.02.07 Dismissione sicura o riutilizzo delle apparecchiature                        |  0  |  0  |  0  |  0  |
+| 27001-A.12.01.02 Gestione dei cambiamenti (sistemistici)                                      |  1  |  0  |  0  |  0  |
+| 27001-A.12.02.01 Controlli contro il malware                                                  |  1  |  0  |  0  |  0  |
+| 27001-A.12.03.01 Backup delle informazioni                                                    |  0  |  0  |  0  |  0  |
+| 27001-A.12.04.01 Raccolta di log degli eventi (e monitoraggio)                                |  1  |  0  |  0  |  0  |
+| 27001-A.12.04.02 Protezione delle informazioni di log                                         |  1  |  0  |  0  |  0  |
+| 27001-A.12.04.03 Log di amministratori e operatori                                            |  1  |  0  |  0  |  0  |
+| 27001-A.12.04.04 Sincronizzazione degli orologi                                               |  1  |  0  |  0  |  0  |
+| 27001-A.12.06.01 Gestione delle vulnerabilità tecniche                                        |  1  |  0  |  0  |  0  |
+| 27001-A.13.01.01 Controlli di rete                                                            |  0  |  0  |  0  |  0  |
+| 27001-A.13.02.01 Politiche e procedure per il trasferimento delle informazioni                |  0  |  0  |  0  |  0  |
+| 27001-A.13.02.03 Messaggistica elettronica                                                    |  0  |  0  |  0  |  0  |
+| 27001-A.13.02.04 Accordi di riservatezza o di non divulgazione                                |  0  |  0  |  0  |  0  |
+| 27001-A.14.01.01 Analisi e specifica dei requisiti per la sicurezza delle informazioni        |  0  |  0  |  0  |  0  |
+| 27001-A.14.02.02 Procedure per il controllo dei cambiamenti di sistema                        |  0  |  0  |  0  |  0  |
+| 27001-A.14.02.08 Test di sicurezza dei sistemi                                                |  0  |  0  |  0  |  0  |
+| 27001-A.14.03.01 Protezione dei dati di test                                                  |  0  |  0  |  0  |  0  |
+| 27001-A.15.02.02 Gestione dei cambiamenti a servizi dei fornitori                             |  0  |  0  |  0  |  0  |
+| 27001-A.16.01.01 Gestione degli incidenti: Responsabilità e procedure                         |  0  |  0  |  0  |  0  |
+| 27001-A.17.02.01 Disponibilità delle strutture per l’elaborazione delle informazioni          |  0  |  1  |  0  |  0  |
+| 27001-A.18.2.1 Riesami indipendenti della sicurezza                                           |  0  |  0  |  0  |  0  |
+| 27001-A.18.2.2 Conformità con politiche e standard                                            |  0  |  0  |  0  |  0  |
++-----------------------------------------------------------------------------------------------+-----+-----+-----+-----+
+| Numeri di controlli applicati                                                                 | 12  |  3  |  0  |  0  |
+`-----------------------------------------------------------------------------------------------+-----+-----+-----+-----+
+
+[rm27001-mr6flaws]
