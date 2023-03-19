@@ -10,46 +10,45 @@
 
 Indice
 
-01) Introduzione                                                      2
-02) Definizione degli asset                        #identify #protect 4
-02a) --> General Manual (SGSI) e Decalogo          #identify #protect 6
-03) Richieste preliminari                                             9
-    a) --> Creazione dell'inventario dispositivi  #identify #protect 10
-    b) --> Criptatura dei dischi                            #protect 11
-    c) --> Gestione unificata ed antivirus          #detect #protect 13
-    d) --> Aggiornamenti di sistema                         #protect 14
-    e) --> Disegno rete                           #identify #protect 16
-    f) --> Telelavoro                                       #protect 17
-    g) --> Regolamentare accesso alle caselle aziendali     #protect 17
-    h) --> Permessi per la condivisione dei dati interni all'impresa 18
-                                                            #protect --
-    i) --> Individuare amministratore/i di sistema         #identify 19
-    l) --> Creazione e revoca degli accessi utente          #protect 21
-    m) --> Blocco terminali                                 #protect 23
-    o) --> Gestione password                                #protect 23
-    p) --> Separazione ambienti di sviluppo, test e produzione       24
-                                                            #protect --
-    q) --> Cancellazione dati                               #protect 25
-    r) --> Segregazione delle reti                          #protect 27
-04) Registrazioni ed accesso ai log di sistemi operativi     #detect 27
-05) Procedure di emergenza (WIP solo per data breach)                28
-06) Backup e ripristini                                     #recover 32
-07) Formazione security manager                    #protect #respond 34
-    a) Formazione per il personale                 #protect #respond 34
-    b) Regolamento per esterni fornitori/collaboratori               35
-                                          #identify #protect #detect --
-08) Utilizzo apparecchiature/dispositivi degli ospiti       #protect 38
-09) Misure di protezione per lo stabile                     #protect 39
-10) Test di penetrabilità (Vulnerability Assestment)                 42
-                                                  #identify #protect --
-11) Monitoraggio dei sistemi che erogano servizi    #detect #respond 44
-12) Documento dei servizi sottoposti a Service Line Agreement        45
-                                                  #identify #respond --
-13) Documento Business Continuity                          #recoover 47
-14) Valutazione dei rischi               #identify #protect #respond 52
-
-
-
+ 01) Introduzione                                                      2
+ 02) Definizione degli asset                        #identify #protect 4
+ 02a) --> General Manual (SGSI) e Decalogo          #identify #protect 6
+ 03) Richieste preliminari                                             9
+     a) --> Creazione dell'inventario dispositivi  #identify #protect 10
+     b) --> Criptatura dei dischi                            #protect 11
+     c) --> Gestione unificata ed antivirus          #detect #protect 13
+     d) --> Aggiornamenti di sistema                         #protect 14
+     e) --> Disegno rete                           #identify #protect 16
+     f) --> Telelavoro                                       #protect 17
+     g) --> Regolamentare accesso alle caselle aziendali     #protect 17
+     h) --> Permessi per la condivisione dei dati interni all'impresa 18
+                                                             #protect --
+     i) --> Individuare amministratore/i di sistema         #identify 19
+     l) --> Creazione e revoca degli accessi utente          #protect 21
+     m) --> Blocco terminali                                 #protect 23
+     o) --> Gestione password                                #protect 23
+     p) --> Separazione ambienti di sviluppo, test e produzione       24
+                                                             #protect --
+     q) --> Cancellazione dati                               #protect 25
+     r) --> Segregazione delle reti                          #protect 27
+ 04) Registrazioni ed accesso ai log di sistemi operativi     #detect 27
+ 05) Procedure di emergenza (WIP solo per data breach)                28
+ 06) Backup e ripristini                                     #recover 32
+ 07) Formazione security manager                    #protect #respond 34
+     a) Formazione per il personale                 #protect #respond 34
+     b) Regolamento per esterni fornitori/collaboratori               35
+                                           #identify #protect #detect --
+     c) Valutzione e revisione dei fornitori/collaboratori            36
+                                           #identify #protect #detect --
+ 08) Utilizzo apparecchiature/dispositivi degli ospiti       #protect 41
+ 09) Misure di protezione per lo stabile                     #protect 42
+ 10) Test di penetrabilità (Vulnerability Assestment)                 45
+                                                   #identify #protect --
+ 11) Monitoraggio dei sistemi che erogano servizi    #detect #respond 47
+ 12) Documento dei servizi sottoposti a Service Line Agreement        48
+                                                   #identify #respond --
+ 13) Documento Business Continuity                          #recoover 50
+ 14) Valutazione dei rischi               #identify #protect #respond 55
 
 
 
@@ -63,12 +62,13 @@ Questa breve guida è stata scritta come un piccolo contributo, per chi
 volesse interessarsi alla normativa ISO/IEC 27001 (in particolare
 l'appendice tecnico 27002), senza troppo impegno iniziale, oppure
 conoscere solo gli aspetti preliminari richiesti, per svilupparli in
-un'organizzazione (anche domestica).
+un'organizzazione, o in contesto privato, domestico.
 
 Le organizzazioni che intendono certificarsi ISO/IEC 27001, scelgono
 una figura interna delegata a seguire il processo di avviamento alla
-normativa.
-Un consulente esterno potrebbe aiutare la figura in questi compiti:
+normativa (il security manager).
+Un consulente esterno potrebbe aiutare la figura interna in questi com_
+piti:
 - cercare il tipo di informazione trattato nei sistemi operativi,
 il tipo di dato trattato e viene salvato in essi
 
@@ -170,7 +170,7 @@ imparziale (vi potrebbbero essere degli interessi).
 [rm27001-mr6flaws]                                            [Pagina 3]
 
 
-02) Definizione degli asset (tag #identify #protect)
+02) Definizione degli asset (#identify #protect)
 
 L'asset è un dato, risorsa conservata, spesso modificabile, protetta
 all'interno dell'organizzazione.
@@ -281,7 +281,7 @@ Tutti gli asset raccolti, andranno poi riportati nel General Manual
 
 [rm27001-mr6flaws]                                            [Pagina 5]
 
-02a) General Manual (SGSI) e Decalogo (tag #identify #protect)
+02a) General Manual (SGSI) e Decalogo (#identify #protect)
 
 Si tratta del documento timone, principale, che raccoglie diverse proce_
 dure ed informazioni del modo in cui l'organizzazione interverrà nel
@@ -505,7 +505,7 @@ tare.
 
 [rm27001-mr6flaws]                                           [Pagina 9]
 
-03a) Creazione dell'inventario dispositivi (tag #identify #protect)
+03a) Creazione dell'inventario dispositivi (#identify #protect)
 
 Ogni computer o altro apparato elettronico dotato della capacità di me_
 morizzazione dati (indipendentemente dal sistema operativo), deve esse_
@@ -599,7 +599,7 @@ ______________________________            _____________________________
 
 FINE MODULO
 
-03b) Criptatura dei dischi (tag #protect)
+03b) Criptatura dei dischi (#protect)
 
 Come potrete immaginare, se un dispositivo contenente dei dati dell'or_
 ganizzazione venisse trafugato o perso, ignoti potrebbero aprrofittare
@@ -677,7 +677,7 @@ Scriveremo nelle procedure dedicate o nel general manual, che i dati so_
 no custoditi in un datacenter, cui l'ingresso ad esso è monitorato (ac_
 cesso dedicato solo a personale autorizzato).
 
-03c) Gestione unificata ed antivirus (tag #detect #protect)
+03c) Gestione unificata ed antivirus (#detect #protect)
 
 La normativa richiede che tutto il software utilizzato nell'impresa sia
 catalogato.
@@ -758,8 +758,8 @@ scansionato in tempo reale da un programma antivirus.
 
 Una piccola nota per i software che possono eseguire codice nascosto nei
 documenti PDF, oppure in documenti di Microsoft Office.
-Il mio consiglio è di eseguire codice javascript o di altro tipo, solo
-nei documenti di origine "fidata" (ovvero scritti da un collega o da un
+Il consiglio è di eseguire codice javascript o di altro tipo, solo nei
+documenti di origine "fidata" (ovvero scritti da un collega o da un
 fornitore conosciuto).
 Esiste anche la possibilità di disabilitare ogni tipo di esecuzione au_
 tomatica di codice, ma a volte non permette di visionare il contenuto
@@ -767,7 +767,7 @@ del documento.
 La normativa ci invita a non aprire il file sospetto ed inatteso.
 Procedere con quest'ultima scelta di fronte a casi di dubbio.
 
-03d) Aggiornamenti di sistema (tag #protect)
+03d) Aggiornamenti di sistema (#protect)
 
 Ogni computer e dispositivo dell'impresa dovrà aver azionato il control_
 lo e l'installazione degli aggiornamenti automatici del sistema
@@ -872,7 +872,7 @@ Nota finale, mai da dimenticare: ogni computer al termine della gior_
 nata lavorativa, deve essere spento per favorire l'installazione degli
 aggiornamenti automatici.
 
-03e) Disegno rete (tag #identify #protect)
+03e) Disegno rete (#identify #protect)
 
 La "piantina" della rete dell'organizzazione, comprenderà aree locali
 (LAN), aree DMZ, guest, VLAN, dispositivi router, firewall, possibili
@@ -882,7 +882,7 @@ disegno, oltre che presentarlo già dal primo giorno di audit certifica_
 zione Stage 1 (03e*1).
 Il possibile aspetto di rindondanza di alcune parti della struttura è
 richiesto e deve essere specificato nella piantina.
-Ad esempio, se uno scambio di informazioni avviene ventiquattro ore su 
+Ad esempio, se uno scambio di informazioni avviene ventiquattro ore su
 ventiquattro, tra un server ed un servizio esterno (un collegamento
 di pagamento), sarà necessario dimostrare la rindondanza che per_
 mette al collegamento di rimanere attivo.
@@ -911,7 +911,7 @@ re configurati in modalità alta affidabilità
 (lato economico, quest'ultima soluzione richiede delle risorse a volte
 cospicue).
 
-03f) Telelavoro (tag #protect)
+03f) Telelavoro (#protect)
 
 Ogni tipo di attività che viene eseguita fuori dall'ufficio, deve essere
 organizzata attraverso un dispositivo aziendale, da molte organizza_
@@ -928,7 +928,7 @@ perimetrale alla rete locale, è possibile installare software più econo_
 mici (possibilmente configurati senza usare un algoritmo RSA) come
 OPENVPN in un server linux o windows presente nell'area LAN.
 
-03g) Regolamentare accesso alle caselle aziendali (tag #protect)
+03g) Regolamentare accesso alle caselle aziendali (#protect)
 Anche l'accesso alle caselle aziendali da una postazione remota sotto_
 sterà ad un regolamento predisposto.
 Nel manuale generale saranno inoltre indicate tutte le regole riguardo
@@ -967,7 +967,7 @@ Solo brevi risposte da un'email (come la conferma di un appuntamento)
 sono permessi.
 
 03h) Permessi per la condivisione dei dati interni all'impresa
-(tag #protect)
+(#protect)
 La maggiornanza delle organizzazioni è divisa per reparti, oppure se
 preferite, gruppi di lavoro.
 La normativa chiede di elencare i settori, descrivere le singole compe_
@@ -1009,7 +1009,7 @@ La tabella dei gruppi sarà mantenuta, ma tecnicamente faranno parte di
 un asset molto ampio per quanto riguarda la condivisione dei dati.
 [rm27001-mr6flaws]                                           [Pagina 18]
 
-03i) Individuare amministratore/i di sistema (tag #identify)
+03i) Individuare amministratore/i di sistema (#identify)
 
 Consiglio nel caso l'aiuto del responsabile privacy interno. Se si
 affronta la certificazione, dovrebbe già essere stata nominata questa
@@ -1135,7 +1135,7 @@ data, _________________________
     ______________________________        _____________________________
 
 
-03l) Creazione e revoca degli accesso utente (tag #protect)
+03l) Creazione e revoca degli accesso utente (#protect)
 
 Per questo punto è necessario una premessa. All'interno dell'organizza_
 zione dovrebbe essere operativo il gestore delle risorse umane.
@@ -1233,7 +1233,7 @@ Maggiori informazioni sono descritte nel punto 03a.
 
 [rm27001-mr6flaws]                                           [Pagina 22]
 
-03m) Blocco terminali (tag #protect)
+03m) Blocco terminali (#protect)
 
 Può sembra un semplice livello di sicurezza, a volte è tralasciato o
 ignorato nelle organizzazioni.
@@ -1254,7 +1254,7 @@ Il Securiy Manager dovrà verificare con controlli a campione, che il co_
 dice PIN a livello controllo numerico sia presente.
 
 
-03o) Gestione password (tag #protect)
+03o) Gestione password (#protect)
 Un punto abbastanza semplice che ci permetterà di essere conforme
 alla normativa.
 Riporto una serie domande e risposte.
@@ -1323,7 +1323,7 @@ già funzioni interne che è possibile abilitare per rispettare le re_
 gole/pratiche sopra descritte.
 
 
-03p) Separazione ambiente di sviluppo, test e produzione (tag #protect)
+03p) Separazione ambiente di sviluppo, test e produzione (#protect)
 
 Ultimo punto preliminatre, che a mio parere richiede non solo un sforzo
 tecnico ma anche uno educativo, se non è ancora stato preso in conside_
@@ -1372,7 +1372,7 @@ ta in un documento e condivisa con tutto il personale di programma_
 zione. Inoltre inlcuderemo la procedura all'interno della politica di
 sicurezza delle informazioni.
 
-03q) Cancellazione dati (tag #protect)
+03q) Cancellazione dati (#protect)
 La gestione dei dati ormai non più utilizzati oppure legati ad una figu_
 ra (utente interno, cliente, fornitore, socio) non più collaborante con
 l'organizzazione, dovranno essere distrutti.
@@ -1457,7 +1457,7 @@ mittente, a quale casella sostitutiva è necessario scrivere.
 
 [rm27001-mr6flaws]                                           [Pagina 26]
 
-03r) --> Segregazione delle reti (tag #protect)
+03r) --> Segregazione delle reti (#protect)
 Aspetto importante per garantire un ottimo livello di cyber sicurezza.
 Durante la configurazione dei firewall che limitano e controllano i
 perimentri delle rete organizzazioni, sarà sempre importante mantenere
@@ -1474,7 +1474,7 @@ di amministratore.
 
 
 
-04) Registrazioni e accesso ai log di sistemi operativi (tag #detect)
+04) Registrazioni e accesso ai log di sistemi operativi (#detect)
 
 Questo punto potrebbe anche rientrare nelle azioni pratiche descritte
 nell'intero passaggio 03.
@@ -1761,7 +1761,7 @@ La procedura data-breach dovrà riportare nome e cognome, della persona
 che avrà contatto con le autorità.
 
 
-06) Backup e ripristini (tag #recover)
+06) Backup e ripristini (#recover)
 
 Il salvataggio dei dati trattati per un certo periodo, oppure banche
 dati utilizzate per la semplice lettura vengono salvati con software
@@ -1863,7 +1863,7 @@ Durante le sessioni audit, le tracciature log che testimonino il
 passaggio dei dati ripristinati, potrebbero essere richieste.
 
 
-07) Formazione security manager (tag #protect #respond)
+07) Formazione security manager (#protect #respond)
 
 La figura del Security Manager è in costante aggiornamenti, in termini
 di nozioni di sicurezza, e di eventi che si verificano nel mondo dei
@@ -1878,7 +1878,7 @@ periodicamenti consultati dal Security Manager.
 Negli audit sono richieste da quali fonti esterne, il Security Manager
 riceve aggiornamenti. Al punto (07*1) sono riportati delle fonti utili.
 
-07a) Formazione per il personale (tag #protect #respond)
+07a) Formazione per il personale (#protect #respond)
 
 Il personale dell'organizzazione potrebbe riscontrare difficoltà nel se_
 guire i punti richiesta dalla normativa.
@@ -1915,7 +1915,7 @@ ganizzazione deve sempre cercare di rispettarli ed attuarli, nella ge_
 stione del sistema di protezione dati.
 
 07b) Estendere regolamento anche ad esterni fornitori o collaboratori
-(tag #identify #protect #detect)
+(#identify #protect #detect)
 Fornitori e collaboratori esterni all'organizzazione, dovranno ope_
 rare all'interno della rete interna, dovranno compilare un questiona_
 rio precompilato.
@@ -2103,8 +2103,145 @@ Codice software, xxxxxxx (inserire descrizione)
 
 ALLEGATO RISERVATEZZA E TRATTAMENTO DEI DATI
 
+07c) Valutazione e revisione dei fornitori/collaboratori
+(#identify #protect #detect)
 
-08) Utilizzo apparecchiature/dispositivi degli ospiti (tag #protect)
+Ogni fornitore o collaboratore esterno deve essere valutato prima di
+sottoscrivere con esso un contratto per una prestazione di servizio,
+che sia continuativa o solo occasionale.
+Per questa valutazione è possibile utilizzare il modello qui sotto ri_
+portato, il quale permette di salvare la nostra valutazione ed essere
+revisionata da un auditor esterno all'organizzazione, senza trovare
+possbili errori.
+
+* Dove opera il fornitore?
+ E' necessario porre attenzione, se il nostro fornitore tratterà possi_
+ bili dati dell'organizazzione in spazi installati presso la sua in_
+ frastruttura (in cloud oppure dedicata). Se la nostra organizzazione
+ opera in territorio europeo, sarebbe preferibile che il fornitore si
+ trovasse in Europa, sia come sede che come punto di trattamento dei
+ dati. Non tratterò qui il caso in cui i dati trattati siano anche sen_
+ sibili, consiglio di verificarlo nel contesto privacy e regolamento
+ GDPR.
+
+
+* Per quale scopo usiamo il fornitore o i suoi servizi?
+
+[rm27001-mr6flaws]                                           [Pagina 38]
+
+ Vi è anche il caso un cui il fornitore eroga solo un software, che trat_
+ ta dati all'interno dell nostra organizzazione. In questo caso, se il
+ fornitore avesse solo una sede extra europea, è necessario verificare
+ se vengono applicati controlli di sicurezza, e quali. Ad esempio:
+ - il fornitore compila il software con compilatori capaci di rilevare
+ e prevenire possibili situazioni pericolose come "buffer overflow"?
+ Tratta possibili dati di test durantre lo sviluppo con i principi di
+ privacy by design /  default?
+ Se il fornitore del software fosse in Europa e dichiarasse di seguire
+ il regolamento GDPR, potremmo già avere un numero di certezze più alto.
+
+* Che tipo di servizio offre?
+ Descrivere (anche brevemente) che tipo di servizio viene erogato. Ri_
+ porto degli esempi:
+ - software da installare presso la nostra organizzazione, senza colle_
+   gamenti diretti con il fornitore (telemtria, aggiornamenti automati_
+   ci)
+ - software in cloud, il fornitore mantiene attiva l'infrastruttura che
+   eroga il servizio stesso, offre le risorse di calcolo e spazio.
+ - consulenza, il fornitore potrebbe collegarsi a spazi dedicati della
+   nostra organizzazione e trattare dei dati, oppure fornire solo codi_
+   ce, strutture per database.
+ - 
+* Che tipo di dato tratta il fornitore?
+ Esso potrebbe trattare diversi tipi di dati, come comuni (nome cognomi,
+ indirizzi email), oppure sensibili, personali (buste paga, codici fi_
+ scali, codici IBAN). Questa domanda è collegata alla prima in modo
+ particolare, se il fornitore tratterà dati sensibili, lo farà colle_
+ gandosi dalla sua sede principale unica in Europa? Se il fornitore for_
+ nirà del codice per software, manterrà un backup presso la propria
+ sede? Sono tutti aspetti che devono essere valutati, e poi trascritti
+ con attenzione.
+
+* Il fornitore possiede una certificazione di gestione sicurezza dati?
+
+ Altro aspetto fondamentale, che potrebbe anche far risparmiare del
+ tempo rispetto i controlli sopra descritti. Se il fornitore possedesse
+ una certficazione iso/iec 27001, è evidente che un organismo di certi_
+ ficazione fornisce audit e ci assicura in parte che un sistema di pro_
+ tezione dati è attivo. Se non possedesse la certificazione specifica
+ per questo sistema, ma attuasse la gestione della protezione dei dati,
+ potremo inviare ad esso una checklist con una serie di domande, per ve_
+ rificare come lo attua, e mantiene. Una base di questionario è mante_
+ nuto in questa guida, al punto 07b.
+ Vi sono realtà statunitensi certificate con controlli PCI, oppure SOC2.
+ Anche queste certificazioni valide, è bene raccogliere più dati possi_
+ bili riguardo quest'ultime (ad esempio i controlli generali eseguiti,
+ oppure risultati di test di penetrazione, audit eseguiti presso sub_
+ -fornitori), e salvare tutte le informazioni in modo che possano es_
+ sere facilmente disponibili durante un audit esterno, rivolot all'or_
+ ganizzazione per la quale operiamo.
+
+
+
+[rm27001-mr6flaws]                                           [Pagina 39]
+
+Per concludere la parte fornitori, è necessario predisporre la valuta_
+zione periodica di quest'ultimi. Almeno una volta all'anno si dovrebbero
+rivalutare tutti i fornitori che trattano dati critici, o collegati a
+rischi.
+Queste valutazioni permetteranno di sapere possibili miglioramenti pre_
+disposti dal fornitori, ad esempio una certificazione acquisita.
+Questo tipo di controllo a ciclo continuo è utile per rilevare possibili
+incidenti dichiarati dal fornitore durante l'anno, come sono stati gesti_
+ti e se vi sono state perdite di dati.
+Salvare le evidenze delle valutazioni continue sarà poi fondamentale per
+l'audit annuale rivolto all'organizzazione per la quale operiamo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                           [Pagina 40]
+
+08) Utilizzo apparecchiature/dispositivi degli ospiti (#protect)
 
 Il concetto di cyber-sicurezza vieta che ospiti possano all'interno
 dell'organizzazione collegare dispositivi elettronici ai cavi della
@@ -2122,17 +2259,10 @@ basta cercare parole "Unifi Access".
 Gli amministratori di rete dell'organizzazione dovranno quindi creare
 una rete dedicata per l'accesso ospite (comunemente chiamata
 VLAN).
-
-
-
-
-
-[rm27001-mr6flaws]                                           [Pagina 38]
-
 Un esempio dello schema.
 
  +--------------------+                    +--------------------------+
- | rete ORGANIZZAZIONE|                    |  rete ospiti (vlan ID xx)|
+ | rete ORGANIZZAZIONE|                    |  rete OSPITI (vlan ID xx)|
  |  192.168.2.0/24    |                    |    172.25.1.0/24         |
  `--------------------'                    `--------------------------'
           \_____________/----------------\      |
@@ -2143,7 +2273,7 @@ Un esempio dello schema.
                                    \_________________.
                                                      |
                                             .--------[-----.
-                                            |   firewall   |
+                                            |   FIREWALL   |
                                             `--------------'
                                                     |
                             @----------@            |
@@ -2165,7 +2295,9 @@ L'accesso viene consentito con le determinate restrizioni del caso
 dati).
 
 
-09) Misure di protezione per lo stabile (tag #protect)
+[rm27001-mr6flaws]                                           [Pagina 41]
+
+09) Misure di protezione per lo stabile (#protect)
 
 I punti della normativa per la protezione dello stabile sono da tenere
 in considerazione.
@@ -2180,11 +2312,6 @@ dell'organizzazione attende ospiti, dovrà prelevare dall'ufficio che
 conserva i cartellini, gli stessi, e notificare sul registro elettroni_
 co, questi dati:
 
-
-
-
-[rm27001-mr6flaws]                                           [Pagina 39]
-
 Data
 Nome Cognome - possibile organizzazione
 Conferisce con (nome cognome membre interno)
@@ -2224,22 +2351,7 @@ Tramite badge è poi possibile restringere l'accesso a determinate aree
 (come quelle di stoccaggio dati) da parte del solo personale autoriz_
 zato.
 
-Ricordo che ogni cavo ethernet (e/o fibra ottica) presente nell'organiz_
-zazione dovrà essere schermato (cosa che avviene già in quasi tutti gli
-stabili).
-Ogni rete WIFI dovrà poi essere protetta da password o altro metodo di
-autenticazione (token generato su richiesta).
-Ogni armadio di deposito dispositivi hardware, dove sono presenti aree
-di stoccaggio o trattamento dati dovrà essere chiuso a chiave.
-Tutte queste misure sono da adattorare per evitare possibili fughe dei
-dati protetti.
-
-Nel registro delle manutenzioni non può mancare poi la verifica periodi_
-ca dell'impianto elettrico.
-Un elettricista per conto dell'azienda sanitaria locale deve controllare
-l'impianto.
-
-[rm27001-mr6flaws]                                           [Pagina 40]
+[rm27001-mr6flaws]                                           [Pagina 42]
 
 Possiamo chiedere al nostro responsabile del servizio prevenzione e pro_
 tezione se può consigliarci un elettricista abilitato alla verifica del_
@@ -2289,15 +2401,71 @@ pleto usato per ridurre il danno materiale dovuto alla fulminazione
 diretta della struttura, esso può (o non) essere presente.
 Tale caratteristica verrà definita nella valutazione.
 
+Ricordo che ogni cavo ethernet (e/o fibra ottica) presente nell'organiz_
+zazione dovrà essere schermato (cosa che avviene già in quasi tutti gli
+stabili).
 
 
 
-
-
-
-[rm27001-mr6flaws]                                           [Pagina 41]
+[rm27001-mr6flaws]                                           [Pagina 43]
 
-10) Test di penetrabiltà (tag #identify #protect)
+Ogni rete WIFI dovrà poi essere protetta da password o altro metodo di
+autenticazione (token generato su richiesta).
+Ogni armadio di deposito dispositivi hardware, dove sono presenti aree
+di stoccaggio o trattamento dati dovrà essere chiuso a chiave.
+Tutte queste misure sono da adattorare per evitare possibili fughe dei
+dati protetti.
+
+Nel registro delle manutenzioni non può mancare poi la verifica periodi_
+ca dell'impianto elettrico.
+Un elettricista per conto dell'azienda sanitaria locale deve controllare
+l'impianto.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                           [Pagina 44]
+
+10) Test di penetrabiltà (#identify #protect)
 
 Si tratta di un processo abbastanza importante, il quale non è consi_
 gliabile per la presentazione in un audit (interno/finale) eseguirlo
@@ -2351,7 +2519,7 @@ Nelle organizzazioni certificate ISO/IEC 27001 da più di due o tre anni,
 potrebbero essere schedulati test sui servizi, e completati prima che
 un sistema operativo entri in funzione nell'organizzazione.
 
-[rm27001-mr6flaws]                                           [Pagina 42]
+[rm27001-mr6flaws]                                           [Pagina 45]
 
 Riporto l'esempio di un test chiamato "Nessus", operante nel sistema
 operativo Linux.
@@ -2407,9 +2575,9 @@ Esistono finestre di orari manutenzione nei server in produzione
 pacchetti aggiornati, e risolti particolari casi di problemi sicurezza.
 
 
-[rm27001-mr6flaws]                                           [Pagina 43]
+[rm27001-mr6flaws]                                           [Pagina 46]
 
-11) Monitoraggio dei sistemi che erogano servizi (tag #detect #respond)
+11) Monitoraggio dei sistemi che erogano servizi (#detect #respond)
 
 Uno dei punti fondamentali della norma è proprio il monitoraggio dei
 servizi e delle loro risorse a disposizione (disponibilità di calcolo
@@ -2463,7 +2631,7 @@ licenze agenti interni dei software sopra descritti.
 Esiste una via alternativa per essere avvisati preventivamente dell'uso
 alto delle risorse?
 
-[rm27001-mr6flaws]                                           [Pagina 44]
+[rm27001-mr6flaws]                                           [Pagina 47]
 
 Sì, forse in maniera non troppo tempestiva come ci offre un algoritmo
 costruito da specialisti ed attivato dell'agente.
@@ -2497,7 +2665,7 @@ o collasso.
 Software gratuiti che ci permettono di raccogliere dati dalle macchine
 e registrarli sono per esempio Grafana, Graylog, Munin.
 
-12) Service Line Agreement (tag #identify #respond)
+12) Service Line Agreement (#identify #respond)
 
 Potremmo definirlo il documento che dichiara le garanzie di continuità,
 dei servizi erogati.
@@ -2519,7 +2687,7 @@ all'intero totale (cento).
 
 
 
-[rm27001-mr6flaws]                                           [Pagina 45]
+[rm27001-mr6flaws]                                           [Pagina 48]
 
 Ad esempio, un disservizio di circa otto ore in un anno, è calcolato
 come segue,
@@ -2575,9 +2743,8 @@ per iscritto, tramite posta elettronica o anche telefonicamente tutti i
 suggerimenti e le idee atti a migliorare il servizio e si impegna a
 garantire sia gli standard generali che quelli specifici in condizioni
 normali ed in assenza di ostacoli che li rendano irrealizzabili.
-[rm27001-mr6flaws]                                           [Pagina 46]
+[rm27001-mr6flaws]                                           [Pagina 49]
 
-
 Supporto Tecnico:
 Area supporto tecnico: http://supporto.[NOME_ORGANIZZAZIONE] o diretta_
 mente dalla piattaforma o dove segnalato in fase successiva.
@@ -2614,7 +2781,7 @@ ore 18:30 dal Lunedì al Venerdì, tramite il sistema di trouble ticket.
 
 FINE (Service Level Agreement)
 
-13) Documento Business Continuity *BCP* (tag #recover)
+13) Documento Business Continuity *BCP* (#recover)
 Il percorso di preparazione alla normativa ci porterà inoltre alla
 stesura di questo documento, focalizzato nel nostro modo di mantenere
 i servizi attivi il più possibile.
@@ -2631,7 +2798,8 @@ uno scheletro abbastanza sotenuto del documento BCP per chi volesse
 solo provare a scriverlo; e magari nel futuro analizzarlo con altre
 parti, e renderlo completo.
 
-[rm27001-mr6flaws]                                           [Pagina 47]
+
+[rm27001-mr6flaws]                                           [Pagina 50]
 
 La prima fase iniziale consisterà nell'elencare tutti i servizi che
 l'organizzazione offre o eroga.
@@ -2674,21 +2842,24 @@ Tabella 013#T2
 | di assistenza     |  basso      |               |  medio       |     |
 `-------------------+-------------+---------------+--------------+-----'
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                           [Pagina 51]
+
 Ad ogni processo collegheremo uno scenario di disastro, che se scaturito
 potrebbe essere un problema per l'erogazione del processo.
 
-
-
-
-
-
-
-
-
-
-
-[rm27001-mr6flaws]                                           [Pagina 48]
-
 Tabella 013#T3
                     +-----------------------------------+
                     |         SCENARI COINVOLTI         |
@@ -2740,10 +2911,7 @@ re ad erogare il servizio o servizi.
 
 
 
-
-
-
-[rm27001-mr6flaws]                                           [Pagina 49]
+[rm27001-mr6flaws]                                           [Pagina 52]
 
 Tabella gestione scenario
 
@@ -2799,7 +2967,7 @@ tabella, la quale sarà seguita in caso di avvenimento dello scenario
 descritto.
 
 
-[rm27001-mr6flaws]                                           [Pagina 50]
+[rm27001-mr6flaws]                                           [Pagina 53]
 
 ESEMPIO procedura 0002
 Il reparto tecnico individuerà un nodo fisico (nel quale è installato
@@ -2855,7 +3023,7 @@ servizio di fornitura assistenza, per circa sessanta minuti. Gli opera_
 tori al call center, registreranno le chiamate in arrivo in modo da re_
 gistrarle nel portale di assistenza appena sarà tornato disponibile.
 
-[rm27001-mr6flaws]                                           [Pagina 51]
+[rm27001-mr6flaws]                                           [Pagina 54]
 
 Scenario ID 4 – Verrà chiesto ad un utente di reparto commerciale di
 erogare un servizio come "Elaborazione buste paga", tramite un apparato
@@ -2884,36 +3052,7 @@ Se durante la simulazione si riscontrano miglioramenti nel processo di
 test e/o verifica, è consigliabile documentarli nelle evidenze, al fine
 di provare che il piano di miglioramento è gestito.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[rm27001-mr6flaws]                                           [Pagina 52]
-
-14) Valutazione dei rischi (tag #identify #protect #respond)
+14) Valutazione dei rischi (#identify #protect #respond)
 
 La valutazione (e analisi) dei rischi, è una delle parte fondamenti per
 mantenere un ottimo livello di cyber-sicurezza, e nel caso sia neces_
@@ -2930,6 +3069,18 @@ Eviterei di mantenere il masssimo del livello a dieci, per gestire al
 meglio il risultato finale (priorità) di gestione del singolo scenario
 di rischio.
 
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                           [Pagina 55]
+
 Riporto per documentazione le linee guida ISO/IEC 27001 inserite al pun_
 to 6.1.3.
 a) selezionare, sulla base dei risultati della valutazione del rischio,
@@ -2967,8 +3118,6 @@ applicare per il singolo rischio. Nel foglio due, sono riportati la mag_
 gior parte dei controlli che l'organizzazione potrebbe scegliere e ap_
 plicare.
 
-[rm27001-mr6flaws]                                           [Pagina 53]
-
 Una volta scelti i controlli, preleveremo il numero totale di essi e lo
 riporteremo nella casella dedicata.
 L'ultima formula, è la differenza tra il valore di priorità e il numero
@@ -2986,7 +3135,8 @@ Non esiste un trattamento/scenario di rischio individuato pari a zero
 Consiglio di tenere sempre in considerazione che il rischio potrebbe
 manifestarsi anche in minima parte, è una buona considerazione per
 tutta l'analisi del rischio.
-
+[rm27001-mr6flaws]                                           [Pagina 56]
+
 La descrizione a fianco dell'ultimo valore di priorità, commenterà come
 il rischio viene trattato (operazioni, trattamenti specifici).
 Nello specifico il pre ed il post trattamento. Per pre si intendono tut_
@@ -3023,9 +3173,26 @@ secondi di tempo. L'azione di post intervento potrebbe essere già piani_
 ficata e conosciuta, ovvero dove recuperare in poco tempo un'altra unità
 utile a far ripartire un minimo di terminali per garantire i servizi
 essenziali.
-[rm27001-mr6flaws]                                           [Pagina 54]
-
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                           [Pagina 57]
+
 * FONTI ESTERNE *
 
 (01*1)
@@ -3079,7 +3246,8 @@ essenziali.
 
 
 
-[rm27001-mr6flaws]                                           [Pagina 55]
+
+[rm27001-mr6flaws]                                           [Pagina 58]
 
 (04*1)
     https://www.gigasys.it/site/log-management/ software dedicato ed at_
@@ -3135,7 +3303,7 @@ essenziali.
     https://www.garanteprivacy.it/
 
 
-[rm27001-mr6flaws]                                           [Pagina 56]
+[rm27001-mr6flaws]                                           [Pagina 59]
 
     Sicurezza e Penetraion test
     https://diablohorn.com/
@@ -3164,7 +3332,8 @@ essenziali.
 
 (14*2)
     https://www.cesaregallotti.it/
-    La risorsa più indicata per iniziare una valutazione del rischio
+    La risorsa più indicata per iniziare una valutazione del rischio,
+    tramite una struttura di gestione valori già collaudata.
 
 
 
@@ -3190,61 +3359,4 @@ essenziali.
 
 
 
-
-[rm27001-mr6flaws]                                           [Pagina 57]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[rm27001-mr6flaws]                                           [Pagina 58]
+[rm27001-mr6flaws]                                           [Pagina 60]
