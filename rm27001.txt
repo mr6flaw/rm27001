@@ -121,9 +121,9 @@ stione privata.
 
 Cosa non è stato trattato in questo testo, riguardo la normativa ISO/IEC
 27001.
-Negli ultimi anni, io autore del testo, testato e preparato questi aspet_
-ti più tecnici e pratici, ma alcune parti del procedimento di certifi_
-cazione rimangono per me, non ancora possibili da descrivere.
+Negli ultimi anni, io autore del testo, ho testato e preparato questi
+aspetti più tecnici e pratici, ma alcune parti del procedimento di cer_
+tificazione rimangono per me, non ancora possibili da descrivere.
 
 Questi documenti sono:
 
@@ -144,9 +144,9 @@ Inoltre, esistono corsi specifici per avviarsi alla professione di
 praticantato se si volesse proseguire con questa professione, in modo
 da poter "auditare" organizzazioni.
 Mentre un team leader, non può auditare la società per la quale lavora
-(per esempio come Security Manager), in quanto sarebbe una figura non
-imparziale (vi potrebbbero essere degli interessi).
-
+(per esempio come dipendente Security Manager), in quanto sarebbe una
+figura non imparziale, potrebbe manifestarsi il rischio, conflitto di
+interessi.
 
 
 
@@ -173,7 +173,7 @@ imparziale (vi potrebbbero essere degli interessi).
 02) Definizione degli asset (#identify #protect)
 
 L'asset è un dato, risorsa conservata, spesso modificabile, protetta
-all'interno dell'organizzazione.
+dall'organizzazione che gestisce la sicurezza dei dati.
 Ogni asset può includere diverse proprietà, le quali ci permetteranno
 di mantenere un adeuguato livello di sicurezza per i nostri dati.
 
@@ -1183,7 +1183,7 @@ utenti operativi nell'organizzazione.
  |    fornitore. E' stata richiesta la revoca?         |
  `-----------------------------------------------------'
        | Sì |                           | No |
-       .----.                           .----.
+       .----'                           .----'
          |                                |
     .----+---------------------.    .-----+--------------.
     | Cancellare il profilo,   |    | E' stata richiesta |
@@ -1200,7 +1200,7 @@ utenti operativi nell'organizzazione.
     | i permessi dell'asset in     |    | o collaboratore esterno ?|
     | cui è coinvolto (****).      |    `--------------------------'
     | Dare conferma alla richiesta |        | Sì |      | No |
-    | pervenuta.                   |        .----.      .----.
+    | pervenuta.                   |        .----'      .----'
     `------------------------------'          /            |
                                              /             |
                                             /              |
@@ -3172,13 +3172,13 @@ l'unità potrebbe essere del tutto esausta e non erogare per nemmeno due
 secondi di tempo. L'azione di post intervento potrebbe essere già piani_
 ficata e conosciuta, ovvero dove recuperare in poco tempo un'altra unità
 utile a far ripartire un minimo di terminali per garantire i servizi
-essenziali.
-
-
-
-
-
-
+essenziali. Lo stato di avanzamento dello scenario è giunto all'ottan_
+ta per cento, e la possibile data prevista per avere in completa gestio_
+ne il rischio, è definita nel campo "Previsto completamento".
+Definire una data stimata è molto importante, soprattutto se un esterno
+o la stessa direzione dell'organizzazione, dovrà valutare i singoli sce_
+nari ancora aperti, e probabilmente concedere risorse per favorirne il
+completamento.
 
 
 
