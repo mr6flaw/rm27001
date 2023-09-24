@@ -44,11 +44,11 @@ Indice
  09) Misure di protezione per lo stabile                     #protect 42
  10) Test di penetrabilità (Vulnerability Assestment)                 45
                                                    #identify #protect --
- 11) Monitoraggio dei sistemi che erogano servizi    #detect #respond 47
- 12) Documento dei servizi sottoposti a Service Line Agreement        48
+ 11) Monitoraggio dei sistemi che erogano servizi    #detect #respond 48
+ 12) Documento dei servizi sottoposti a Service Line Agreement        49
                                                    #identify #respond --
- 13) Documento Business Continuity                          #recoover 50
- 14) Valutazione dei rischi               #identify #protect #respond 55
+ 13) Documento Business Continuity                           #recover 51
+ 14) Valutazione dei rischi               #identify #protect #respond 56
 
 
 
@@ -2559,9 +2559,6 @@ impostazioni del kernel.
 /sbin/sysctl -w net.ipv4.conf.all.secure_redirects=0
 /sbin/sysctl -w net.ipv4.conf.all.send_redirects=0
 
-Altre interessanti opzioni di sicurezza da applicare nel sistema opera_
-tivo Linux, le potete trovare nella pagina "Linux Hardening
-Guide" (10*2).
 
 Il test "Nessus" procederà quindi con la scansione di tutti i pacchetti
 installati nel sistema Linux, e confronterà i numeri di versione con
@@ -2574,8 +2571,67 @@ Esistono finestre di orari manutenzione nei server in produzione
 (solitamente in fascia notturna), nelle quali vengono installati
 pacchetti aggiornati, e risolti particolari casi di problemi sicurezza.
 
+Altre interessanti opzioni di sicurezza da applicare nel sistema opera_
+tivo Linux, le potete trovare nella pagina "Linux Hardening
+Guide" (10*2).
 
 [rm27001-mr6flaws]                                           [Pagina 46]
+
+Un'altra nota aggiuntiva merita di essere descritta per il kernel Linux.
+E' abbastanza configurabile a livello di parametri di sicurezza. Il con_
+siglio per chi già ricompila il kernel dai sorgenti per poi utilizzare
+la propria immagine (in gergo chiamata boot), è di testare anche un
+approccio ancora più completo (per le configurazioni di sicurezza) come
+queste impostazioni del progetto kernel-hardening-checker (10*3).
+Nella pagina github dedicata ad esso, trovate informazioni riguardo
+lo script di verifica impostazioni.
+
+Lo script è in grado di verificare quali impostazioni sono presenti nel
+sistema operativo, quindi una volta rilevati quali spegnere o invece
+mantenere, procedere alla ricompilazione dell'immagine kernel.
+
+Modificare i parametri del kernel può inoltre aiutare a tenere segrete
+certe informazioni ai test di vulnerabilità. Esempio, la lista dei pro_
+cessi in uso nel sistema operativo, indirizzi di memoria usati, che
+dovrebbero essere sempre generati con numerazioni numeriche casuali
+(vedi CONFIG_SLAB_FREELIST_RANDOM).
+Oppure opzioni come nospectre_v2, scritte per processori Intel, vulne_
+rabili a difetti di architettura. Vedi Meltdown e Spectre (10*4).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                           [Pagina 47]
 
 11) Monitoraggio dei sistemi che erogano servizi (#detect #respond)
 
@@ -2631,7 +2687,7 @@ licenze agenti interni dei software sopra descritti.
 Esiste una via alternativa per essere avvisati preventivamente dell'uso
 alto delle risorse?
 
-[rm27001-mr6flaws]                                           [Pagina 47]
+[rm27001-mr6flaws]                                           [Pagina 48]
 
 Sì, forse in maniera non troppo tempestiva come ci offre un algoritmo
 costruito da specialisti ed attivato dell'agente.
@@ -2687,7 +2743,7 @@ all'intero totale (cento).
 
 
 
-[rm27001-mr6flaws]                                           [Pagina 48]
+[rm27001-mr6flaws]                                           [Pagina 49]
 
 Ad esempio, un disservizio di circa otto ore in un anno, è calcolato
 come segue,
@@ -2743,7 +2799,7 @@ per iscritto, tramite posta elettronica o anche telefonicamente tutti i
 suggerimenti e le idee atti a migliorare il servizio e si impegna a
 garantire sia gli standard generali che quelli specifici in condizioni
 normali ed in assenza di ostacoli che li rendano irrealizzabili.
-[rm27001-mr6flaws]                                           [Pagina 49]
+[rm27001-mr6flaws]                                           [Pagina 50]
 
 Supporto Tecnico:
 Area supporto tecnico: http://supporto.[NOME_ORGANIZZAZIONE] o diretta_
@@ -2799,7 +2855,7 @@ solo provare a scriverlo; e magari nel futuro analizzarlo con altre
 parti, e renderlo completo.
 
 
-[rm27001-mr6flaws]                                           [Pagina 50]
+[rm27001-mr6flaws]                                           [Pagina 51]
 
 La prima fase iniziale consisterà nell'elencare tutti i servizi che
 l'organizzazione offre o eroga.
@@ -2855,7 +2911,7 @@ Tabella 013#T2
 
 
 
-[rm27001-mr6flaws]                                           [Pagina 51]
+[rm27001-mr6flaws]                                           [Pagina 52]
 
 Ad ogni processo collegheremo uno scenario di disastro, che se scaturito
 potrebbe essere un problema per l'erogazione del processo.
@@ -2911,7 +2967,7 @@ re ad erogare il servizio o servizi.
 
 
 
-[rm27001-mr6flaws]                                           [Pagina 52]
+[rm27001-mr6flaws]                                           [Pagina 53]
 
 Tabella gestione scenario
 
@@ -2967,7 +3023,7 @@ tabella, la quale sarà seguita in caso di avvenimento dello scenario
 descritto.
 
 
-[rm27001-mr6flaws]                                           [Pagina 53]
+[rm27001-mr6flaws]                                           [Pagina 54]
 
 ESEMPIO procedura 0002
 Il reparto tecnico individuerà un nodo fisico (nel quale è installato
@@ -3023,7 +3079,7 @@ servizio di fornitura assistenza, per circa sessanta minuti. Gli opera_
 tori al call center, registreranno le chiamate in arrivo in modo da re_
 gistrarle nel portale di assistenza appena sarà tornato disponibile.
 
-[rm27001-mr6flaws]                                           [Pagina 54]
+[rm27001-mr6flaws]                                           [Pagina 55]
 
 Scenario ID 4 – Verrà chiesto ad un utente di reparto commerciale di
 erogare un servizio come "Elaborazione buste paga", tramite un apparato
@@ -3079,7 +3135,7 @@ di rischio.
 
 
 
-[rm27001-mr6flaws]                                           [Pagina 55]
+[rm27001-mr6flaws]                                           [Pagina 56]
 
 Riporto per documentazione le linee guida ISO/IEC 27001 inserite al pun_
 to 6.1.3.
@@ -3135,7 +3191,7 @@ Non esiste un trattamento/scenario di rischio individuato pari a zero
 Consiglio di tenere sempre in considerazione che il rischio potrebbe
 manifestarsi anche in minima parte, è una buona considerazione per
 tutta l'analisi del rischio.
-[rm27001-mr6flaws]                                           [Pagina 56]
+[rm27001-mr6flaws]                                           [Pagina 57]
 
 La descrizione a fianco dell'ultimo valore di priorità, commenterà come
 il rischio viene trattato (operazioni, trattamenti specifici).
@@ -3151,6 +3207,12 @@ pure alcuni di essi sono ancora in lavorazione; in questo ultimo caso
 il controllo non risulterà applicato.
 Come ultimo dettaglio, viene riportato anche la data dell'ultima analisi
 del rischio specifico.
+
+E' possibile che alcuni dei controlli elencati, non siano utilizzati in
+tutti gli scenari di rischio. E' bene utilizzare una formula, per rile_
+varli, ed evidenziare questo aspetto. Durante le revisione dell'analisi
+sarà necessario valutare perchè un controllo non sia stato utilizzato,
+e magari dopo N mesi sia possibile utilizzarlo.
 
 La spiegazione qui riportata è semplificata, vi sono metodi più com_
 pleti per condurre un'analsi di rischio. Lo strumento VERA scritto da
@@ -3185,13 +3247,7 @@ completamento.
 
 
 
-
-
-
-
-
-
-[rm27001-mr6flaws]                                           [Pagina 57]
+[rm27001-mr6flaws]                                           [Pagina 58]
 
 * FONTI ESTERNE *
 
@@ -3247,7 +3303,7 @@ completamento.
 
 
 
-[rm27001-mr6flaws]                                           [Pagina 58]
+[rm27001-mr6flaws]                                           [Pagina 59]
 
 (04*1)
     https://www.gigasys.it/site/log-management/ software dedicato ed at_
@@ -3303,7 +3359,7 @@ completamento.
     https://www.garanteprivacy.it/
 
 
-[rm27001-mr6flaws]                                           [Pagina 59]
+[rm27001-mr6flaws]                                           [Pagina 60]
 
     Sicurezza e Penetraion test
     https://diablohorn.com/
@@ -3321,6 +3377,13 @@ completamento.
 
 (10*2)
     https://bit.ly/3duJgjU
+
+(10*3)
+    https://github.com/a13xp0p0v/kernel-hardening-checker
+
+(10*4)
+    https://it.wikipedia.org/wiki/Spectre_(vulne_
+    rabilit%C3%A0_di_sicurezza)
 
 (13*1)
     https://it.wikipedia.org/wiki/Multiprotocol_Label_Switching
@@ -3352,11 +3415,4 @@ completamento.
 
 
 
-
-
-
-
-
-
-
-[rm27001-mr6flaws]                                           [Pagina 60]
+[rm27001-mr6flaws]                                           [Pagina 61]  #### 3362 ---> 3418 (+56)
