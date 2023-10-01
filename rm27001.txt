@@ -1240,18 +1240,18 @@ ignorato nelle organizzazioni.
 Ogni utente dovrebbe quando si allontana dalla propria postazione, bloc_
 care con la combinazione di tasti CTRL+ALT+CANC il proprio computer.
 Spesso il personale si allonta dalla postazione lasciando il desktop
-del computer a libero accesso, e chinque potrebbe utilizzarlo.
-Un aiuto, per ridurre il rischio di intrusione, sarà lo screen saver.
-Dopo massimo tre minuti (consiglio un tempo inferiore) di inattività
-del computer, verrà azionato lo screen-saver bloccando la postazione.
+del computer al libero accesso, e chiunque potrebbe utilizzarlo.
+Un aiuto, per ridurre il rischio di intrusione, sarà il salva schermo.
+Dopo massimo tre minuti di inattività del computer, verrà azionato il
+salva schermo, bloccando la postazione.
 L'amministratore di rete, può facilmente impostare e distribuire questa
 politica, su tutti i computer dell'organizzazione.
 Mentre per i telefoni cellulari (smartphone e non), dovrà essere impo_
 stato un blocco a livello PIN numerico.
 La tecnologia di oggi giorno permette anche di impostare lo sblocco via
 impronta digitale.
-Il Securiy Manager dovrà verificare con controlli a campione, che il co_
-dice PIN a livello controllo numerico sia presente.
+Il Securiy Manager dovrà verificare con regolari controlli a campione,
+che il codice PIN a livello controllo numerico sia presente.
 
 
 03o) Gestione password (#protect)
@@ -1261,18 +1261,18 @@ Riporto una serie domande e risposte.
 
 *) Perchè è importante modificare la password del proprio utente di
 accesso alla rete aziendale o altro tipo di risorse?
-Non esiste la certezza che la password usata e qualche volta anche sal_
-vata nei dispositivi di uso risorse, non verrà mai letta da ignoti.
+Non esiste la certezza che la password usata e spesso anche salvata
+nei dispositivi dell'organizzazione, non verrà mai letta da ignoti.
 Programmi offensivi sono costruiti appositamente per trovare password,
-digitate o mantenute nei computer o cellulari di nuova generazione.
+digitate o mantenute.
 
 *) Come porre rimedio a questo problema?
 E' sufficiente modificare con una regolare cadenza la password del pro_
-prio utente, oppure attendere la richiesta automatica di cambio password
-(proposta dal dominio di rete organizzazione).
-Rendere la vita difficile ai programmi è un modo per proteggere la no_
-stra corrispondenza, il cambio password fatto almeno una volta ogni sei
-mesi è l’inizio per difendere la nostra privacy.
+prio utente, oppure attendere la richiesta programmata di cambio pass_
+word (proposta dal dominio di rete organizzazione).
+Rendere la vita difficile alle minacce è un modo per proteggere la
+corrispondenza, il cambio password fatto almeno una volta ogni sei
+mesi è l’inizio della difesa, mantenere un buon livello di sicurezza.
 
 *) Come posso scegliere la composizione alfanumerica della password?
 Per la scelta delle password è necessario seguire questo decalogo:
