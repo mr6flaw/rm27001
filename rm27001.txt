@@ -3382,8 +3382,7 @@ completamento.
     https://github.com/a13xp0p0v/kernel-hardening-checker
 
 (10*4)
-    https://it.wikipedia.org/wiki/Spectre_(vulne_
-    rabilit%C3%A0_di_sicurezza)
+    https://www.zonca.it/spectre.php
 
 (13*1)
     https://it.wikipedia.org/wiki/Multiprotocol_Label_Switching
@@ -3415,4 +3414,5 @@ completamento.
 
 
 
-[rm27001-mr6flaws]                                           [Pagina 61]  #### 3362 ---> 3418 (+56)
+
+[rm27001-mr6flaws]                                           [Pagina 61]
