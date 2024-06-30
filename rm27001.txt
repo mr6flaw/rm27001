@@ -49,7 +49,7 @@ Indice
                                                    #identify #respond --
  13) Documento Business Continuity                           #recover 51
  14) Valutazione dei rischi               #identify #protect #respond 56
-
+ 15) Dichiarazione di applicabilità (SoA)         #____????           58
 
 
 
@@ -58,27 +58,26 @@ Indice
 [rm27001-mr6flaws]                                            [Pagina 1]
 
 01) Introduzione
-Questa breve guida è stata scritta come un piccolo contributo, per chi
-volesse interessarsi alla normativa ISO/IEC 27001 (in particolare
+Questa guida è stata scritta come un piccolo contributo, per chi vole_
+sse interessarsi alla normativa ISO/IEC 27001 (in particolare
 l'appendice tecnico 27002), senza troppo impegno iniziale, oppure
 conoscere solo gli aspetti preliminari richiesti, per svilupparli in
 un'organizzazione, o in contesto privato, domestico.
 
 Le organizzazioni che intendono certificarsi ISO/IEC 27001, scelgono
 una figura interna delegata a seguire il processo di avviamento alla
-normativa (il security manager).
+normativa,il security manager.
 Un consulente esterno potrebbe aiutare la figura interna in questi com_
 piti:
-- cercare il tipo di informazione trattato nei sistemi operativi,
-il tipo di dato trattato e viene salvato in essi
-
+- organizzare la prima documentazione che tratta i sistemi operativi,
+il tipo di dato trattato e che viene salvato in essi
 - scrivere procedure per segnalare anomalie/incidenti, o come richie_
 dere l'installazione di software da parte del personale
 - inventariare tutti i tipi di software utilizzati nei sistemi opera_
 tivi (sia lato client che server)
 - ogni accesso alle aree fisiche dove i dati sono conservati, dovrà es_
 sere registrato
-- creazione degli ASSET, ovvero la mappatura delle banche dati, con i 
+- creazione degli "asset", ovvero la mappatura delle banche dati, con i
 tipi di dati trattati ed il periodo di conservazione
 - mantenere separate le aree di test da quelle di produzione nelle qua_
 li sono trattati e resi disponibili dei dati
@@ -90,6 +89,43 @@ sionisti esperti in sicurezza delle informazioni, per impostare la mi_
 glior prassi da seguire, nel campo della sicurezza delle informazioni.
 Per rendere rappresentabile l'appendice A 27002, possiamo disegnarla
 come una lunga checklist, divisa per capitoli e punti.
+
+Inoltre viene mantenuto un linguaggio pratico, al fine di semplificare
+i concetti e renderli attuabili anche da chi è solo interessato ad in_
+crementare la sicurezza all'interno della propria organizzazione o ge_
+stione privata.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                            [Pagina 2]
+
+Una nota importante per possibili raccomandazioni che si potrebbero ri_
+cevere a fine di una sessione audit.
+Esse se non si ha modo di gestirle nel tempo accordato, NON possono di_
+ventare non conformità in fase di controllo del prossimo audit.
+
+Inoltre, esistono corsi specifici per avviarsi alla professione di
+"team leader", ottenere la prima qualifica e poi iniziare un periodo di
+praticantato se si volesse proseguire con questa professione, in modo
+da poter "auditare" organizzazioni.
+Mentre un team leader, non può auditare la società per la quale lavora
+(per esempio come dipendente Security Manager), in quanto sarebbe una
+figura non imparziale, potrebbe manifestarsi il rischio, conflitto di
+interessi.
 
 ** Avvertenze **
 
@@ -111,42 +147,6 @@ Queste informazioni sono soggette a copyright del l'organizzazione
 "International Organization for Standardization" (01*1).
 
 
-[rm27001-mr6flaws]                                            [Pagina 2]
-
-
-Inoltre viene mantenuto un linguaggio pratico, al fine di semplificare
-i concetti e renderli attuabili anche da chi è solo interessato ad in_
-crementare la sicurezza all'interno della propria organizzazione o ge_
-stione privata.
-
-Cosa non è stato trattato in questo testo, riguardo la normativa ISO/IEC
-27001.
-Negli ultimi anni, io autore del testo, ho testato e preparato questi
-aspetti più tecnici e pratici, ma alcune parti del procedimento di cer_
-tificazione rimangono per me, non ancora possibili da descrivere.
-
-Questi documenti sono:
-
-Dichiarazione di applicabilità (SoA: State of Applicability)
-Politiche sicurezza informazioni
-Manuale generico di gestione sistema sicurezza dati (SGSI)
-Riesame finale della sicurezza dati, dell'anno intercorso.
-
-Mi auguro in futuro di poter inserire punti guida, anche per essi.
-
-Una nota importante per possibili raccomandazioni che si potrebbero ri_
-cevere a fine di una sessione audit.
-Esse se non si ha modo di gestirle nel tempo accordato, NON possono di_
-ventare non conformità in fase di controllo del prossimo audit.
-
-Inoltre, esistono corsi specifici per avviarsi alla professione di
-"team leader", ottenere la prima qualifica e poi iniziare un periodo di
-praticantato se si volesse proseguire con questa professione, in modo
-da poter "auditare" organizzazioni.
-Mentre un team leader, non può auditare la società per la quale lavora
-(per esempio come dipendente Security Manager), in quanto sarebbe una
-figura non imparziale, potrebbe manifestarsi il rischio, conflitto di
-interessi.
 
 
 
@@ -383,8 +383,8 @@ re)
 Policy interna sull’uso di internet e della posta elettronica (testo
 precompilato)
 Internet (testo precompilato)
-Utilizzo reti wifi (se sono presenti all'interno dell'organizzazione, te_
-sto precompilato)
+Utilizzo reti wifi (se sono presenti all'interno dell'organizzazione,
+testo precompilato)
 
 
 
@@ -1009,15 +1009,15 @@ La tabella dei gruppi sarà mantenuta, ma tecnicamente faranno parte di
 un asset molto ampio per quanto riguarda la condivisione dei dati.
 [rm27001-mr6flaws]                                           [Pagina 18]
 
-03i) Individuare amministratore/i di sistema (#identify)
+03i) Individuare l'amministratore di sistema (#identify)
 
-Consiglio nel caso l'aiuto del responsabile privacy interno. Se si
-affronta la certificazione, dovrebbe già essere stata nominata questa
-figura, al fine che la figura/e, possano essere nominate.
+Si tratta di una figura che tutte le organizzazioni, dalle piccole alle
+grandi, oggi dovrebbe già aver nominato. In caso contrario, è necessario
+quanto prima procedere.
 
-Riporto l'esempio del modolo di presa in carico, dove saranno elencate
-determinate attività assegnate per amministratore
-(possono essere differenti a seconda della tipologia di amministratore).
+Viene qui riportato un esempio del modolo di presa in carico. In esso sa_
+ranno elencate determinate attività assegnate per amministratore, ne
+possono essere assegnati differenti a seconda della loro funzione.
 
 NOMINA AD AMMINISTRATORE DI SISTEMA
 
@@ -1025,7 +1025,8 @@ ai sensi del provvedimento del garante 27 novembre 2018 (G.U. N.300 del
 24 dicembre 2008)
 
                                 Spettabile ____________________________
-                                             (indirizzo organizzazione)
+                                             (nome, indirizzo
+                                                 organizzazione)
 
 
 Posto che con la definizione di "Amministratore di Sistema" si intendo_
@@ -1056,7 +1057,6 @@ dell'affidabilità.
 
 Attività assegnate:
 (qui inseriremo le attività che l'amministratore dovrà svolgere)
-
 
 
 
@@ -1142,31 +1142,31 @@ zione dovrebbe essere operativo il gestore delle risorse umane.
 Ruolo che in molti casi è anche mantenuto dal responsabile dell'organiz_
 zazione.
 Scrivo questo perchè il Security Manger riceverà richieste di creazione,
-modifica o revoca permessi utenti da ruoli esterni al suo compito.
+modifica o revoca permessi utente da gruppi diversi dal suo.
 Inoltre queste operazioni sugli utenti, sono spesso completate dal_
-l'amministratore di sistema, se il Security Manager non ha tutti i
-permessi per avviarle.
+l'amministratore di sistema, se il Security Manager non partecipa diret_
+tamente alle operazioni sopra elencate.
 La procedura da inserire nel General Manual (o da mantenere scritta ed
 operativa solo come riferimento se il nostro scopo non è ottenere
 la certificazione), è molto semplice.
 Essa ci permetterà anche di tracciare le operazioni sui tutti gli
 utenti operativi nell'organizzazione.
 
+Inoltre, è necessario mantenere definita e diffusa una politica di ge_
+stione password utente. Un esempio potrebbe essere:
+- minimo 12 caratteri alfanumerici
+- presenza di lettere minuscole/maiuscole
+- presenza di almeno due simboli (come %,.:-_#^?/\&$!)
+- il sistema di verifica password dovrebbe almeno ricordare i caratteri
+inseriti dall'utente nelle precedenti password, per almeno cinque volte.
+Questo controllo, sfavorisce l'utente nel re-inserire una password si_
+mile alle precedenti, quando è necessaria cambiarla, per via della
+scadenza.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+La politica viene scritta e documentata, e le regole sono attivate poi
+nelle impostazioni password di Active Directory se viene usato Microsoft
+come gestore di gruppi di rete, oppure PAM se viene usato il sistema
+operativo Linux.
 
 
 
@@ -1583,7 +1583,7 @@ generale.
                             | azione |
                             `--------'
 
-Elencherò alcune di queste possibili procedure, 
+Elencherò alcune di queste possibili procedure,
 
 - dati danneggiati
 --> durante un'attività di aggiornamento di sistema operativo, o aggior_
@@ -1823,7 +1823,7 @@ fine estrazione del dato?
 il controllo il prossimo giorno lavorativo?
 
 - Prove documentate del ripristino di sistemi operativi
-Descriverò ora la parte del ripristino del dato. 
+Descriverò ora la parte del ripristino del dato.
 Voglio prima fare una premessa. Certi tipi di situazioni lavorative e
 non, inducono ad utilizzare un sistema operativo e una serie di appli_
 cazioni anche per oltre cinque, sei anni.
@@ -2265,9 +2265,9 @@ Un esempio dello schema.
  | rete ORGANIZZAZIONE|                    |  rete OSPITI (vlan ID xx)|
  |  192.168.2.0/24    |                    |    172.25.1.0/24         |
  `--------------------'                    `--------------------------'
-          \_____________/----------------\      |
+          \_____________.----------------.      |
                         |apparato SWITCH |______/
-                        \----------------/
+                        `----------------'
                                    |
                                    |
                                    \_________________.
@@ -2277,11 +2277,11 @@ Un esempio dello schema.
                                             `--------------'
                                                     |
                             @----------@            |
-                            | router   |------------/
+                            | router   |------------
                             | internet |
                             `----------'
 
-In questo scarno esempio, la rete dell'organizzazione è divisa a livello
+In questo scarno disegno, la rete dell'organizzazione è divisa a livello
 fisico dalla rete ospiti, tramite un apparato switch programmabile
 (porta per porta ethernet).
 La rete ospiti può comunicare con il mondo internet tramite un apparato
@@ -3249,8 +3249,66 @@ completamento.
 
 [rm27001-mr6flaws]                                           [Pagina 58]
 
-* FONTI ESTERNE *
+15) Dichiarazione di applicabilità
 
+In questo capitolo finale, verranno trattati tutti i controlli della
+ISO/IEC 27002. Nei precedenti capitoli della guida sono stati trattati
+requisiti, e preparazioni____ utili a rispondere ai controlli tecnici
+della norma. Importante è tenere sempre in considerazione che non è ri_
+chiesto completare tutti i punti, vi è sempre la possibilità di esclu_
+denrne alcuni, motivando il perchè, sulla base di reali necessità.
+Vi sono software in grado di mantenere aggiornato e rendere disponibile
+l'elenco dei controlli; in caso non abbiamo a disposizione uno di que_
+st'ultimi, possiamo mantenere l'elenco completo in un foglio di calcolo
+o altro tipo di documento facile da utilizzare.
+Riporterò qui un esempio di una tabella da cui si può mantenere l'elenco
+dei controlli.
+
+.----+---------------+---------------+-----------.
+| NN | descrizione   | svolgimento   | documento |
++----+---------------+---------------+-----------+
+
+Informare che la lista deve essere pronta per il giorno di stage 1
+
+Consigli utili per alcuni punti???
+
+Descrivere l'importanza del sistema documentale, quindi inserire il codi_
+ce univoco del documento nel campo. In questo modo sarà semplice trovare
+il documenti, se l'auditor chiederà di visionarlo.
+
+INSERIRE QUI LO SCADENZIARIO?
+
+Come verificare periodicamente i punti dello stato di applicabilità?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                           [Pagina 59]
+
+* FONTI ESTERNE *
+ Al fine fine di mantenere una corretta impaginazione, alcune risorse
+ sono qui riportate sottoforma di URL corto (shorten).
+ 
 (01*1)
     https://www.iso.org/
 
@@ -3301,9 +3359,7 @@ completamento.
 
 
 
-
-
-[rm27001-mr6flaws]                                           [Pagina 59]
+[rm27001-mr6flaws]                                           [Pagina 60]
 
 (04*1)
     https://www.gigasys.it/site/log-management/ software dedicato ed at_
@@ -3338,7 +3394,7 @@ completamento.
                                        recenti
     https://twitter.com/hFireF0X       hFireF0X - ricercatore impegnato
                                        nell'oltrepassare i controlli UAC
-                                       del sistema Windows
+                                       del sistema operativo Windows
     https://twitter.com/USCERT_gov     riporta maggiori incidenti di si_
                                        curezza, analizza minacce, e con_
                                        divide informazioni del mondo
@@ -3359,7 +3415,7 @@ completamento.
     https://www.garanteprivacy.it/
 
 
-[rm27001-mr6flaws]                                           [Pagina 60]
+[rm27001-mr6flaws]                                           [Pagina 61]
 
     Sicurezza e Penetraion test
     https://diablohorn.com/
@@ -3415,4 +3471,4 @@ completamento.
 
 
 
-[rm27001-mr6flaws]                                           [Pagina 61]
+[rm27001-mr6flaws]                                           [Pagina 62]
