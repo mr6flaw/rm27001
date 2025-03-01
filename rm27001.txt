@@ -3372,41 +3372,63 @@ Come verificare periodicamente i punti dello stato di applicabilità?
     https://bit.ly/3SRboOl
 
 (07*1)
-    https://twitter.com/netbiosX       NetbiosX, ricercatore sicurezza
-                                       per ambiente Windows
-    https://twitter.com/KyleHanslovan  Kyle Hanslovan, analista malware
-    https://twitter.com/wdormann       Will Dormann, analista vulnerabi_
-	                                   lità
-    https://twitter.com/adriengnt      Adrien Guinet, ricercatore sicu_
-                                       rezza
-    https://twitter.com/MarceloRivero  Marcelo Rivero - ricercatore im_
+    https://x.com/netbiosX             NetbiosX, ricercatore sicurezza
+                                       per ambiente Windows.
+    https://x.com/KyleHanslovan        Kyle Hanslovan, analista malware
+    https://x.com/wdormann             Will Dormann, analista vulnerabi_
+	                                   lità.
+    https://x.com/adriengnt            Adrien Guinet, ricercatore sicu_
+                                       rezza.
+    https://x.com/MarceloRivero        Marcelo Rivero - ricercatore im_
                                        pegnato nel segnalare programmi
-                                       fraudolenti
-    https://twitter.com/binitamshah    Bini Tamshah - ricercatrice impe_
+                                       fraudolenti.
+    https://x.com/binitamshah          Bini Tamshah - ricercatrice impe_
                                        gnate nel divulgare informazioni,
                                        manuali per la sicurezza informa_
                                        tica, linguaggi di programmazio_
                                        ne, tecniche di penetrazione si_
                                        stemi.
 
-    https://twitter.com/Antelox        Antelox - ricercatore impegnato
+    https://x.com/Antelox              Antelox - ricercatore impegnato
                                        nel segnalare truffe, virus
-                                       recenti
-    https://twitter.com/hFireF0X       hFireF0X - ricercatore impegnato
+                                       recenti.
+    https://x.com/hFireF0X             hFireF0X - ricercatore impegnato
                                        nell'oltrepassare i controlli UAC
                                        del sistema operativo Windows
-    https://twitter.com/USCERT_gov     riporta maggiori incidenti di si_
+    https://x.com/USCERT_gov           riporta maggiori incidenti di si_
                                        curezza, analizza minacce, e con_
                                        divide informazioni del mondo
                                        cyber security.
-    https://twitter.com/GnuTLS         Aggiornamenti riguardo il proto_
-                                       collo sicuro TLS
-    https://twitter.com/ITGovernance   IT Governance (il portale di rife_
+    https://x.com/GnuTLS               Aggiornamenti riguardo il proto_
+                                       collo sicuro TLS.
+    https://x.com/ITGovernance         IT Governance (il portale di rife_
                                        rimento per le pratiche di sicu_
                                        rezza nelle organizzazioni azien_
-                                       dali e non)
-    https://twitter.com/Dinosn         Nicolas Krassas - ricercatore am_
+                                       dali e non).
+    https://x.com/Dinosn               Nicolas Krassas - ricercatore am_
                                        bito cyber-sicurezza.
+    https://x.com/mullvadnet           Un servizio VPN, pubblica anche
+                                       informazioni relative alla privacy
+                                       dati.
+    https://x.com/csirt_it             Account ufficiale del Computer
+                                       Security Incident Response Team.
+                                       Pubblica informazioni aggiornate
+                                       riguardo CVE e dati 0day.
+
+[rm27001-mr6flaws]                                           [Pagina 61]
+
+    https://x.com/therealshodan        Ricercatore, pubblica anche il co_
+                                       dice sorgente di uno strumento usb
+                                       utile per penetration test,
+                                       USB Army Knife.
+    https://x.com/3xp0rtblog           Ricercatore in virus e cyber-cri_
+                                       mine, rivolto a paesi dell'est
+                                       Europa.
+    https://x.com/abuse_ch             Team di sicurezza dedicato alla
+                                       lotta di reti botnet e virus.
+                                       Utile seguirlo, per essere aggior_
+                                       nati riguardo le operazioni di
+                                       blocco botnet.
 
     Iscrizione alle newsletter come garante della privacy
     https://www.m3aawg.org/ M3AAWG
@@ -3414,9 +3436,6 @@ Come verificare periodicamente i punti dello stato di applicabilità?
     Garante Privacy
     https://www.garanteprivacy.it/
 
-
-[rm27001-mr6flaws]                                           [Pagina 61]
-
     Sicurezza e Penetraion test
     https://diablohorn.com/
 
@@ -3452,23 +3471,4 @@ Come verificare periodicamente i punti dello stato di applicabilità?
     https://www.cesaregallotti.it/
     La risorsa più indicata per iniziare una valutazione del rischio,
     tramite una struttura di gestione valori già collaudata.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 [rm27001-mr6flaws]                                           [Pagina 62]
