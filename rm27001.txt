@@ -31,14 +31,15 @@ Indice
                                                              #protect --
      q) --> Cancellazione dati                               #protect 25
      r) --> Segregazione delle reti                          #protect 27
+
  04) Registrazioni ed accesso ai log di sistemi operativi     #detect 27
- 05) Procedure di emergenza (WIP solo per data breach)                28
+ 05) Procedure di emergenza                                           28
  06) Backup e ripristini                                     #recover 32
  07) Formazione security manager                    #protect #respond 34
      a) Formazione per il personale                 #protect #respond 34
      b) Regolamento per esterni fornitori/collaboratori               35
                                            #identify #protect #detect --
-     c) Valutzione e revisione dei fornitori/collaboratori            36
+     c) Valutazione e revisione dei fornitori/collaboratori           36
                                            #identify #protect #detect --
  08) Utilizzo apparecchiature/dispositivi degli ospiti       #protect 41
  09) Misure di protezione per lo stabile                     #protect 42
@@ -49,8 +50,7 @@ Indice
                                                    #identify #respond --
  13) Documento Business Continuity                           #recover 51
  14) Valutazione dei rischi               #identify #protect #respond 56
- 15) Dichiarazione di applicabilità (SoA)         #____????           58
-
+ 15) Dichiarazione di applicabilità (SoA)  #governance                58
 
 
 
@@ -146,17 +146,17 @@ dard che si trovano nella documentazione ISO/IEC ufficiale.
 Queste informazioni sono soggette a copyright del l'organizzazione
 "International Organization for Standardization" (01*1).
 
+Il termine data center usato nella guida, fa riferimento a stanze dove
+spesso risiedono unità di calcolo dati (processo denominato anche cloud
+computing).
+In alcune normative (vedi la NIS2, articolo 35), per data center si
+intendono strutture dove è possibile stanziare le unità di calcolo
+ma non si offre il servizio di calcolo. Quest'ultimo potrebbe predi_
+sporlo l'organizzazione che decide di attivare le unità di calcolo.
 
-
-
-
-
-
-
-
-
-
-
+Qui ho preferito utilizzare il termine data center, anche per le piccole
+organizzazioni, che mantengono unità di calcolo attive in una stanza
+di piccole o medie dimensioni.
 
 
 
@@ -251,30 +251,30 @@ Tabella 02#T
 
 
 Un'altro aspetto fondamentale riguarda il trattamento dei dati del_
-l'organizzazione in paesi fuori dal territorio europeo (questa guida 
+l'organizzazione in paesi fuori dal territorio europeo. Questa guida 
 è stata scritta con riferimento ad un'organizzazione che opera nel
-territorio italiano).
-Vi sono dei casi in cui non è possibile mantenere i dati nello stesso
-edificio dell'organizzazione.
-Per varie ragioni, dalla copia dati mantenuta in un luogo diverso ris_
-petto la sede operativa (scongiurare la perdita per via di un disastro),
-all'evitare attacchi di disturbo mirati a fermare la continuità di dis_
-tribuzione di uno o più servizi.
-Risulta più flessibile esportare i dati anche fuori dalla comunità eu_
-ropea, in paesi che offrono aree protette da vari tipi di attacco
-informatico o disastri naturali (alluvioni, pericolo di incendi,
+territorio italiano.
+Esistono casi in cui non è possibile mantenere i dati nella sede ope_
+rativa o data center dell'organizzazione. Ad esempio,
+Per varie ragioni, dalla copia dati mantenuta in un luogo diverso ri_
+spetto la sede operativa (evitare la perdita in caso di disastro),
+a schicare attacchi di disturbo mirati a fermare la continuità di di_
+stribuzione di uno o più servizi.
+Risulta quindi più flessibile esportare i dati anche fuori dalla comu_
+nità europea, in paesi che offrono aree protette da vari tipi di at_
+tacco informatico o disastri naturali (alluvioni, pericolo di incendi,
 terromoti).
 E' necessario prima di "trasportare" il dato, verificare se il pease
-extra comunitario che lo ospiterà, sarà compreso nella lista dis_
-ponibile in questa pagina del Garante della Privacy (02*1).
-Nel giorno di aggiornamento della guida, la pagina con l'elenco dei
-paesi disponibili a ospitaare i dati risulta non disponibile.
-Appena disponibile sarà incluso in un aggiornamento, la conferma se le
-autorizzazioni nazionali sinora emesse dal Garante, saranno ancora
-valide.
+extra comunitario che lo ospiterà, sarà compreso nella lista di_
+sponibile in questa pagina del Garante della Privacy (02*1).
+Nota bene, questa informazione è quella raccolta nei principali rila_
+sci della guida RM27001. Potrebbe variare, e potrebbe nei vari rilasci
+essere aggiornata.
 
 Tutti gli asset raccolti, andranno poi riportati nel General Manual
-(SGSI). Di seguito la sezione dedicata ad esso.
+(SGSI). Di seguito la sezione dedicata ad esso (02a).
+
+
 
 
 
@@ -283,21 +283,20 @@ Tutti gli asset raccolti, andranno poi riportati nel General Manual
 
 02a) General Manual (SGSI) e Decalogo (#identify #protect)
 
-Si tratta del documento timone, principale, che raccoglie diverse proce_
-dure ed informazioni del modo in cui l'organizzazione interverrà nel
-trattamento dati, ma anche di fronte a situazioni di prevenzione, peri_
-colo, o emergenza, compreso l'elenco delle procedure base.
-Gli argomenti del general manual sono parecchi, il Security Manager sa_
-rà con la Direzione dell'organizzazione, una delle poche persone nel_
-che potrà stendere i vari punti, mentre altri collaboratori, saranno a
+Si tratta del documento principale, che raccoglie diverse procedure
+ed informazioni che descrivono il modo in cui l'organizzazione interverrà
+nel trattamento dati, istruzioni richieste dai controlli dello standard,
+anche di fronte a situazioni di prevenzione, pericolo, o emergenza.
+Gli argomenti del General Manual possono essere molteplici, il Security
+Manager sarà con la Direzione dell'organizzazione, una delle persone
+che stendere i vari punti, mentre altri collaboratori, saranno a
 conoscenza di questo documento, e potranno consultarlo.
 
-Di seguito sono elencati alcuni punti di un possibile "General Manual".
-Un consulente potrebbe inserirne altri a seconda del tipo di dati, im_
-pianti di memorizzazione e trattamento, utilizzati dall'organizzazione.
+Di seguito sono elencati alcuni punti del possibile "General Manual".
+Si potrebbero inserirne anche altri a seconda del tipo di dati, impianti
+di memorizzazione e trattamento, utilizzati dall'organizzazione.
 
-GLOSSARIO (serie di termini usato nel manuale, è possibile già trovarlo
-precompilato)
+GLOSSARIO (serie di termini usati nel manuale)
 CLASSIFICAZIONE DELLE INFORMAZIONI (in parte precompilato, per il re_
 sto dovremo inserire i nostri asset)
 DIRITTI DEGLI INTERESSATI (è possibile già trovarlo precompilato)
@@ -306,29 +305,30 @@ sibile già trovarlo precompilato)
 L'informativa (è possibile già trovarlo precompilato)
 Il consenso (è possibile già trovarlo precompilato)
 
-Esempio di informativa per clienti ed utenti (è possibile già trovarlo
-precompilato)
+Esempio di informativa per clienti ed utenti
+
+REGOLE GENERALI PER IL TRATTAMENTO DEI DATI TRASFERIMENTO ALL’ESTERO
+DI DATI.
+* RESPONSABILITA’ DEL TITOLARE (o Responsabile interno)
+Trattamenti svolti presso organizzazioni/enti esterni o da collabo_
+ratori esterni.
+Nomina e contrattutaliazione di un responsabile.
+
+DPO – DATA PROTECTION OFFICER (sarà necessario spedificiare
+  l'indirizzo email del Data Protection Officer interno)
+SECURITY MANAGER
+AMMINISTRATORI DI SISTEMA
+Incaricati (Individuazione degli incaricati)
+
+Esempio di lettera di nomina ad incaricato
 
 
-REGOLE GENERALI PER IL TRATTAMENTO DEI DATI (è possibile già trovarlo
-precompilato)
-TRASFERIMENTO ALL’ESTERO DI DATI (è possibile già trovarlo precompilato)
-* RESPONSABILITA’
-del Titolare (è possibile già trovarlo precompilato)
-del Responsabile interno (è possibile già trovarlo precompilato)
-Trattamenti svolti presso organizzazioni/enti esterni o da collaboratori
-esterni (è possibile già trovarlo precompilato)
-Nomina e contrattutaliazione di un responsabile (è possibile già trovar_
-lo precompilato)
-DPO – DATA PROTECTION OFFICER (è possibile già trovarlo precompilato,
-  sarà necessario spedificiare l'indirizzo email del nostro DPO
-  interno)
-SECURITY MANAGER (è possibile già trovarlo precompilato)
-AMMINISTRATORI DI SISTEMA (è possibile già trovarlo precompilato)
-Incaricati (è possibile già trovarlo precompilato)
-Individuazione degli incaricati (è possibile già trovarlo precompilato)
-Esempio di lettera di nomina ad incaricato (è possibile già trovarlo
-precompilato)
+
+
+
+
+
+
 
 
 
@@ -337,54 +337,54 @@ precompilato)
 
 [rm27001-mr6flaws]                                            [Pagina 6]
 
-Responsabilità dei singoli – SEGNALAZIONE DEI PUNTI DI DEBOLEZZA (è pos_
-sibile già trovarlo precompilato, la procedura è da compilare)
-Responsabilità del management (è possibile già trovarlo precompilato)
-LA FORMAZIONE (è possibile già trovarlo precompilato)
+Responsabilità dei singoli
+  – Segnalazione dei punti di debolezza
+  - Responsabilità del management
 
-DATA BREACH – VIOLAZIONE DI DATI (è possibile già trovarlo precompilato,
-    serve comunque una procedura abbastanza dettagliata, da mantenere
+LA FORMAZIONE
+
+DATA BREACH – VIOLAZIONE DI DATI (
+    è possibile mantenere una istruzione abbastanza dettagliata,
     come allegato rispetto al General Manual)
-PROCEDURA PER SEGNALARE UN DANNEGGIAMENTO DEI DATI (necessario compilarla)
-PROCEDURA IN CASO DI DIFFUSIONE INVOLONTARIA DATI WEB (necessario com_
-pilarla)
-PRASSI DA RISPETTARE IN GENERALE NEL TRATTAMENTO DEI DATI (è possibile
-già trovarlo precompilato)
-PRASSI DA RISPETTARE NEL TRATTAMENTO CON STRUMENTI ELETTRONICI (è pos_
-sibile già trovarlo precompilato)
-Uso/gestione del sito internet (è possibile già trovarlo precompilato)
+PROCEDURA PER SEGNALARE UN DANNEGGIAMENTO DEI DATI
+PROCEDURA IN CASO DI DIFFUSIONE INVOLONTARIA DATI WEB
+
+PRASSI DA RISPETTARE IN GENERALE NEL TRATTAMENTO DEI DATI
+
+PRASSI DA RISPETTARE NEL TRATTAMENTO CON STRUMENTI ELETTRONICI
+
+USO/GESTIONE DEL SITO INTERNET
 POLITICA DI CONTROLLO DEGLI ACCESSI - Codice identificativo dell’incari_
 cato
 POLITICA DI CONTROLLO DEGLI ACCESSI - Gestione delle password di accesso
-(in parte precompilato, il resto dovremo inserire le parti che riguardano
-la nostra organizzazione)
-POLITICA DI CONTROLLO ACCESSI - PROCEDURA PER CREAZIONE, REVOCA O MODIFI_
-CA ACCESSI UTENTE (procedura da compilare)
+
+POLITICA DI CONTROLLO ACCESSI - PROCEDURA PER CREAZIONE, REVOCA O
+MODIFICA ACCESSI UTENTE.
 PROCEDURA PER GESTIRE SOFTWARE CHE SONO IN GRADO DI SUPERARE CONTROLLI
-(procedura da compilare)
-Gestione dell’hardware (è possibile già trovarlo precompilato)
+
+Gestione dell’hardware
 Antivirus (in parte da compilare, seguendo le parti che riguardano la
 l'organizzazione da certificare)
-Manutenzione (in parte da compilare, seguendo le parti che riguardano
-l'organizzazione da certificare)
-Connessioni remote (in parte da compilare, seguendo le parti che riguar_
-dano l'organizzazione da certificare)
-Uso improprio degli asset aziendali (in parte da compilare, seguendo le
-parti che riguardano l'organizzazione da certificare)
-Uso dei dispositivi personali (in parte da compilare, seguendo le parti
-che riguardano l'organizzazione da certificare)
+Manutenzione degli strumenti che trattano dati o sono collegati al
+trattamento.
+Connessioni remote
+
+Uso improprio degli asset aziendali
+
+Uso dei dispositivi personali
+
 RICHIESTA DI ASSEGNAZIONE DEVICE A DIPENDENTE O A COLLABORATORE ESTERNO
-(in parte da compilare, seguendo le parti che riguardano l'organizzazio_
-ne da certificare)
-Utilizzo dei supporti di memorizzazione (in parte da compilare, seguendo
-le parti che riguardano la nostra organizzazione)
-PROCEDURA IN CASO DI FURTO DI MATERIALE ASSEGNATO (procedura da compila_
-re)
-Policy interna sull’uso di internet e della posta elettronica (testo
-precompilato)
-Internet (testo precompilato)
-Utilizzo reti wifi (se sono presenti all'interno dell'organizzazione,
-testo precompilato)
+
+
+Utilizzo dei supporti di memorizzazione
+
+PROCEDURA IN CASO DI FURTO DI MATERIALE ASSEGNATO
+
+Policy interna sull’uso di internet e della posta elettronica,
+Internet, utilizzo reti wifi (se sono presenti all'interno dell'organiz_
+zazione).
+
+
 
 
 
@@ -394,56 +394,56 @@ testo precompilato)
 [rm27001-mr6flaws]                                            [Pagina 7]
 
 
-Posta elettronica (testo precompilato)
-Diritto d’autore e proprietà intellettuale (testo precompilato)
-Protezione delle informazioni private e confidenziali (testo
-precompilato)
-Modalità di esecuzione dei controlli (testo precompilato)
+Posta elettronica
+Diritto d’autore e proprietà intellettuale
+Protezione delle informazioni private e confidenziali
+
+Modalità di esecuzione dei controlli
 
 PROCEDIMENTI DISCIPLINARI PREVISTI IN CASO DI MANCATO RISPETTO DELLA RE_
-GOLAMENTAZIONE INTERNA
-O DI VIOLAZIONI DELLA SICUREZZA DELLE INFORMAZIONI (testo precompilato)
+GOLAMENTAZIONE INTERNA O DI VIOLAZIONI DELLA SICUREZZA DELLE INFORMAZIONI
+
 
 STRUMENTI PER RENDERE LA PRESTAZIONE LAVORATIVA E STRUMENTI DI CONTROLLO
-(testo precompilato)
+
 Modalità di esecuzione dei backup e test degli stessi (testo da compila_
 re, a seconda di come saranno eseguiti questi controlli nell'organizza_
 zione)
 PRASSI DA RISPETTARE NEL TRATTAMENTO DEI DATI CON STRUMENTI FISICI E NON
-ELETTRONICI (testo precompilato)
-SICUREZZA FISICA DELL’EDIFICIO (testo parzialmente precompilato, è nece_
-ssario inserire delle parti se all'interno dell'organizzazione esiste un
-datacenter o aree di stoccaggio trattamento dati)
-CLASSIFICAZIONE DELLE AREE E PERIMETRO DI SICUREZZA (testo precompilato,
-potrebbe essere necessario variarlo o inserire della parti)
-PROCEDURA DI EMERGENZA PER SVILUPPO INCENDI (procedura da compilare)
+ELETTRONICI
+SICUREZZA FISICA DELL’EDIFICIO (è necessario inserire delle parti se
+all'interno dell'organizzazione esiste un data center o aree di stoccaggio
+trattamento dati)
+CLASSIFICAZIONE DELLE AREE E PERIMETRO DI SICUREZZA
 
-ESECUZIONE DI ATTIVITA’ DI TELEMARKETING (testo precompilato)
+PROCEDURA DI EMERGENZA PER SVILUPPO INCENDI
+
+ESECUZIONE DI ATTIVITA’ DI TELEMARKETING
 CLAUSOLA DI RISERVATEZZA DA INSERIRE NEI CONTRATTI CON I FORNITORI/COL_
-LABORATORI (testo precompilato)
-RICHIAMO ALLA NORMATIVA PRIVACY DA INSERIRE NEI CONTRATTI (testo precom_
-pilato)
-AFFIDAMENTO DI UN SERVIZIO AD UN FORNITORE ESTERNO (testo precompilato)
-PUBBLICAZIONE ANNUNCI DI RICERCA PERSONALE (testo precompilato)
-GESTIONE DEI CURRICULA VITAE (testo precompilato)
-UTILIZZO DEI DEVICE AZIENDALI (testo precompilato)
-AZIONI COMMERCIALI (testo precompilato)
-LISTE DI DISTRIBUZIONE (testo precompilato)
-RICHIESTE DEGLI INTERESSATI (testo precompilato)
-USO DEI SOCIAL NETWORK (testo precompilato)
-PROCEDURE SPECIFICHE PER ATTIVITA’ SU CLIENTI (testo precompilato)
-PROCEDURA PER RECUPERO PASSWORD CLIENTE (testo precompilato)
-PROCEDURA PER INTERVENTO PRESSO MACCHINA CLIENTE (testo precompilato)
-MONITORAGGIO E PRESTAZIONI RISORSE (procedura da scrivere a seconda del
-tipo di organizzazione)
-SVILUPPO DI SOFTWARE (possibile procedura da scrivere a seconda del tipo
-di organizzazione)
-PRINCIPI PER L’INGEGNERIZZAZIONE DI SISTEMI SICURI (procedura da scri_
-vere a seconda del tipo di organizzazione)
-PRINCIPI PER LA GESTIONE DEI CAMBIAMENTI (procedura da scrivere a secon_
-da del tipo di organizzazione)
-MODALITA’ DI TRASFERIMENTO DELLE INFORMAZIONI (procedura da scrivere a
-seconda del tipo di organizzazione)
+LABORATORI
+RICHIAMO ALLA NORMATIVA PRIVACY DA INSERIRE NEI CONTRATTI
+AFFIDAMENTO DI UN SERVIZIO AD UN FORNITORE ESTERNO
+PUBBLICAZIONE ANNUNCI DI RICERCA PERSONALE
+GESTIONE DEI CURRICULA VITAE
+UTILIZZO DEI DEVICE AZIENDALI
+AZIONI COMMERCIALI
+LISTE DI DISTRIBUZIONE
+RICHIESTE DEGLI INTERESSATI
+USO DEI SOCIAL NETWORK
+PROCEDURE SPECIFICHE PER ATTIVITA’ SU CLIENTI
+PROCEDURA PER RECUPERO PASSWORD CLIENTE
+PROCEDURA PER INTERVENTO PRESSO MACCHINA CLIENTE
+MONITORAGGIO E PRESTAZIONI RISORSE
+
+SVILUPPO DI SOFTWARE (se viene effettuato all'interno dell'or_
+ganizzazione)
+PRINCIPI PER L’INGEGNERIZZAZIONE DI SISTEMI SICURI (se viene effettuato
+all'interno dell'organizzazione)
+PRINCIPI PER LA GESTIONE DEI CAMBIAMENTI
+
+MODALITA’ DI TRASFERIMENTO DELLE INFORMAZIONI (nel caso esista anche
+la remota possibilità di trasferire informazioni ad altre parti inter_
+ressate).
 
 
 
@@ -486,14 +486,14 @@ Di seguito l'esempio regole del decalogo.
   https://nome.sito/ (*02n1*)
 - 10) La casella elettronica dall’esterno degli uffici [NOME_ORGANIZZA_
   ZIONE] può essere consultata in modalità di sola lettura, tramite il
-  pannello webmail (specificare l'indirizzo URL del pannello)
+  computer fornito dall'organizzazione.
 
 (*02n1*) le regole per la gestione e l'intervallo di cambio password è
 preferibile riportarle in una pagina dedicata del sito internet del_
 l'organizzazione, che possa essere utilizzato anche da parti interes_
 sate.
 Per maggiore informazioni del testo che dovremo includere della pagina,
-potete consultare il punto 03o della guida.
+potete consultare il punto "03o" della guida.
 
 
 03) Richieste preliminari
@@ -669,12 +669,12 @@ che prevede facilmente l'attivazione della criptatura dati.
 
 Per i dispositivi server (fisici) già presenti, che non possono essere
 criptati (perchè l'attuale sistema operativo, non supporta la cripta_
-tura), e sono allocati in un datacenter di proprietà dell'organizazione,
+tura), e sono allocati nel data center di proprietà dell'organizazione
 è possibile vlutare se accettare il rischio, come sopra descritto.
 [rm27001-mr6flaws]                                           [Pagina 12]
 
 Scriveremo nelle procedure dedicate o nel general manual, che i dati so_
-no custoditi in un datacenter, cui l'ingresso ad esso è monitorato (ac_
+no custoditi in un data center, cui l'ingresso ad esso è monitorato (ac_
 cesso dedicato solo a personale autorizzato).
 
 03c) Gestione unificata ed antivirus (#detect #protect)
@@ -691,7 +691,7 @@ tificazione ISO/IEC 27001, usano già computer e dispositivi mobili con
 installato software di vario tipo.
 Ad esempio, Adobe Photoshop, Microsoft Office, programmi gestionali,
 servizi postali come Exchange, Mdaemon, oppure software di progettazione
-come Autocad.
+come Autocad, LibreCad.
 
 Il mio consiglio è quindi seguire una di queste due possibili scelte di
 catalogo.
@@ -719,9 +719,9 @@ Dovremo quindi raccogliere le informazioni generate da ogni computer e
 riportarle nel registro elettronico, con l'ulteriore operazione pianifi_
 cata di scansionare i computer e dispositivi ad intervalli regolari
 (ogni due mesi circa).
-Questa scelta richiede del tempo in definitiva.
-
-
+Questa scelta richiede più tempo nel mantenimento a lungo termine,
+inoltre nn è possibile in poco tempo o quasi reale, conoscere quali
+software sono attivi, e le possibili vulnerabilità legati ad essi.
 
 
 
@@ -733,9 +733,9 @@ Questa scelta richiede del tempo in definitiva.
 Il programma di gestione unificata nella maggior parte dei casi riesce
 a gestire il trattamento dei supporti rimovibili.
 Ogni computer controllato dal programma di gestione non potrà utilizzare
-liberamente un supporto rimovibile come una chiavetta USB.
+liberamente un supporto rimovibile come una chiavetta o disco USB.
 L'amministratore di sistema dovrà quindi abilitare il seriale del dispo_
-sitivo rimovibile all'interno del software di gestione, precisameten nel
+sitivo rimovibile all'interno del software di gestione, precisamente nel
 catalogo dei dispositivi.
 
 Terminata questa procedura, l'amministratore dovrà scansionare il sup_
@@ -746,12 +746,14 @@ po di richiesta purché tracciabile).
 
 
 La parte Antivirus.
-Quasi ogni impresa utilizza computer con installato un software antivirus.
-E' bene verificare che tutti i computer ne abbiamo uno licenziato.
-Vivo consiglio, evitate di installare antivirus gratuiti.
-Gli aggiornamenti rilasciati dai gestori sono molto lenti, e secondo as_
-petto, nell'audit viene richiesto un antivirus abbastanza efficace.
-Quello che forse non vi aspettavate, riguarda la parte degli smarthphone.
+Quasi ogni organizzazione utilizza computer con installato un software
+antivirus.
+E' bene verificare che tutti i computer ne abbiamo uno licenziato,
+evitare licenze di tipo gratuite.
+Gli aggiornamenti rilasciati dai gestori gratutiti sono rilasciati poche
+volte durante la giornata operativa, e secondo aspetto, nell'audit viene
+verificato un antivirus abbastanza efficace.
+Una nota di riguardo per i dispositivi smarthphone/mobile.
 Escludendo prodotti Apple come Iphone ed Ipad (potrebbero non essere di_
 sponibili antivirus per essi), ogni altro dispositivo mobile deve essere
 scansionato in tempo reale da un programma antivirus.
@@ -762,8 +764,8 @@ Il consiglio è di eseguire codice javascript o di altro tipo, solo nei
 documenti di origine "fidata" (ovvero scritti da un collega o da un
 fornitore conosciuto).
 Esiste anche la possibilità di disabilitare ogni tipo di esecuzione au_
-tomatica di codice, ma a volte non permette di visionare il contenuto
-del documento.
+tomatica di codice, ma a volte non permette di operare con il contenuto
+del documento, oppure semplicemente visualizzarlo.
 La normativa ci invita a non aprire il file sospetto ed inatteso.
 Procedere con quest'ultima scelta di fronte a casi di dubbio.
 
@@ -778,8 +780,6 @@ italiane.
 questi sistemi operativi gestiti da Microsoft sono rilasciati anche
 dopo la scoperta di una vulnerabilità, ormai diventata di pubblico
 dominio.
-
-
 
 
 
@@ -830,7 +830,7 @@ riportate alcune più utilizzate.
 
 --> Ubuntu - vale la descrizione della distribuzione Debian.
 --> Fedora - vale la descrizione della distribuzione Debian.
---> CentOS - il supporto per la versione 7 terminerà nell'anno 2024.
+--> CentOS - il supporto per la versione 7 è terminato nell'anno 2024.
 --> Almalinux - il progetto prende il posto della versione CentOS 7/8
 --> Rocky Linux - il progetto prende il posto della versione CentOS 7/8.
     E' possibile avviare uno script nelle versioni CentOS 8, in modo da
@@ -907,9 +907,8 @@ nire, mantenendo attivo il collegamento VPN.
 Stessa valutazione per le aree locali dove vi sono cicli di elabora_
 zione o stocaggio di dati per ventiquattro ore.
 Apparati come switch che mantengono attive queste aree, dovranno esse_
-re configurati in modalità alta affidabilità
-(lato economico, quest'ultima soluzione richiede delle risorse a volte
-cospicue).
+re configurati in modalità alta affidabilità (lato economico, que_
+st'ultima soluzione richiede delle risorse a volte cospicue).
 
 03f) Telelavoro (#protect)
 
@@ -950,6 +949,7 @@ ferie o attività di lavoro fuori sede o altro motivo ancora)
 al fine di garantire la continuità lavorativa può rendersi necessario
 accedere alla casella di posta elettronica in uso al dipendente stesso
 per inviare e ricevere messaggi.
+
 
 [rm27001-mr6flaws]                                           [Pagina 17]
 
@@ -1013,7 +1013,7 @@ un asset molto ampio per quanto riguarda la condivisione dei dati.
 
 Si tratta di una figura che tutte le organizzazioni, dalle piccole alle
 grandi, oggi dovrebbe già aver nominato. In caso contrario, è necessario
-quanto prima procedere.
+quanto prima procedere con la nomina.
 
 Viene qui riportato un esempio del modolo di presa in carico. In esso sa_
 ranno elencate determinate attività assegnate per amministratore, ne
@@ -1141,12 +1141,12 @@ Per questo punto è necessario una premessa. All'interno dell'organizza_
 zione dovrebbe essere operativo il gestore delle risorse umane.
 Ruolo che in molti casi è anche mantenuto dal responsabile dell'organiz_
 zazione.
-Scrivo questo perchè il Security Manger riceverà richieste di creazione,
+Scrivo questo perchè il Security Manager riceverà richieste di creazione,
 modifica o revoca permessi utente da gruppi diversi dal suo.
 Inoltre queste operazioni sugli utenti, sono spesso completate dal_
 l'amministratore di sistema, se il Security Manager non partecipa diret_
 tamente alle operazioni sopra elencate.
-La procedura da inserire nel General Manual (o da mantenere scritta ed
+L'istruzione da inserire nel General Manual (o da mantenere scritta ed
 operativa solo come riferimento se il nostro scopo non è ottenere
 la certificazione), è molto semplice.
 Essa ci permetterà anche di tracciare le operazioni sui tutti gli
@@ -1235,10 +1235,11 @@ Maggiori informazioni sono descritte nel punto 03a.
 
 03m) Blocco terminali (#protect)
 
-Può sembra un semplice livello di sicurezza, a volte è tralasciato o
+Può sembra un semplice controllo di sicurezza, a volte è tralasciato o
 ignorato nelle organizzazioni.
 Ogni utente dovrebbe quando si allontana dalla propria postazione, bloc_
-care con la combinazione di tasti CTRL+ALT+CANC il proprio computer.
+care con la combinazione di tasti CTRL+ALT+CANC il proprio computer
+(se Windows/Linux), oppure CTRL+CMD+Q se MAC.
 Spesso il personale si allonta dalla postazione lasciando il desktop
 del computer al libero accesso, e chiunque potrebbe utilizzarlo.
 Un aiuto, per ridurre il rischio di intrusione, sarà il salva schermo.
@@ -1250,9 +1251,8 @@ Mentre per i telefoni cellulari (smartphone e non), dovrà essere impo_
 stato un blocco a livello PIN numerico.
 La tecnologia di oggi giorno permette anche di impostare lo sblocco via
 impronta digitale.
-Il Securiy Manager dovrà verificare con regolari controlli a campione,
+Il Securiy Manager verificherà con regolari controlli a campione,
 che il codice PIN a livello controllo numerico sia presente.
-
 
 03o) Gestione password (#protect)
 Un punto abbastanza semplice che ci permetterà di essere conforme
@@ -1534,7 +1534,7 @@ di stoccaggio.
 
 Tabella 04#T
 +-----------------------------------------------------------+---------+
-| Dato di dominio pubblico (nessun danno economico/immagine | 1  anno |
+| Dato di dominio pubblico (nessun danno economico/immagine | 1 anno  |
 | se trafugati)                                             |         |
 +-----------------------------------------------------------+---------+
 | Dato di dominio pubblico (danni economici o d'immagini    | 5 anni  |
@@ -1543,9 +1543,9 @@ Tabella 04#T
 | Dato sensibile (abbiamo sottoscritto un contratto         |         |
 | con una pubblica amministrazione/ente statale)            | 5 anni  |
 +-----------------------------------------------------------+---------+
-| Dato sensibile legato a persona fisiche                   | 5  anni |
+| Dato sensibile legato a persona fisiche                   | 5 anni  |
 +-----------------------------------------------------------+---------+
-| Dati di chiamate telefoniche (sorgente/destinazione)      | 7  anni |
+| Dati di chiamate telefoniche (sorgente/destinazione)      | 7 anni  |
 +-----------------------------------------------------------+---------+
 
 Aggiornamento disciplina nazionale. Trovate al riferimento (04*2) un
@@ -1583,9 +1583,9 @@ generale.
                             | azione |
                             `--------'
 
-Elencherò alcune di queste possibili procedure,
+Elencherò alcune di queste possibili procedure.
 
-- dati danneggiati
+- Dati danneggiati
 --> durante un'attività di aggiornamento di sistema operativo, o aggior_
 namento applicazione, abbiamo involontariamente perso dei dati.
 In questo caso l'utente che ha avviato la procedura e ha rilevato la
@@ -1595,7 +1595,7 @@ L'amministratore dovrà quindi dare il via al ripristino dei dati persi,
 e descrivere possibili problemi riscontrati durante la fase di recupero
 dati.
 
-- incendio
+- Incendio
 evento raro in ufficio, nella mia esperienza l'ho visto accadere per
 via di un corto circuito solo una volta in venti anni di lavoro.
 Dopo questo evento, il collaboratore dell'organizzazione quando tornerò
@@ -1609,7 +1609,7 @@ Se queste apparecchiature (o parti di esse, come un disco interno) sono
 in uno degli stati sopra descritti, la procedura descriverà come apri_
 re all'interno dell'organizzazione la segnalazione.
 
-- furto/perdita accidentale
+- Furto/perdita accidentale
 evento che può verificarsi con maggior probabilità. Ipotizziamo una
 situazione come l'aver lasciato in automobile, con le porte chiuse,
 un computer portatile o un altro dispositivo di memorizzazione del_
@@ -1625,7 +1625,7 @@ visati, potranno procedere al ripristino del dispositivo tramite
 un muletto o nuovo strumento.
 [rm27001-mr6flaws]                                           [Pagina 29]
 
-- email richiesta riscatto
+- Email richiesta riscatto
 Negli ultimi anni organizzazioni criminali hanno costruito dei soft_
 ware illegali distribuiti senza permesso nei computer di ignari utenti.
 Ad una certa data i software vengono attivati da chi li controlla, allo
@@ -1647,7 +1647,7 @@ bile, è consigliabile scrivere nella procedura di staccare il cavo di
 rete da questo apparecchio, non utilizzarlo ed utilizzare un altro ter_
 minale per l'avvio della procedura.
 
-- diffusione involontaria dei dati
+- Diffusione involontaria dei dati
 Evento la cui probabilità di manifestarsi è alta. Un errore umano
 potrebbe agevolare l'utente
 (senza volerlo) a pubblicare dei dati che risultano privati, e non pos_
@@ -1665,11 +1665,11 @@ La procedura dovrà comunicare all'utente che si è accorto dell'errata
 divulgazione dati, di aprire una richiesta tracciabile, in modo che il
 securiy manager dell'organizzazione possa intervenire.
 
-- procedura monitor risorse
-Ogni sistema operativo dell'organizzazione dovrà essere controllato
-attraverso processi monitor.
-Vengono quindi verificati i valori di consumo RAM, calcolo CPU, spazio
-libero nelle partizioni, ed altri livelli da sorvegliare.
+- Procedura controllo risorse
+Ogni sistema operativo critico dell'organizzazione dovrà essere
+controllato attraverso processi di monitoraggio.
+Vengono quindi verificati i valori di consumo memoria RAM, calcolo CPU,
+spazio libero nelle partizioni, ed altri livelli da sorvegliare.
 All'arrivo di una segnalazione (tramite email per esempio), sarà neces_
 sario valutare se si è verificata anche un'anomalia nel sistema
 operativo dettagliato.
@@ -1681,7 +1681,7 @@ ad un esaurimento di una risorsa, e nel caso predisporre un ampliamento.
 
 [rm27001-mr6flaws]                                           [Pagina 30]
 
-- richiesta installazione nuovo software da parte di un membro del_
+- Richiesta installazione nuovo software da parte di un membro del_
 l'organizzazione.
 Una delle procedure che saranno molto utilizzate. I membri o dipendenti
 dovranno abituarsi ad utilizzarla.
@@ -1706,12 +1706,12 @@ accurata i programmi richiesti, e nel caso prendere contatto con i for_
 nitori del software, al fine di chiarire ogni aspetto riguardo la sicu_
 rezza richiesta dalla normativa.
 
-- procedura di rilevazione Data Breach
-Se mantenete dati di terze parti nei vostri archivi digitali, come dati
-personali, il consulente dovrà aiutarvi nello stendere quest'ultima.
+- Procedura per la gestione di un Data Breach
+Se mantenete dati personali di titolari nei vostri archivi digitali,
+è necessario stendere la procedura in oggetto.
 
-Scopo della procedura è quello di definire le modalità e le responsabi_
-lità per il corretto adempimento dell’obbligo di notifica al "Garante
+Scopo di essa è quello di definire le modalità e le responsabilità per
+il corretto adempimento dell’obbligo di notifica al "Garante
 privacy" ed eventuale comunicazione agli interessati di violazioni di
 dati personali.
 Le prescrizioni contenute nella presente procedura discendono da norma_
@@ -2366,7 +2366,7 @@ so l'impianto e se vi sono del problemi (come file elettrici fuori po_
 sto), anzichè riportarli come problema, potrebbe "gestirli".
 
 Per mantenere la continuità dei servizi offerti dall'organizzazione, la
-quale mantiene un datacenter, lo stabile dovrà essere sottoposto ad una
+quale mantiene un data center, lo stabile dovrà essere sottoposto ad una
 perizia di rischio fulminazione (diretta o indiretta).
 Prima di affrontare la valutazione (quasi sempre effettuata da un pe_
 rito professionista) è vivamente raccomandato chiedere il consenso di
@@ -3251,53 +3251,53 @@ completamento.
 
 15) Dichiarazione di applicabilità
 
-In questo capitolo finale, verranno trattati tutti i controlli della
-ISO/IEC 27002. Nei precedenti capitoli della guida sono stati trattati
-requisiti, e preparazioni____ utili a rispondere ai controlli tecnici
-della norma. Importante è tenere sempre in considerazione che non è ri_
-chiesto completare tutti i punti, vi è sempre la possibilità di esclu_
-denrne alcuni, motivando il perchè, sulla base di reali necessità.
+In questo capitolo finale, è spiegato come preparare la dichiarazione,
+che altro non è che la lista dei controlli richiesti dal formato 2022,
+oggi giorno richiesto.
+Nei precedenti capitoli della guida sono stati trattati requisiti, e
+metodi di sviluppo utili a rispondere ai controlli tecnici della norma.
+Importante è tenere sempre in considerazione che non è richiesto comple_
+tare tutti i punti, vi è sempre la possibilità di escluderne alcuni,
+motivando il perchè, sulla base di reali necessità.
 Vi sono software in grado di mantenere aggiornato e rendere disponibile
 l'elenco dei controlli; in caso non abbiamo a disposizione uno di que_
 st'ultimi, possiamo mantenere l'elenco completo in un foglio di calcolo
-o altro tipo di documento facile da utilizzare.
+o altro tipo di formato facile da consultare.
 Riporterò qui un esempio di una tabella da cui si può mantenere l'elenco
 dei controlli.
 
-.----+---------------+---------------+-----------.
-| NN | descrizione   | svolgimento   | documento |
-+----+---------------+---------------+-----------+
+.----+---------------+---------------+-------------+--------------.
+| NN | Descrizione   | Svolgimento   | Riferimento | Applicato?   |
+|    | controllo     | controllo     | documento   | Sì / No      |
++----+---------------+---------------+-------------+--------------+
 
-Informare che la lista deve essere pronta per il giorno di stage 1
+Per essere semplice da consultare, sia per noi che la scriviamo, che
+per l'auditor, è consigliabile mantenere il metodo descritto nella ta_
+bella. Avere sempre a portare di mano il numero di riferimento e la
+stesso descrizione del controllo, aiuta sopratutto nelle sessioni di
+audit, che nella verifica interta dell'intero documento.
+Altro aspetto da non dimenticare, sono i riferimenti documentali. Il
+consiglio è di mantenere per la maggior parte dei controlli, la docu_
+mentazione o l'istruzione, che descrive e completa lo svolgimento del
+controllo stesso.
 
-Consigli utili per alcuni punti???
-
-Descrivere l'importanza del sistema documentale, quindi inserire il codi_
-ce univoco del documento nel campo. In questo modo sarà semplice trovare
-il documenti, se l'auditor chiederà di visionarlo.
-
-INSERIRE QUI LO SCADENZIARIO?
-
-Come verificare periodicamente i punti dello stato di applicabilità?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Con l'avvento del formato 2022 dell'allegato ANNEX della ISO/IEC 27001
+chi aveva già sviluppato i controlli del formato 2013, si trova nella
+situazione di riaddarli, se non riscriverli per il nuovo formato. Inol_
+tre, il formato 2022, ha circa dieci nuovi controlli da sviluppare.
+L'allegato annex del formato 2022, contiene una tabella di mappatura
+dei vecchi controlli, rapportati a quelli nuovi. Questa mappatura aiuta
+certamente ad evitare errori di sviluppo seguendo il nuovo formato.
+L'aspetto a cui fare molta attenzione, riguarda le ISO/IEC 27017 e
+27018. Esse saranno ricostruite ed adattate al nuovo formato 2022, nel
+corso dell'anno 2025. Nell'attesa, è necessario mappare anche i punti
+di queste due norme, con il formato 2022.
+Nel foglio di calcolo, è consigliabile creare un foglio dedicato a que_
+sta mappatura, verificando uno ad uno i controlli per le norme dei ser_
+vizi in cloud (27017) e privacy dei dati (27018). Alcuni di questi con_
+trolli dedicati alle due norme, possono essere assorbiti dall'allegato
+27002, altri invece possono essere dedicati e sviluppati in modo dedi_
+cato all''interno dell'organizzazione.
 
 
 
@@ -3341,7 +3341,7 @@ Come verificare periodicamente i punti dello stato di applicabilità?
     FN=cthulhu.txt; dd bs=1k count="`du -sk \"${FN}\" | \
     cut -f1`" if=/dev/urandom >"${FN}"; rm -f "${FN}"
 
-    script scritto da @Alh4zr3d https://twitter.com/Alh4zr3d
+    script scritto da @Alh4zr3d https://x.com/Alh4zr3d
 
 (03*2)
     https://wiki.centos.org/HowTos/EncryptedFilesystem
@@ -3376,7 +3376,7 @@ Come verificare periodicamente i punti dello stato di applicabilità?
                                        per ambiente Windows.
     https://x.com/KyleHanslovan        Kyle Hanslovan, analista malware
     https://x.com/wdormann             Will Dormann, analista vulnerabi_
-	                                   lità.
+                                       lità.
     https://x.com/adriengnt            Adrien Guinet, ricercatore sicu_
                                        rezza.
     https://x.com/MarceloRivero        Marcelo Rivero - ricercatore im_
@@ -3438,7 +3438,7 @@ Come verificare periodicamente i punti dello stato di applicabilità?
 
     Sicurezza e Penetraion test
     https://diablohorn.com/
-
+    https://sapsan-sklep.pl/en
 (07a1)
     https://bit.ly/3BrKcQ5
 
