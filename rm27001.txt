@@ -31,27 +31,27 @@
                                                              #protect  --
      q) --> Cancellazione dati                               #protect  25
      r) --> Segregazione delle reti                          #protect  27
-
- 04) Registrazioni ed accesso ai log di sistemi operativi     #detect  27
- 05) Procedure di emergenza                                            28
- 06) Backup e ripristini                                     #recover  32
- 07) Formazione                                     #protect #respond  34
-     a) Security Manager                                               34
-     a) Personale dipendente                                           34
-     b) Regolamento per esterni fornitori/collaboratori                35
+     s) --> Controllo delle reti    #detective  #corrective  #protect  28
+ 04) Registrazioni ed accesso ai log di sistemi operativi     #detect  29
+ 05) Procedure di emergenza                                            30
+ 06) Backup e ripristini                                     #recover  34
+ 07) Formazione                                     #protect #respond  --
+     a) Security Manager                                               36
+     b) Personale dipendente                                           36
+     c) Regolamento per esterni fornitori/collaboratori                36
                                            #identify #protect #detect  --
-     c) Valutazione e revisione dei fornitori/collaboratori            36
+     d) Valutazione e revisione dei fornitori/collaboratori            38
                                            #identify #protect #detect  --
- 08) Utilizzo apparecchiature/dispositivi degli ospiti       #protect  41
- 09) Misure di protezione per lo stabile                     #protect  42
- 10) Test di penetrabilità (Vulnerability Assestment)                  45
+ 08) Utilizzo apparecchiature/dispositivi degli ospiti       #protect  44
+ 09) Misure di protezione per lo stabile                     #protect  45
+ 10) Test di penetrabilità (Vulnerability Assestment)                  48
                                                    #identify #protect  --
- 11) Monitoraggio dei sistemi che erogano servizi    #detect #respond  48
- 12) Documento dei servizi sottoposti a Service Line Agreement         49
+ 11) Monitoraggio dei sistemi che erogano servizi    #detect #respond  51
+ 12) Documento dei servizi sottoposti a Service Line Agreement         52
                                                    #identify #respond  --
- 13) Documento Business Continuity                           #recover  51
- 14) Valutazione dei rischi               #identify #protect #respond  56
- 15) Dichiarazione di applicabilità (SoA) #core                        58
+ 13) Documento Business Continuity                           #recover  54
+ 14) Valutazione dei rischi               #identify #protect #respond  59
+ 15) Dichiarazione di applicabilità (SoA) #core                        62
 
 [rm27001-mr6flaws]                                              [Pagina 1]
 
@@ -65,7 +65,7 @@ mestico.
 Le organizzazioni che intendono certificarsi ISO/IEC 27001, scelgono
 una figura interna delegata a seguire il processo di avviamento alla
 normativa, il security manager.
-Un consulente esterno potrebbe inilziamente aiutare la figura interna
+Un consulente esterno potrebbe inizialmente aiutare la figura interna
 a crescere in questo contesto di sicurezza dati. Alcuni compiti del con_
 sulente:
 - organizzare la prima documentazione che tratta i sistemi operativi,
@@ -86,8 +86,8 @@ gli obbiettivi di conformità alle normative concernenti le informazioni.
 L'appendice A 27002 attinge alle conoscenze di un gruppo di profes_
 sionisti esperti in sicurezza delle informazioni, per impostare la mi_
 glior prassi da seguire.
-Per rendere rappresentabile l'appendice A 27002, è possisibile disegnarla
-come una lunga checklist, divisa per capitoli e punti.
+Per rendere rappresentabile l'appendice A 27002, è possisibile rappresen_
+tarla come una lunga checklist, divisa per capitoli e punti.
 
 Inoltre viene mantenuto un linguaggio pratico, al fine di semplificare
 i concetti e renderli attuabili anche da chi, è solo interessato ad incre_
@@ -112,9 +112,10 @@ privata.
 [rm27001-mr6flaws]                                              [Pagina 2]
 
 Una nota importante per possibili raccomandazioni che si potrebbero rice_
-vere a fine di una sessione audit.
-Esse se non si ha modo di gestirle nel tempo accordato, NON possono diven_
-tare non conformità in fase di controllo del prossimo audit.
+vere a fine di una sessione audit di terze parti.
+Esse se non si ha modo di gestirle nel tempo accordato, NON possono evol_
+vere in una non conformità, in fase di controllo nell'audit di sorve_
+glianza.
 
 Inoltre, esistono corsi specifici per avviarsi alla professione di
 "team leader", ottenere la prima qualifica e poi iniziare un periodo di
@@ -140,7 +141,7 @@ norma.
 
 Nella guida viene ridotto il più possibile i riferimenti degli standard
 che si trovano nella documentazione ISO/IEC ufficiale.
-Queste informazioni sono soggette a copyright del l'organizzazione
+Queste informazioni sono soggette a copyright dell'organizzazione
 "International Organization for Standardization" (01*1).
 
 Il termine data center usato nella guida, fa riferimento a stanze dove
@@ -154,7 +155,6 @@ l'organizzazione che decide di attivare le unità di calcolo.
 In questa guida si è preferito utilizzare il termine data center, anche
 per le piccole organizzazioni, che mantengono unità di calcolo attive in
 una stanza di piccole o medie dimensioni.
-
 
 
 
@@ -241,7 +241,7 @@ Tabella 02#T
  +-----------+------------+------------+------------------+------------+
  | Categoria | Ubicazione | Criticità  | Grado            | Accesso    |
  | dati      |            |            | confidenzialità  |            |
- +--------- -+------------+------------+------------------+------------+
+ +-----------+------------+------------+------------------+------------+
  | codice  X | github     | bassa      | confindenziale   | reparto X  |
  +-----------+------------+------------+------------------+------------+
  | progetto  | Datacenter | bassa      | diffuso          | reparto G  |
@@ -251,7 +251,7 @@ Tabella 02#T
 
 Un'altro aspetto fondamentale riguarda il trattamento dei dati dell'orga_
 nizzazione in paesi fuori dal territorio europeo. Questa guida è stata
-scritta con riferimento ad un'organizzazione che opera nel territorio
+scritta con riferimento all'organizzazione che opera nel territorio
 italiano.
 Esistono casi in cui non è possibile mantenere i dati nella sede operati_
 va o data center dell'organizzazione.
@@ -284,7 +284,7 @@ Tutti gli asset raccolti, andranno poi riportati nel General Manual
 Si tratta del documento principale, raccoglie diverse procedure ed
 informazioni che descrivono il modo operante in cui l'organizzazione
 interverrà nel trattamento dati, istruzioni richieste dai controlli
-Standard, a supporto di situazioni di prevenzione, pericolo, o emergenza.
+standard, a supporto di situazioni di prevenzione, pericolo, o emergenza.
 
 Gli argomenti del General Manual possono essere molteplici, il Security
 Manager sarà con la Direzione dell'organizzazione, uno dei responsabili
@@ -447,41 +447,40 @@ ressate).
 
 [rm27001-mr6flaws]                                              [Pagina 8]
 
-Considerando che le informazioni del manuale sono parecchie e un colla_
-boratore non potrebbe facilmente ricordarsi i punti principali, verrà
-sicuramente in aiuto un breve documento, il decalogo.
+Considerando il numero medio altro di informazioni nel manuale, colla_
+boratore non riuscirebbe facilmente ricordarsi i punti principali. Sarà
+quindi di aiuto un documento di una pagina, il decalogo.
 Dieci semplice regole, le quali potranno aiutare a tenere in considera_
 zione i principi di sicurezza ed uso strumenti all'interno dell'organiz_
 zazione.
 
-Di seguito l'esempio regole del decalogo.
+Di seguito un esempio di regole che potrebbero essere presenti.
 
 - 1) Nel momento in cui al dipendente viene assegnato un device si impe_
-     gna ad usarlo e custodirlo per tutta la durata dell’assegnazione.
+  gna ad usarlo e custodirlo per tutta la durata dell’assegnazione.
 - 2) Ogni dispositivo aziendale, nonché la posta e la navigazione web
-     sono utilizzabili solo per scopi aziendali.
+  sono utilizzabili solo per scopi aziendali;
 - 3) Tutto il materiale elettronico consegnato per uso aziendale, deve
   essere utilizzato con la configurazione impostata dagli amministratori
-  di sistema
+  di sistema;
 - 4) L’installazione di nuovi software nel proprio dispositivo azienda_
   le, deve essere richiesta tramite dedicato ticket agli amministratori
-  di sistema
+  di sistema;
 - 5) Gli sviluppatori di codice devono attenersi alle procedure di svi_
   luppo codice sicuro, e alla procedura di flusso:
-  ambiente locale --> ambiente test --> ambiente produzione
+  ambiente locale --> ambiente test --> ambiente produzione;
 - 6) Per lo svolgimento delle sessioni di reperibilità degli applicativi
   web, richieste da un cliente, deve essere richiesta l’assegnazione di
   un portatile aziendale, che coprirà il turno di reperibilità richie_
-  sto.
+  sto;
 - 7) A fine della giornata lavorativa il computer assegnato deve essere
-  spento al fine di consentire l'installazione delle patch di sicurezza.
+  spento al fine di consentire l'installazione delle patch di sicurezza;
 - 8) Le informazioni e i dati devono essere scambiati unicamente con le
   modalità sicure definite da [NOME_ORGANIZZAZIONE] (cartelle condivise
-  all’interno dell'ufficio, servizio portale HTTPS -NOME-)
+  all’interno dell'ufficio, servizio portale HTTPS -NOME-);
 - 9) E’ necessario attenersi alle regole di cambio e generazione pass_
-  word
-  per la propria casella postale, seguendo le regole riportate nel sito
-  https://nome.sito/ (*02n1*)
+  word per la propria casella postale, seguendo le regole riportate nel
+  sito https://nome.sito/ (*02n1*);
 - 10) La casella elettronica dall’esterno degli uffici [NOME_ORGANIZZA_
   ZIONE] può essere consultata in modalità di sola lettura, tramite il
   computer fornito dall'organizzazione.
@@ -496,8 +495,9 @@ potete consultare il punto "03o" della guida.
 
 03) Richieste preliminari
 
-Prima di entrare negli aspetti più corposi richiesti dalla norma, ho
-preferito stendere i punti tecnici dell'allegato A (27002) da completare.
+Prima di entrare nelle cosidette tematiche di sistema dalla normativa,
+vengono spiegati i controlli tecnici base previsti dell'allegato A (27002)
+da completare.
 
 
 
@@ -599,12 +599,12 @@ FINE MODULO
 
 03b) Criptatura dei dischi (#protect)
 
-Come potrete immaginare, se un dispositivo contenente dei dati dell'or_
-ganizzazione venisse trafugato o perso, ignoti potrebbero aprrofittare
-dell'occasione, per leggere le informazioni salvate.
-La norma ci richiedere di criptare ogni tipo di dispositivo mobile, co_
-me un computer portatile o un cellulare di tipo smartphone.
-Con gli odieri sistemi operativi, il passaggio della criptatura del di_
+Come già è possibile immaginare, se un dispositivo contenente dei dati
+dell'organizzazione venisse trafugato o perso, ignoti potrebbero approfit_
+tare dell'occasione, per leggere le informazioni salvate.
+La normativa richiede di criptare ogni tipo di dispositivo mobile, come
+un computer portatile o un cellulare di tipo smartphone.
+Con gli odierni sistemi operativi, il passaggio della criptatura del di_
 sco è abbastanza semplice, mentre con quelli del passato, è necessario
 affidarsi a programmi di terze parti per completare la criptatura del
 disco.
@@ -620,60 +620,57 @@ che trovate alla nota (03b*1).
 
 Un appassionato di sicurezza informatica ha scritto un articolo in cui
 documenta, come scavalcare la schermata di richiesta password di Bit_
-locker. Se siete interessati, maggiori informazioni nella pagina ripor_
-tata alla nota (03b*2).
+Locker. Per maggiori informazioni la pagina è riportata alla nota
+(03b*2).
 
 
-Per Linux, il tool consigliato è dm-crypt (03b*3), oppure "Linux Unified
-Key Setup" (03b*4).
-Le attuali distribuzioni Linux, come Almalinux e Debian che permettono
+Per Linux, lo strumento consigliato è dm-crypt (03b*3), oppure "Linux
+Unified Key Setup" (03b*4).
+Le attuali distribuzioni Linux, come Almalinux e Debian permettono
 di criptare il disco di sistema e dati fin dalla prima installazione.
 
-MAC OS, verificate la procedura esterna a questa guida, il cui URL è ri_
-portato alla nota (03*b5).
+MAC OS, è consigliabile leggere la procedura esterna a questa guida,
+il cui URL è riportato alla nota (03*b5).
 
-Android, possiamo utilizzare la funzione integrata del sistema operati_
-vo, chiamata "Full Disk Encryption".
-Chiederà l'impostazione di un PIN numerico.
+Android, è possibile utilizzare la funzione integrata del sistema opera_
+tivo, chiamata "Full Disk Encryption". Essa chiederà l'impostazione
+di un PIN numerico.
 
-Iphone e sistemi operativi iOS, utilizziamo la funzione "Attiva il Pass_
-code", inseriamo una password alfanumerica abbastanza forte (oltre se_
-dici caratteri), e non dovremo fare altro.
+Iphone e sistemi operativi iOS, è possibile utilizzare la funzione "At_
+tiva il Passcode", inserendo una password alfanumerica abbastanza forte
+(oltre sedici caratteri), e non sarà necessario fare altro.
 
-Dischi nei computer fissi, comunemente chiamati torrette o desktop.
+Nota per i dischi nei computer fissi, comunemente chiamati torrette
+o desktop.
 
 Nella maggior parte degli uffici, o aree di lavoro come la produzione,
-magazzino, officina, eccetera, gli operatori non necessitano di un por_
-tatile.
+magazzino, officina eccetera, gli operatori richiedono l'uso di un com_
+puter fisso.
+Se stessimo valutando il rischio di furto apparecchiature mobili, è
+chiaro, che i computer desktop per essere sottratti possono avere più
+protezioni, ad esempio l'antifurto dello stabile dove si trovano.
+Il rischio se calcolato, è quindi più basso; ma procedere con la crip_
+tatura anche dei dischi dei computer desktop è sempre caldamente consi_
+gliato. Protezioni aggiuntive per ridurre il rischio di furto di aree
+di memoria non criptate (vi sono casi in cui l'hardware obsoleto non
+permette di procedere con la criptatura) possono essere applicate per
+contenere il livello di rischio; oggi giorno con le odierne tecnolo_
+gie, criptate un'area di memoria è diventata una operazione facile
+e veloce.
 
-Un punto in più, in quanto non esiste un rischio alto, il quale si avvi_
-cinerebbe ad una trafugazione o perdita dei dati (esempio, un comune ca_
-so di furto della torretta PC).
-Il consulente potrebbe indicarci che un rischio di furto è sempre in ag_
-guato, quindi di procedere alla criptatura anche di questi dischi fissi.
 
-Consiglierei di criptare i dischi, ma se il modello del computer fisso
-fosse obsoleto, potete riportare nell'inventario questo dettaglio, e no_
-tificare che al prossimo aggiornamento hardware, la fase di criptatura
-verrà completata.
 
-Durante un audit di certificazione "stage 2" (03*b6), l'auditor di terze
-parti ha confermato la scelta dell'organizzazione di non criptare i dischi
-dei computer fissi (perchè custoditi all'interno dello stabile del_
-l'organizzazione).
-Potremo quindi affrontare l'operazione quando inizieremo l'aggiornamento
-di tutto l'hardware del computer ed installaremo un sistema operativo
-che prevede facilmente l'attivazione della criptatura dati.
 
-Per i dispositivi server (fisici) già presenti, che non possono essere
-criptati (perchè l'attuale sistema operativo, non supporta la cripta_
-tura), e sono allocati nel data center di proprietà dell'organizazione
-è possibile valutare se accettare il rischio, come sopra descritto.
+
+
+
+
+
+
+
+
 [rm27001-mr6flaws]                                             [Pagina 12]
 
-Scriveremo nella documentazione dedicata, che i dati sono custoditi in un
-data center, cui l'ingresso ad esso è monitorato (accesso dedicato solo a
-personale autorizzato).
 
 03c) Gestione unificata ed antivirus (#detect #protect)
 
@@ -683,8 +680,8 @@ La figura del security manager dovrà catalogare ed approvare ogni soft_
 ware (compresi i sistemi operativi) utilizzato nei computer (client,
 server, e dispositivi mobili).
 Quest'ulitmi dati devono poi essere trascritti ed aggiornati in un appo_
-sito registro elettronico (un normale foglio di excel).
-Nella maggioranza dei casi le imprese che si stanno rivolgendo alla cer_
+sito registro elettronico.
+Nella maggioranza dei casi le imprese che si stanno avvicinando alla cer_
 tificazione ISO/IEC 27001, usano già computer e dispositivi mobili con
 installato software di vario tipo.
 Ad esempio, Adobe Photoshop, Microsoft Office, programmi gestionali,
@@ -725,6 +722,9 @@ attivi, e le possibili vulnerabilità legati ad essi.
 
 
 
+
+
+
 [rm27001-mr6flaws]                                             [Pagina 13]
 
 
@@ -744,17 +744,18 @@ po di richiesta purché tracciabile).
 
 
 La parte Antivirus.
-Quasi ogni organizzazione utilizza computer con installato un software
-antivirus.
+Le organizzazioni che trattano dati utilizzano computer client o server,
+e per buona pratica di igiene della sicurezza dati, in essi vi è instal_
+lato un software antivirus.
 E' bene verificare che tutti i computer ne abbiamo uno licenziato,
-evitare licenze di tipo gratuite.
-Gli aggiornamenti rilasciati dai gestori gratutiti sono rilasciati poche
+evitando quindi licenze di tipo gratuite.
+Gli aggiornamenti mantenuti dai gestori gratutiti sono rilasciati poche
 volte durante la giornata operativa, e secondo aspetto, nell'audit viene
-verificato un antivirus abbastanza efficace.
-Una nota di riguardo per i dispositivi smarthphone/mobile.
+verificata la presenza di un antivirus abbastanza efficace.
+Nota di riguardo per i dispositivi smarthphone/mobile.
 Escludendo prodotti Apple come Iphone ed Ipad (potrebbero non essere di_
-sponibili antivirus per essi), ogni altro dispositivo mobile deve essere
-scansionato in tempo reale da un programma antivirus.
+sponibili antivirus per essi), ogni altro dispositivo mobile deve mante_
+nere attivo un programma antivirus.
 
 Una piccola nota per i software che possono eseguire codice nascosto nei
 documenti PDF, oppure in documenti di Microsoft Office.
@@ -774,19 +775,15 @@ e l'installazione degli aggiornamenti automatici del sistema operativo.
 
 Prendiamo in considerazione i sistemi comunemente usati nelle imprese
 italiane.
-* Windows 10 (o 8.1) client, Windows 2016 server. Gli aggiornamenti per
+* Windows 11 client, Windows 2022 server. Gli aggiornamenti per
 questi sistemi operativi gestiti da Microsoft sono rilasciati anche
 dopo la scoperta di una vulnerabilità, ormai diventata di pubblico
 dominio.
 
 
-
 [rm27001-mr6flaws]                                             [Pagina 14]
 
 
-Nel caso di Windows 7, gli aggiornamenti hanno permesso a questa ver_
-sione di completare le comunicazioni criptate, sfruttando il metodo
-di trasporto sicuro TLS 1.2.
 A fine giornata spegnere sempre il client, mentre nei server program_
 mare una finestra di manutenzione, per installare gli aggiornamenti.
 
@@ -794,49 +791,52 @@ mare una finestra di manutenzione, per installare gli aggiornamenti.
 mente resi disponibili da Apple. Se a fine giornata il MAC viene spento
 e gli aggiornamenti sono installati, non si corrono particolari rischi.
 
-* Linux.
-Il mondo del sistema operativo pinguino offre varie distribuzioni, qui
-riportate alcune più utilizzate.
+* Linux. Il mondo dei sistemi operativi marchiati con un simpatico
+pinguino offre varie distribuzioni, qui riportate le maggiori utilizzate.
 
 --> Redhat 7/8 (Enterprise Linux) - con la sottoscrizione alla licenza
-    d'uso del sistema non correte rischi.
-    Gli aggiornamenti sono disponibili in poche ore, dopo che unavul_
-    nerabilità è stata riscontrata.
+    d'uso del sistema non si corrono rischi.
+    Gli aggiornamenti sono disponibili in poche ore, dopo che una vul_
+    nerabilità è stata riscontrata. Da essa sono derivate altre distri_
+    buzioni, con i nomi di CentOS, AlmaLinux, Fedora.
 
 --> Suse - la distribuzione fornisce tramite sottoscrizione l'aggiorna_
     mento dei pacchetti. Anche in questo caso, se frequentemente 
     aggiornata si corrono pochi rischi.
-    Vale la descrizione fatta per Redhat.
+    Vale la descrizione riportata sopra per Redhat.
 
---> Debian 9 - gli aggiornamenti sono gratuiti, e ben gestiti dalla 
-    comunità che contribuisce alla distribuzione. Se uno di quest'ultimi
-    è critico (una vulnerabilità nel kernel) non è rilasciato in pochi
-    giorni dalla comunità, è necessario agire manualmente, ad esempio
-    tramite la ricompilazione pacchetto, da codice sorgente.
-    Il codice correzione in formato "diff", può essere cercato nei siti
-    web come quelli riportati alla fonte esterna (03*6).
+--> Debian 12/13 - gli aggiornamenti sono gratuiti, e ben gestiti dalla
+    comunità che contribuisce alla distribuzione. Anche per i problemi
+    critici (come le vulnerabilità nel kernel) è sufficiente attivare
+    l'aggiornamento del pacchetto con il comando: apt-get upgrade.
+    La compilazione dei sorgenti di un pacchetto è sempre possibile,
+    anche usando comandi come diff o patch, i quali permettono di
+    applicare le dedicate correzioni al codice sorgente.
 
-    Grazie all'aiuto del comando patch, possiamo prelevare la parte del
-    sorgente kernel modificato ed applicare la correzione.
+    A puro di titolo di esempio, viene qui riportato il comando patch,
+    nei sorgenti del kernel Linux (per un aggiornamento):
     $ cd /usr/src/linux-sorgenti-kernel-x.x
     $ patch -p1 < patch-xx-cve-xx.diff
 
-    Quindi compilare il sorgente ed installare i nuovi file binari.
-
-    In definitiva, Debian è una distribuzione utilizzabile nella maggior
-    parte degli ambienti dove si trattano dati non sensibili.
-
---> Ubuntu - vale la descrizione della distribuzione Debian.
---> Fedora - vale la descrizione della distribuzione Debian.
+--> Ubuntu - si tratta di una distribuzione derivata da Debian. Può esse_
+    re utilizzata anche in ambienti di produzione, l'aggiornamento dei
+    suoi pacchetti è mantenuto dalla comunità che lavora al progetto del_
+    la distribuzione.
 --> CentOS - il supporto per la versione 7 è terminato nell'anno 2024.
---> Almalinux - il progetto prende il posto della versione CentOS 7/8
---> Rocky Linux - il progetto prende il posto della versione CentOS 7/8.
-    E' possibile avviare uno script nelle versioni CentOS 8, in modo da
-    utilizzare gli aggiornamento di Rocky Linux e convertire la base del
-    sistema CentOS alla versione Rocky Linux.
-
-
-
+    In termini di compatibilità, il progetto è stato sostituito senza
+    problemi da AlmaLinux.
+--> Rocky Linux - altro progetto che ha preso il posto della versione
+    CentOS 7/8. E' possibile avviare uno script nelle versioni CentOS 8,
+    in modo da utilizzare gli aggiornamento di Rocky Linux e convertire
+    la base del sistema CentOS alla versione Rocky Linux.
+--> Arch - una distribuzione leggera, ispirata alle sue sorelle maggiori
+    di nome CRUX e Slackware. La gestione dei pacchetti in queste distri_
+    buzioni è basata con file testuali, ovvero non utilizza un database.
+    Questa filosofia ha sempre permesso di risolvere possibili problemi
+    di dipendenze tra i pacchetti con più facilità. Si tratta di un pro_
+    getto del tutto autonomo, quindi non c'è garanzia di trovare in poco
+    tempo un pacchetto aggiornato, al fine di risolvere una vulnerabilità
+    alta o media.
 [rm27001-mr6flaws]                                             [Pagina 15]
 
 
@@ -912,17 +912,17 @@ ma soluzione richiede delle risorse a volte cospicue).
 
 Ogni tipo di attività che viene eseguita fuori dall'ufficio, deve essere
 organizzata attraverso un dispositivo aziendale, da molte organizzazioni
-ed imprese è scelto un portatile.
+è scelto un portatile.
 Se l'utente necessiterà di effettuare un accesso (intendiamo nel dominio
-dell'impresa oppure anche in un solo server interno), dovremo fornire un
+dell'impresa oppure anche in un solo server interno), si dovrà fornire un
 accesso di tipo virtual private network (VPN).
 Ogni accesso VPN deve essere registrato, ad esempio nel software di rac_
 colta log che il fornitore dell'apparato firewall ci ha gestito.
-E' probabile che l'ispettore, durante la fase "Stage 1" chiederà la ve_
+E' probabile che l'auditor, durante la fase "Stage 1" chiederà la ve_
 rifica di questo dato.
 Se risulta complesso attivare il software di collegamento nel firewall
 perimetrale alla rete locale, è possibile installare software più econo_
-mici (possibilmente configurati senza usare un algoritmo RSA) come
+mici (configurati senza usare un algoritmo di criptatura RSA) come
 OPENVPN in un server linux o windows presente nell'area LAN.
 
 03g) Regolamentare accesso alle caselle aziendali (#protect)
@@ -937,9 +937,9 @@ richiesti per la protezione dei dati personali.
 - La trasmissione via e-mail di dati sensibili può essere effettuata
 solo previa cifratura dei dati stessi.
 - Qualora sia necessario conservare copie elettroniche e/o cartacee del_
-le e-mail per la documentazione delle operazioni effettuate,
-devono essere rispettate le regole dell’organizzazione relative alla ar_
-chiviazione e conservazione dei documenti.
+le e-mail per la documentazione delle operazioni effettuate, devono
+essere rispettate le regole dell’organizzazione relative alla archivia_
+zione e conservazione dei documenti.
 - Non è consentito l’inoltro di e-mail dell’organizzazione alla propria
 casella elettronica privata.
 - In caso di assenza improvvisa o programmata del dipendente (es. per
@@ -964,8 +964,8 @@ portale (i quali potrebbero ad insapunta contenere codice malevolo).
 Solo brevi risposte da un'email (come la conferma di un appuntamento)
 sono permessi.
 
-03h) Permessi per la condivisione dei dati interni all'impresa
-(#protect)
+03h) Permessi per la condivisione dei dati interni all'impresa (#protect)
+
 La maggiornanza delle organizzazioni è divisa per reparti, oppure se
 preferite, gruppi di lavoro.
 La normativa chiede di elencare i settori, descrivere le singole compe_
@@ -974,7 +974,7 @@ Di seguito un esempio per rendere chiara la richiesta.
 Il reparto amministrativo potrebbe scambiare o leggere informazioni del
 reparto commerciale, che genera offerte e porta contratti firmati in
 sede.
-Supponiamo di aver applicato una regola di accesso nell'area di condi_
+Si suppone di aver applicato una regola di accesso nell'area di condi_
 visione dati, la quale permette solo agli appartenenti del gruppo com_
 merciale di accedere alla propria area. Di conseguenza il gruppo am_
 ministrativo dovrà trovare un altro modo per leggere il dato commer_
@@ -1178,10 +1178,10 @@ operativo Linux.
  .-----------------------------------------------------.
  | E' giunta richiesta tramite portale organizzativo   |
  | di modificare o revocare permessi ad un utente o    |
- |    fornitore. E' stata richiesta la revoca?         |
+ | fornitore. E' stata richiesta la revoca?            |
  `-----------------------------------------------------'
        | Sì |                           | No |
-       .----'                           .----'
+       `----'                           `----'
          |                                |
     .----+---------------------.    .-----+--------------.
     | Cancellare il profilo,   |    | E' stata richiesta |
@@ -1189,16 +1189,16 @@ operativo Linux.
     | l'effettiva cancellazione|    | nuovo utente?      |
     |  della cancellazione (**)|    `--------------------'
     `--------------------------'        | Sì |    | No |
-                                        `----'    `----'
+                                        `-+--'    `-+--'
                                           |         |
                         .-----------------'         |
                         |                           |
     .-------------------+----------.    .-----------+--------------.
     | Assegnare al nuovo utente    |    | L'utente è un fornitore  |
     | i permessi dell'asset in     |    | o collaboratore esterno ?|
-    | cui è coinvolto (****).      |    `--------------------------'
+    | cui è coinvolto (***).       |    `--------------------------'
     | Dare conferma alla richiesta |        | Sì |      | No |
-    | pervenuta.                   |        .----'      .----'
+    | pervenuta.                   |        `----'      `----'
     `------------------------------'          /            |
                                              /             |
                                             /              |
@@ -1208,7 +1208,7 @@ operativo Linux.
             | Assegnare o creare i         |  | conferma alla         |
             | permessi richiesti.          |  | richiesta             |
             | Dare conferma alla richiesta |  | pervenuta.            |
-            | pervenuta  (***)             |  `-----------------------'
+            | pervenuta  (****)            |  `-----------------------'
             `------------------------------'
 
 
@@ -1216,46 +1216,80 @@ operativo Linux.
 quando è richiesta la cancelllazione dell'utente (come impostazione
 auto-risponditore per la casella email da disattivare).
 
-(***) Ulteriore nota che completa la procedura. Il fornitore o utente
+(***) nella maggior parte dei casi è richiesto anche l'inserimento di
+un dispositivo (computer, telefono smartphone).
+Maggiori informazioni sono descritte nel punto 03a.
+
+(****) Ulteriore nota che completa la procedura. Il fornitore o utente
 esterno richiedente accessp ai dati, dovrà essere prima valutato dal
 Security Manager. Consultare già il punto 07b della guida se nel caso
 sarà necessario completare con maggiore descrizione, questa procedura
 di creazione e revoca.
-
-(****) nella maggior parte dei casi è richiesto anche l'inserimento di
-un dispositivo (computer, telefono smartphone).
-Maggiori informazioni sono descritte nel punto 03a.
 
 
 
 
 [rm27001-mr6flaws]                                             [Pagina 22]
 
-03m) Blocco terminali (#protect)
+03m) Blocco terminali e stampe (#protect)
 
-Può sembra un semplice controllo di sicurezza, a volte è tralasciato o
-ignorato nelle organizzazioni.
+Potrebbe sembrare un semplice controllo di sicurezza, a volte è trala_
+sciato o ignorato nelle organizzazioni.
 Ogni utente dovrebbe quando si allontana dalla propria postazione, bloc_
-care con la combinazione di tasti CTRL+ALT+CANC il proprio computer
-(se Windows/Linux), oppure CTRL+CMD+Q se MAC.
+care con la combinazione di tasti CTRL+ALT+CANC (sequenza per Windows/Linux)
+il proprio computer, oppure CTRL+CMD+Q (sequenza MAC).
 Spesso il personale si allonta dalla postazione lasciando il desktop
-del computer al libero accesso, e chiunque potrebbe utilizzarlo.
-Un aiuto, per ridurre il rischio di intrusione, sarà il salva schermo.
-Dopo massimo tre minuti di inattività del computer, verrà azionato il
-salva schermo, bloccando la postazione.
-L'amministratore di rete, può facilmente impostare e distribuire questa
-politica, su tutti i computer dell'organizzazione.
+del computer, disponibile al libero accesso, e chiunque potrebbe utiliz_
+zarlo. Un aiuto per ridurre il rischio di intrusione, sarà il salva
+schermo. Dopo massimo tre minuti di inattività del computer, verrà aziona_
+to il salva schermo, bloccando la postazione.
+L'amministratore può facilmente impostare e distribuire questa politica,
+su tutti i computer Windows, utenti dell'organizzazione (ammesso che venga
+usato Active Directory, come gestione centralizzata degli utenti).
 Mentre per i telefoni cellulari (smartphone e non), dovrà essere impo_
 stato un blocco a livello PIN numerico.
-La tecnologia di oggi giorno permette anche di impostare lo sblocco via
-impronta digitale.
-Il Securiy Manager verificherà con regolari controlli a campione, che
+Il Security Manager verificherà con regolari controlli a campione, che
 il codice PIN a livello controllo numerico sia presente.
+La tecnologia di oggi giorno permette anche di utilizzare blocchi tramite
+impronta digitale, o riconoscimento del volto.
 
+Le stampe su carta, seguendo un'osservazione del controllo 7.7 della
+versione 2022 (Clear Desk and Clear Screen), dovrebbero essere protette
+direttamente sul dispositivo che si occupa della stessa stampa.
+In questo modo il richiedente della stampa, potra essere il solo che
+otterrà la stampa richiesta, una volta che si troverà vicino al dispo_
+sitivo. La maggior parte delle stampanti d'ufficio supporta questa fun_
+zione, il consiglio è di abilitarla, informando preventivamente tutti gli
+utenti dell'organizzazione.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                             [Pagina 23]
+
 03o) Gestione password (#protect)
-Un punto abbastanza semplice che ci permetterà di essere conforme
-alla normativa.
-Riporto una serie domande e risposte.
+Un punto abbastanza semplice che ci permetterà di essere conforme alla
+normativa. Sono di seguito riportate una serie di domande e risposte.
 
 *) Perchè è importante modificare la password del proprio utente di
 accesso alla rete aziendale o altro tipo di risorse?
@@ -1277,49 +1311,48 @@ Per la scelta delle password è necessario seguire questo decalogo:
 
 – la lunghezza deve essere di almeno 8 caratteri alfanumerici; deve es_
   sere aggiornata ogni 180 giorni, e sarà diversa da quella scaduta.
-    La nuova password deve essere diversa dalle 4 precedenti
+    La nuova password deve essere diversa dalle 4 precedenti;
 
 – i suoi primi 3 caratteri devono essere diversi rispetto ai corrispon_
   denti caratteri della password scaduta e così per i secondi e gli ul_
-  timi tre caratteri consecutivi
+  timi tre caratteri consecutivi;
 
 – le password devono essere facili da ricordare ma difficili da ipotiz_
-  zare
-[rm27001-mr6flaws]                                             [Pagina 23]
-
+  zare;
+
 – la password non deve essere uguale al cognome e nome; non è consen_
   tita la ripetizione di caratteri nella password, cioè non sono consen_
-  tite le doppie
+  tite le doppie;
 
 – la password non può essere uguale al nome della casella email, né può
-  essere uguale ai primi quattro caratteri della casella
+  essere uguale ai primi quattro caratteri della casella;
 
 – le password non devono consistere in stringhe di caratteri ripetute
-  (ad esempio, a1111111, 1aaaaaaa)
+  (ad esempio, a1111111, 1aaaaaaa);
 
 – le password non devono essere costruite con numeri o caratteri in
-  sequenza (ad esempio, 12345678)
+  sequenza (ad esempio, 12345678);
 
 – non si può utilizzare una password con i seguenti caratteri:
        TITO, ESTE, PERS, CRA, RETE, MARZ, APRI, GIUG, LUGL, AGOS, NOVE,
        DICE, TEST, OPER, ROMA, MILA, FIRE, PALE, BOLO, 1234, IBM, ICR,
-       FILI, DIV, SERV, ACHI, BANC
+       FILI, DIV, SERV, ACHI, BANC;
 
 – le password non devono contenere chiavi o parole comunemente utiliz_
 zate (ad esempio, PASSWORD1, o parole trovate in un dizionario con o
-senza valori numerici)
-
+senza valori numerici);
+[rm27001-mr6flaws]                                             [Pagina 24]
+
 – le password non devono essere costruite utilizzando nomi, acronimi
-comuni, iniziali, date di compleanni, nomi di calendario o mesi, nu_
-meri telefonici o qualsiasi altra informazione facilmente associa_
-bile al nome della casella email.
+comuni, iniziali, date di compleanni, nomi di calendario o mesi, numeri
+telefonici o qualsiasi altra informazione facilmente associabile al nome
+della casella email.
 
 Queste regole sopra descritte dovranno essere inserite nel sistema che
 si occupa di gestire le autenticazioni per l'organizzazione.
 Sistemi operativi come Windows e Linux (tramite il gestore PAM) hanno
 già funzioni interne che è possibile abilitare per rispettare le re_
 gole/pratiche sopra descritte.
-
 
 03p) Separazione ambiente di sviluppo, test e produzione (#protect)
 
@@ -1339,25 +1372,21 @@ La seconda, il programmatore userà gli strumenti di compilazione,
 interpretazione direttamente nel suo computer.
 Qual'è il punto in cui fare attenzione per entrambe le scelte?
 
-
-
-[rm27001-mr6flaws]                                             [Pagina 24]
-
-I dati salvati a fine giornata dovranno essere prelevati dai nostri pro_
-grammi di backup e archiviati.
-Per farla breve, l'agente di backup deve entrare per il prelievo dati,
-nel computer del programmatore o nel server di sviluppo codice.
-(*) Il software è stato scritto, deve essere testato, probabilmente da
-altro personale dell'organizzazione oppure anche dal cliente che potreb_
-be averlo commissionato.
-Per avviare il test abbiamo predisposto un server dedicato al test.
-Non possiamo installare l'ambiente di test nel computer del programma_
+I dati salvati a fine giornata dovranno essere prelevati dai programmi
+di backup e archiviati.
+L'agente di backup deve entrare per il prelievo dati, nel computer del
+programmatore o nei server di stoccaggio del codice sviluppato.
+(*) Il software è stato scritto, e l'applicazione che lo utilizza deve es_
+sere testata, probabilmente da altro personale dell'organizzazione oppure
+dal cliente che potrebbe averlo commissionato.
+Per avviare il test, è necessario predisporre un server dedicato al test.
+Non è possibile installare l'ambiente di test nel computer del programma_
 tore.
 (*) Il software è stato testato, in accordo con il project manager che
 ha avvisato il cliente o il dipartimento interno all'organizzazione
 possiamo concludere quest'ultima fase con il rilascio del software.
-Se con questa fase si chiude anche il progetto di sviluppo (escludiamo
-per ora sistemazione o presa in carico di possibili bug), il codice dal_
+Se con questa fase si chiude anche il progetto di sviluppo (esclusa per
+ora sistemazione o presa in carico di possibili bug), il codice dal_
 l'ambiente locale e di test dovrà essere tassativamente cancellato.
 La figura del Security Manager deve appurare che la cancellazione dei
 dati avvenga, tramite controllia campione nello spazio di test.
@@ -1365,10 +1394,15 @@ Nell'ambiente locale, è consigliabile chiedere al programmatore di mo_
 strare il contenuto della directory codice, al fine di rilevare possi_
 bile materiale ormai dimenticato.
 
+
+
+
+[rm27001-mr6flaws]                                             [Pagina 25]
+
 La procedura completa con le varie opzioni scelte, deve essere descrit_
-ta in un documento e condivisa con tutto il personale di programma_
-zione. Inoltre inlcuderemo la procedura all'interno della politica di
-sicurezza delle informazioni.
+ta in un documento e condivisa con tutto il personale di sviluppo.
+Inoltre inlcuderemo la procedura all'interno della politica di sicurez_
+za delle informazioni.
 
 03q) Cancellazione dati (#protect)
 La gestione dei dati ormai non più utilizzati oppure legati ad una figu_
@@ -1397,12 +1431,30 @@ aree dell'organizzazione.
 Se i dati venissero trovati, il responsabile o l'operatore del re_
 parto, dovrà procedere alla cancellazione e tracciare l'evento (in un
 apposito registro elettronico o cartaceo).
-[rm27001-mr6flaws]                                             [Pagina 25]
-
+
 Fondamentale è capire e prevenire queste situazioni. Probabilmente la
 prima procedura di cancellazione potrebbe funzionare parzialmente in al_
 cuni casi, e per vari motivi, non essere in grado di cancellare il dato.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                             [Pagina 26]
+
 Qui riassunta una breve procedura.
 
  .-----------------------------------------------.
@@ -1449,12 +1501,6 @@ Se l'utente utilizzava una casella di posta, essa dovrà essere chiusa,
 e un processo simile ad un auto-risponditore, dovrà avviare il possibile
 mittente, a quale casella sostitutiva è necessario scrivere.
 
-
-
-
-
-[rm27001-mr6flaws]                                             [Pagina 26]
-
 03r) --> Segregazione delle reti (#protect)
 Aspetto importante per garantire un ottimo livello di cyber sicurezza.
 Durante la configurazione dei firewall che limitano e controllano i
@@ -1462,33 +1508,83 @@ perimentri delle rete organizzazioni, sarà sempre importante mantenere
 la seguente regola:
 il passaggio dati è vietato del tutto tra le reti, vengono abilitate
 solo le regole firewall per i servizi leciti.
+
+[rm27001-mr6flaws]                                             [Pagina 27]
+
 Questo concetto permetterà in caso di intrusione di limitare i movimenti
-laterali di un possibile intruso. Come è stato osservato in numerose
-società attaccate da gruppi criminali (dediti all'installazione di virus
-tipo ransomware), l'intruso spesso guadagna accesso ad una porzione di
-rete (spesso quella delimitarizzata DMZ), e tenta di scoprire se vi sono
-server di controllo dominio Windows o Limux, per guadagnare i privilegi
-di amministratore.
+laterali di un possibile intruso.
+Come è stato osservato in numerose società attaccate da gruppi criminali
+(dediti all'installazione di software ransomware), l'intruso spesso gua_
+dagna accesso ad una porzione di rete (sovente quella delimitarizzata
+DMZ), e tenta di scoprire se vi sono server di controllo dominio Windows
+o Limux, per guadagnare i privilegi di amministratore.
+
+03s) --> Controlli di rete (#detective. #corrective)
+
+Con l'avvento dei firewall evoluti (NextGEN per scrivere una delle tante
+soluzioni) controlli di rete più approfonditi, sono oggi giorno possibi_
+li. La norma chiede di applicare la scansione dei pacchetti in ingresso
+ed uscita dall'organizzazione, in questo modo è possibile mantere un buon
+livello di riservatezza, ed integrità dei dati. I controlli più comuni ed
+ormai indispensabili, sono:
+- scansione dei pacchetti in transito sulla rete tramite ispezione anti_
+  virus
+- scansione del traffico di rete per rilevare l'uso di potenziali applica_
+  zioni dannose (come botnet C2, peer-to-peer, istant message)
+- data leak prevention (DLP): file con estensioni comune, come la suite
+  Microsoft Office (.docx, xlsx, pptx, ecc..), compressi (.zip, .rar),
+  di testo (.txt, .rtf, .pdf), archivi (.tar), potrebbero essere veicoli
+  per esfiltrare dati dall'organizzazione, verso server insuri. I file
+  spesso sono divulgati tramite protocolli di rete comuni, come HTTP, FTP,
+  SMTP, IMAP, ed altri. Compito del Security Manager è impostare una serie
+  di regole DLP nel firewall di rete, al fine di rilevare iniziali perdite
+  di dati, quindi fermare il problema il prima possibile.
+- scansione dei pacchetti a livello Intrusion Prevention o Detection Pre_
+  vention. Questa scansione ha lo scopo di rilevare possibili pacchetti
+  con all'interno payload, ovvero sfruttamenti di vulnerabilità, dirette
+  ai servizi interni dell'organizzazione, oppure alle applicazioni degli
+  utenti, installate nei computer. La stessa funzione è in grado di rile_
+  vare anche attività di comunicazione messe in atto da botnet malevole,
+  oppure da utenti interni (basti pensare all'uso di programmi rivolti
+  al calcolo mining).
+
+Una volta che i controlli di rete saranno scelti ed attivati, sarà possi_
+bile scrivere un'istruzione dedicata alla verifica dei dati log, generati
+dagli stessi controlli. L'istruzione dovrebbe includere, chi esegue il
+controllo, ogni tipo di dato individuato, e l'azione che viene intrapresa
+a seguito di una possibile anomalia rilevata.
 
 
 
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                             [Pagina 28]
+
 04) Registrazioni e accesso ai log di sistemi operativi (#detect)
 
 Questo punto potrebbe anche rientrare nelle azioni pratiche descritte
 nell'intero passaggio 03.
 E' preferibile che tutti i sistemi operativi nell'organizzazione siano
 stati inventariati, ed aggiornati.
-Sapremo quindi il numero esatto di sistemi utilizzati, e in quali dovre_
-mo attivare la registrazione dell'accesso ad essi.
-L'accesso ad un sistema dell'organizzazione verrà salvato in uno spazio
-di memoria predisposto per mantenere il dato inalterato.
-Troviamo in commercio diversi software o soluzioni dedicate [sistemi
+All'occorrenza sarà possibile conoscere il numero esatto di sistemi uti_
+lizzati, e in quali attivare la registrazione delle loro attività nella
+rete.
+L'accesso ad un sistema dell'organizzazione deve essere mantenuto in uno
+spazio di memoria predisposto per mantenere il dato inalterato.
+Sono in commercio diversi software e/o soluzioni dedicate, sistemi
 pronti per utilizzare intere aree di allocazione dati (come le network
-area storage)] progettati unicamente per mantenere un dato inalterato,
+area storage), progettati unicamente per mantenere un dato inalterato,
 e ricercarlo quando necessario.
-Alla nota 04*1 potete trovare alcune delle soluzioni sopra descritte.
-Per un maggior dettaglio degli eventi che dovremo registrare nello
-spazio inalterabile, riporto un estratto dal manuale operativo
+Alla nota 04*1 sono disponibili soluzioni sopra descritte.
+Per un maggior dettaglio degli eventi che saranno registrati nello
+spazio inalterabile, è qui riportato un estratto dal manuale operativo
 ISO/IEC 27001.
 
 -- Estratto manuale ISO/IEC 27002 (2013) --
@@ -1509,7 +1605,23 @@ e) le registrazioni degli accessi riusciti a falliti del sistema;
 f) le registrazioni degli accessi riusciti a falliti ai dati, ed ad
    altre risorse;
 
-[rm27001-mr6flaws]                                             [Pagina 27]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                             [Pagina 29]
 
 g) i cambiamenti alla configurazioni di sistema;
 h) l'uso di privilegi;
@@ -1521,13 +1633,13 @@ m) l'attivazione e la disattivazione dei sistemi di protezione, quali
    gli antivirus e per le
 individuazioni di intrusioni;
 n) le registrazioni delle transazioni applicative, effettuate dagli
-   utenti;
+   utenti.
 -- FINE Estratto manuale ISO/IEC 27002 (2013) --
 
-Per quanto tempo dovremo mantenere i dati raccolti con le informazioni
-di accesso?
+Per quanto tempo dovranno essere mantenuti i dati raccolti con le infor_
+mazioni di accesso?
 Dipende dal tipo di dato che l'operatore può visionare o trattare, ef_
-fettuando l'accesso. Mostrerò questa tabella, rende un'idea dei tempi
+fettuando l'accesso. Di seguito una tabella, con esempi un'idea dei tempi
 di stoccaggio.
 
 Tabella 04#T
@@ -1544,28 +1656,28 @@ Tabella 04#T
  | Dato sensibile legato a persona fisiche                   | 5 anni  |
  +-----------------------------------------------------------+---------+
  | Dati di chiamate telefoniche (sorgente/destinazione)      | 7 anni  |
- +-----------------------------------------------------------+---------+
+ +-----------------------------------------------------------+---------'
 
-Aggiornamento disciplina nazionale. Trovate al riferimento (04*2) un
-interessante articolo, che descrive la conservazione dei dati tele_
-matici, osservando gli obblighi a livello nazionale ed europeo.
+Aggiornamento direttiva europea. Al riferimento (04*2) vi è un interes_
+sante articolo, che descrive la conservazione dei dati telematici, osser_
+vando gli obblighi a livello europeo.
 
 05) Procedure di emergenza
 
-Ho inserito in questo capitolo le procedure base richieste dalla norma_
-tiva.
-Consiglio di scriverle mantenendo uno stile di diagramma di flusso,
-semplificandole, in quanto dovranno essere lette da tutti i dipendenti.
+In questo capitolo sono descritte le procedure base richieste dalla nor_
+mativa.
+E' consigliabile scriverle mantenendo uno stile di diagramma di flusso,
+così da salvaguardare semplicità, in quanto potrebbero essere lette dalla
+maggior parte degli utenti dell'organizzazione.
 
-Gli stessi collaboratori dovranno tenerle presente, ovvero in caso
-di necessità dovranno sapere dove si trovano, nel nostro manuale
-generale.
-
-
+Anche possibili collaboratori dovranno tenerle presente, in caso di ne_
+cessità dovranno almeno sapere che sono riportate nel manuale generale.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 28]
+
+
+[rm27001-mr6flaws]                                             [Pagina 30]
 
 
  *-----------------------------------------------------------------*
@@ -1585,21 +1697,20 @@ Elencherò alcune di queste possibili procedure.
 
 - Dati danneggiati
 --> durante un'attività di aggiornamento di sistema operativo, o aggior_
-namento applicazione, abbiamo involontariamente perso dei dati.
+namento applicazione, sono stati involontariamente persi dei dati.
 In questo caso l'utente che ha avviato la procedura e ha rilevato la
 perdita di dati, dovrà aprire una segnalazione all'amministratore di si_
-stema, e se lo riteniamo necessario, anche al security manager.
+stema, e se ritenuto necessario, anche al security manager.
 L'amministratore dovrà quindi dare il via al ripristino dei dati persi,
 e descrivere possibili problemi riscontrati durante la fase di recupero
-dati.
+dati. In questo caso specifico, sarà aperto un incidente, per poi gestir_
+lo.
 
 - Incendio
-evento raro in ufficio, nella mia esperienza l'ho visto accadere per
-via di un corto circuito solo una volta in venti anni di lavoro.
-Dopo questo evento, il collaboratore dell'organizzazione quando tornerò
-al proprio posto di lavoro, dovrà elencare le apparecchiature danneg_
-giate.
-Ad esempio il proprio computer, dischi o chiavette rimovibili.
+evento raro in ufficio, ma se dovesse manifestarsi ad esempio per un cor_
+to circuito nell'impianto elettrico, è meglio essere già organizzati.
+Dopo questo evento, si dovrà elencare le apparecchiature danneggiate.
+Ad esempio personal computer, dischi o chiavette rimovibili.
 E' inteso, questi dispositivi sono stati preventivamente criptati dagli
 amministratori di sistema, anche se persi durante l'incendio, il rischio
 che un intruso possa aver accesso ai dati contenuti è molto basso.
@@ -1608,31 +1719,32 @@ in uno degli stati sopra descritti, la procedura descriverà come aprire
 all'interno dell'organizzazione la segnalazione.
 
 - Furto/perdita accidentale
-evento che può verificarsi con maggior probabilità. Ipotizziamo una
-situazione come l'aver lasciato in automobile, con le porte chiuse,
-un computer portatile o un altro dispositivo di memorizzazione del_
+evento che può verificarsi con maggior probabilità. Ipotizzando una si_
+tuazione come l'aver lasciato in automobile, con le porte chiuse, un
+computer portatile o un altro dispositivo di memorizzazione del_
 l'organizzazione.
 L'automobile viene rubata, oppure lo stesso computer viene trafugato.
 La procedura è molto semplice, l'utente dovrà aprire una richiesta dal
 nostro portale interno (ticket o altro strumento che crei un evento
 tracciabile).
 Il security manager verrà avvisato in modo da valutare gli asset presen_
-ti nel dispositivo perso,
-quindi intervenire. Mentre gli amministratori di sistema, anche loro av_
-visati, potranno procedere al ripristino del dispositivo tramite
-un muletto o nuovo strumento.
-[rm27001-mr6flaws]                                             [Pagina 29]
+ti nel dispositivo perso, quindi intervenire.
+Mentre gli amministratori di sistema, anche loro avvisati, potranno pro_
+cedere al ripristino del dispositivo tramite un muletto o nuovo strumento.
+
+
+[rm27001-mr6flaws]                                             [Pagina 31]
 
 - Email richiesta riscatto
 Negli ultimi anni organizzazioni criminali hanno costruito dei software
 illegali installati senza permesso nei computer di ignari utenti.
-Ad una certa data temporale, i software vengono attivati da chi li con_
-trolla, allo scopo di codificare ogni dato presente nelle cartelle
-documenti dell'utente, ed inoltre questa operazione può intaccare anche
-i file presenti nei dischi di rete condivisi.
-Dopo queste operazioni, all'utente preso di mira potrebbe giungere un
-avviso su desktop per il pagamento, in cambio della chiave per ottenere
-i file decodificati, di nuovo leggibili.
+E' possibile che in una data programmata, i software vengono attivati
+allo scopo di codificare ogni dato presente nelle cartelle documenti
+dell'utente, ed inoltre questa operazione spesso viene estesa anche
+ai file presenti nei dischi di rete condivisi.
+Dopo queste operazioni, all'utente vittima potrebbe giungere un avviso
+sul proprio desktop con le istruzioni di pagamento, in cambio della chiave
+per ottenere i file decodificati, di nuovo leggibili.
 
 Qualunque sia la richiesta o il danno precedentemente arrecato dall'igno_
 to, è consigliabile trascrivere una procedura.
@@ -1677,18 +1789,16 @@ esaurimento di una risorsa, e nel caso predisporre un ampliamento.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 30]
+[rm27001-mr6flaws]                                             [Pagina 32]
 
 - Richiesta installazione nuovo software da parte di un membro dell'orga_
 nizzazione.
-Una delle procedure che saranno molto utilizzate. I membri o dipendenti
-dovranno abituarsi ad utilizzarla.
-La normativa prevede che nessun utente di un dispositivo possa installare
-in autonomia un software.
-Dovrà quindi seguire la procedura, chiedere all'amministratore i permessi
-per installare il software (se già conosciuto), oppure la valutazione di
-quest'ultimo se non catalogato nell'inventario software dell'organizza_
-zione.
+Una delle procedure che saranno abbastanza utilizzate. I membri o dipen_
+denti dovranno abituarsi ad utilizzarla.
+La normativa prevede che la maggior parte degli utente di un dispositivo
+non possa installare in autonomia un software.
+L'utente con pochi privilegi, dovrà quindi seguire la procedura, chiedere
+all'amministratore i permessi per installare il software.
 
 L'amministratore dovrà richiedere o cercare delle informazioni, come ad
 esempio l'autore del programma, se vi sono collegamenti a risorse esterne
@@ -1705,8 +1815,8 @@ nitori del software, al fine di chiarire ogni aspetto riguardo la sicu_
 rezza richiesta dalla normativa.
 
 - Procedura per la gestione di un Data Breach
-Se mantenete dati personali di titolari nei vostri archivi digitali,
-è necessario stendere la procedura in oggetto.
+Se i dati personali di titolari sono mantenuti negli archivi digitali
+dell'organizzazione, è necessario stendere la procedura in oggetto.
 
 Scopo di essa è quello di definire le modalità e le responsabilità per
 il corretto adempimento dell’obbligo di notifica al "Garante privacy"
@@ -1733,7 +1843,9 @@ La procedura continua poi con queste fasi.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 31]
+
+
+[rm27001-mr6flaws]                                             [Pagina 33]
 
 - Schema di sintesi -
 
@@ -1763,44 +1875,44 @@ che avrà contatto con le autorità.
 
 Il salvataggio dei dati trattati per un certo periodo, oppure banche
 dati utilizzate per la semplice lettura vengono salvati con software
-dedicati, oppure procedure interne.
-Pensiamo al salvataggio di una macchina virtuale tramite un proce_
-dimento snapshot, un agente di backup, opure semplicemente una procedura
-con lo strumento xcopy o mysqldump (per i database).
+dedicati, oppure con procedure che sfruttano strumenti o utilità
+di sistema.
+Ad esempio il salvataggio di una macchina virtuale tramite un procedi_
+mento snapshot (salvataggio istantaneo), un agente di backup, oppure
+semplicemente una procedura con lo strumento xcopy o mysqldump
+(quest'ultimo dedicato ai database).
 Ebbene questi procedimenti avviati spesso nelle ore notturne o nell'arco
 della giornata (dove il rischio di perdita dati e ore lavoro è alto),
 non basta verificare il loro avvio e termine operativo.
-Dobbiamo a seconda del numero di procedure e tipologia di dati che
+E' necessario a seconda del numero di salvataggio e tipologia di dati che
 dovranno essere disponibili in caso di disastri o perdite (quindi
 l'avvio di un ripristino), programmare un procedimento di verifica
 dei dati salvati.
-Il mio consiglio è di programmare il controllo a livello giornaliero,
+Il consiglio è di programmare il controllo a livello giornaliero,
 dal lunedì al venerdì, e se possibile alternare il personale che effet_
 tuerà la verifica.
 Anche se la base dati da verificare è minima (ad esempio, un set di
 backup di un solo server gestionale), il controllo nei giorni lavorativi
-ci permetterà di ridurre il rischio di una possibile perdita di infor_
-mazioni, anche di un solo giorno di inserimento.
-Diverso è per quelle organizzazioni che si occupano di più salva_
-taggi di set di dati, soprattutto per conto terzi.
+permetterà di ridurre il rischio di una possibile perdita di informazio_
+ni, anche di un solo giorno. Diverso è per le organizzazioni che si oc_
+cupano di più salvataggi di set di dati, soprattutto per conto terzi.
 Spesso in queste realtà organizzative, la natura e la tipologia del dato
 da salvare è molto varia.
 Il personale di controllo dovrà essere istruito per la verifica di ogni
 informazioni salvata; ad esempio, come verificare se un database è stato
 estratto nel suo formato di salvataggio in modalità completa.
-
-[rm27001-mr6flaws]                                             [Pagina 32]
+[rm27001-mr6flaws]                                             [Pagina 34]
 
 Spesso le estrazioni dedicate al backup sono avviate, ma per una serie
 di interventi interni al database, non riescono ad essere terminate.
-Riporto l'esempio di una procedura VIEW o ROUTINE del database MYSQL
-con un problema, per giunta creata prima di fine giornata
+Viene riportato l'esempio di una procedura VIEW o ROUTINE del database
+MYSQL con un problema, per giunta creata prima di fine giornata
 lavorativa, e lasciata in uno stato che interromperà quasi certamente
 l'estrazione dati per il procedimento di backup.
 Il numero di controlli da eseguire, deve essere sufficiente per giorno
 a completare la verifica di tutti i backup in una settimana.
-Se il set completo di tutti i nostri processi backup è pari a settanta,
-dovremo eseguire quattordici controlli al giorno.
+Se il set completo dei processi backup è pari a settanta, sarà necessario
+seguire quattordici controlli al giorno.
 Il personale inoltre deve seguire una regola molto importante. Se in un
 determintato giorno lavorativo è assente l'addetto al controllo
 (malattia o permesso), deve essere predisposto il controllo da parte di
@@ -1821,38 +1933,38 @@ fine estrazione del dato?
 il controllo il prossimo giorno lavorativo?
 
 - Prove documentate del ripristino di sistemi operativi
-Descriverò ora la parte del ripristino del dato.
-Voglio prima fare una premessa. Certi tipi di situazioni lavorative e
-non, inducono ad utilizzare un sistema operativo e una serie di appli_
-cazioni anche per oltre cinque, sei anni.
-Ci si può imbattere in situazioni in cui il dato deve essere ripristi_
+Di seguito parte del ripristino del dato.
+Certi tipi di situazioni lavorative e non, inducono ad utilizzare un
+sistema operativo e una serie di applicazioni anche per oltre cinque,
+sei anni.
+E' possibile trovarsi in situazioni in cui il dato deve essere ripristi_
 nato dopo questo periodo ipotetico, su nuovi sistemi operativi o
 motori database aggiornati.
-Ricordo il database MYSQL, disponibile in distribuzioni Linux, fino a
-pochi anni fa con pacchetti contenenti la versione di Oracle, e poi
-sostituiti con quelli dell'organizzazione MariaDB.
-Le procedure programmate permettono di ridurre il rischio di trovarci
+Il database MYSQL, disponibile in distribuzioni Linux, fino a pochi anni
+fa con pacchetti contenenti la versione di Oracle, e poi sostituiti con
+quelli dell'organizzazione MariaDB.
+Le procedure programmate permettono di ridurre il rischio e di trovarsi
 bloccati, durante la fase di ripristino dati.
-Per questo motivo l'ispettore chiederà nell'audit "Stage 1", documenti
-che traccino il test di ripristino dati.
-Potremmo in questo test trovare delle problematiche nell'importare da_
+Per questo motivo nel controllo audit di terze parti, è possibile che
+vengano richiesti in fase "Stage 1", documenti di evidenza dei test di
+ripristino dati.
+In questo test è possibile trovare delle problematiche nell'importare da_
 ti da una versione database ad una più recente.
-Dovremo quindi correggere le tabelle, o i programmi di importazione.
-Saremo in caso di necessità,pronti a ripristinare i dati di qualsiasi
-natura, presenti nelle nostre aree di stoccaggio senza particolari
-problemi (così da attenersi, ai tempi di ripristino elencati nel docu_
-mento SLA, punto 14).
+Si raccomando di correggere le tabelle, o i programmi di importazione.
+In caso di necessità, sarà possibile essere pronti a ripristinare i dati
+di qualsiasi natura, presenti nelle aree di stoccaggio; così da attener_
+si, ai tempi di ripristino elencati nel documento SLA, punto 14).
 Per ogni procedura di ripristino è consigliabile documentare l'orario
 di partenza e fine, includendo i log di estriazione dati.
 
-[rm27001-mr6flaws]                                             [Pagina 33]
+[rm27001-mr6flaws]                                             [Pagina 35]
 
-Ad esempio, se copieremo dati presenti nelle aree di storage, dovremo
-salvare tutto l'elenco. Se preleveremo un intero estratto di uno o più
-database, dovremo stampare tutte le operazioni per poi raccoglierle in
-un file di testo da conservare.
-Riporto un esempio per Mysql/MariaDB da inserire, in una procedura
-autotizzata:
+Ad esempio, se è prevista la copia di dati presenti nelle aree di sto_
+rage, è raccomandato salvare tutto l'elenco delle operazioni a video
+stampate. Se sarà prelevato un intero estratto di uno o più database,
+è consigliabile stampare tutte le operazioni per poi raccoglierle in un
+file di testo da conservare.
+Un esempio per Mysql/MariaDB da inserire, in una procedura autotizzata:
 
 $ date; mysql --password=cccccc -u utente --force nome_database < \
 nome_dump_database.sql >> log.txt
@@ -1860,6 +1972,11 @@ nome_dump_database.sql >> log.txt
 Durante le sessioni audit, le tracciature log che testimonino il
 passaggio dei dati ripristinati, potrebbero essere richieste.
 
+Con cadenza regolare, i dati critici dovrebbero essere salvati in un
+luogo esterno all'organizzazione. Quest'ultimo potrebbe trattarsi di un'
+area valutata, presso un datacenter di terze parti. I dati precedente_
+mente criptati, una volta posizionati, dovranno essere scollegati dalla
+rete.
 
 07) Formazione (#protect #respond)
 
@@ -1889,20 +2006,26 @@ per ciascun reparto.
 Nell'introduzione alla norma è consigliabile includere con brevi frasi
 i punti più importanti, con disegni o icone che possono aiutare il
 personale a ricordarsi di un particolare passaggio o termine.
-Includere cenni alla normativa GDPR europea, e la norma inglese MCSS
-(07a*1) per sottolineare l'impegno di paesi vicini all'Italia ma anche
-extra europei per mantenere una buona sicurezza nella gestione dei dati.
-Nell'organizzazione esistono poi reparti che trattano tipi di dati di_
-versi tra loro. Una figura amministrativa può trattare banche dati come
-lo stesso eseguirebbe una figura commerciale. La stessa amministrativa
-al contrario, potrebbe non trattare il dato codice del reparto
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                             [Pagina 36]
+
+Includere cenni al regolamento GDPR europeo (07a*1) per sottolineare
+l'impegno di paesi vicini all'Italia ma anche extra europei per mante_
+nere una buona sicurezza nella gestione dei dati.
+In un'organizzazione esistono spesso reparti che trattano tipi di dati
+diversi tra loro. Una figura amministrativa può trattare banche dati co_
+me lo stesso eseguirebbe una figura commerciale. La stessa amministra_
+tiva al contrario, potrebbe non trattare il dato codice del reparto
 programmatori.
 Per questo motivo i fogli di presentazione potrebbero essere quasi sem_
 pre differenziati, includendo termini e disegni diversi per reparto.
 
-
-[rm27001-mr6flaws]                                             [Pagina 34]
-
 Il personale ne trarrà vantaggio e si sentirà ascoltato allo stesso
 tempo, troverà nel Security Manager la figura di riferimento di fronte
 ad una scelta legata alla tema sicurezza di un asset.
@@ -1941,25 +2064,14 @@ prova o test di consapevolezza per la sicurezza dati.
 
 Per il secondo aspetto, sarà necessario acquistare un servizio di spedi_
 zione posta elettronica, presso un ulteriore provider.
-
-Una volta che i due servizi saranno configurati nel software, si potrà
-procedere alla scelta del messaggio. Modelli di possibili esche per gli
-utenti sono spesso già disponibili nel software di awareness. Costruirne
-un paio che possano essere collegati ad aspetti dei singoli utenti o re_
-parti è ottima cosa. I modelli predefiniti che propongono di inserire
-utente e password, per confermare una manutenzione o aggiornamento dello
-spazio della casella aziendale, possono funzionare, ma non ad ogni test di
-consapevolezza.
-
-
-
-
-
-
-
-
-
-[rm27001-mr6flaws]                                             [Pagina 35]
+Configurati i due servizi nel software, si potrà procedere alla scelta
+del messaggio. Modelli di possibili esche per gli utenti sono spesso già
+disponibili nel software di awareness. Costruirne un paio che possano
+essere collegati ad aspetti dei singoli utenti o reparti è ottima cosa.
+I modelli predefiniti che propongono di inserire utente e password, per
+confermare una manutenzione o aggiornamento dello spazio della casella
+aziendale, possono funzionare, ma non ad ogni test di consapevolezza.
+[rm27001-mr6flaws]                                             [Pagina 37]
 
 07c) Estendere regolamento anche ad esterni fornitori o collaboratori
 (#identify #protect #detect)
@@ -2015,7 +2127,7 @@ Elenco requisiti base
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 36]
+[rm27001-mr6flaws]                                             [Pagina 38]
 
 --> Backup
 ----> presenza di backup effettuato a cadenza (sì/no)
@@ -2071,7 +2183,7 @@ dell'organizzazione.
 Creeremo un profilo con i permessi di accesso alle sole aree predefinite
 e dedicate per esso.
 
-[rm27001-mr6flaws]                                             [Pagina 37]
+[rm27001-mr6flaws]                                             [Pagina 39]
 
 Inoltre è consigliabile che il fornitore acceda solo alle aree di
 test, se si occupa dello sviluppo di programmi o di gestione/revisione
@@ -2127,7 +2239,7 @@ firmata per presa visione.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 38]
+[rm27001-mr6flaws]                                             [Pagina 40]
 
 DATA, LUOGO: __________________
 
@@ -2183,7 +2295,7 @@ possbili errori.
 
 * Per quale scopo usiamo il fornitore o i suoi servizi?
 
-[rm27001-mr6flaws]                                             [Pagina 39]
+[rm27001-mr6flaws]                                             [Pagina 41]
 
  Vi è anche il caso un cui il fornitore eroga solo un software, che trat_
  ta dati all'interno dell nostra organizzazione. In questo caso, se il
@@ -2239,7 +2351,7 @@ possbili errori.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 40]
+[rm27001-mr6flaws]                                             [Pagina 42]
 
 Per concludere la parte fornitori, è necessario predisporre la valuta_
 zione periodica di quest'ultimi. Almeno una volta all'anno si dovrebbero
@@ -2295,7 +2407,7 @@ l'audit annuale rivolto all'organizzazione per la quale si opera.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 41]
+[rm27001-mr6flaws]                                             [Pagina 43]
 
 08) Utilizzo apparecchiature/dispositivi degli ospiti (#protect)
 
@@ -2351,14 +2463,14 @@ L'accesso viene consentito con le determinate restrizioni del caso
 dati).
 
 
-[rm27001-mr6flaws]                                             [Pagina 42]
+[rm27001-mr6flaws]                                             [Pagina 44]
 
 09) Misure di protezione per lo stabile (#protect)
 
 I punti della normativa per la protezione dello stabile sono da tenere
 in considerazione.
-Elencherò le azioni pratiche da compiere, affinchè possiate già essere
-preparati per un audit interno.
+Sono di seguito elencate azioni pratiche da compiere, affinchè si possa
+già essere preparati per un audit interno.
 Create un registro elettronico e stampate dei cartellini di carta con
 scritto "VISITATORE".
 Se riuscite inserite i cartellini in una bustina di plastica munita
@@ -2407,7 +2519,7 @@ Tramite badge è poi possibile restringere l'accesso a determinate aree
 (come quelle di stoccaggio dati) da parte del solo personale autoriz_
 zato.
 
-[rm27001-mr6flaws]                                             [Pagina 43]
+[rm27001-mr6flaws]                                             [Pagina 45]
 
 Possiamo chiedere al nostro responsabile del servizio prevenzione e pro_
 tezione se può consigliarci un elettricista abilitato alla verifica del_
@@ -2463,7 +2575,7 @@ stabili).
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 44]
+[rm27001-mr6flaws]                                             [Pagina 46]
 
 Ogni rete WIFI dovrà poi essere protetta da password o altro metodo di
 autenticazione (token generato su richiesta).
@@ -2519,7 +2631,7 @@ l'impianto.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 45]
+[rm27001-mr6flaws]                                             [Pagina 47]
 
 10) Test di penetrabiltà (#identify #protect)
 
@@ -2575,7 +2687,7 @@ Nelle organizzazioni certificate ISO/IEC 27001 da più di due o tre anni,
 potrebbero essere schedulati test sui servizi, e completati prima che
 un sistema operativo entri in funzione nell'organizzazione.
 
-[rm27001-mr6flaws]                                             [Pagina 46]
+[rm27001-mr6flaws]                                             [Pagina 48]
 
 Riporto l'esempio di un test chiamato "Nessus", operante nel sistema
 operativo Linux.
@@ -2631,7 +2743,7 @@ Altre interessanti opzioni di sicurezza da applicare nel sistema opera_
 tivo Linux, le potete trovare nella pagina "Linux Hardening
 Guide" (10*2).
 
-[rm27001-mr6flaws]                                             [Pagina 47]
+[rm27001-mr6flaws]                                             [Pagina 49]
 
 Un'altra nota aggiuntiva merita di essere descritta per il kernel Linux.
 E' abbastanza configurabile a livello di parametri di sicurezza. Il con_
@@ -2687,7 +2799,7 @@ rabili a difetti di architettura. Vedi Meltdown e Spectre (10*4).
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 48]
+[rm27001-mr6flaws]                                             [Pagina 50]
 
 11) Monitoraggio dei sistemi che erogano servizi (#detect #respond)
 
@@ -2743,7 +2855,7 @@ licenze agenti interni dei software sopra descritti.
 Esiste una via alternativa per essere avvisati preventivamente dell'uso
 alto delle risorse?
 
-[rm27001-mr6flaws]                                             [Pagina 49]
+[rm27001-mr6flaws]                                             [Pagina 51]
 
 Sì, forse in maniera non troppo tempestiva come ci offre un algoritmo
 costruito da specialisti ed attivato dell'agente.
@@ -2799,7 +2911,7 @@ all'intero totale (cento).
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 50]
+[rm27001-mr6flaws]                                             [Pagina 52]
 
 Ad esempio, un disservizio di circa otto ore in un anno, è calcolato
 come segue,
@@ -2855,7 +2967,7 @@ per iscritto, tramite posta elettronica o anche telefonicamente tutti i
 suggerimenti e le idee atti a migliorare il servizio e si impegna a
 garantire sia gli standard generali che quelli specifici in condizioni
 normali ed in assenza di ostacoli che li rendano irrealizzabili.
-[rm27001-mr6flaws]                                             [Pagina 51]
+[rm27001-mr6flaws]                                             [Pagina 53]
 
 Supporto Tecnico:
 Area supporto tecnico: http://supporto.[NOME_ORGANIZZAZIONE] o diretta_
@@ -2911,7 +3023,7 @@ solo provare a scriverlo; e magari nel futuro analizzarlo con altre
 parti, e renderlo completo.
 
 
-[rm27001-mr6flaws]                                             [Pagina 52]
+[rm27001-mr6flaws]                                             [Pagina 54]
 
 La prima fase iniziale consisterà nell'elencare tutti i servizi che
 l'organizzazione offre o eroga.
@@ -2967,7 +3079,7 @@ o erogato. Di seguito la tabella di esempio.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 53]
+[rm27001-mr6flaws]                                             [Pagina 55]
 
 Ad ogni processo collegheremo uno scenario di disastro, che se scaturito
 potrebbe essere un problema per l'erogazione del processo.
@@ -3023,7 +3135,7 @@ re ad erogare il servizio o servizi.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 54]
+[rm27001-mr6flaws]                                             [Pagina 56]
 
 Tabella gestione scenario
 
@@ -3079,7 +3191,7 @@ tabella, la quale sarà seguita in caso di avvenimento dello scenario
 descritto.
 
 
-[rm27001-mr6flaws]                                             [Pagina 55]
+[rm27001-mr6flaws]                                             [Pagina 57]
 
 ESEMPIO procedura 0002
 Il reparto tecnico individuerà un nodo fisico (nel quale è installato
@@ -3135,7 +3247,7 @@ servizio di fornitura assistenza, per circa sessanta minuti. Gli opera_
 tori al call center, registreranno le chiamate in arrivo in modo da re_
 gistrarle nel portale di assistenza appena sarà tornato disponibile.
 
-[rm27001-mr6flaws]                                             [Pagina 56]
+[rm27001-mr6flaws]                                             [Pagina 58]
 
 Scenario ID 4 – Verrà chiesto ad un utente di reparto commerciale di
 erogare un servizio come "Elaborazione buste paga", tramite un apparato
@@ -3191,7 +3303,7 @@ di rischio.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 57]
+[rm27001-mr6flaws]                                             [Pagina 59]
 
 Riporto per documentazione le linee guida ISO/IEC 27001 inserite al pun_
 to 6.1.3.
@@ -3247,7 +3359,7 @@ Non esiste un trattamento/scenario di rischio individuato pari a zero
 Consiglio di tenere sempre in considerazione che il rischio potrebbe
 manifestarsi anche in minima parte, è una buona considerazione per
 tutta l'analisi del rischio.
-[rm27001-mr6flaws]                                             [Pagina 58]
+[rm27001-mr6flaws]                                             [Pagina 60]
 
 La descrizione a fianco dell'ultimo valore di priorità, commenterà come
 il rischio viene trattato (operazioni, trattamenti specifici).
@@ -3303,7 +3415,7 @@ completamento.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 59]
+[rm27001-mr6flaws]                                             [Pagina 61]
 
 15) Dichiarazione di applicabilità
 
@@ -3322,10 +3434,10 @@ o altro tipo di formato facile da consultare.
 Riporterò qui un esempio di una tabella da cui si può mantenere l'elenco
 dei controlli.
 
- .----+---------------+---------------+-------------+--------------.
- | NN | Descrizione   | Svolgimento   | Riferimento | Applicato?   |
- |    | controllo     | controllo     | documento   | Sì / No      |
- +----+---------------+---------------+-------------+--------------+
+ .----+---------------+---------------+-------------+-------------.
+ | NN | Descrizione   | Svolgimento   | Riferimento | Applicato?  |
+ |    | controllo     | controllo     | documento   | Sì / No     |
+ +----+---------------+---------------+-------------+-------------+
 
 Per essere semplice da consultare, sia per noi che la scriviamo, che
 per l'auditor, è consigliabile mantenere il metodo descritto nella ta_
@@ -3341,25 +3453,25 @@ Con l'avvento del formato 2022 dell'allegato ANNEX della ISO/IEC 27001
 chi aveva già sviluppato i controlli del formato 2013, si trova nella
 situazione di riaddarli, se non riscriverli per il nuovo formato. Inol_
 tre, il formato 2022, ha circa dieci nuovi controlli da sviluppare.
-L'allegato annex del formato 2022, contiene una tabella di mappatura
+L'allegato ANNEX del formato 2022, contiene una tabella di mappatura
 dei vecchi controlli, rapportati a quelli nuovi. Questa mappatura aiuta
 certamente ad evitare errori di sviluppo seguendo il nuovo formato.
-L'aspetto a cui fare molta attenzione, riguarda le ISO/IEC 27017 e
-27018. Esse saranno ricostruite ed adattate al nuovo formato 2022, nel
-corso dell'anno 2025. Nell'attesa, è necessario mappare anche i punti
-di queste due norme, con il formato 2022.
+L'aspetto a cui fare molta attenzione, riguarda la ISO/IEC 27017, mentre
+la ISO/IEC 27018 è stata aggiornata a fine agosto 2025.
+La ISO/IEC 27017 sarà aggiornata e adottata al nuovo formato 2022, nel
+corso dell'anno 2026. Nell'attesa, è necessario mappare anche i punti
+di questa norma, con il formato 2022.
 Nel foglio di calcolo, è consigliabile creare un foglio dedicato a que_
 sta mappatura, verificando uno ad uno i controlli per le norme dei ser_
-vizi in cloud (27017) e privacy dei dati (27018). Alcuni di questi con_
-trolli dedicati alle due norme, possono essere assorbiti dall'allegato
-27002, altri invece possono essere dedicati e sviluppati in modo dedi_
-cato all'interno dell'organizzazione.
+vizi in cloud (27017).. Alcuni di questi controlli dedicati alle due norme,
+possono essere assorbiti dall'allegato 27002, altri invece possono essere
+dedicati e sviluppati in modo dedicato all'interno dell'organizzazione.
 
 
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 60]
+[rm27001-mr6flaws]                                             [Pagina 62]
 
 * FONTI ESTERNE *
  Al fine fine di mantenere una corretta impaginazione, alcune risorse
@@ -3380,13 +3492,7 @@ cato all'interno dell'organizzazione.
     https://bit.ly/3dzPbUX
 (03b*5)
     https://it.wikipedia.org/wiki/Linux_Unified_Key_Setup
-(03*b6)
-    Stage 2: audit per valutare l'attuazione e l'efficacia del
-             sistema di gestione sicurezza informazioni. Importanti
-             controlli effettuati in esso, sono: monitoraggio, misu_
-             razione, reporting, delle prestazioni. Controllo opera_
-             tivo dei processi del cliente. Verifica audit interni
-             e riesame della direzione.
+
 (03e*1)
     Stage 1: audit in cui vengono fornite almeno le informa_
              zioni del SGSI, le attività coperte, copia del_
@@ -3408,14 +3514,20 @@ cato all'interno dell'organizzazione.
     https://www.manageengine.com/
 (03*5)
     https://www.belarc.com/products_belarc_advisor
-(03*6)
-    https://bit.ly/3bmEggz
-    https://lore.kernel.org/lists.html
+
 (03*7)
     https://github.com/rocky-linux/
 
 
-[rm27001-mr6flaws]                                             [Pagina 61]
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                             [Pagina 63]
 
 (04*1)
     https://www.gigasys.it/site/log-management/ software dedicato ed at_
@@ -3471,7 +3583,7 @@ cato all'interno dell'organizzazione.
                                        Pubblica informazioni aggiornate
                                        riguardo CVE e dati 0day.
 
-[rm27001-mr6flaws]                                             [Pagina 62]
+[rm27001-mr6flaws]                                             [Pagina 64]
 
     https://x.com/therealshodan        Ricercatore, pubblica anche il co_
                                        dice sorgente di uno strumento usb
@@ -3501,9 +3613,6 @@ cato all'interno dell'organizzazione.
       positivi Raspberry Pi, per monitorare e verificare possibili vul_
       nerabilità negli ambienti di rete Wi-Fi.
 
-(07a1)
-    https://bit.ly/3BrKcQ5
-
 (09*1)
     https://amzn.to/3QaTC6H
 
@@ -3524,15 +3633,13 @@ cato all'interno dell'organizzazione.
 (13*1)
     https://it.wikipedia.org/wiki/Multiprotocol_Label_Switching
 
-
-
-
-[rm27001-mr6flaws]                                             [Pagina 63]
-
 (14*1)
     https://github.com/mr6flaw/rm27001/blob/master/rm27001_14T1.txt
 
     https://github.com/mr6flaw/rm27001/blob/master/rm27001_14T2.txt
+
+
+[rm27001-mr6flaws]                                             [Pagina 65]
 
 (14*2)
     https://www.cesaregallotti.it/
@@ -3583,4 +3690,9 @@ cato all'interno dell'organizzazione.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 64]
+
+
+
+
+
+[rm27001-mr6flaws]                                             [Pagina 66]
