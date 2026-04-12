@@ -3434,16 +3434,22 @@ o altro tipo di formato facile da consultare.
 Riporterò qui un esempio di una tabella da cui si può mantenere l'elenco
 dei controlli.
 
- .----+---------------+---------------+-------------+-------------.
- | NN | Descrizione   | Svolgimento   | Riferimento | Applicato?  |
- |    | controllo     | controllo     | documento   | Sì / No     |
- +----+---------------+---------------+-------------+-------------+
+ .---+-------------+-------------+--------+-------------+------------.
+ | NN| Descrizione | Svolgimento | Motivo | Riferimento | Applicato? |
+ |   | controllo   | controllo   |        | documento   | Sì / No    |
+ +---+-------------+-------------+--------+-------------+------------+
 
 Per essere semplice da consultare, sia per noi che la scriviamo, che
 per l'auditor, è consigliabile mantenere il metodo descritto nella ta_
 bella. Avere sempre a portare di mano il numero di riferimento e la
 stesso descrizione del controllo, aiuta sopratutto nelle sessioni di
 audit, che nella verifica interta dell'intero documento.
+Nel campo "Motivo", è necessario per ogni controllo descrivere il perchè
+applichiamo il controllo, in quanto è richiesto anche dalla stessa norma.
+Si tratta di un lavoro abbansta lungo quello di descrivere per ogni con_
+trollo il motivo, considerando un'organizzazione che mantiene anche le
+due estensioni 27017/27018.
+
 Altro aspetto da non dimenticare, sono i riferimenti documentali. Il
 consiglio è di mantenere per la maggior parte dei controlli, la docu_
 mentazione o l'istruzione, che descrive e completa lo svolgimento del
@@ -3451,8 +3457,8 @@ controllo stesso.
 
 Con l'avvento del formato 2022 dell'allegato ANNEX della ISO/IEC 27001
 chi aveva già sviluppato i controlli del formato 2013, si trova nella
-situazione di riaddarli, se non riscriverli per il nuovo formato. Inol_
-tre, il formato 2022, ha circa dieci nuovi controlli da sviluppare.
+situazione di reinserirli, se non riscriverli per il nuovo formato.
+Inoltre, il formato 2022, ha circa dieci nuovi controlli da sviluppare.
 L'allegato ANNEX del formato 2022, contiene una tabella di mappatura
 dei vecchi controlli, rapportati a quelli nuovi. Questa mappatura aiuta
 certamente ad evitare errori di sviluppo seguendo il nuovo formato.
@@ -3461,17 +3467,67 @@ la ISO/IEC 27018 è stata aggiornata a fine agosto 2025.
 La ISO/IEC 27017 sarà aggiornata e adottata al nuovo formato 2022, nel
 corso dell'anno 2026. Nell'attesa, è necessario mappare anche i punti
 di questa norma, con il formato 2022.
-Nel foglio di calcolo, è consigliabile creare un foglio dedicato a que_
-sta mappatura, verificando uno ad uno i controlli per le norme dei ser_
-vizi in cloud (27017).. Alcuni di questi controlli dedicati alle due norme,
-possono essere assorbiti dall'allegato 27002, altri invece possono essere
-dedicati e sviluppati in modo dedicato all'interno dell'organizzazione.
-
 
 
 
 
 [rm27001-mr6flaws]                                             [Pagina 62]
+
+Nel foglio di calcolo, è consigliabile creare un foglio dedicato a que_
+sta mappatura, verificando uno ad uno i controlli per le norme dei ser_
+vizi in cloud (27017). Alcuni di questi controlli dedicati alle due
+norme, possono essere assorbiti dall'allegato 27002, altri invece pos_
+sono essere dedicati e sviluppati in modo dedicato all'interno del_
+l'organizzazione.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                             [Pagina 63]
 
 * FONTI ESTERNE *
  Al fine fine di mantenere una corretta impaginazione, alcune risorse
@@ -3527,7 +3583,7 @@ dedicati e sviluppati in modo dedicato all'interno dell'organizzazione.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 63]
+[rm27001-mr6flaws]                                             [Pagina 64]
 
 (04*1)
     https://www.gigasys.it/site/log-management/ software dedicato ed at_
@@ -3583,7 +3639,7 @@ dedicati e sviluppati in modo dedicato all'interno dell'organizzazione.
                                        Pubblica informazioni aggiornate
                                        riguardo CVE e dati 0day.
 
-[rm27001-mr6flaws]                                             [Pagina 64]
+[rm27001-mr6flaws]                                             [Pagina 65]
 
     https://x.com/therealshodan        Ricercatore, pubblica anche il co_
                                        dice sorgente di uno strumento usb
@@ -3639,7 +3695,7 @@ dedicati e sviluppati in modo dedicato all'interno dell'organizzazione.
     https://github.com/mr6flaw/rm27001/blob/master/rm27001_14T2.txt
 
 
-[rm27001-mr6flaws]                                             [Pagina 65]
+[rm27001-mr6flaws]                                             [Pagina 66]
 
 (14*2)
     https://www.cesaregallotti.it/
@@ -3695,4 +3751,4 @@ dedicati e sviluppati in modo dedicato all'interno dell'organizzazione.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 66]
+[rm27001-mr6flaws]                                             [Pagina 67]
