@@ -1150,21 +1150,21 @@ certificazione), è molto semplice.
 Essa ci permetterà anche di tracciare le operazioni sui tutti gli
 utenti operativi nell'organizzazione.
 
-Inoltre, è necessario mantenere definita e diffusa una politica di ge_
-stione password utente. Un esempio potrebbe essere:
+E' necessario mantenere definita e diffusa una politica di gestione
+password utente. Un esempio potrebbe essere:
 - minimo 12 caratteri alfanumerici
 - presenza di lettere minuscole/maiuscole
 - presenza di almeno due simboli (come %,.:-_#^?/\&$!)
 - il sistema di verifica password dovrebbe almeno ricordare i caratteri
 inseriti dall'utente nelle precedenti password, per almeno cinque volte.
-Questo controllo, sfavorisce l'utente nel re-inserire una password si_
-mile alle precedenti, quando è necessaria cambiarla, per via della
+Questo controllo, scoraggia l'utente nel reinserire una password si_
+mile alle precedenti, quando è necessaria cambiarla per via della
 scadenza.
 
 La politica viene scritta e documentata, e le regole sono attivate poi
 nelle impostazioni password di Active Directory se viene usato Microsoft
-come gestore di gruppi di rete, oppure PAM se viene usato il sistema
-operativo Linux.
+come gestore di gruppi di rete, oppure il servizio PAM gestore del_
+autenticazione centralizzata nel sistema operativo Linux.
 
 
 
@@ -1999,14 +1999,14 @@ riceve aggiornamenti. Al punto (07*1) sono riportati delle fonti utili.
 Il personale dell'organizzazione potrebbe riscontrare difficoltà nel se_
 guire i punti richiesta dalla normativa.
 Se venisse poi chiesto di seguire un corso di introduzione alla stessa
-normativa, potrebbe verificarsi dei possibili problemi di comprensione.
+normativa, potrebbero verificarsi dei possibili problemi di compren_
+sione.
 Il consiglio è di presentare l'introduzione dei termini ISO/IEC 27001,
 asset, nuove regole e procedure tramite fogli di presentazione, diversi
 per ciascun reparto.
 Nell'introduzione alla norma è consigliabile includere con brevi frasi
-i punti più importanti, con disegni o icone che possono aiutare il
-personale a ricordarsi di un particolare passaggio o termine.
-
+i punti più importanti, inserendo disegni o icone che possono aiutare
+il personale a ricordarsi di un particolare passaggio o termine.
 
 
 
@@ -2073,6 +2073,62 @@ confermare una manutenzione o aggiornamento dello spazio della casella
 aziendale, possono funzionare, ma non ad ogni test di consapevolezza.
 [rm27001-mr6flaws]                                             [Pagina 37]
 
+Concluso il ciclo di consapevolezza del personale, è fondamentale ricor_
+darsi che la norma richiede il continuo supporto della formazione.
+Nell'ottica di rimanere nel ciclo continuo di miglioramento, è necessario
+programmare per ogni anno un aggiormaneto della formazione per tutto il
+personale, ad esclusione dei nuovi ingressi, ovvero chi è entrato nel_
+l'organizzazione negli ultimi dodici mesi.
+
+Vi sono due possibili vie per mantere il ciclo formativo. La prima è
+quella di mantenere ed aggiornare le tematiche di sicurezza dati, per
+poi proporle. Questa via spesso richiede del tempo, basti pensare al_
+l'ulteriore tempo per presentare il materiale.
+E' però possibile valutare di acquistare pacchetti di formazione, i
+quali possono essere distribuiti in modalità online. Alcuni di questi
+propongono all'utente piccolo questionario finale, così da avere la con_
+ferma che il corso sia stata avviato e concluso.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[rm27001-mr6flaws]                                             [Pagina 38]
+
 07c) Estendere regolamento anche ad esterni fornitori o collaboratori
 (#identify #protect #detect)
 Fornitori e collaboratori esterni all'organizzazione, dovranno ope_
@@ -2127,7 +2183,7 @@ Elenco requisiti base
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 38]
+[rm27001-mr6flaws]                                             [Pagina 39]
 
 --> Backup
 ----> presenza di backup effettuato a cadenza (sì/no)
@@ -2183,7 +2239,7 @@ dell'organizzazione.
 Creeremo un profilo con i permessi di accesso alle sole aree predefinite
 e dedicate per esso.
 
-[rm27001-mr6flaws]                                             [Pagina 39]
+[rm27001-mr6flaws]                                             [Pagina 40]
 
 Inoltre è consigliabile che il fornitore acceda solo alle aree di
 test, se si occupa dello sviluppo di programmi o di gestione/revisione
@@ -2239,7 +2295,7 @@ firmata per presa visione.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 40]
+[rm27001-mr6flaws]                                             [Pagina 41]
 
 DATA, LUOGO: __________________
 
@@ -2295,7 +2351,7 @@ possbili errori.
 
 * Per quale scopo usiamo il fornitore o i suoi servizi?
 
-[rm27001-mr6flaws]                                             [Pagina 41]
+[rm27001-mr6flaws]                                             [Pagina 42]
 
  Vi è anche il caso un cui il fornitore eroga solo un software, che trat_
  ta dati all'interno dell nostra organizzazione. In questo caso, se il
@@ -2351,7 +2407,7 @@ possbili errori.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 42]
+[rm27001-mr6flaws]                                             [Pagina 43]
 
 Per concludere la parte fornitori, è necessario predisporre la valuta_
 zione periodica di quest'ultimi. Almeno una volta all'anno si dovrebbero
@@ -2407,7 +2463,7 @@ l'audit annuale rivolto all'organizzazione per la quale si opera.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 43]
+[rm27001-mr6flaws]                                             [Pagina 44]
 
 08) Utilizzo apparecchiature/dispositivi degli ospiti (#protect)
 
@@ -2463,7 +2519,7 @@ L'accesso viene consentito con le determinate restrizioni del caso
 dati).
 
 
-[rm27001-mr6flaws]                                             [Pagina 44]
+[rm27001-mr6flaws]                                             [Pagina 45]
 
 09) Misure di protezione per lo stabile (#protect)
 
@@ -2519,7 +2575,7 @@ Tramite badge è poi possibile restringere l'accesso a determinate aree
 (come quelle di stoccaggio dati) da parte del solo personale autoriz_
 zato.
 
-[rm27001-mr6flaws]                                             [Pagina 45]
+[rm27001-mr6flaws]                                             [Pagina 46]
 
 Possiamo chiedere al nostro responsabile del servizio prevenzione e pro_
 tezione se può consigliarci un elettricista abilitato alla verifica del_
@@ -2575,7 +2631,7 @@ stabili).
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 46]
+[rm27001-mr6flaws]                                             [Pagina 47]
 
 Ogni rete WIFI dovrà poi essere protetta da password o altro metodo di
 autenticazione (token generato su richiesta).
@@ -2631,7 +2687,7 @@ l'impianto.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 47]
+[rm27001-mr6flaws]                                             [Pagina 48]
 
 10) Test di penetrabiltà (#identify #protect)
 
@@ -2687,7 +2743,7 @@ Nelle organizzazioni certificate ISO/IEC 27001 da più di due o tre anni,
 potrebbero essere schedulati test sui servizi, e completati prima che
 un sistema operativo entri in funzione nell'organizzazione.
 
-[rm27001-mr6flaws]                                             [Pagina 48]
+[rm27001-mr6flaws]                                             [Pagina 49]
 
 Riporto l'esempio di un test chiamato "Nessus", operante nel sistema
 operativo Linux.
@@ -2743,7 +2799,7 @@ Altre interessanti opzioni di sicurezza da applicare nel sistema opera_
 tivo Linux, le potete trovare nella pagina "Linux Hardening
 Guide" (10*2).
 
-[rm27001-mr6flaws]                                             [Pagina 49]
+[rm27001-mr6flaws]                                             [Pagina 50]
 
 Un'altra nota aggiuntiva merita di essere descritta per il kernel Linux.
 E' abbastanza configurabile a livello di parametri di sicurezza. Il con_
@@ -2799,7 +2855,7 @@ rabili a difetti di architettura. Vedi Meltdown e Spectre (10*4).
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 50]
+[rm27001-mr6flaws]                                             [Pagina 51]
 
 11) Monitoraggio dei sistemi che erogano servizi (#detect #respond)
 
@@ -2855,7 +2911,7 @@ licenze agenti interni dei software sopra descritti.
 Esiste una via alternativa per essere avvisati preventivamente dell'uso
 alto delle risorse?
 
-[rm27001-mr6flaws]                                             [Pagina 51]
+[rm27001-mr6flaws]                                             [Pagina 52]
 
 Sì, forse in maniera non troppo tempestiva come ci offre un algoritmo
 costruito da specialisti ed attivato dell'agente.
@@ -2911,7 +2967,7 @@ all'intero totale (cento).
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 52]
+[rm27001-mr6flaws]                                             [Pagina 53]
 
 Ad esempio, un disservizio di circa otto ore in un anno, è calcolato
 come segue,
@@ -2967,7 +3023,7 @@ per iscritto, tramite posta elettronica o anche telefonicamente tutti i
 suggerimenti e le idee atti a migliorare il servizio e si impegna a
 garantire sia gli standard generali che quelli specifici in condizioni
 normali ed in assenza di ostacoli che li rendano irrealizzabili.
-[rm27001-mr6flaws]                                             [Pagina 53]
+[rm27001-mr6flaws]                                             [Pagina 54]
 
 Supporto Tecnico:
 Area supporto tecnico: http://supporto.[NOME_ORGANIZZAZIONE] o diretta_
@@ -3023,7 +3079,7 @@ solo provare a scriverlo; e magari nel futuro analizzarlo con altre
 parti, e renderlo completo.
 
 
-[rm27001-mr6flaws]                                             [Pagina 54]
+[rm27001-mr6flaws]                                             [Pagina 55]
 
 La prima fase iniziale consisterà nell'elencare tutti i servizi che
 l'organizzazione offre o eroga.
@@ -3079,7 +3135,7 @@ o erogato. Di seguito la tabella di esempio.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 55]
+[rm27001-mr6flaws]                                             [Pagina 56]
 
 Ad ogni processo collegheremo uno scenario di disastro, che se scaturito
 potrebbe essere un problema per l'erogazione del processo.
@@ -3135,7 +3191,7 @@ re ad erogare il servizio o servizi.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 56]
+[rm27001-mr6flaws]                                             [Pagina 57]
 
 Tabella gestione scenario
 
@@ -3191,7 +3247,7 @@ tabella, la quale sarà seguita in caso di avvenimento dello scenario
 descritto.
 
 
-[rm27001-mr6flaws]                                             [Pagina 57]
+[rm27001-mr6flaws]                                             [Pagina 58]
 
 ESEMPIO procedura 0002
 Il reparto tecnico individuerà un nodo fisico (nel quale è installato
@@ -3247,7 +3303,7 @@ servizio di fornitura assistenza, per circa sessanta minuti. Gli opera_
 tori al call center, registreranno le chiamate in arrivo in modo da re_
 gistrarle nel portale di assistenza appena sarà tornato disponibile.
 
-[rm27001-mr6flaws]                                             [Pagina 58]
+[rm27001-mr6flaws]                                             [Pagina 59]
 
 Scenario ID 4 – Verrà chiesto ad un utente di reparto commerciale di
 erogare un servizio come "Elaborazione buste paga", tramite un apparato
@@ -3303,7 +3359,7 @@ di rischio.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 59]
+[rm27001-mr6flaws]                                             [Pagina 60]
 
 Riporto per documentazione le linee guida ISO/IEC 27001 inserite al pun_
 to 6.1.3.
@@ -3359,7 +3415,7 @@ Non esiste un trattamento/scenario di rischio individuato pari a zero
 Consiglio di tenere sempre in considerazione che il rischio potrebbe
 manifestarsi anche in minima parte, è una buona considerazione per
 tutta l'analisi del rischio.
-[rm27001-mr6flaws]                                             [Pagina 60]
+[rm27001-mr6flaws]                                             [Pagina 61]
 
 La descrizione a fianco dell'ultimo valore di priorità, commenterà come
 il rischio viene trattato (operazioni, trattamenti specifici).
@@ -3415,7 +3471,7 @@ completamento.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 61]
+[rm27001-mr6flaws]                                             [Pagina 62]
 
 15) Dichiarazione di applicabilità
 
@@ -3471,7 +3527,7 @@ di questa norma, con il formato 2022.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 62]
+[rm27001-mr6flaws]                                             [Pagina 63]
 
 Nel foglio di calcolo, è consigliabile creare un foglio dedicato a que_
 sta mappatura, verificando uno ad uno i controlli per le norme dei ser_
@@ -3527,7 +3583,7 @@ l'organizzazione.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 63]
+[rm27001-mr6flaws]                                             [Pagina 64]
 
 * FONTI ESTERNE *
  Al fine fine di mantenere una corretta impaginazione, alcune risorse
@@ -3583,7 +3639,7 @@ l'organizzazione.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 64]
+[rm27001-mr6flaws]                                             [Pagina 65]
 
 (04*1)
     https://www.gigasys.it/site/log-management/ software dedicato ed at_
@@ -3592,8 +3648,8 @@ l'organizzazione.
     anche funzioni di controllo audit (utile per avviare indagini o es_
     sere avvisati in tempo reale di possibili perdite dati)
 
-(04*2) 
-    https://bit.ly/3SRboOl
+(04*2)
+    https://www.zonca.it/data-retention.php
 
 (07*1)
     https://x.com/netbiosX             NetbiosX, ricercatore sicurezza
@@ -3639,7 +3695,7 @@ l'organizzazione.
                                        Pubblica informazioni aggiornate
                                        riguardo CVE e dati 0day.
 
-[rm27001-mr6flaws]                                             [Pagina 65]
+[rm27001-mr6flaws]                                             [Pagina 66]
 
     https://x.com/therealshodan        Ricercatore, pubblica anche il co_
                                        dice sorgente di uno strumento usb
@@ -3695,7 +3751,7 @@ l'organizzazione.
     https://github.com/mr6flaw/rm27001/blob/master/rm27001_14T2.txt
 
 
-[rm27001-mr6flaws]                                             [Pagina 66]
+[rm27001-mr6flaws]                                             [Pagina 67]
 
 (14*2)
     https://www.cesaregallotti.it/
@@ -3751,4 +3807,4 @@ l'organizzazione.
 
 
 
-[rm27001-mr6flaws]                                             [Pagina 67]
+[rm27001-mr6flaws]                                             [Pagina 68]
